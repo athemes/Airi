@@ -13,10 +13,388 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	width: 61vw;
+	height: 143vw;
+	margin-left: 19.5vw;
+	margin-right: 19.5vw;
+	margin-top: 13vw;
+	padding: 5.15vw 10.3vw;
+	border: 1px solid #EEEEEE;
+	background: #FFFFFF;
+	box-shadow: 0 15px 32px rgba(0, 0, 0, 0.14);
+
+	.post-date {
+		text-transform: uppercase;
+		color: red;
+		letter-spacing: 3px;
+		font-size: 0.72vw;
+	}
+
+	.post-title {
+		margin-top: 1vw;
+		font-size: 1.8vw;
+	}
+
+	.post-info{
+		margin-top: 1.55vw;
+		font-size: 0.6vw;
+		color: #bfbfbf;
+		height: 1.55vw;
+	
+		.post-category {
+			background: #eff1f4;
+			font-size: 0.6vw;
+			text-transform: uppercase;
+			color: #bfbfbf;
+			width: 7.5vw;
+			border-radius: 1.55vw;
+			border: 0px;
+			height: 1.55vw;
+		}
+
+		.post-by {
+			margin-left: 1.55vw;
+			font-size: 0.6vw;
+			strong{
+				color: #595959;
+			}
+		}
+
+		.post-comments-number {
+			font-size: 0.6vw;
+			text-transform: uppercase;
+			margin-left: 1.55vw;
+		}
+	}
+
+	.post-image {
+		width: 100%;
+		height: 25.77vw;
+		margin-top: 1.55vw
+	}
+
+	.post-content {
+		margin-top: 1.55vw;
+		border-bottom: 1px solid #ebebeb;
+		height: 30.4vw;
+
+		p {
+			font-size: 0.82vw;
+			margin: 0px;
+			padding-bottom: 1.55vw;
+		}
+
+		.strong-sentence{
+			float:left;
+			width: 100%;
+			margin-top: -1.55vw;
+
+			.bracket {
+				font-size: 5.15vw;
+				color: #f0437e;
+				display: inline-block;
+				width: 9%;
+			}
+
+			.content {
+				font-size: 1.03vw;
+				display: inline-block;
+				width: 90%;
+				vertical-align: -webkit-baseline-middle;
+
+				p {
+					margin-top: 1.55vw; 
+					.sentence-owner {
+						font-size: 0.82vw;
+						color: #191919;
+					}
+
+					.owner-position {
+						font-size: 0.72vw;
+						color: #f0437e;	
+					}
+				}
+			}
+		}
+	}
+
+	.share-buttons {
+		margin-top: 1.55vw;
+
+		button {
+			height: 1.5vw;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			border: 0px;
+			font-size: 0.62vw;
+			text-transform: uppercase;
+			background: #f3f3f3;
+		}
+
+		label {
+			float: right;
+			font-size: 0.82vw;
+			padding-top: 0.7vw;
+		}
+
+		icon {
+			float: right;
+			font-size: 0.82vw;
+			padding-top: 0.7vw;
+			padding-left: 0.82vw;
+		}
+	}
+
+	.comment-list {
+		margin-top: 3.1vw;
+		margin-bottom: 2vw;
+		height: 33vw;
+		border-bottom: 1px solid #ebebeb; 
+
+		.header {
+			font-size: 1.24vw;
+			color: #191919;
+		}
+
+		.comment {
+			margin-top: 2vw;
+			float: left;
+			width: 100%;
+
+			.user-avatar {
+				padding-right: 1.55vw;
+				display: inline-block;
+
+				img {
+					width: 3.61vw;
+				}
+			}
+
+			.comment-info {
+				padding-left: 1.55vw;
+				vertical-align: top;
+				display: inline-block;
+				border-left: 1px solid #ebebeb;
+
+				.comment-date {
+					font-size: 0.62vw;
+					color: #bfbfbf;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					margin-bottom: 0.5vw;
+				}
+
+				.user-name {
+					font-size: 0.92vw;
+					color: #191919;
+					margin-bottom: 0.5vw;
+				}
+
+				.comment-detail {
+					font-size: 0.82vw;
+					color: #595959;
+					margin-bottom: 0.5vw;
+				}
+
+				button {
+					font-size: 0.82vw;
+					color: #191919;
+					height: 2vw;
+					padding-left: 1.5vw;
+					padding-right: 1.5vw;
+					border-radius: 1vw;
+					border: 0px;
+					text-transform: uppercase;
+				}
+
+				button:hover {
+					color: #ffffff;
+					background: linear-gradient(to right, #df2176, #fac091);
+				}
+
+				.sub-comment {
+					margin-top: 1.55vw;
+					float: left;
+					width: 100%;
+
+					.sub-user-avatar {
+						padding-right: 1.55vw;
+						display: inline-block;
+
+						img {
+							width: 3.61vw;
+						}
+					}
+
+					.sub-comment-info {
+						vertical-align: top;
+						display: inline-block;
+
+						.sub-comment-date {
+							font-size: 0.62vw;
+							color: #bfbfbf;
+							letter-spacing: 2px;
+							text-transform: uppercase;
+							margin-bottom: 0.5vw;
+						}
+
+						.sub-user-name {
+							font-size: 0.92vw;
+							color: #191919;
+							margin-bottom: 0.5vw;
+						}
+
+						.sub-comment-detail {
+							font-size: 0.82vw;
+							color: #595959;
+							margin-bottom: 0.5vw;
+						}
+
+						button {
+							font-size: 0.82vw;
+							color: #191919;
+							height: 2vw;
+							padding-left: 1.5vw;
+							padding-right: 1.5vw;
+							border-radius: 1vw;
+							border: 0px;
+						}
+
+						button:hover {
+							color: #ffffff;
+							background: linear-gradient(to right, #df2176, #fac091);
+						}
+					}
+				}
+			}
+		}
+
+		.sub-comment {
+			margin-top: 1.55vw;
+			float: left;
+			width: 100%;
+
+			.user-avatar {
+				padding-right: 1.55vw;
+				display: inline-block;
+
+				img {
+					width: 3.61vw;
+				}
+			}
+
+			.comment-info {
+				padding-left: 1.55vw;
+				vertical-align: middle;
+				display: inline-block;
+
+				.comment-date {
+					font-size: 0.62vw;
+					color: #bfbfbf;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					margin-bottom: 0.5vw;
+				}
+
+				.user-name {
+					font-size: 0.92vw;
+					color: #191919;
+					margin-bottom: 0.5vw;
+				}
+
+				.comment-detail {
+					font-size: 0.82vw;
+					color: #595959;
+					margin-bottom: 0.5vw;
+				}
+
+				button {
+					font-size: 0.82vw;
+					color: #191919;
+					height: 2vw;
+					padding-left: 1.5vw;
+					padding-right: 1.5vw;
+					border-radius: 1vw;
+					border: 0px;
+				}
+
+				button:hover {
+					color: #ffffff;
+					background: linear-gradient(to right, #df2176, #fac091);
+				}
+			}
+		}
+	}
+
+	.comment-form {
+		margin-top: 3.1vw;
+		height: 33vw;
+		border-bottom: 1px solid #ebebeb;
+
+		.header {
+			font-size: 1.24vw;
+			color: #191919;
+			margin-bottom: 2vw;
+		}
+
+		input {
+			width: 100%;
+			height: 2.57vw;
+			font-size: 0.82vw;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			margin-bottom: 1vw;
+			border-radius: 0px;
+			border: 1px solid #ebebeb;
+		}
+
+		input::placeholder {
+			color: #bfbfbf;
+		}
+
+		input:focus {
+			border: 1px solid #1e1e27;
+			outline: none;
+		}
+
+		textarea {
+			font-size: 0.82vw;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			margin-bottom: 1vw;
+			border-radius: 0px;
+			border: 1px solid #ebebeb;
+			resize: none;
+		}
+
+		textarea::placeholder {
+			color: #bfbfbf;
+		}
+
+		textarea:focus {
+			border: 1px solid #1e1e27;
+			outline: none;
+		}
+
+		button {
+			height: 2.2vw;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			font-size: 0.72vw;
+			color: #ffffff;
+			text-transform: uppercase;
+			border: 0px;
+			border-radius: 1.1vw;
+			background: linear-gradient(to right, #df2176, #fac091);
+		}
+	}
 }
+
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+
