@@ -27,6 +27,8 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
+		    
+  		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	</header><!-- .entry-header -->
 
 	<?php atu_post_thumbnail(); ?>
@@ -37,7 +39,7 @@
 		<div class="post-info">
 			<button class="post-category">Development</button>
 			<span class="post-by">by <strong>Joe Fylan</strong></span>
-			<span class="post-comments-number"><icon></icon>06 Comments</span>
+			<span class="post-comments-number"><i class="far fa-comments"></i>&nbsp 06 Comments</span>
 		</div>
 		<div class="post-image">
 			<img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" />
@@ -61,22 +63,22 @@
 			<span><button>Multippopuse</button> </span>
 			<span><button>Design</button> </span>
 			<span><button>Ideas</button> </span>
-			<span><icon>a</icon></span>
-			<span><icon>a</icon></span>
-			<span><icon>a</icon></span>
-			<span><icon>a</icon></span>
+			<span class="social-icon"><i class="fab fa-pinterest"></i></span>
+			<span class="social-icon"><i class="fab fa-google-plus-g"></i></i></span>
+			<span class="social-icon"><i class="fab fa-twitter"></i></i></span>
+			<span class="social-icon"><i class="fab fa-facebook-f"></i></span>
 			<span><label>Share:</label></span>
 		</div>
 		<div class="comment-list">
 			<div class="header">2 Comments</div>
-			<div class="comment">
+			<div class="comment-items">
 				<div class="user-avatar">
 					<img src="<?php echo get_template_directory_uri() ?>/images/avatar3.png">
 				</div>
 				<div class="comment-info">
 					<div class="comment-date">27 Aug 2016</div>
 					<div class="user-name">Brandon Kelley</div>
-					<div class="comment-detail">Here is comment</div>
+					<div class="comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi</div>
 					<div>
 						<span><button>like</button> </span>
 						<span><button>reply</button> </span>
@@ -88,7 +90,7 @@
 						<div class="sub-comment-info">
 							<div class="sub-comment-date">27 Aug 2016</div>
 							<div class="sub-user-name">Brandon Kelley</div>
-							<div class="sub-comment-detail">Here is comment</div>
+							<div class="sub-comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </div>
 							<div>
 								<span><button>like</button> </span>
 								<span><button>reply</button> </span>
@@ -97,14 +99,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="comment">
+			<div class="comment-items">
 				<div class="user-avatar">
 					<img src="<?php echo get_template_directory_uri() ?>/images/avatar1.png">
 				</div>
 				<div class="comment-info">
 					<div class="comment-date">27 Aug 2016</div>
 					<div class="user-name">Leander Tee</div>
-					<div class="comment-detail">Here is comment</div>
+					<div class="comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </div>
 					<div>
 						<span><button>like</button> </span>
 						<span><button>reply</button> </span>

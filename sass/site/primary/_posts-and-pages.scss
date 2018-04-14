@@ -14,7 +14,6 @@
 .entry-content,
 .entry-summary {
 	width: 61vw;
-	height: 143vw;
 	margin-left: 19.5vw;
 	margin-right: 19.5vw;
 	margin-top: 13vw;
@@ -76,7 +75,6 @@
 	.post-content {
 		margin-top: 1.55vw;
 		border-bottom: 1px solid #ebebeb;
-		height: 30.4vw;
 
 		p {
 			font-size: 0.82vw;
@@ -143,27 +141,38 @@
 			padding-top: 0.7vw;
 			padding-left: 0.82vw;
 		}
+
+		.social-icon {
+			float: right;
+			font-size: 0.82vw;
+			padding-top: 0.7vw;
+			padding-left: 0.82vw;
+		}
+
 	}
 
 	.comment-list {
+		border-bottom: 1px solid #ebebeb;
+		display: inline-block;
 		margin-top: 3.1vw;
-		margin-bottom: 2vw;
-		height: 33vw;
-		border-bottom: 1px solid #ebebeb; 
+		width: 100%;
 
 		.header {
 			font-size: 1.24vw;
 			color: #191919;
+			margin-bottom: 2vw;
+			width: 100%;
 		}
 
-		.comment {
-			margin-top: 2vw;
+		.comment-items {
+			margin-bottom: 2vw;
 			float: left;
 			width: 100%;
 
 			.user-avatar {
 				padding-right: 1.55vw;
 				display: inline-block;
+				width: 14%;
 
 				img {
 					width: 3.61vw;
@@ -175,6 +184,7 @@
 				vertical-align: top;
 				display: inline-block;
 				border-left: 1px solid #ebebeb;
+				width: 85%;
 
 				.comment-date {
 					font-size: 0.62vw;
@@ -220,6 +230,7 @@
 					.sub-user-avatar {
 						padding-right: 1.55vw;
 						display: inline-block;
+						width: 14%;
 
 						img {
 							width: 3.61vw;
@@ -229,6 +240,7 @@
 					.sub-comment-info {
 						vertical-align: top;
 						display: inline-block;
+						width: 84%;
 
 						.sub-comment-date {
 							font-size: 0.62vw;
@@ -328,8 +340,6 @@
 
 	.comment-form {
 		margin-top: 3.1vw;
-		height: 33vw;
-		border-bottom: 1px solid #ebebeb;
 
 		.header {
 			font-size: 1.24vw;
