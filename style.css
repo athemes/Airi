@@ -634,6 +634,17 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Content
  --------------------------------------------------------------*/
+.content-area {
+  margin: 100px 170px;
+  padding: 80px 140px;
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.14);
+}
+.site-main {
+  margin-left: 0;
+  margin-right: 0;
+}
 /*--------------------------------------------------------------
  ## Posts and pages
  --------------------------------------------------------------*/
@@ -646,95 +657,8 @@ a:hover, a:active {
 .updated:not(.published) {
   display: none;
 }
-.page-content, .entry-content, .entry-summary {
-  width: 61vw;
-  margin-left: 19.5vw;
-  margin-right: 19.5vw;
-  margin-top: 13vw;
-  padding: 5.15vw 10.3vw;
-  border: 1px solid #eee;
-  background: #fff;
-  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.14);
-}
-.page-content .post-date, .entry-content .post-date, .entry-summary .post-date {
-  text-transform: uppercase;
-  color: red;
-  letter-spacing: 3px;
-  font-size: 0.72vw;
-}
-.page-content .post-title, .entry-content .post-title, .entry-summary .post-title {
-  margin-top: 1vw;
-  font-size: 1.8vw;
-}
-.page-content .post-info, .entry-content .post-info, .entry-summary .post-info {
-  margin-top: 1.55vw;
-  font-size: 0.6vw;
-  color: #bfbfbf;
-  height: 1.55vw;
-}
-.page-content .post-info .post-category, .entry-content .post-info .post-category, .entry-summary .post-info .post-category {
-  background: #eff1f4;
-  font-size: 0.6vw;
-  text-transform: uppercase;
-  color: #bfbfbf;
-  width: 7.5vw;
-  border-radius: 1.55vw;
-  border: 0px;
-  height: 1.55vw;
-}
-.page-content .post-info .post-by, .entry-content .post-info .post-by, .entry-summary .post-info .post-by {
-  margin-left: 1.55vw;
-  font-size: 0.6vw;
-}
-.page-content .post-info .post-by strong, .entry-content .post-info .post-by strong, .entry-summary .post-info .post-by strong {
-  color: #595959;
-}
-.page-content .post-info .post-comments-number, .entry-content .post-info .post-comments-number, .entry-summary .post-info .post-comments-number {
-  font-size: 0.6vw;
-  text-transform: uppercase;
-  margin-left: 1.55vw;
-}
-.page-content .post-image, .entry-content .post-image, .entry-summary .post-image {
+.page-content p img, .entry-content p img, .entry-summary p img {
   width: 100%;
-  height: 25.77vw;
-  margin-top: 1.55vw;
-}
-.page-content .post-content, .entry-content .post-content, .entry-summary .post-content {
-  margin-top: 1.55vw;
-  border-bottom: 1px solid #ebebeb;
-}
-.page-content .post-content p, .entry-content .post-content p, .entry-summary .post-content p {
-  font-size: 0.82vw;
-  margin: 0px;
-  padding-bottom: 1.55vw;
-}
-.page-content .post-content .strong-sentence, .entry-content .post-content .strong-sentence, .entry-summary .post-content .strong-sentence {
-  float: left;
-  width: 100%;
-  margin-top: -1.55vw;
-}
-.page-content .post-content .strong-sentence .bracket, .entry-content .post-content .strong-sentence .bracket, .entry-summary .post-content .strong-sentence .bracket {
-  font-size: 5.15vw;
-  color: #f0437e;
-  display: inline-block;
-  width: 9%;
-}
-.page-content .post-content .strong-sentence .content, .entry-content .post-content .strong-sentence .content, .entry-summary .post-content .strong-sentence .content {
-  font-size: 1.03vw;
-  display: inline-block;
-  width: 90%;
-  vertical-align: -webkit-baseline-middle;
-}
-.page-content .post-content .strong-sentence .content p, .entry-content .post-content .strong-sentence .content p, .entry-summary .post-content .strong-sentence .content p {
-  margin-top: 1.55vw;
-}
-.page-content .post-content .strong-sentence .content p .sentence-owner, .entry-content .post-content .strong-sentence .content p .sentence-owner, .entry-summary .post-content .strong-sentence .content p .sentence-owner {
-  font-size: 0.82vw;
-  color: #191919;
-}
-.page-content .post-content .strong-sentence .content p .owner-position, .entry-content .post-content .strong-sentence .content p .owner-position, .entry-summary .post-content .strong-sentence .content p .owner-position {
-  font-size: 0.72vw;
-  color: #f0437e;
 }
 .page-content .share-buttons, .entry-content .share-buttons, .entry-summary .share-buttons {
   margin-top: 1.55vw;
@@ -753,231 +677,54 @@ a:hover, a:active {
   font-size: 0.82vw;
   padding-top: 0.7vw;
 }
-.page-content .share-buttons icon, .entry-content .share-buttons icon, .entry-summary .share-buttons icon {
-  float: right;
-  font-size: 0.82vw;
-  padding-top: 0.7vw;
-  padding-left: 0.82vw;
-}
 .page-content .share-buttons .social-icon, .entry-content .share-buttons .social-icon, .entry-summary .share-buttons .social-icon {
   float: right;
   font-size: 0.82vw;
   padding-top: 0.7vw;
   padding-left: 0.82vw;
 }
-.page-content .comment-list, .entry-content .comment-list, .entry-summary .comment-list {
-  border-bottom: 1px solid #ebebeb;
-  display: inline-block;
-  margin-top: 3.1vw;
-  width: 100%;
-}
-.page-content .comment-list .header, .entry-content .comment-list .header, .entry-summary .comment-list .header {
-  font-size: 1.24vw;
-  color: #191919;
-  margin-bottom: 2vw;
-  width: 100%;
-}
-.page-content .comment-list .comment-items, .entry-content .comment-list .comment-items, .entry-summary .comment-list .comment-items {
-  margin-bottom: 2vw;
-  float: left;
-  width: 100%;
-}
-.page-content .comment-list .comment-items .user-avatar, .entry-content .comment-list .comment-items .user-avatar, .entry-summary .comment-list .comment-items .user-avatar {
-  padding-right: 1.55vw;
-  display: inline-block;
-  width: 14%;
-}
-.page-content .comment-list .comment-items .user-avatar img, .entry-content .comment-list .comment-items .user-avatar img, .entry-summary .comment-list .comment-items .user-avatar img {
-  width: 3.61vw;
-}
-.page-content .comment-list .comment-items .comment-info, .entry-content .comment-list .comment-items .comment-info, .entry-summary .comment-list .comment-items .comment-info {
-  padding-left: 1.55vw;
-  vertical-align: top;
-  display: inline-block;
-  border-left: 1px solid #ebebeb;
-  width: 85%;
-}
-.page-content .comment-list .comment-items .comment-info .comment-date, .entry-content .comment-list .comment-items .comment-info .comment-date, .entry-summary .comment-list .comment-items .comment-info .comment-date {
-  font-size: 0.62vw;
-  color: #bfbfbf;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info .user-name, .entry-content .comment-list .comment-items .comment-info .user-name, .entry-summary .comment-list .comment-items .comment-info .user-name {
-  font-size: 0.92vw;
-  color: #191919;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info .comment-detail, .entry-content .comment-list .comment-items .comment-info .comment-detail, .entry-summary .comment-list .comment-items .comment-info .comment-detail {
-  font-size: 0.82vw;
-  color: #595959;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info button, .entry-content .comment-list .comment-items .comment-info button, .entry-summary .comment-list .comment-items .comment-info button {
-  font-size: 0.82vw;
-  color: #191919;
-  height: 2vw;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  border-radius: 1vw;
-  border: 0px;
-  text-transform: uppercase;
-}
-.page-content .comment-list .comment-items .comment-info button:hover, .entry-content .comment-list .comment-items .comment-info button:hover, .entry-summary .comment-list .comment-items .comment-info button:hover {
-  color: #fff;
-  background: linear-gradient(to right, #df2176, #fac091);
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment, .entry-content .comment-list .comment-items .comment-info .sub-comment, .entry-summary .comment-list .comment-items .comment-info .sub-comment {
-  margin-top: 1.55vw;
-  float: left;
-  width: 100%;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar {
-  padding-right: 1.55vw;
-  display: inline-block;
-  width: 14%;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar img, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar img, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-user-avatar img {
-  width: 3.61vw;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info {
-  vertical-align: top;
-  display: inline-block;
-  width: 84%;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-date, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-date, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-date {
-  font-size: 0.62vw;
-  color: #bfbfbf;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-user-name, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-user-name, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-user-name {
-  font-size: 0.92vw;
-  color: #191919;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-detail, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-detail, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info .sub-comment-detail {
-  font-size: 0.82vw;
-  color: #595959;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button {
-  font-size: 0.82vw;
-  color: #191919;
-  height: 2vw;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  border-radius: 1vw;
-  border: 0px;
-}
-.page-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button:hover, .entry-content .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button:hover, .entry-summary .comment-list .comment-items .comment-info .sub-comment .sub-comment-info button:hover {
-  color: #fff;
-  background: linear-gradient(to right, #df2176, #fac091);
-}
-.page-content .comment-list .sub-comment, .entry-content .comment-list .sub-comment, .entry-summary .comment-list .sub-comment {
-  margin-top: 1.55vw;
-  float: left;
-  width: 100%;
-}
-.page-content .comment-list .sub-comment .user-avatar, .entry-content .comment-list .sub-comment .user-avatar, .entry-summary .comment-list .sub-comment .user-avatar {
-  padding-right: 1.55vw;
-  display: inline-block;
-}
-.page-content .comment-list .sub-comment .user-avatar img, .entry-content .comment-list .sub-comment .user-avatar img, .entry-summary .comment-list .sub-comment .user-avatar img {
-  width: 3.61vw;
-}
-.page-content .comment-list .sub-comment .comment-info, .entry-content .comment-list .sub-comment .comment-info, .entry-summary .comment-list .sub-comment .comment-info {
-  padding-left: 1.55vw;
-  vertical-align: middle;
-  display: inline-block;
-}
-.page-content .comment-list .sub-comment .comment-info .comment-date, .entry-content .comment-list .sub-comment .comment-info .comment-date, .entry-summary .comment-list .sub-comment .comment-info .comment-date {
-  font-size: 0.62vw;
-  color: #bfbfbf;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .sub-comment .comment-info .user-name, .entry-content .comment-list .sub-comment .comment-info .user-name, .entry-summary .comment-list .sub-comment .comment-info .user-name {
-  font-size: 0.92vw;
-  color: #191919;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .sub-comment .comment-info .comment-detail, .entry-content .comment-list .sub-comment .comment-info .comment-detail, .entry-summary .comment-list .sub-comment .comment-info .comment-detail {
-  font-size: 0.82vw;
-  color: #595959;
-  margin-bottom: 0.5vw;
-}
-.page-content .comment-list .sub-comment .comment-info button, .entry-content .comment-list .sub-comment .comment-info button, .entry-summary .comment-list .sub-comment .comment-info button {
-  font-size: 0.82vw;
-  color: #191919;
-  height: 2vw;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  border-radius: 1vw;
-  border: 0px;
-}
-.page-content .comment-list .sub-comment .comment-info button:hover, .entry-content .comment-list .sub-comment .comment-info button:hover, .entry-summary .comment-list .sub-comment .comment-info button:hover {
-  color: #fff;
-  background: linear-gradient(to right, #df2176, #fac091);
-}
-.page-content .comment-form, .entry-content .comment-form, .entry-summary .comment-form {
-  margin-top: 3.1vw;
-}
-.page-content .comment-form .header, .entry-content .comment-form .header, .entry-summary .comment-form .header {
-  font-size: 1.24vw;
-  color: #191919;
-  margin-bottom: 2vw;
-}
-.page-content .comment-form input, .entry-content .comment-form input, .entry-summary .comment-form input {
-  width: 100%;
-  height: 2.57vw;
-  font-size: 0.82vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  margin-bottom: 1vw;
-  border-radius: 0px;
-  border: 1px solid #ebebeb;
-}
-.page-content .comment-form input::placeholder, .entry-content .comment-form input::placeholder, .entry-summary .comment-form input::placeholder {
-  color: #bfbfbf;
-}
-.page-content .comment-form input:focus, .entry-content .comment-form input:focus, .entry-summary .comment-form input:focus {
-  border: 1px solid #1e1e27;
-  outline: none;
-}
-.page-content .comment-form textarea, .entry-content .comment-form textarea, .entry-summary .comment-form textarea {
-  font-size: 0.82vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  margin-bottom: 1vw;
-  border-radius: 0px;
-  border: 1px solid #ebebeb;
-  resize: none;
-}
-.page-content .comment-form textarea::placeholder, .entry-content .comment-form textarea::placeholder, .entry-summary .comment-form textarea::placeholder {
-  color: #bfbfbf;
-}
-.page-content .comment-form textarea:focus, .entry-content .comment-form textarea:focus, .entry-summary .comment-form textarea:focus {
-  border: 1px solid #1e1e27;
-  outline: none;
-}
-.page-content .comment-form button, .entry-content .comment-form button, .entry-summary .comment-form button {
-  height: 2.2vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  font-size: 0.72vw;
-  color: #fff;
-  text-transform: uppercase;
-  border: 0px;
-  border-radius: 1.1vw;
-  background: linear-gradient(to right, #df2176, #fac091);
-}
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+.posted-on {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.posted-on a {
+  color: red;
+  border-bottom: 0px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.cat-links a {
+  text-decoration: none;
+  background: #eff1f4;
+  text-transform: uppercase;
+  color: #bfbfbf;
+  font-size: 12px;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+.byline {
+  margin-left: 20px;
+  color: #bfbfbf;
+  font-size: 12px;
+}
+.byline a {
+  color: #595959;
+  font-size: 14px;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+.comments-link {
+  color: #bfbfbf;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.comments-link a {
+  color: #bfbfbf;
+  text-decoration: none;
 }
 /*--------------------------------------------------------------
  ## Comments

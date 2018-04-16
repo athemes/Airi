@@ -11,54 +11,61 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				atu_posted_on();
+				// atu_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				atu_posted_on();
+		?>
+		<div class="entry-meta">
+			<?php 
+				atu_entry_footer(); 
 				atu_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			?>
+		</div>
 		    
   		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	</header><!-- .entry-header -->
 
-	<?php atu_post_thumbnail(); ?>
 
+
+	<?php atu_post_thumbnail(); ?>
+   
 	<div class="entry-content">
-		<div class="post-date"> 26 Nov 2018 </div>
-		<div class="post-title"> 15 Best Interior Design WordPress Themes 2018</div>
-		<div class="post-info">
-			<button class="post-category">Development</button>
-			<span class="post-by">by <strong>Joe Fylan</strong></span>
-			<span class="post-comments-number"><i class="far fa-comments"></i>&nbsp 06 Comments</span>
-		</div>
-		<div class="post-image">
-			<img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" />
-		</div>
-		<div class="post-content">
-			<p> One of the most important parts of any healthy lifestyle, though, is a willingness to learn from those who’ve already been around for a bit. It seems like a good place to start. You might notice there’s a bit of a variety, almost as if one lifestyle doesn’t fit all. </p>
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-			<div class="strong-sentence">
-				<div class="bracket">“</div>
-				<div class="content">
-					“If you’re going to try, go all the way. There is no other feeling like that. You will be alone with the gods, and the nights will flame with fire. You will ride life straight to perfect laughter. It’s the only good fight there is.”
-					<p>
-						<span class="sentence-owner">Ollie Schneider -</span>
-						<span class="owner-position">CEO DeerCreative</span>
-					</p> 
-				</div>
-			</div>
-			<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-		</div>
+
+		<?php
+		if (atu_post_thumbnail() ) ?>
+		<p><img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" /></p>
+		<?php
+		the_content( sprintf(
+			wp_kses(
+				/* translators: %s: Name of current post. Only visible to screen readers */
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'atu' ),
+				array(
+					'span' => array(
+						'class' => array(),
+					),
+				)
+			),
+			get_the_title()
+		) );
+
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'atu' ),
+			'after'  => '</div>',
+		) );
+		?>
 		<div class="share-buttons">
 			<span><button>Multippopuse</button> </span>
 			<span><button>Design</button> </span>
@@ -67,65 +74,8 @@
 			<span class="social-icon"><i class="fab fa-google-plus-g"></i></i></span>
 			<span class="social-icon"><i class="fab fa-twitter"></i></i></span>
 			<span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-			<span><label>Share:</label></span>
+ 			<span><label>Share:</label></span>
 		</div>
-		<div class="comment-list">
-			<div class="header">2 Comments</div>
-			<div class="comment-items">
-				<div class="user-avatar">
-					<img src="<?php echo get_template_directory_uri() ?>/images/avatar3.png">
-				</div>
-				<div class="comment-info">
-					<div class="comment-date">27 Aug 2016</div>
-					<div class="user-name">Brandon Kelley</div>
-					<div class="comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi</div>
-					<div>
-						<span><button>like</button> </span>
-						<span><button>reply</button> </span>
-					</div>
-					<div class="sub-comment">
-						<div class="sub-user-avatar">
-							<img src="<?php echo get_template_directory_uri() ?>/images/avatar2.png">
-						</div>
-						<div class="sub-comment-info">
-							<div class="sub-comment-date">27 Aug 2016</div>
-							<div class="sub-user-name">Brandon Kelley</div>
-							<div class="sub-comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </div>
-							<div>
-								<span><button>like</button> </span>
-								<span><button>reply</button> </span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="comment-items">
-				<div class="user-avatar">
-					<img src="<?php echo get_template_directory_uri() ?>/images/avatar1.png">
-				</div>
-				<div class="comment-info">
-					<div class="comment-date">27 Aug 2016</div>
-					<div class="user-name">Leander Tee</div>
-					<div class="comment-detail">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi </div>
-					<div>
-						<span><button>like</button> </span>
-						<span><button>reply</button> </span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="comment-form">
-			<div class="header"><sharp>Leave A Comment</sharp></div>
-			<input type="text" name="name" placeholder="Name" />
-			<input type="text" name="email" placeholder="Email" />
-			<input type="text" name="website" placeholder="Website" />
-			<textarea rows="4" name="message" placeholder="Message"></textarea>
-			<button>send message</button>
-		</div>
-		
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php atu_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
