@@ -1,11 +1,12 @@
 .no-sidebar {
 	.content-area {
 		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 100px;
+		margin-right: 100px;
 	}
 
 	.site-main {
+		margin-left: 100px;
 		margin-right: 0;
 	}
 }

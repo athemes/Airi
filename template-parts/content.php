@@ -11,27 +11,42 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				atu_posted_on();
+				// atu_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				atu_posted_on();
+		?>
+		<div class="entry-meta">
+			<?php 
+				atu_entry_footer(); 
 				atu_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			?>
+		</div>
+		    
+  		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	</header><!-- .entry-header -->
 
-	<?php atu_post_thumbnail(); ?>
 
+
+	<?php atu_post_thumbnail(); ?>
+   
 	<div class="entry-content">
+
+		<?php
+		if (atu_post_thumbnail() ) ?>
+		<p><img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" /></p>
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -51,9 +66,16 @@
 			'after'  => '</div>',
 		) );
 		?>
+		<div class="share-buttons">
+			<span><button>Multippopuse</button> </span>
+			<span><button>Design</button> </span>
+			<span><button>Ideas</button> </span>
+			<span class="social-icon"><i class="fab fa-pinterest"></i></span>
+			<span class="social-icon"><i class="fab fa-google-plus-g"></i></i></span>
+			<span class="social-icon"><i class="fab fa-twitter"></i></i></span>
+			<span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+ 			<span><label>Share:</label></span>
+		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php atu_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
