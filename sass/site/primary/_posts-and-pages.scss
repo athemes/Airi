@@ -13,10 +13,94 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	p {
+		img {
+				width: 100%;
+		}
+	}
+
+	.share-buttons {
+ 		margin-top: 1.55em;
+ 		border-top: 1px solid #eee;
+ 		padding-top: 1.55em;
+ 
+ 		button {
+ 			padding-left: 2em;
+ 			padding-right: 2em;
+ 			border: 0px;
+ 			font-size: 12px;
+ 			text-transform: uppercase;
+ 			background: #f3f3f3;
+ 		}
+
+ 		button:hover {
+ 			color: #191919;
+ 		}
+ 
+ 		label {
+ 			float: right;
+ 			font-size: 16px;
+ 		}
+ 
+		.social-icon {
+			float: right;
+			font-size: 16px;
+			padding-left: 1em;
+		}
+	}
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.posted-on {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	a {
+		color: red;
+		border-bottom: 0px;
+		text-decoration: none;
+		font-size: 14px;
+	}
+}
+
+.cat-links {
+	a {
+		text-decoration: none;
+		background: #eff1f4;
+		text-transform: uppercase;
+		color: #bfbfbf;
+		font-size: 12px;
+		padding: 10px 20px;
+		border-radius: 15px;
+	}
+}
+
+.byline {
+	margin-left: 20px;
+	color: #bfbfbf;
+	font-size: 12px;
+
+	a {
+		color: #595959;
+		font-size: 14px;
+		padding: 0px 20px;
+		text-decoration: none;
+	}
+}
+
+.comments-link {
+	color: #bfbfbf;
+	font-size: 14px;
+	text-transform: uppercase;
+
+	a {
+		color: #bfbfbf;
+		text-decoration: none;
+	}
+}
+
+
