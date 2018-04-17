@@ -35,7 +35,6 @@
 			?>
 		</div>
 		    
-  		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	</header><!-- .entry-header -->
 
 
@@ -45,9 +44,10 @@
 	<div class="entry-content">
 
 		<?php
-		if (atu_post_thumbnail() ) ?>
+		if (!atu_post_thumbnail() ){ ?>
 		<p><img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" /></p>
-		<?php
+
+		<?php }
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */

@@ -27,8 +27,8 @@
  ## Links
  ## Menus
  # Accessibility
- # Alignments
- # Clearings
+ # A
+ # Clearingslignments
  # Widgets
  # Content
  ## Posts and pages
@@ -430,34 +430,48 @@ table {
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, .8);
+  border-radius: 15px;
+  background: #fff;
+  color: #191919;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: 0.6em 2em 0.5em;
+  text-transform: uppercase;
 }
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
+  outline: 0;
+}
+button:hover {
+  background: linear-gradient(to right, #df2176, #fac091);
+  color: #fff;
+}
+input[type="submit"] {
+  background: linear-gradient(to right, #df2176, #fac091);
+  padding: 1em 2em 1em;
+  border-radius: 2em;
+  color: #fff;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   color: #666;
+  padding: 10px;
+  width: 100%;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
-  color: #111;
+  border: 1px solid #191919;
+  outline: none;
 }
 select {
   border: 1px solid #ccc;
 }
 textarea {
   width: 100%;
+  resize: none;
 }
 /*--------------------------------------------------------------
  # Navigation
@@ -662,6 +676,8 @@ a:hover, a:active {
 }
 .page-content .share-buttons, .entry-content .share-buttons, .entry-summary .share-buttons {
   margin-top: 1.55vw;
+  border-top: 1px solid #eee;
+  padding-top: 1.55vw;
 }
 .page-content .share-buttons button, .entry-content .share-buttons button, .entry-summary .share-buttons button {
   height: 1.5vw;
@@ -671,6 +687,9 @@ a:hover, a:active {
   font-size: 0.62vw;
   text-transform: uppercase;
   background: #f3f3f3;
+}
+.page-content .share-buttons button:hover, .entry-content .share-buttons button:hover, .entry-summary .share-buttons button:hover {
+  color: #191919;
 }
 .page-content .share-buttons label, .entry-content .share-buttons label, .entry-summary .share-buttons label {
   float: right;
@@ -734,6 +753,52 @@ a:hover, a:active {
 }
 .bypostauthor {
   display: block;
+}
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+ol .comment-author {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+}
+ol .comment-author img {
+  width: 60%;
+}
+ol .comment-detail {
+  display: inline-block;
+  width: 84%;
+}
+ol .comment-detail .comment-meta a {
+  color: #bfbfbf;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+ol .comment-detail .comment-meta .fn {
+  color: #191919;
+  font-size: 18px;
+  text-decoration: none;
+  font-style: normal;
+}
+ol .comment-detail .comment-meta .fn a {
+  color: #191919;
+  font-size: 18px;
+}
+ol .comment-detail .reply {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+ol .comment-detail .reply a {
+  text-decoration: none;
+  color: inherit;
+}
+ol .comment-detail .like {
+  display: inline-block;
+  color: #191919;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

@@ -21,6 +21,8 @@
 
 	.share-buttons {
  		margin-top: 1.55vw;
+ 		border-top: 1px solid #eee;
+ 		padding-top: 1.55vw;
  
  		button {
  			height: 1.5vw;
@@ -30,6 +32,10 @@
  			font-size: 0.62vw;
  			text-transform: uppercase;
  			background: #f3f3f3;
+ 		}
+
+ 		button:hover {
+ 			color: #191919;
  		}
  
  		label {
