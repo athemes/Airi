@@ -16,7 +16,6 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	padding: 10px;
-	width: 100%;
 	border: 1px solid $color__border-input;
 
 	&:focus {
@@ -33,3 +32,4 @@ textarea {
 	width: 100%;
 	resize: none;
 }
+

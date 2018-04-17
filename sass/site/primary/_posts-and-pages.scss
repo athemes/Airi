@@ -20,16 +20,15 @@
 	}
 
 	.share-buttons {
- 		margin-top: 1.55vw;
+ 		margin-top: 1.55em;
  		border-top: 1px solid #eee;
- 		padding-top: 1.55vw;
+ 		padding-top: 1.55em;
  
  		button {
- 			height: 1.5vw;
- 			padding-left: 1vw;
- 			padding-right: 1vw;
+ 			padding-left: 2em;
+ 			padding-right: 2em;
  			border: 0px;
- 			font-size: 0.62vw;
+ 			font-size: 12px;
  			text-transform: uppercase;
  			background: #f3f3f3;
  		}
@@ -40,15 +39,13 @@
  
  		label {
  			float: right;
- 			font-size: 0.82vw;
- 			padding-top: 0.7vw;
+ 			font-size: 16px;
  		}
  
 		.social-icon {
 			float: right;
-			font-size: 0.82vw;
-			padding-top: 0.7vw;
-			padding-left: 0.82vw;
+			font-size: 16px;
+			padding-left: 1em;
 		}
 	}
 }

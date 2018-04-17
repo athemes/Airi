@@ -459,7 +459,6 @@ input[type="submit"] {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   color: #666;
   padding: 10px;
-  width: 100%;
   border: 1px solid #ccc;
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
@@ -675,16 +674,15 @@ a:hover, a:active {
   width: 100%;
 }
 .page-content .share-buttons, .entry-content .share-buttons, .entry-summary .share-buttons {
-  margin-top: 1.55vw;
+  margin-top: 1.55em;
   border-top: 1px solid #eee;
-  padding-top: 1.55vw;
+  padding-top: 1.55em;
 }
 .page-content .share-buttons button, .entry-content .share-buttons button, .entry-summary .share-buttons button {
-  height: 1.5vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 2em;
+  padding-right: 2em;
   border: 0px;
-  font-size: 0.62vw;
+  font-size: 12px;
   text-transform: uppercase;
   background: #f3f3f3;
 }
@@ -693,14 +691,12 @@ a:hover, a:active {
 }
 .page-content .share-buttons label, .entry-content .share-buttons label, .entry-summary .share-buttons label {
   float: right;
-  font-size: 0.82vw;
-  padding-top: 0.7vw;
+  font-size: 16px;
 }
 .page-content .share-buttons .social-icon, .entry-content .share-buttons .social-icon, .entry-summary .share-buttons .social-icon {
   float: right;
-  font-size: 0.82vw;
-  padding-top: 0.7vw;
-  padding-left: 0.82vw;
+  font-size: 16px;
+  padding-left: 1em;
 }
 .page-links {
   clear: both;
@@ -799,6 +795,9 @@ ol .comment-detail .reply a {
 ol .comment-detail .like {
   display: inline-block;
   color: #191919;
+}
+input[type="text"], input[type="email"], input[type="url"] {
+  width: 100%;
 }
 /*--------------------------------------------------------------
  # Infinite scroll
