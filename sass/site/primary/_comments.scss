@@ -4,3 +4,72 @@
 .bypostauthor {
 	display: block;
 }
+
+ol {
+	margin: 0px;
+	padding: 0px;
+	list-style:none;
+	border-bottom: 1px solid #eee;
+
+	ul {
+		list-style:none;
+	}
+
+	.comment-author {
+		display: inline-block;
+		vertical-align: top;
+    	width: 15%;
+
+    	img {
+    		width: 60%;
+    	}
+	}
+
+	.comment-detail {
+		display: inline-block;
+		width: 84%;
+
+		.comment-meta {
+			
+			a {
+				color: #bfbfbf;
+				font-size: 12px;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.fn {
+				color: #191919;
+				font-size: 18px;
+				text-decoration: none;
+				font-style: normal;
+
+				a {
+					color: #191919;
+					font-size: 18px;
+				}
+			}
+		}
+
+		.reply {
+			margin-bottom: 30px;
+			display: inline-block;
+			
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+
+		.like {
+			display: inline-block;
+			color: #191919;
+		}
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+	width: 100%;
+}

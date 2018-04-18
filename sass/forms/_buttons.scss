@@ -4,12 +4,13 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
+	border-radius: 15px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
+	color:  #191919;
 	@include font-size(0.75);
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .6em 2em .5em;
+	text-transform: uppercase;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -18,5 +19,18 @@ input[type="submit"] {
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+		outline: 0;
 	}
+}
+
+button:hover {
+	background: linear-gradient(to right, #df2176, #fac091);
+	color: #fff;
+}
+
+input[type="submit"] {
+	background: linear-gradient(to right, #df2176, #fac091);
+	padding: 1em 2em 1em;
+	border-radius: 2em;
+	color: #fff;
 }
