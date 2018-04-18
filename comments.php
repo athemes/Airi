@@ -73,8 +73,22 @@ if ( post_password_required() ) {
         'comment_notes_after' => '',
         'comment_notes_before' => '',
 	);
-
-	comment_form($comments_args);
+	if (!is_user_logged_in()) {  
+		comment_form($comments_args);
+	}  
+	else{  
+		$comments_args = array(
+        // change the title of send button 
+        'label_submit'=>'Send Message',
+        // change the title of the reply section
+        'title_reply'=>'Reave A Comment',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        'comment_notes_before' => '',
+        'comment_field' => '<p class="comment-form-comment"><label for="comment"></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" aria-required="true" placeholder="Message" required="required"></textarea></p>',
+		);
+		comment_form($comments_args);
+	}  
 	?>
 
 </div><!-- #comments -->

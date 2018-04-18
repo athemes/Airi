@@ -11,6 +11,10 @@ ol {
 	list-style:none;
 	border-bottom: 1px solid #eee;
 
+	ul {
+		list-style:none;
+	}
+
 	.comment-author {
 		display: inline-block;
 		vertical-align: top;

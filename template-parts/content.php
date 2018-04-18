@@ -45,7 +45,7 @@
 
 		<?php
 		if (!atu_post_thumbnail() ){ ?>
-		<p><img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" /></p>
+		  <p><img src="<?php echo get_template_directory_uri() ?>/images/post_image.png" /></p>
 
 		<?php }
 		the_content( sprintf(
@@ -65,17 +65,18 @@
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'atu' ),
 			'after'  => '</div>',
 		) );
-		?>
-		<div class="share-buttons">
-			<span><button>Multippopuse</button> </span>
-			<span><button>Design</button> </span>
-			<span><button>Ideas</button> </span>
-			<span class="social-icon"><i class="fab fa-pinterest"></i></span>
-			<span class="social-icon"><i class="fab fa-google-plus-g"></i></i></span>
-			<span class="social-icon"><i class="fab fa-twitter"></i></i></span>
-			<span class="social-icon"><i class="fab fa-facebook-f"></i></span>
- 			<span><label>Share:</label></span>
-		</div>
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { ?>
+			<div class="share-buttons">
+				<span><button>Multippopuse</button> </span>
+				<span><button>Design</button> </span>
+				<span><button>Ideas</button> </span>
+				<span class="social-icon"><i class="fab fa-pinterest"></i></span>
+				<span class="social-icon"><i class="fab fa-google-plus-g"></i></i></span>
+				<span class="social-icon"><i class="fab fa-twitter"></i></i></span>
+				<span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+	 			<span><label>Share:</label></span>
+			</div><?php
+		} ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

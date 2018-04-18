@@ -682,6 +682,7 @@ a:hover, a:active {
   padding-left: 2em;
   padding-right: 2em;
   border: 0px;
+  border-radius: 0px;
   font-size: 12px;
   text-transform: uppercase;
   background: #f3f3f3;
@@ -755,6 +756,9 @@ ol {
   padding: 0px;
   list-style: none;
   border-bottom: 1px solid #eee;
+}
+ol ul {
+  list-style: none;
 }
 ol .comment-author {
   display: inline-block;
