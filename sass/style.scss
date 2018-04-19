@@ -104,3 +104,203 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+.single {
+	.site-content {
+		margin: 8% 13%;
+		padding: 5% 10%; 
+		border: 1px solid #EEEEEE;
+		background: #FFFFFF;
+		box-shadow: 0 15px 32px rgba(0, 0, 0, 0.14);
+
+		.post {
+			.entry-meta {
+				.posted-on {
+					letter-spacing: 3px;
+					text-transform: uppercase;
+
+					a {
+						color: red;
+						text-decoration: none;
+						font-size: 14px;
+					}
+				}
+
+				.cat-links {
+					a {
+						text-decoration: none;
+						background: #eff1f4;
+						text-transform: uppercase;
+						color: #bfbfbf;
+						font-size: 12px;
+						padding: 10px 20px;
+						border-radius: 15px;
+					}
+				}
+
+				.byline {
+					margin-left: 20px;
+					color: #bfbfbf;
+					font-size: 12px;
+
+					a {
+						color: #595959;
+						font-size: 14px;
+						padding: 0px 20px;
+						text-decoration: none;
+					}
+				}
+
+				.comments-link {
+					color: #bfbfbf;
+					font-size: 14px;
+					text-transform: uppercase;
+
+					a {
+						color: #bfbfbf;
+						text-decoration: none;
+					}
+				}
+				
+			}
+			.post-thumbnail {
+				margin-top: 2em;
+			}
+			.entry-content {
+				.share-buttons {
+			 		margin-top: 1.55em;
+			 		border-top: 1px solid #eee;
+			 		padding-top: 1.55em;
+			 
+			 		button {
+			 			padding: .6em 2em .5em;
+			 			border: 0px;
+			 			border-radius: 0px;
+			 			font-size: 12px;
+			 			text-transform: uppercase;
+			 			background: #f3f3f3;
+			 		}
+
+			 		button:hover {
+			 			color: #191919;
+			 		}
+			 
+			 		label {
+			 			float: right;
+			 			font-size: 16px;
+			 		}
+			 
+					.social-icon {
+						float: right;
+						font-size: 16px;
+						padding-left: 1em;
+						color: #191919;
+					}
+				}
+			}
+		}
+
+		.comments-area {
+			ol {
+				margin: 0px;
+				padding: 0px;
+				list-style:none;
+				border-bottom: 1px solid #eee;
+
+				ul {
+					list-style:none;
+				}
+
+				.comment-author {
+					display: inline-block;
+					vertical-align: top;
+			    	width: 15%;
+
+			    	.avatar {
+			    		width: 60px;
+			    		height: 60px;
+			    		position: absolute;
+			    	}
+				}
+
+				.comment-detail {
+					display: inline-block;
+					width: 84%;
+
+					.comment-meta {
+						
+						a {
+							color: #bfbfbf;
+							font-size: 12px;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+
+						.fn {
+							color: #191919;
+							font-size: 18px;
+							text-decoration: none;
+							font-style: normal;
+
+							a {
+								color: #191919;
+								font-size: 18px;
+							}
+						}
+					}
+
+					.reply {
+						margin-bottom: 30px;
+						display: inline-block;
+						
+						a {
+							text-decoration: none;
+							color: inherit;
+						}
+					}
+
+					.like {
+						display: inline-block;
+						color: #191919;
+					}
+
+					button {
+						background: #fff;
+						border-radius: 2em;
+						padding: .6em 2em .5em;
+					}
+
+					button:hover {
+						background: linear-gradient(to right, #df2176, #fac091);
+						color: #fff;
+						border-radius: 2em;
+					}
+				}
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="url"],
+			textarea {
+				width: 100%;
+				padding: 10px;
+				resize: none;
+
+				&:focus {
+					border: 1px solid #191919;
+					outline: none;
+				}
+
+			}
+
+			input[type="submit"] {
+				background: linear-gradient(to right, #df2176, #fac091);
+				padding: 1em 2em 1em;
+				border-radius: 2em;
+				color: #fff;
+			}
+
+		}
+	}
+}
+

@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $atu_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'atu' ),
+					esc_html__( 'One Comments', 'atu' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $atu_comment_count, 'comments title', 'atu' ) ),
+					esc_html( _nx( '%1$s', '%1$s Comments', $atu_comment_count, 'comments title', 'atu' ) ),
 					number_format_i18n( $atu_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -49,12 +49,7 @@ if ( post_password_required() ) {
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
-			?>
+			<?php wp_list_comments( 'type=comment&callback=atu_theme_comment' ); ?>
 		</ol><!-- .comment-list -->
 
 		<?php
@@ -69,7 +64,31 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$comments_args = array(
+        // change the title of send button 
+        'label_submit'=>'Send Message',
+        // change the title of the reply section
+        'title_reply'=>'Reave A Comment',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        'comment_notes_before' => '',
+	);
+	if (!is_user_logged_in()) {  
+		comment_form($comments_args);
+	}  
+	else{  
+		$comments_args = array(
+        // change the title of send button 
+        'label_submit'=>'Send Message',
+        // change the title of the reply section
+        'title_reply'=>'Reave A Comment',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        'comment_notes_before' => '',
+        'comment_field' => '<p class="comment-form-comment"><label for="comment"></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" aria-required="true" placeholder="Message" required="required"></textarea></p>',
+		);
+		comment_form($comments_args);
+	}  
 	?>
 
 </div><!-- #comments -->
