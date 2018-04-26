@@ -8,78 +8,78 @@
  */
 
 if ( ! function_exists( 'atu_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
-	function atu_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Atu, use a find and replace
-		 * to change 'atu' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'atu', get_template_directory() . '/languages' );
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
+    function atu_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on Atu, use a find and replace
+         * to change 'atu' to the name of your theme in all the template files.
+         */
+        load_theme_textdomain( 'atu', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'atu' ),
-		) );
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menus( array(
+            'menu-1' => esc_html__( 'Primary', 'atu' ),
+        ) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'atu_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+        // Set up the WordPress core custom background feature.
+        add_theme_support( 'custom-background', apply_filters( 'atu_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+        // Add theme support for selective refresh for widgets.
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
-	}
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ) );
+    }
 endif;
 add_action( 'after_setup_theme', 'atu_setup' );
 
@@ -91,10 +91,10 @@ add_action( 'after_setup_theme', 'atu_setup' );
  * @global int $content_width
  */
 function atu_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'atu_content_width', 640 );
+    // This variable is intended to be overruled from themes.
+    // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+    $GLOBALS['content_width'] = apply_filters( 'atu_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'atu_content_width', 0 );
 
@@ -104,15 +104,15 @@ add_action( 'after_setup_theme', 'atu_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function atu_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'atu' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'atu' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Sidebar', 'atu' ),
+        'id'            => 'sidebar-1',
+        'description'   => esc_html__( 'Add widgets here.', 'atu' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'atu_widgets_init' );
 
@@ -120,15 +120,18 @@ add_action( 'widgets_init', 'atu_widgets_init' );
  * Enqueue scripts and styles.
  */
 function atu_scripts() {
-	wp_enqueue_style( 'atu-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'atu-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+    wp_enqueue_style( 'work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet' );
+    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css' );
 
-	wp_enqueue_script( 'atu-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'atu-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'atu-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'atu-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'atu_scripts' );
 
@@ -156,12 +159,83 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+    require get_template_directory() . '/inc/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+    require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load Social Menu widget file.
+ */
+
+require get_template_directory() . '/inc/social_menu_widget.php';
+
+/**
+ * Return the name of the css class for the footer sidebar and the number of columns.
+ * @return array
+ */
+function check_footer_sidebar_columns(){
+    $columns = get_theme_mod('footer_widgets_columns', 4);
+    if($columns > 4 || $columns < 4) {
+        $columns = 4;
+    }
+    $class_widget = 'col-sm-6 col-md-3';
+    if($columns === 3){
+        $class_widget = 'col-sm-4';
+    }elseif ($columns === 2){
+        $class_widget = 'col-sm-6';
+    }elseif ($columns === 1){
+        $class_widget = '';
+    }
+    return [
+        'class_name'    =>  $class_widget,
+        'col'           =>  $columns
+    ];
+}
+
+add_action( 'widgets_init', 'register_atu_footer_widget' );
+function register_atu_footer_widget(){
+    register_sidebar( array(
+        'name'          => 'Footer',
+        'id'            => 'footer_sidebar',
+        'description'   => 'Widgets in footer',
+        'class'         => '',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => "</li>\n",
+        'before_title'  => '<h3 class="widgettitle">',
+        'after_title'   => "</h3>\n",
+    ) );
+}
+
+function cur_target_sidebar_add_classes_to_params($params) {
+    $sidebar_id = $params[0]['id'];
+    if($sidebar_id === 'footer_sidebar'){
+        $registered_widgets = wp_get_sidebars_widgets();
+        if(!isset($registered_widgets[$sidebar_id]) || !is_array($registered_widgets[$sidebar_id])) { // Check if the current sidebar has no widgets
+            return $params; // No widgets in this sidebar... bail early.
+        }
+
+        if(isset($GLOBALS['widget_num'])) { // See if the counter array has an entry for this sidebar
+            $GLOBALS['widget_num']++;
+        } else { // If not, create it starting with 1
+            $GLOBALS['widget_num'] = 1;
+        }
+
+        extract(check_footer_sidebar_columns(), EXTR_OVERWRITE);//class name and columns number
+
+        if($GLOBALS['widget_num'] > $col){
+            unset($params[0]);
+            return $params;
+        }
+
+        $params[0]['before_widget'] = preg_replace('/class=\"/', 'class="' . $class_name . ' ', $params[0]['before_widget'], 1);
+
+    }
+    return $params;
+}
+add_filter('dynamic_sidebar_params','cur_target_sidebar_add_classes_to_params');
