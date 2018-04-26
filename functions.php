@@ -180,10 +180,7 @@ require get_template_directory() . '/inc/social_menu_widget.php';
  * @return array
  */
 function check_footer_sidebar_columns(){
-    $columns = get_theme_mod('footer_widgets_columns', 4);
-    if($columns > 4 || $columns < 4) {
-        $columns = 4;
-    }
+    $columns = get_theme_mod('footer_widgets_columns', 3);
     $class_widget = 'col-sm-6 col-md-3';
     if($columns === 3){
         $class_widget = 'col-sm-4';
