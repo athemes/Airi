@@ -37,7 +37,7 @@ class Atu_Social extends WP_Widget {
     }
 
     function update( $new_instance, $old_instance ) {
-        $instance['title'] = sanitize_text_field($new_instance['title']);
+        $instance['title'] = sanitize_text_field($new_instance['title']); 
         $instance['nav_menu'] = (int) $new_instance['nav_menu'];
         return $instance;
     }
@@ -59,7 +59,7 @@ class Atu_Social extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select your social menu:', 'atu'); ?></label>
             <select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
-                <option value="0"><?php _e( '&mdash; Select &mdash;', 'leto' ) ?></option>
+                <option value="0"><?php _e( '&mdash; Select &mdash;', 'atu' ) ?></option>
                 <?php
                 foreach ( $menus as $menu ) {
                     echo '<option value="' . $menu->term_id . '"'

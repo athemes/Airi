@@ -192,5 +192,5 @@ function atu_register_footer_widget(){
 add_action( 'widgets_init', 'atu_register_footer_widget' );
 
 add_action( 'atu_footer', function () {
-    require 'sidebar-footer.php';
+    get_sidebar( 'footer' );
 } );
