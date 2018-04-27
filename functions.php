@@ -121,9 +121,11 @@ add_action( 'widgets_init', 'atu_widgets_init' );
  */
 function atu_scripts() {
     wp_enqueue_style( 'atu-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
-    wp_enqueue_style( 'work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet' );
-    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css' );
+
+    wp_enqueue_style( 'atu-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0.0' );
+    wp_enqueue_style( 'atu-fontawesome', get_template_directory_uri() . '/css/fontawesome.css', array(), '5.0.10' );
+
+    wp_enqueue_style( 'atu-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet' );
 
     wp_enqueue_script( 'atu-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -149,6 +151,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/footer-functions.php';
 
 /**
  * Customizer additions.
@@ -169,70 +172,25 @@ if ( class_exists( 'WooCommerce' ) ) {
     require get_template_directory() . '/inc/woocommerce.php';
 }
 
-/**
- * Load Social Menu widget file.
- */
+require get_template_directory() . '/widgets/class-atu-social.php';
 
-require get_template_directory() . '/inc/social_menu_widget.php';
-
-/**
- * Return the name of the css class for the footer sidebar and the number of columns.
- * @return array
- */
-function check_footer_sidebar_columns(){
-    $columns = get_theme_mod('footer_widgets_columns', 3);
-    $class_widget = 'col-sm-6 col-md-3';
-    if($columns === 3){
-        $class_widget = 'col-sm-4';
-    }elseif ($columns === 2){
-        $class_widget = 'col-sm-6';
-    }elseif ($columns === 1){
-        $class_widget = '';
+function atu_register_footer_widget(){
+    for ( $i = 1; $i <= 4; $i++ ) {
+        register_sidebar( array(
+            'name'          => __( 'Footer column ', 'atu' ) . $i,
+            'id'            => 'footer-' . $i,
+            'description'   => '',
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
     }
-    return [
-        'class_name'    =>  $class_widget,
-        'col'           =>  $columns
-    ];
+
+    register_widget( 'Atu_Social' );
 }
+add_action( 'widgets_init', 'atu_register_footer_widget' );
 
-add_action( 'widgets_init', 'register_atu_footer_widget' );
-function register_atu_footer_widget(){
-    register_sidebar( array(
-        'name'          => 'Footer',
-        'id'            => 'footer_sidebar',
-        'description'   => 'Widgets in footer',
-        'class'         => '',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => "</li>\n",
-        'before_title'  => '<h3 class="widgettitle">',
-        'after_title'   => "</h3>\n",
-    ) );
-}
-
-function cur_target_sidebar_add_classes_to_params($params) {
-    $sidebar_id = $params[0]['id'];
-    if($sidebar_id === 'footer_sidebar'){
-        $registered_widgets = wp_get_sidebars_widgets();
-        if(!isset($registered_widgets[$sidebar_id]) || !is_array($registered_widgets[$sidebar_id])) { // Check if the current sidebar has no widgets
-            return $params; // No widgets in this sidebar... bail early.
-        }
-
-        if(isset($GLOBALS['widget_num'])) { // See if the counter array has an entry for this sidebar
-            $GLOBALS['widget_num']++;
-        } else { // If not, create it starting with 1
-            $GLOBALS['widget_num'] = 1;
-        }
-
-        extract(check_footer_sidebar_columns(), EXTR_OVERWRITE);//class name and columns number
-
-        if($GLOBALS['widget_num'] > $col){
-            unset($params[0]);
-            return $params;
-        }
-
-        $params[0]['before_widget'] = preg_replace('/class=\"/', 'class="' . $class_name . ' ', $params[0]['before_widget'], 1);
-
-    }
-    return $params;
-}
-add_filter('dynamic_sidebar_params','cur_target_sidebar_add_classes_to_params');
+add_action( 'atu_footer', function () {
+    require 'sidebar-footer.php';
+} );

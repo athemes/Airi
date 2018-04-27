@@ -184,3 +184,37 @@ msgstr ""
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
+
+#: widgets/class-atu-social.php:11
+msgid "Display your social profile"
+msgstr ""
+
+#: widgets/class-atu-social.php:12
+msgid "Atu: Social Profile"
+msgstr ""
+
+#: widgets/class-atu-social.php:50
+#, php-format
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr ""
+
+#: widgets/class-atu-social.php:58
+msgid ""
+"In order to display your social icons in a widget, all you need to do is go "
+"to <strong>Appearance > Menus</strong> and create a menu containing links to "
+"your social profiles, then assign that menu here. Supported networks: "
+"Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, "
+"Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance."
+msgstr ""
+
+#: widgets/class-atu-social.php:60
+msgid "Select your social menu:"
+msgstr ""
+
+#: widgets/class-atu-social.php:62
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: widgets/functions.php:181
+msgid "Footer column "
+msgstr ""

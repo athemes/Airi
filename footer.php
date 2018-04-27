@@ -8,22 +8,12 @@
  *
  * @package Atu
  */
-
 ?>
 
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-    <?php
-    if ( function_exists('dynamic_sidebar') ) : ?>
-        <div class="container footer-widgets-area">
-            <div class="row">
-                <?php
-                dynamic_sidebar('footer_sidebar');
-                ?>
-            </div>
-        </div>
-    <?php endif; ?>
+    <?php do_action( 'atu_footer' ); ?>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
