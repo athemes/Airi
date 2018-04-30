@@ -43,8 +43,8 @@ class Atu_Social extends WP_Widget {
     }
 
     function form( $instance ) {
-        $title 		= isset( $instance['title'] ) ? $instance['title'] : '';
-        $nav_menu 	= isset( $instance['nav_menu'] ) ? $instance['nav_menu'] : '';
+        $title 		= isset( $instance['title'] ) ? esc_html( $instance['title'] ) : '';
+        $nav_menu 	= isset( $instance['nav_menu'] ) ? esc_html( $instance['nav_menu'] ) : '';
         $menus = wp_get_nav_menus( array( 'orderby' => 'name' ) );
         if ( !$menus ) {
             echo '<p>'. sprintf( __('No menus have been created yet. <a href="%s">Create some</a>.', 'atu'), admin_url('nav-menus.php') ) .'</p>';
