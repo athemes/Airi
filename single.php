@@ -4,20 +4,21 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Atu
+ * @package Airi
  */
 
 get_header();
+
+$layout = airi_single_layout();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php echo esc_attr( $layout['type'] ); ?> <?php echo esc_attr( $layout['cols'] ); ?>">
 		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', 'single' );
 
 			the_post_navigation();
 
@@ -33,5 +34,7 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+if ( $layout['sidebar'] ) {
+	get_sidebar();
+}
 get_footer();

@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Atu
+ * @package Airi
  */
 
 /*
@@ -24,23 +24,21 @@ if ( post_password_required() ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
+	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-			$atu_comment_count = get_comments_number();
-			if ( '1' === $atu_comment_count ) {
+			$comment_count = get_comments_number();
+			if ( '1' === $comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'atu' ),
+					esc_html__( '1 comment', 'airi' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $atu_comment_count, 'comments title', 'atu' ) ),
-					number_format_i18n( $atu_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					/* translators: 1: comment count number */
+					esc_html( _nx( '%1$s comments', '%1$s comments', $comment_count, 'comments title', 'airi' ) ),
+					number_format_i18n( $comment_count )
 				);
 			}
 			?>
@@ -50,21 +48,21 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+				wp_list_comments( array(
+					'style'       => 'ol',
+					'short_ping'  => true,
+					'avatar_size' => '70',
+					'callback'	 => 'airi_comment_template'
+				) );
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php
-		the_comments_navigation();
+		<?php the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'atu' ); ?></p>
-			<?php
+		if ( ! comments_open() ) : ?>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'airi' ); ?></p>
+		<?php
 		endif;
 
 	endif; // Check for have_comments().

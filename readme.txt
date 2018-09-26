@@ -1,15 +1,15 @@
-=== Atu ===
+=== Airi ===
 
 Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, feairired-images, threaded-comments, translation-ready
 
-Requires at least: 4.5
+Requires at least: 4.0
 Tested up to: 4.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Atu.
+A starter theme called Airi.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-Atu includes support for Infinite Scroll in Jetpack.
+Airi includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

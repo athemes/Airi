@@ -1,28 +1,28 @@
 <?php
 /**
- * Atu functions and definitions
+ * Airi functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Atu
+ * @package Airi
  */
 
-if ( ! function_exists( 'atu_setup' ) ) :
+if ( ! function_exists( 'airi_setup' ) ) :
 	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
+	 * Sets up theme defaults and registers support for various WordPress feairires.
 	 *
 	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
+	 * runs before the init hook. The init hook is too late for some feairires, such
 	 * as indicating support for post thumbnails.
 	 */
-	function atu_setup() {
+	function airi_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Atu, use a find and replace
-		 * to change 'atu' to the name of your theme in all the template files.
+		 * If you're building a theme based on Airi, use a find and replace
+		 * to change 'airi' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'atu', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'airi', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -38,13 +38,16 @@ if ( ! function_exists( 'atu_setup' ) ) :
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 * @link https://developer.wordpress.org/themes/functionality/feairired-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size( 'airi-720', 720 );
+		add_image_size( 'airi-360-360', 360, 360, true );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'atu' ),
+			'menu-1' => esc_html__( 'Primary', 'airi' ),
 		) );
 
 		/*
@@ -59,8 +62,8 @@ if ( ! function_exists( 'atu_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'atu_custom_background_args', array(
+		// Set up the WordPress core custom background feairire.
+		add_theme_support( 'custom-background', apply_filters( 'airi_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +84,7 @@ if ( ! function_exists( 'atu_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'atu_setup' );
+add_action( 'after_setup_theme', 'airi_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,50 +93,165 @@ add_action( 'after_setup_theme', 'atu_setup' );
  *
  * @global int $content_width
  */
-function atu_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'atu_content_width', 640 );
+function airi_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'airi_content_width', 1170 );
 }
-add_action( 'after_setup_theme', 'atu_content_width', 0 );
+add_action( 'after_setup_theme', 'airi_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function atu_widgets_init() {
+function airi_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'atu' ),
+		'name'          => esc_html__( 'Sidebar', 'airi' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'atu' ),
+		'description'   => esc_html__( 'Add widgets here.', 'airi' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
+
+	//Footer widget areas
+	$widget_areas = get_theme_mod( 'footer_widget_areas', '4' );
+	for ( $i=1; $i <= $widget_areas; $i++ ) {
+		register_sidebar( array(
+			'name'          => __( 'Footer ', 'airi' ) . $i,
+			'id'            => 'footer-' . $i,
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+	}
+
+	register_widget( 'Airi_Social' );
+	register_widget( 'Airi_Recent_Posts' );
+
 }
-add_action( 'widgets_init', 'atu_widgets_init' );
+add_action( 'widgets_init', 'airi_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function atu_scripts() {
-	wp_enqueue_style( 'atu-style', get_stylesheet_uri() );
+function airi_scripts() {
+	wp_enqueue_style( 'airi-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'atu-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'airi-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'atu-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_style( 'airi-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
+
+	//Deregister FontAwesome from Elementor
+	wp_deregister_style( 'font-awesome' );
+
+	if ( !class_exists( 'Kirki_Fonts' ) ) {
+		wp_enqueue_style( 'airi-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600', array(), null );
+	}
+
+	//Load masonry
+	$blog_layout = airi_blog_layout();
+	if ( $blog_layout == 'layout-masonry' ) {
+		wp_enqueue_script( 'jquery-masonry' );
+	}
+
+	wp_enqueue_script( 'airi-scripts', get_template_directory_uri() . '/js/vendor/scripts.js', array( 'jquery' ), '20180223', true );
+
+	wp_enqueue_script( 'airi-scripts2', get_template_directory_uri() . '/js/vendor/jquery.sticky.js', array( 'jquery' ), '20180223', true );
+
+	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/main.js', array( 'jquery' ), '20180223', true );	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
-add_action( 'wp_enqueue_scripts', 'atu_scripts' );
+add_action( 'wp_enqueue_scripts', 'airi_scripts' );
+
+ /**
+ * Enqueue custom Elementor scripts
+ */
+function airi_elementor_scripts() {
+	wp_enqueue_script( 'airi-navigation', get_template_directory_uri() . '/js/vendor/navigation.js', array( 'jquery', 'jquery-slick', 'imagesloaded' ), '20180717', true );
+}
+add_action('elementor/frontend/after_register_scripts', 'airi_elementor_scripts');
+
+ /**
+ * Enqueue Bootstrap
+ */
+function airi_enqueue_bootstrap() {
+	wp_enqueue_style( 'airi-bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), true );
+}
+add_action( 'wp_enqueue_scripts', 'airi_enqueue_bootstrap', 9 );
 
 /**
- * Implement the Custom Header feature.
+ * Disable Elementor globals on theme activation
+ */
+function airi_disable_elementor_globals () {
+	update_option( 'elementor_disable_color_schemes', 'yes' );
+	update_option( 'elementor_disable_typography_schemes', 'yes' );
+}
+add_action('after_switch_theme', 'airi_disable_elementor_globals');
+
+/**
+ * Custom Elementor widgets
+ */
+function airi_register_elementor_widgets() {
+
+	if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
+
+		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-blog.php';
+		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-portfolio.php';
+		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-shop-categories.php';
+	}
+}
+add_action( 'elementor/widgets/widgets_registered', 'airi_register_elementor_widgets' );
+
+/**
+ * Elementor ID
+ */
+if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
+    define( 'ELEMENTOR_PARTNER_ID', 2128 );
+}
+
+/**
+ * Custom Elementor category
+ */
+function airi_block_category() {
+	
+	if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
+		\Elementor\Plugin::$instance->elements_manager->add_category( 
+		'airi-elements',
+		[
+			'title' => __( 'Airi Elements', 'airi' ),
+			'icon' => 'fa fa-plug',
+		],
+		1
+		);		
+	}	
+}
+add_action( 'elementor/elements/categories_registered', 'airi_block_category' );
+
+/**
+ * Elementor skins
+ */
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-google-maps-skin.php';
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php';
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php';
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php';
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php';
+require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php';
+
+/**
+ * Widgets
+ */
+require get_template_directory() . '/widgets/class-airi-social.php';
+require get_template_directory() . '/widgets/class-airi-recent-posts.php';
+
+/**
+ * Implement the Custom Header feairire.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
@@ -150,7 +268,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -165,3 +283,56 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load Learnpress compatibility file.
+ */
+if ( class_exists( 'LearnPress' ) ) {
+	require get_template_directory() . '/inc/compatibility/learnpress.php';
+}
+
+/**
+ * TGMPA
+ */
+require_once get_template_directory() . '/inc/tgmpa/class-tgm-plugin-activation.php';
+
+function airi_register_required_plugins() {
+
+	$plugins = array(
+
+		array(
+			'name'      => 'Elementor',
+			'slug'      => 'elementor',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Contact Form 7',
+			'slug'      => 'contact-form-7',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'MailChimp for WordPress',
+			'slug'      => 'mailchimp-for-wp',
+			'required'  => false,
+		),
+		array(
+			'name'      => 'Theme options',
+			'slug'      => 'kirki',
+			'required'  => false,
+		),
+	);	
+
+	$config = array(
+		'id'           => 'airi',
+		'default_path' => '',
+		'menu'         => 'tgmpa-install-plugins',
+		'has_notices'  => true,
+		'dismissable'  => true,
+		'dismiss_msg'  => '',
+		'is_automatic' => false,
+		'message'      => '',
+	);
+
+	tgmpa( $plugins, $config );
+}
+add_action( 'tgmpa_register', 'airi_register_required_plugins' );

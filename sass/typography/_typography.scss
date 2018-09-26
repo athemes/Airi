@@ -1,12 +1,16 @@
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+}
+
 body,
 button,
 input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
+	color: #595959;
 	line-height: $font__line-height-body;
 }
 

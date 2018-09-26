@@ -1,22 +1,35 @@
 button,
+.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6em 1em .4em;
+
+	color: #fff;
+	font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid $color_primary;
+    background-color: $color_primary;
+    padding: 14px 30px;
+    border-radius: 2px;
+    transition: all 0.3s;
+	cursor: pointer;
+	border-radius: 30px;
+
+    .menuStyle3 .top-bar & {
+    	color: #fff;
+    }
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		background-color: transparent;
+		color: #000;
 	}
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
+	.menuStyle3 .top-bar & {
+		&:hover {
+			background-color: transparent;
+			color: #000;
+		}		
 	}
 }

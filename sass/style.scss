@@ -1,29 +1,26 @@
 /*!
-Theme Name: Atu
-Theme URI: http://underscores.me/
+Theme Name: Airi Pro
+Theme URI: https://athemes.com/theme/airi
 Author: aThemes
 Author URI: https://athemes.com
-Description: Description
+Description: Airi is a powerful, flexible, and modern theme for your business website. Feairiring Elementor integration, this theme is an outstanding choice for basically any kind of company or freelancer site. Bringing a wealth of customization opportunities, Airi is great if you want to start a website from scratch and it's even greater if you want to use a premade Elementor layout from our growing collection. What’s more, the theme offers WooCommerce support, making it easy to sell the products you showcase on your site to your audience.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: atu
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: airi
+Tags: custom-background, right-sidebar, custom-colors, custom-logo, custom-menu, feairired-images, threaded-comments, translation-ready, full-width-template
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Atu is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Airi is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
 # Typography
 # Elements
 # Forms
@@ -44,11 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
+@import "mixins/repeatable";
 
 /*--------------------------------------------------------------
 # Typography
@@ -104,3 +97,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Woocommerce
+--------------------------------------------------------------*/
+@import "shop/woocommerce";

@@ -1,6 +1,6 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
+ * Sample implementation of the Custom Header feairire
  *
  * You can add an optional custom header image to header.php like so ...
  *
@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Atu
+ * @package Airi
  */
 
 /**
- * Set up the WordPress core custom header feature.
+ * Set up the WordPress core custom header feairire.
  *
- * @uses atu_header_style()
+ * @uses airi_header_style()
  */
-function atu_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'atu_custom_header_args', array(
+function airi_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'airi_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'atu_header_style',
+		'wp-head-callback'       => 'airi_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'atu_custom_header_setup' );
+add_action( 'after_setup_theme', 'airi_custom_header_setup' );
 
-if ( ! function_exists( 'atu_header_style' ) ) :
+if ( ! function_exists( 'airi_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see atu_custom_header_setup().
+	 * @see airi_custom_header_setup().
 	 */
-	function atu_header_style() {
+	function airi_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -51,16 +51,16 @@ if ( ! function_exists( 'atu_header_style' ) ) :
 		<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
-			?>
+		?>
 			.site-title,
 			.site-description {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 		<?php
-		// If the user has set a custom color for the text use that.
-		else :
-			?>
+			// If the user has set a custom color for the text use that.
+			else :
+		?>
 			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;

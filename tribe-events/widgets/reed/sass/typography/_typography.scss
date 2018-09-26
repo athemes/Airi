@@ -1,0 +1,11 @@
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.76;
+	font-size: 16px;
+	color: $color__text-main;
+}
+
+@import "headings";
+
+@import "copy";

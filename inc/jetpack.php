@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Atu
+ * @package Airi
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function atu_jetpack_setup() {
+function airi_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'atu_infinite_scroll_render',
+		'render'    => 'airi_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,32 +28,32 @@ function atu_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'atu-style',
+			'stylesheet' => 'airi-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
 			'author'     => '.byline',
 			'comment'    => '.comments-link',
 		),
-		'featured-images' => array(
+		'feairired-images' => array(
 			'archive'    => true,
 			'post'       => true,
 			'page'       => true,
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'atu_jetpack_setup' );
+add_action( 'after_setup_theme', 'airi_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function atu_infinite_scroll_render() {
+function airi_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
 			get_template_part( 'template-parts/content', 'search' );
 		else :
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', get_post_format() );
 		endif;
 	}
 }
