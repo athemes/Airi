@@ -34,6 +34,16 @@
 			var headerHeight = $('.site-header').outerHeight();
 			$('#masthead-sticky-wrapper').css('min-height', headerHeight);
 
+			//Help Edge with handling the menu background color
+			$window = $(window);
+			$window.scroll(function() {
+				if ( $window.scrollTop() <= 0 ) {
+					$('.menuStyle1 .sticky-wrapper').removeClass('is-sticky');
+				} else {
+					$('.menuStyle1 .sticky-wrapper').addClass('is-sticky');
+				}
+			});
+
 		} else {
 			$('.sticky-header .site-header, .sticky-header .main-navigation, .sticky-header .bottom-bar').unstick();
 		}
