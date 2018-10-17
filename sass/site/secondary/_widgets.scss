@@ -91,10 +91,16 @@
 		padding-top: 13px;
 		padding-bottom: 13px;
 		margin-right: -5px;
-		max-width: 190px;
+		width: 100%;
 	}
 	.search-submit {
-		vertical-align: top;
+		display: none;
+	}
+
+	.search-form {
+		label {
+			width: 100%;
+		}
 	}
 }
 

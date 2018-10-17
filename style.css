@@ -1846,10 +1846,13 @@ ul.header-search-cart .header-cart-link .count {
   padding-top: 13px;
   padding-bottom: 13px;
   margin-right: -5px;
-  max-width: 190px;
+  width: 100%;
 }
 .widget_search .search-submit {
-  vertical-align: top;
+  display: none;
+}
+.widget_search .search-form label {
+  width: 100%;
 }
 
 /* Custom recent posts widget */
