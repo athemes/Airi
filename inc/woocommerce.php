@@ -11,7 +11,7 @@
  * WooCommerce setup function.
  *
  * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-feairires-(zoom,-swipe,-lightbox)-in-3.0.0
+ * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
  *
  * @return void
  */

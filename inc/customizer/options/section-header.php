@@ -25,8 +25,6 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'menuStyle1' => esc_attr__( 'Basic 1 - inside header', 'airi' ),
 		'menuStyle2' => esc_attr__( 'Basic 2 - outside header', 'airi' ),
-		'menuStyle3' => esc_attr__( 'Extended 1 - finance style', 'airi' ),
-		'menuStyle4' => esc_attr__( 'Extended 2 - local business style', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -176,7 +174,7 @@ Airi_Kirki::add_field( 'airi', array(
 	'fields' => array(
 		'icon' => array(
 			'type'        => 'select',
-			'label'       => __( 'Social network', 'kirki' ),
+			'label'       => __( 'Social network', 'airi' ),
 			'choices'     => $social_networks,
 		),
 		'link_url' => array(

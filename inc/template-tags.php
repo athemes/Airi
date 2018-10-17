@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core feairires.
+ * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package Airi
  */

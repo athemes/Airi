@@ -1,19 +1,17 @@
 === Airi ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, feairired-images, threaded-comments, translation-ready
+Contributors: athemes
+Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.9
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
+License: GNU General Public License v3
 License URI: LICENSE
-
-A starter theme called Airi.
 
 == Description ==
 
-Description
+Airi is a powerful, flexible, and modern theme for your business website. Featuring Elementor integration, this theme is an outstanding choice for basically any kind of company or freelancer site. Bringing a wealth of customization opportunities, Airi is great if you want to start a website from scratch and it's even greater if you want to use a premade Elementor layout from our growing collection. What’s more, the theme offers WooCommerce support, making it easy to sell the products you showcase on your site to your audience.
 
 == Installation ==
 
@@ -25,14 +23,18 @@ Description
 
 = Does this theme support any plugins? =
 
-Airi includes support for Infinite Scroll in Jetpack.
-
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - September 26 2018 =
 * Initial release
 
 == Credits ==
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* FontAwesome http://fontawesome.io/ ,(C) Dave Gandy, [SIL](https://scripts.sil.org/OFL?)
+* Isotope http://isotope.metafizzy.co/, (C) Metafizzy, [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+* Bootstrap http://getbootstrap.com/, (C) 2011-2015 Twitter, Inc, [MIT](http://opensource.org/licenses/MIT)
+* Sticky Plugin http://stickyjs.com/. (C) Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
+* Screenshot image https://pixabay.com/en/laptop-table-technology-office-2434393/, (C) umeridrisi, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+* Screenshot image https://unsplash.com/photos/zNRITe8NPqY/, (C) Kevin Bhagat, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)

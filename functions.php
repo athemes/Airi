@@ -9,10 +9,10 @@
 
 if ( ! function_exists( 'airi_setup' ) ) :
 	/**
-	 * Sets up theme defaults and registers support for various WordPress feairires.
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some feairires, such
+	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
 	function airi_setup() {
@@ -38,7 +38,7 @@ if ( ! function_exists( 'airi_setup' ) ) :
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
-		 * @link https://developer.wordpress.org/themes/functionality/feairired-images-post-thumbnails/
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
 
@@ -62,7 +62,7 @@ if ( ! function_exists( 'airi_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feairire.
+		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'airi_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
@@ -159,9 +159,7 @@ function airi_scripts() {
 
 	wp_enqueue_script( 'airi-scripts', get_template_directory_uri() . '/js/vendor/scripts.js', array( 'jquery' ), '20180223', true );
 
-	wp_enqueue_script( 'airi-scripts2', get_template_directory_uri() . '/js/vendor/jquery.sticky.js', array( 'jquery' ), '20180223', true );
-
-	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/main.js', array( 'jquery' ), '20180223', true );	
+	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/custom.min.js', array( 'jquery' ), '20180223', true );	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -203,8 +201,6 @@ function airi_register_elementor_widgets() {
 	if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
 
 		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-blog.php';
-		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-portfolio.php';
-		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-shop-categories.php';
 	}
 }
 add_action( 'elementor/widgets/widgets_registered', 'airi_register_elementor_widgets' );
@@ -251,11 +247,6 @@ require get_template_directory() . '/widgets/class-airi-social.php';
 require get_template_directory() . '/widgets/class-airi-recent-posts.php';
 
 /**
- * Implement the Custom Header feairire.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -292,6 +283,11 @@ if ( class_exists( 'LearnPress' ) ) {
 }
 
 /**
+ * Demo content
+ */
+require_once dirname( __FILE__ ) . '/inc/demo-content/setup.php';
+
+/**
  * TGMPA
  */
 require_once get_template_directory() . '/inc/tgmpa/class-tgm-plugin-activation.php';
@@ -320,6 +316,11 @@ function airi_register_required_plugins() {
 			'slug'      => 'kirki',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'Demo content import',
+			'slug'      => 'one-click-demo-import',
+			'required'  => false,
+		),		
 	);	
 
 	$config = array(

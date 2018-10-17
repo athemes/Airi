@@ -88,7 +88,7 @@ msgstr ""
 msgid "Post Title"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:139, inc/compatibility/elementor/blocks/block-blog.php:175, inc/compatibility/elementor/blocks/block-blog.php:234, inc/compatibility/elementor/blocks/block-blog.php:298, inc/compatibility/elementor/blocks/block-portfolio.php:200, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-2.php:47, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-2.php:80, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-3.php:46, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-3.php:79, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-4.php:44, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin.php:45
+#: inc/compatibility/elementor/blocks/block-blog.php:139, inc/compatibility/elementor/blocks/block-blog.php:175, inc/compatibility/elementor/blocks/block-blog.php:234, inc/compatibility/elementor/blocks/block-blog.php:298, inc/compatibility/elementor/blocks/block-portfolio.php:200, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:47, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:80, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:46, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:79, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:44, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:45
 msgid "Color"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Background color"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:222, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-2.php:36, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-3.php:35, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-4.php:33
+#: inc/compatibility/elementor/blocks/block-blog.php:222, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:36, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:35, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:33
 msgid "Category"
 msgstr ""
 
@@ -117,7 +117,7 @@ msgid "Testimonials"
 msgstr ""
 
 #: inc/compatibility/elementor/blocks/block-portfolio.php:94
-msgid "Feairires list"
+msgid "Features list"
 msgstr ""
 
 #: inc/compatibility/elementor/blocks/block-portfolio.php:98
@@ -292,88 +292,112 @@ msgstr ""
 msgid "CTA box titles"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-2.php:26
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:26
 msgid "Style 3"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-2.php:69, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-3.php:68
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:69, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:68
 msgid "Comments"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-3.php:26
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:26
 msgid "Style 4"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin-4.php:24
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:24
 msgid "Style 5"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin.php:24
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:24
 msgid "Style 2"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin.php:33
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:33
 msgid "Read more link"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-athemes-blog-skin.php:110, inc/compatibility/elementor/skins/class-atu-athemes-blog-skin.php:127
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:110, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:127
 msgid "Read more >>"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:25
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:25
 msgid "Airi map"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:31
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:31
 msgid "London Eye, London, United Kingdom"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:36, inc/customizer/options/section-header.php:364, template-parts/menus/menu-menuStyle4.php:11
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:36, inc/customizer/options/section-header.php:364, template-parts/menus/menu-menuStyle4.php:11
 msgid "Address"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:53
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:53
 msgid "Note"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:58
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:58
 msgid "Please go here %s to find the latitude and longitute for your address."
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:58, inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:71
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:58, inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:71
 msgid "here"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:66
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:66
 msgid "API key"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:71
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:71
 msgid "Please go here %s to get your Google Maps API Key."
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:81
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:81
 msgid "Latitude"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:94
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:94
 msgid "Longitude"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-google-maps-skin.php:108
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:108
 msgid "Marker"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-image-icon-box-skin.php:26
+#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:26
 msgid "List style"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-atu-image-icon-box-skin.php:33
+#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:33
 msgid "General color"
 msgstr ""
 
 #: inc/compatibility/learnpress.php:14
 msgid "Free"
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:54
+msgid "A plugin is required to take advantage of this theme's features in the customizer."
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:55
+msgid "Install Kirki Toolkit now"
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:56
+msgid "Install Now"
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:59
+msgid "You have installed Kirki. Activate it to take advantage of this theme's features in the customizer."
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:60
+msgid "Activate Kirki Toolkit now"
+msgstr ""
+
+#: inc/customizer/kirki/include-kirki.php:61
+msgid "Activate Now"
 msgstr ""
 
 #: inc/customizer/options/section-blog.php:16
@@ -664,7 +688,7 @@ msgstr ""
 msgid "Available for menu types Extended 1"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:156
+#: inc/customizer/options/section-header.php:156, inc/customizer/options/section-header.php:179
 msgid "Social network"
 msgstr ""
 
@@ -724,16 +748,16 @@ msgstr ""
 msgid "Font families"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:27, inc/customizer/options/section-typography.php:45
-msgid "Control Label"
+#: inc/customizer/options/section-typography.php:27
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer/options/section-typography.php:45, inc/customizer/options/section-typography.php:80
+msgid "Body"
 msgstr ""
 
 #: inc/customizer/options/section-typography.php:63
 msgid "Font sizes"
-msgstr ""
-
-#: inc/customizer/options/section-typography.php:80
-msgid "Body"
 msgstr ""
 
 #: inc/customizer/options/section-typography.php:104
@@ -1242,46 +1266,50 @@ msgstr ""
 msgid "See this event"
 msgstr ""
 
-#: widgets/class-atu-recent-posts.php:20
+#: tribe-events/widgets/list-widget.php:126
+msgid "There are no upcoming %s at this time."
+msgstr ""
+
+#: widgets/class-airi-recent-posts.php:20
 msgid "Recent posts with thumbnails."
 msgstr ""
 
-#: widgets/class-atu-recent-posts.php:23
+#: widgets/class-airi-recent-posts.php:23
 msgid "Airi: Recent Posts"
 msgstr ""
 
-#: widgets/class-atu-recent-posts.php:135, widgets/class-atu-social.php:55
+#: widgets/class-airi-recent-posts.php:135, widgets/class-airi-social.php:55
 msgid "Title:"
 msgstr ""
 
-#: widgets/class-atu-recent-posts.php:138
+#: widgets/class-airi-recent-posts.php:138
 msgid "Number of posts to show:"
 msgstr ""
 
-#: widgets/class-atu-recent-posts.php:142
+#: widgets/class-airi-recent-posts.php:142
 msgid "Display post date?"
 msgstr ""
 
-#: widgets/class-atu-social.php:11
+#: widgets/class-airi-social.php:11
 msgid "Display your social profile"
 msgstr ""
 
-#: widgets/class-atu-social.php:12
+#: widgets/class-airi-social.php:12
 msgid "Airi: Social Profile"
 msgstr ""
 
-#: widgets/class-atu-social.php:50
+#: widgets/class-airi-social.php:50
 msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
 msgstr ""
 
-#: widgets/class-atu-social.php:58
+#: widgets/class-airi-social.php:58
 msgid "In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance."
 msgstr ""
 
-#: widgets/class-atu-social.php:60
+#: widgets/class-airi-social.php:60
 msgid "Select your social menu:"
 msgstr ""
 
-#: widgets/class-atu-social.php:62
+#: widgets/class-airi-social.php:62
 msgid "&mdash; Select &mdash;"
 msgstr ""

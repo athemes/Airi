@@ -24,7 +24,7 @@ Airi_Kirki::add_section( 'airi_section_fonts', array(
 Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'typography',
 	'settings'    => 'headings_font',
-	'label'       => esc_attr__( 'Control Label', 'airi' ),
+	'label'       => esc_attr__( 'Headings', 'airi' ),
 	'section'     => 'airi_section_fonts',
 	'default'     => array(
 		'font-family'    => 'Work Sans',
@@ -42,7 +42,7 @@ Airi_Kirki::add_field( 'airi', array(
 Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'typography',
 	'settings'    => 'body_font',
-	'label'       => esc_attr__( 'Control Label', 'airi' ),
+	'label'       => esc_attr__( 'Body', 'airi' ),
 	'section'     => 'airi_section_fonts',
 	'default'     => array(
 		'font-family'    => 'Work Sans',

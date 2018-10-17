@@ -35,7 +35,7 @@ function airi_jetpack_setup() {
 			'author'     => '.byline',
 			'comment'    => '.comments-link',
 		),
-		'feairired-images' => array(
+		'featured-images' => array(
 			'archive'    => true,
 			'post'       => true,
 			'page'       => true,

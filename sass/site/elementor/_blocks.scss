@@ -27,7 +27,7 @@
 	color: #35d7a4;
 	font-size: 24px;
 }
-.plan-feairire {
+.plan-feature {
 	padding: 10px;
 	color: #595959;
 
@@ -71,7 +71,7 @@
     margin-top: 5px;
     display: inline-block;	
 }
-.pricing-section .plan-item.feairired-plan .plan-header {
+.pricing-section .plan-item.featured-plan .plan-header {
 	background-color: #e64e4e;	
 }
 .pricing-section .elementor-button {
@@ -114,7 +114,7 @@
 	padding: 0;
 	margin-top: 0;
 }
-.pricing-section .feairired-plan .plan-item-inner {
+.pricing-section .featured-plan .plan-item-inner {
 	box-shadow: 0 20px 32px -8px rgba(0, 0, 0, 0.1);	
 }
 
@@ -607,7 +607,7 @@
 		}
 	}
 
-	.feairire-link {
+	.feature-link {
 		display: table;
 		text-transform: uppercase;
 		color: #bfbfbf;
@@ -1189,4 +1189,56 @@
 		}
 	}
 
+}
+
+/* Slider block */
+.athemes-hero-wrapper {
+	.slick-slide {
+		height: 500px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	.elementor-slick-slider ul.slick-dots li {
+	
+		margin: 3px;
+		width: 12px;
+		height: 12px;
+
+		button {
+			background: #adadad;
+			padding: 0;
+			border-radius: 0;
+			width: 12px;
+			height: 12px;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&.slick-active {
+			button {
+				background: #1c1c1c;
+			}
+		}
+	}
+	.slide-title {
+		margin-bottom: 30px;
+	}
+	.button {
+		margin-top: 45px;
+		padding-left: 48px;
+		padding-right: 48px;
+		display: inline-block;
+	}
+	.slide-inner {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		padding-left: 60px;
+	}
+	.elementor-slick-slider ul.slick-dots {
+		bottom: 25px;
+	}
 }

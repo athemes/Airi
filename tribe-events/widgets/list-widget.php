@@ -44,11 +44,11 @@ if ( $posts ) : ?>
 				<div class="events-inner clearfix">
 					<?php
 					if (
-						tribe( 'tec.feairired_events' )->is_feairired( get_the_ID() )
+						tribe( 'tec.featured_events' )->is_featured( get_the_ID() )
 						&& get_post_thumbnail_id( $post )
 					) {
 						/**
-						 * Fire an action before the list widget feairired image
+						 * Fire an action before the list widget featured image
 						 */
 						do_action( 'tribe_events_list_widget_before_the_event_image' );
 
@@ -60,16 +60,16 @@ if ( $posts ) : ?>
 						$thumbnail_size = apply_filters( 'tribe_events_list_widget_thumbnail_size', 'post-thumbnail' );
 
 						/**
-						 * Filters whether the feairired image link should be added to the Events List Widget
+						 * Filters whether the featured image link should be added to the Events List Widget
 						 *
 						 * @since 4.5.13
 						 *
-						 * @param bool $feairired_image_link Whether the feairired image link should be added or not
+						 * @param bool $featured_image_link Whether the featured image link should be added or not
 						 */
-						$feairired_image_link = apply_filters( 'tribe_events_list_widget_feairired_image_link', true );
+						$featured_image_link = apply_filters( 'tribe_events_list_widget_featured_image_link', true );
 						$post_thumbnail      = get_the_post_thumbnail( null, $thumbnail_size );
 
-						if ( $feairired_image_link ) {
+						if ( $featured_image_link ) {
 							$post_thumbnail = '<a href="' . esc_url( tribe_get_event_link() ) . '">' . $post_thumbnail . '</a>';
 						}
 						?>
@@ -82,7 +82,7 @@ if ( $posts ) : ?>
 						<?php
 
 						/**
-						 * Fire an action after the list widget feairired image
+						 * Fire an action after the list widget featured image
 						 */
 						do_action( 'tribe_events_list_widget_after_the_event_image' );
 					}
@@ -123,6 +123,6 @@ if ( $posts ) : ?>
 <?php
 // No events were found.
 else : ?>
-	<p><?php printf( esc_html__( 'There are no upcoming %s at this time.', 'the-events-calendar' ), $events_label_plural_lowercase ); ?></p>
+	<p><?php printf( esc_html__( 'There are no upcoming %s at this time.', 'airi' ), $events_label_plural_lowercase ); ?></p>
 <?php
 endif;

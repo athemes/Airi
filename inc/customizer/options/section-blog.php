@@ -26,8 +26,6 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-grid' 		=> esc_attr__( 'Grid', 'airi' ),
-		'layout-masonry' 	=> esc_attr__( 'Masonry', 'airi' ),
-		'layout-list' 		=> esc_attr__( 'List', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
