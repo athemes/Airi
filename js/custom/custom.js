@@ -56,6 +56,13 @@
 		$( 'body' ).toggleClass( 'mobile-menu-active' );
 	} );
 
+
+	$( '.main-navigation' ).on( 'click', 'li a', function( e ) {
+		if ( $( 'body' ).hasClass( 'mobile-menu-active' ) ) {
+			$( 'body' ).removeClass( 'mobile-menu-active' );
+		}
+	} );
+
 	// Add dropdown arrow to <li> elements that contain sub-menus
 	var hasChildMenu = $( '.main-navigation' ).find('li:has(ul)');
 	hasChildMenu.children('a').after('<span class="subnav-toggle"></span>');
