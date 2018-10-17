@@ -208,7 +208,8 @@ button,
 .button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.learnpress-page .lp-button {
   color: #fff;
   font-size: 13px;
   font-weight: 600;
@@ -227,14 +228,16 @@ input[type="submit"] {
 .button, .menuStyle3 .top-bar
 input[type="button"], .menuStyle3 .top-bar
 input[type="reset"], .menuStyle3 .top-bar
-input[type="submit"] {
+input[type="submit"], .menuStyle3 .top-bar
+.learnpress-page .lp-button {
   color: #fff;
 }
 button:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.learnpress-page .lp-button:hover {
   background-color: transparent;
   color: #000;
 }
@@ -242,7 +245,8 @@ input[type="submit"]:hover {
 .button:hover, .menuStyle3 .top-bar
 input[type="button"]:hover, .menuStyle3 .top-bar
 input[type="reset"]:hover, .menuStyle3 .top-bar
-input[type="submit"]:hover {
+input[type="submit"]:hover, .menuStyle3 .top-bar
+.learnpress-page .lp-button:hover {
   background-color: transparent;
   color: #000;
 }
