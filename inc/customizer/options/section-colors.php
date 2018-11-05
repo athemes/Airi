@@ -823,6 +823,20 @@ Airi_Kirki::add_field( 'airi', array(
 	),
 ) );
 
+Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'color',
+	'settings'    => 'mobile_toggle_color',
+	'label'       => esc_attr__( 'Mobile toggle color', 'airi' ),
+	'section'     => 'airi_section_colors_header',
+	'default'     => '',
+	'transport'	 => 'auto',
+	'output' => array(
+		array(
+			'element'  => '.menuStyle1 .mobile-menu-toggle_lines, .menuStyle1 .mobile-menu-toggle_lines:before, .menuStyle1 .mobile-menu-toggle_lines:after,.menuStyle1 .mobile-menu-toggle_lines,.mobile-menu-toggle_lines:before, .mobile-menu-toggle_lines:after,.mobile-menu-toggle_lines,.menuStyle3 .mobile-menu-toggle_lines,.menuStyle3 .mobile-menu-toggle_lines:before, .menuStyle3 .mobile-menu-toggle_lines:after',
+			'property' => 'background',
+		),
+	),			
+) );
 
 /**
  * Blog colors
