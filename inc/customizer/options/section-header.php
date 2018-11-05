@@ -438,6 +438,13 @@ Airi_Kirki::add_field( 'airi', array(
     )		
 ) );
 
+Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'checkbox',
+	'settings'    => 'disable_header_search',
+	'section'     => 'airi_section_menu',
+	'default'     => '',	
+	'label'       => __( 'Disable header search icon?', 'airi' ),
+) );
 
 /**
  * Checks if menu type is extended

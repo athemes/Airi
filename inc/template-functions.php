@@ -324,15 +324,19 @@ if ( !function_exists( 'airi_site_branding' ) ) {
 
 if ( ! function_exists( 'airi_header_cart_search' ) ) {
 	/**
-	 * Display Header cart and search ico.
+	 * Display Header cart and search icon.
 	 *
 	 */
 	function airi_header_cart_search() {
+		
+		$disable_search = get_theme_mod( 'disable_header_search' );
 		?>
 		<ul class="header-search-cart">
+			<?php if ( !$disable_search ) : ?>
 			<li class="header-search">
 				<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
 			</li>
+			<?php endif; ?>
 			<li class="header-cart-link">
 				<?php if ( function_exists( 'airi_woocommerce_cart_link' ) ) {
 					airi_woocommerce_cart_link();
