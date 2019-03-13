@@ -107,7 +107,7 @@ function airi_register_athemes_blog_skin() {
 										<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 										<?php airi_posted_on(); ?>
 										<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-										<a class="read-more" href="<?php the_permalink(); ?> title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
+										<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
 									</div>	
 								</div>				
 							</div>
@@ -124,7 +124,7 @@ function airi_register_athemes_blog_skin() {
 									<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 									<?php airi_posted_on(); ?>
 									<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-									<a class="read-more" href="<?php the_permalink(); ?> title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
+									<a class="read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read more >>', 'airi' ); ?></a>
 								</div>	
 							</div>				
 						</div>

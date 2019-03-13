@@ -35,6 +35,10 @@ Airi_Kirki::add_field( 'airi', array(
 		array(
 			'element' => 'h1,h2,h3,h4,h5,h6,.site-title',
 		),
+		array(
+			'element'  => '.editor-block-list__layout h1,.editor-block-list__layout h2,.editor-block-list__layout h3,.editor-block-list__layout h4,.editor-block-list__layout h5,.editor-block-list__layout h6,.editor-post-title__block .editor-post-title__input',
+			'context'  => array( 'editor' ),
+		),		
 	),
 ) );
 
@@ -53,6 +57,10 @@ Airi_Kirki::add_field( 'airi', array(
 		array(
 			'element' => 'body',
 		),
+		array(
+			'element'  => '.editor-block-list__layout,.editor-block-list__layout .editor-block-list__block',
+			'context'  => array( 'editor' ),
+		),		
 	),
 ) );
 
@@ -92,6 +100,10 @@ Airi_Kirki::add_field( 'airi', array(
 			'element'  => 'body',
 			'property' => 'font-size',
 			'units'    => 'px',
+		),
+		array(
+			'element'  => '.editor-styles-wrapper p',
+			'context'  => array( 'editor' ),
 		),
 	),	
 ) );
