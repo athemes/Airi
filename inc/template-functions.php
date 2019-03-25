@@ -122,7 +122,13 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		if ( $layout == 'layout-grid' || $layout == 'layout-masonry' ) {
 			$cols 		= 'col-md-12';
 			$sidebar	= false;
-		} else {
+		}
+		elseif ( $layout == 'layout-list-2' )
+		{
+			$cols 		= 'col-lg-9';
+			$sidebar 	= true;
+		}
+		else {
 			$cols 		= 'col-lg-8';
 			$sidebar 	= true;
 		}	
@@ -130,7 +136,12 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		//Inner columns for list layout
 		if ( $layout == 'layout-list' ) {
 			$item_inner_cols = 'col-md-6 col-sm-12';
-		} else {
+		}
+		elseif ( $layout == 'layout-list-2' )
+		{
+			$item_inner_cols = '';
+		}
+		else {
 			$item_inner_cols = 'col-md-12';
 		}
 
