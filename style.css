@@ -835,6 +835,46 @@ a:hover, a:active {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 }
 
+.menuStyle5 .site-header {
+  background-color: #61a0ce;
+  border: none;
+  color: #fff;
+  padding-top: 34px;
+  padding-bottom: 33px;
+}
+.menuStyle5 .site-header .main-navigation {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.menuStyle5 .site-header .main-navigation ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.menuStyle5 .site-header .main-navigation ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+.menuStyle5 .site-header .main-navigation ul li.current-menu-item > a {
+  border-bottom: 2px solid #fff;
+}
+.menuStyle5 .site-header .contact-us span {
+  font-size: 22px;
+}
+.menuStyle5 .site-header .socials a {
+  color: #fff;
+}
+.menuStyle5 .site-header .socials a + a {
+  margin-left: 20px;
+}
+.menuStyle5 .is-sticky .site-header {
+  background-color: #61a0ce;
+}
+
 .site-header {
   padding: 30px 0;
   /* Sticky header */
@@ -1314,6 +1354,24 @@ ul.header-search-cart .header-cart-link .count {
   left: 2px;
 }
 
+@media (max-width: 1199px) {
+  .menuStyle5 .site-header .last-block,
+.menuStyle5 .site-header .contact-us {
+    margin-top: 10px;
+  }
+  .menuStyle5 .site-header .last-block .socials {
+    padding-top: 6px;
+  }
+}
+@media (max-width: 991px) {
+  .menuStyle5 .last-block .socials {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+       -moz-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
 /*--------------------------------------------------------------
 ## Branding
 --------------------------------------------------------------*/

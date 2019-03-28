@@ -25,6 +25,7 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'menuStyle1' => esc_attr__( 'Basic 1 - inside header', 'airi' ),
 		'menuStyle2' => esc_attr__( 'Basic 2 - outside header', 'airi' ),
+		'menuStyle5' => esc_attr__( 'Basic 5 - outside header', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -37,6 +38,13 @@ Airi_Kirki::add_field( 'airi', array(
 		'menuContained' 	=> esc_attr__( 'Contained', 'airi' ),
 		'menuNotContained' 	=> esc_attr__( 'Not contained', 'airi' ),
 	),
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '!=',
+		),
+	)
 ) );
 Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'radio',
