@@ -1081,6 +1081,19 @@ ul.header-search-cart {
 				}
 			}
 		}
+		.site-header .main-navigation ul li a,
+		.main-navigation ul li a:hover,
+		.main-navigation ul li.current_page_item > a,
+		.main-navigation ul li.current-menu-item > a,
+		.main-navigation ul li.current_page_ancestor > a,
+		.main-navigation ul li.current-menu-ancestor > a {
+			color: #61a0ce;
+		}
+
+		.site-header .main-navigation ul li a,
+		.site-header .main-navigation ul li a:hover {
+			border-bottom: none;
+		}
 	}
 }
 @media ( max-width: 991px ) {

@@ -146,6 +146,10 @@ hr {
   margin-bottom: 1.5em;
 }
 
+button:hover {
+  outline: none;
+}
+
 ul, ol {
   margin: 0 0 15px 15px;
   padding-left: 20px;
@@ -1361,6 +1365,18 @@ ul.header-search-cart .header-cart-link .count {
   }
   .menuStyle5 .site-header .last-block .socials {
     padding-top: 6px;
+  }
+  .menuStyle5 .site-header .main-navigation ul li a,
+.menuStyle5 .main-navigation ul li a:hover,
+.menuStyle5 .main-navigation ul li.current_page_item > a,
+.menuStyle5 .main-navigation ul li.current-menu-item > a,
+.menuStyle5 .main-navigation ul li.current_page_ancestor > a,
+.menuStyle5 .main-navigation ul li.current-menu-ancestor > a {
+    color: #61a0ce;
+  }
+  .menuStyle5 .site-header .main-navigation ul li a,
+.menuStyle5 .site-header .main-navigation ul li a:hover {
+    border-bottom: none;
   }
 }
 @media (max-width: 991px) {
