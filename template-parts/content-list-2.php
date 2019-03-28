@@ -14,9 +14,11 @@ $hide_date 		= get_theme_mod( 'index_hide_date' );
 $hide_cats 		= get_theme_mod( 'index_hide_cats' );
 $hide_author 	= get_theme_mod( 'index_hide_author' );
 $hide_comments 	= get_theme_mod( 'index_hide_comments' );
+$post_class[] = 'col-12';
+$post_class[] = $layout['type'];
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $layout['type'] ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( implode( ' ', $post_class ) ); ?>>
 
 	<div class="post-inner">
 		<div class="flex">
@@ -31,16 +33,23 @@ $hide_comments 	= get_theme_mod( 'index_hide_comments' );
 						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 					 if ( $hide_thumb == '' ) : ?>
-					<div class="<?php echo esc_attr( $layout['item_inner_cols'] ); ?>">
-						<?php airi_post_thumbnail(); ?>
-						<?php
-						if ( $hide_cats == '' ) {
-							echo '<span>';
-								airi_first_category();
-							echo '</span>';
-							}
+					 <?php
+						if ( has_post_thumbnail() )
+						{
 						?>
-					</div>
+							<div class="thumbnail<?php echo esc_attr( $layout['item_inner_cols'] ); ?>">
+								<?php airi_post_thumbnail(); ?>
+								<?php
+								if ( $hide_cats == '' ) {
+									echo '<span>';
+									airi_first_category();
+									echo '</span>';
+								}
+								?>
+							</div>
+						<?php
+						}
+					 ?>
 					<?php endif; ?>
 				</header><!-- .entry-header -->	
 				<div class="entry-meta">

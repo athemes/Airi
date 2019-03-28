@@ -114,6 +114,28 @@ Airi_Kirki::add_field( 'airi', array(
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'radio',
+	'settings'    => 'single_post_content_layout',
+	'label'       => __( 'Content layout', 'airi' ),
+	'section'     => 'airi_section_blog_single',
+	'default'     => 'layout-default',
+	'choices'     => array(
+		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
+		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+	),
+) );
+Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'radio',
+	'settings'    => 'single_comment_form_layout',
+	'label'       => __( 'Comment Form Layout', 'airi' ),
+	'section'     => 'airi_section_blog_single',
+	'default'     => 'layout-default',
+	'choices'     => array(
+		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
+		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+	),
+) );
+Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'checkbox',
 	'settings'    => 'single_hide_thumb',
 	'label'       => esc_attr__( 'Hide post thumbnail?', 'airi' ),

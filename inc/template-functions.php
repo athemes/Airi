@@ -26,6 +26,9 @@ function airi_body_classes( $classes ) {
 	$sticky 	= get_theme_mod('sticky_menu', 'sticky-header');
 	$classes[] 	= esc_attr( $sticky );	
 
+	// primary type
+	$layout = airi_blog_layout();
+	$classes[] = $layout[ 'type' ];
 
 	if ( class_exists( 'WooCommerce' ) ) {
 		$check = airi_wc_archive_check();
