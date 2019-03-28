@@ -454,6 +454,93 @@ Airi_Kirki::add_field( 'airi', array(
 	'label'       => __( 'Disable header search icon?', 'airi' ),
 ) );
 
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_custom_text',
+	'label'       		=> __( 'Custom Text', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'default'     		=> __( 'Call Us', 'airi' ),
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_facebook',
+	'label'       		=> __( 'Facebook', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_twitter',
+	'label'       		=> __( 'Twitter', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_google',
+	'label'       		=> __( 'Google +', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'default'     		=> '',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_linkedin',
+	'label'       		=> __( 'Likedin', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_skype',
+	'label'       		=> __( 'Skype', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
 /**
  * Checks if menu type is extended
  */

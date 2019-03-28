@@ -31,15 +31,32 @@
 			</nav><!-- #site-navigation -->
 
 			<div class="col-sm-12 col-xl-2 col-lg-6 col-12 contact-us text-center text-lg-left text-xl-right">
-				Call Us: <span>001-1234-88888</span>
+			<?php
+			$custom_text = get_theme_mod( 'menu5_custom_text' );
+			if ( $custom_text )
+			{
+				echo wp_kses_post( $custom_text );
+			}
+			?>
 			</div>
 			<div class="col-sm-12 last-block col-xl-2 col-lg-6 col-12">
 				<div class="socials d-flex justify-content-end">
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+					<?php
+					$socials = array( 'facebook', 'twitter', 'google', 'linkedin', 'skype' );
+					foreach ( $socials as $social )
+					{
+						$field_name = sprintf( 'menu5_%s', $social );
+						$value = get_theme_mod( $field_name );
+						if ( $value )
+						{
+						?>
+							<a href="<?php echo esc_url( $value ); ?>"><i class="fa fa-<?php echo $social == 'google'? 'google-plus': $social; ?>" aria-hidden="true"></i></a>
+						<?php
+						}
+					?>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>
