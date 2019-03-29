@@ -839,6 +839,22 @@ a:hover, a:active {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 }
 
+.menuStyle5.page-template-template_page-builder .sticky-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.menuStyle5.page-template-template_page-builder .site-header {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1199px) {
+  .menuStyle5.page-template-template_page-builder .site-header {
+    background-color: #61a0ce;
+  }
+}
+.menuStyle5.page-template-template_page-builder.static-header .site-header {
+  position: absolute;
+}
 .menuStyle5 .site-header {
   background-color: #61a0ce;
   border: none;
@@ -877,6 +893,7 @@ a:hover, a:active {
 }
 .menuStyle5 .is-sticky .site-header {
   background-color: #61a0ce;
+  z-index: 9999 !important;
 }
 
 .site-header {

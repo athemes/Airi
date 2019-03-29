@@ -27,8 +27,11 @@ function airi_body_classes( $classes ) {
 	$classes[] 	= esc_attr( $sticky );	
 
 	// primary type
-	$layout = airi_blog_layout();
-	$classes[] = $layout[ 'type' ];
+	if ( is_home() || is_singular( 'post' ) )
+	{
+		$layout = airi_blog_layout();
+		$classes[] = $layout[ 'type' ];
+	}
 
 	if ( class_exists( 'WooCommerce' ) ) {
 		$check = airi_wc_archive_check();
