@@ -247,11 +247,16 @@
 }
 
 .layout-list-2 {
+	.site-content {
+		padding-bottom: 0;
+	}
 	.content-area {
 		article {
 			border-bottom: none;
 			padding-right: 20px;
 			width: 100%;
+			margin-bottom: 0;
+			padding-bottom: 52px;
 
 			.post-inner {
 				padding-right: 20px;
@@ -311,6 +316,14 @@
 					text-transform: capitalize;
 				}
 			}
+
+			&:last-child {
+				padding-bottom: 0;
+
+				.post-inner {
+					border-bottom: none
+				}
+			}
 		}
 	}
 	.widget-area {
@@ -318,6 +331,9 @@
 		border: none;
 	}
 	&.single-post {
+		.site-content {
+			padding-bottom: 39px;
+		}
 		.content-area {
 			article {
 				.thumbnail {

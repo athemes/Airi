@@ -2424,10 +2424,15 @@ ul.social-media-list li {
   }
 }
 
+.layout-list-2 .site-content {
+  padding-bottom: 0;
+}
 .layout-list-2 .content-area article {
   border-bottom: none;
   padding-right: 20px;
   width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 52px;
 }
 .layout-list-2 .content-area article .post-inner {
   padding-right: 20px;
@@ -2481,9 +2486,18 @@ ul.social-media-list li {
   margin-top: 21px;
   text-transform: capitalize;
 }
+.layout-list-2 .content-area article:last-child {
+  padding-bottom: 0;
+}
+.layout-list-2 .content-area article:last-child .post-inner {
+  border-bottom: none;
+}
 .layout-list-2 .widget-area {
   padding: 0;
   border: none;
+}
+.layout-list-2.single-post .site-content {
+  padding-bottom: 39px;
 }
 .layout-list-2.single-post .content-area article .thumbnail .cat-links {
   font-size: 12px;
@@ -2657,6 +2671,7 @@ ul.social-media-list li {
           box-shadow: none;
 }
 .comment-form.layout-2 .form-submit {
+  margin-top: 40px;
   text-align: left;
 }
 .comment-form.layout-2 .form-submit .btn-main {
