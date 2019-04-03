@@ -511,6 +511,94 @@
 		}
 	}
 }
+.menuStyle5 {
+	&.page-template-template_page-builder {
+
+		.sticky-wrapper {
+			position: absolute;
+			width: 100%;
+			z-index: 99;
+		}
+
+		.site-header {
+			background-color: rgba(0,0,0,.3);
+
+			@include mqmax1199 {
+				background-color: #61a0ce;
+			}
+		}
+
+		&.static-header {
+
+			.site-header {
+				position: absolute;
+			}
+		}
+	}
+
+	.site-header {
+		background-color: #61a0ce;
+		border: none;
+		color: #fff;
+		padding-top: 34px;
+		padding-bottom: 33px;
+
+		.main-navigation {
+			justify-content: flex-start;
+
+			ul {
+				li {
+					a {
+						color: #fff;
+						text-transform: uppercase;
+						font-weight: 500;
+						transition: all .3s;
+
+						&:hover {
+							border-bottom: 2px solid #fff;
+						}
+					}
+
+					&.current-menu-item {
+						&> a {
+							border-bottom: 2px solid #fff;
+						}
+					}
+				}
+			}
+		}
+		.contact-us {
+			span {
+				font-size: 22px;
+			}
+		}
+		.socials {
+			a {
+				color: #fff;
+
+				&+ a {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+	.is-sticky {
+		.site-header {
+			background-color: #61a0ce;
+			z-index: 9999 !important;
+		}
+	}
+	//&.home {
+	//	.sticky-wrapper{
+	//		&:not( .is-sticky ) {
+	//			.site-header {
+	//				background-color: rgba(0,0,0,.3);
+	//			}
+	//		}
+	//	}
+	//}
+
+}
 .site-header {
 	padding: 30px 0;
 
@@ -1010,6 +1098,45 @@ ul.header-search-cart {
 			position: relative;
 			top: -8px;
 			left: 2px;
+		}
+	}
+}
+
+@media ( max-width: 1199px ) {
+
+	.menuStyle5 {
+		.site-header {
+			.last-block,
+			.contact-us {
+				margin-top: 10px;
+			}
+			.last-block {
+				.socials {
+					padding-top: 6px;
+				}
+			}
+		}
+		.site-header .main-navigation ul li a,
+		.main-navigation ul li a:hover,
+		.main-navigation ul li.current_page_item > a,
+		.main-navigation ul li.current-menu-item > a,
+		.main-navigation ul li.current_page_ancestor > a,
+		.main-navigation ul li.current-menu-ancestor > a {
+			color: #61a0ce;
+		}
+
+		.site-header .main-navigation ul li a,
+		.site-header .main-navigation ul li a:hover {
+			border-bottom: none;
+		}
+	}
+}
+@media ( max-width: 991px ) {
+	.menuStyle5 {
+		.last-block {
+			.socials {
+				justify-content: center !important;
+			}
 		}
 	}
 }

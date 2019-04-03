@@ -18,7 +18,11 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
-
+button {
+	&:hover {
+		outline: none;
+	}
+}
 @import "lists";
 
 img {

@@ -169,5 +169,75 @@
 			padding: 17px 20px;
 		}
 	}
+}
 
+.hover-white-style {
+	&:hover {
+		.elementor-icon-box-wrapper {
+			.elementor-icon-box-icon {
+				i {
+					color: #fff;
+				}
+			}
+			.elementor-icon-box-content {
+				.elementor-icon-box-title {
+					color: #fff !important;
+				}
+			}
+			.elementor-icon-box-description {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.counter-layout {
+	.elementor-icon-box-wrapper {
+		position: relative;
+
+		.elementor-icon-box-icon {
+			position: absolute;
+			margin: 0;
+			right: 0;
+		}
+		.elementor-icon-box-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.elementor-icon-box-title {
+			margin-right: 16px;
+			margin-bottom: 0;
+		}
+	}
+}
+.shadow-animation {
+	.elementor-widget-container {
+		display: inline-block;
+		border-radius: 100%;
+		animation: shadowGrow 2s infinite;
+	}
+}
+.hover-slide-up {
+	transition: all .3s;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+}
+
+
+@keyframes shadowGrow {
+	0% {
+		box-shadow: 0px 0px 0px 13px rgba(21,131,233,0.2);
+	}
+	50% {
+		box-shadow: 0px 0px 0px 0 rgba(21,131,233,0.2);
+	}
+	75% {
+		box-shadow: 0px 0px 0px 0 rgba(21,131,233,0.2);
+	}
+	100% {
+		box-shadow: 0px 0px 0px 13px rgba(21,131,233,0.2);
+	}
 }

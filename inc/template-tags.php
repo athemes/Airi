@@ -123,7 +123,13 @@ function airi_post_thumbnail() {
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
-			the_post_thumbnail( 'airi-720', array(
+		$layout = get_theme_mod( 'blog_layout', 'layout-default' );
+		$image_size = 'airi-720';
+		if ( 'layout-list-2' == $layout )
+		{
+			$image_size = 'airi-850-485';
+		}
+			the_post_thumbnail( $image_size, array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),
