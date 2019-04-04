@@ -29,18 +29,21 @@ $hide_author 	= get_theme_mod( 'single_hide_author' );
 		<?php
 		if ( ( $layout['type'] == 'layout-default' ) && ( $hide_thumb == '' ) )
 		{
-			?>
-			<div class="thumbnail<?php echo esc_attr( $layout['item_inner_cols'] ); ?>">
-				<?php airi_post_thumbnail(); ?>
-				<?php
-				if ( $hide_cats == '' ) {
-					echo '<span>';
-					airi_all_categories();
-					echo '</span>';
-				}
+			if ( has_post_thumbnail() )
+			{
 				?>
-			</div>
-			<?php
+				<div class="thumbnail<?php echo esc_attr( $layout['item_inner_cols'] ); ?>">
+					<?php airi_post_thumbnail(); ?>
+					<?php
+					if ( $hide_cats == '' ) {
+						echo '<span>';
+						airi_all_categories();
+						echo '</span>';
+					}
+					?>
+				</div>
+				<?php
+			}
 		}
 		?>
 	</header><!-- .entry-header -->
