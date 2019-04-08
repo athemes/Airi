@@ -5,7 +5,7 @@ Theme URI: https://athemes.com/theme/airi
 Author: aThemes
 Author URI: https://athemes.com
 Description: Airi is a powerful, flexible, and modern theme for your business website. Featuring Elementor integration, this theme is an outstanding choice for basically any kind of company or freelancer site. Bringing a wealth of customization opportunities, Airi is great if you want to start a website from scratch and it's even greater if you want to use a premade Elementor layout from our growing collection. What’s more, the theme offers WooCommerce support, making it easy to sell the products you showcase on your site to your audience.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: airi
@@ -142,6 +142,10 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
+}
+
+button:hover {
+  outline: none;
 }
 
 ul, ol {
@@ -778,6 +782,61 @@ a:hover, a:active {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 }
 
+.menuStyle5.page-template-template_page-builder .sticky-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.menuStyle5.page-template-template_page-builder .site-header {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1199px) {
+  .menuStyle5.page-template-template_page-builder .site-header {
+    background-color: #61a0ce;
+  }
+}
+.menuStyle5.page-template-template_page-builder.static-header .site-header {
+  position: absolute;
+}
+.menuStyle5 .site-header {
+  background-color: #61a0ce;
+  border: none;
+  color: #fff;
+  padding-top: 34px;
+  padding-bottom: 33px;
+}
+.menuStyle5 .site-header .main-navigation {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.menuStyle5 .site-header .main-navigation ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.menuStyle5 .site-header .main-navigation ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+.menuStyle5 .site-header .main-navigation ul li.current-menu-item > a {
+  border-bottom: 2px solid #fff;
+}
+.menuStyle5 .site-header .contact-us span {
+  font-size: 22px;
+}
+.menuStyle5 .site-header .socials a {
+  color: #fff;
+}
+.menuStyle5 .site-header .socials a + a {
+  margin-left: 20px;
+}
+.menuStyle5 .is-sticky .site-header {
+  background-color: #61a0ce;
+  z-index: 9999 !important;
+}
+
 .site-header {
   padding: 30px 0;
   /* Sticky header */
@@ -1248,6 +1307,34 @@ ul.header-search-cart .header-cart-link .count {
   left: 2px;
 }
 
+@media (max-width: 1199px) {
+  .menuStyle5 .site-header .last-block,
+  .menuStyle5 .site-header .contact-us {
+    margin-top: 10px;
+  }
+  .menuStyle5 .site-header .last-block .socials {
+    padding-top: 6px;
+  }
+  .menuStyle5 .site-header .main-navigation ul li a,
+  .menuStyle5 .main-navigation ul li a:hover,
+  .menuStyle5 .main-navigation ul li.current_page_item > a,
+  .menuStyle5 .main-navigation ul li.current-menu-item > a,
+  .menuStyle5 .main-navigation ul li.current_page_ancestor > a,
+  .menuStyle5 .main-navigation ul li.current-menu-ancestor > a {
+    color: #61a0ce;
+  }
+  .menuStyle5 .site-header .main-navigation ul li a,
+  .menuStyle5 .site-header .main-navigation ul li a:hover {
+    border-bottom: none;
+  }
+}
+@media (max-width: 991px) {
+  .menuStyle5 .last-block .socials {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
 /*--------------------------------------------------------------
 ## Branding
 --------------------------------------------------------------*/
@@ -1992,6 +2079,22 @@ ul.social-media-list li {
   background: #EDA57F;
 }
 
+.layout-list-2 .widget {
+  margin-bottom: 30px;
+}
+.layout-list-2 .widget ul li {
+  padding-bottom: 18px;
+}
+.layout-list-2 .widget ul li a {
+  font-size: 16px;
+}
+.layout-list-2 .widget_search .search-field {
+  border-radius: 24.5px;
+}
+.layout-list-2 .widget_categories li:before {
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -2234,6 +2337,85 @@ ul.social-media-list li {
   }
 }
 
+.layout-list-2 .site-content {
+  padding-bottom: 0;
+}
+.layout-list-2 .content-area article {
+  border-bottom: none;
+  padding-right: 20px;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 52px;
+}
+.layout-list-2 .content-area article .post-inner {
+  padding-right: 20px;
+  padding-bottom: 51px;
+  border-bottom: 1px solid #ebebeb;
+}
+.layout-list-2 .content-area article .entry-header {
+  margin-bottom: 24px;
+}
+.layout-list-2 .content-area article .entry-header .entry-title {
+  line-height: 46px;
+  margin-top: 15px;
+  margin-bottom: 32px;
+}
+.layout-list-2 .content-area article .thumbnail {
+  position: relative;
+}
+.layout-list-2 .content-area article .thumbnail .post-thumbnail {
+  margin-bottom: 0;
+}
+.layout-list-2 .content-area article .thumbnail .post-thumbnail img {
+  border-radius: 5px;
+}
+.layout-list-2 .content-area article .thumbnail .post-cat,
+.layout-list-2 .content-area article .thumbnail .cat-links a {
+  background: #0a8ae6;
+  color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 7px 15px;
+}
+.layout-list-2 .content-area article .entry-meta {
+  line-height: 18px;
+}
+.layout-list-2 .content-area article .entry-meta .byline {
+  font-size: 16px;
+}
+.layout-list-2 .content-area article .entry-meta .byline a {
+  color: #191919;
+}
+.layout-list-2 .content-area article .entry-content {
+  margin-top: 26px;
+}
+.layout-list-2 .content-area article .entry-footer .read-more-link {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 21px;
+  text-transform: capitalize;
+}
+.layout-list-2 .content-area article:last-child {
+  padding-bottom: 0;
+}
+.layout-list-2 .content-area article:last-child .post-inner {
+  border-bottom: none;
+}
+.layout-list-2 .widget-area {
+  padding: 0;
+  border: none;
+}
+.layout-list-2.single-post .site-content {
+  padding-bottom: 39px;
+}
+.layout-list-2.single-post .content-area article .thumbnail .cat-links {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
 /* 404 */
 .error404 .site-content {
   background-color: #f7f7f7;
@@ -2275,6 +2457,12 @@ ul.social-media-list li {
   width: 100%;
 }
 
+@media (max-width: 479px) {
+  .layout-list-2 .content-area article .entry-header .entry-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -2376,6 +2564,35 @@ ul.social-media-list li {
 .comment-form .comment-reply-title {
   font-size: 24px;
 }
+.comment-form.layout-2 {
+  margin-top: 35px;
+}
+.comment-form.layout-2 .form-group {
+  margin-bottom: 19px;
+}
+.comment-form.layout-2 input,
+.comment-form.layout-2 textarea {
+  border-color: #ebebeb;
+  border-radius: 5px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.comment-form.layout-2 .form-submit {
+  margin-top: 40px;
+  text-align: left;
+}
+.comment-form.layout-2 .form-submit .btn-main {
+  display: inline-block;
+  width: auto;
+  border-width: 0;
+  border-radius: 2px;
+  padding: 13px 33px;
+}
+.comment-form.layout-2 .form-submit .btn-main:hover {
+  background-color: #0a8ae6;
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
 ## Elementor
@@ -2398,10 +2615,12 @@ ul.social-media-list li {
   position: static;
 }
 
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay img,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay img {
   display: none;
 }
 
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay .elementor-custom-embed-play,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay .elementor-custom-embed-play {
   position: static;
   -webkit-transform: none;
@@ -2537,6 +2756,49 @@ ul.social-media-list li {
 }
 .beauty-contact p select {
   padding: 17px 20px;
+}
+
+.hover-white-style:hover .elementor-icon-box-wrapper .elementor-icon-box-icon i {
+  color: #fff;
+}
+.hover-white-style:hover .elementor-icon-box-wrapper .elementor-icon-box-content .elementor-icon-box-title {
+  color: #fff !important;
+}
+.hover-white-style:hover .elementor-icon-box-wrapper .elementor-icon-box-description {
+  color: #fff !important;
+}
+
+.counter-layout .elementor-icon-box-wrapper {
+  position: relative;
+}
+.counter-layout .elementor-icon-box-wrapper .elementor-icon-box-icon {
+  position: absolute;
+  margin: 0;
+  right: 0;
+}
+.counter-layout .elementor-icon-box-wrapper .elementor-icon-box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.counter-layout .elementor-icon-box-wrapper .elementor-icon-box-title {
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.hover-slide-up {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.hover-slide-up:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 /*--------------------------------------------------------------
@@ -3609,6 +3871,64 @@ ul.social-media-list li {
 .athemes-blog.airi_athemes_blog_skin_4 .posted-on span:last-of-type {
   font-size: 16px;
   text-transform: uppercase;
+}
+
+/* Style 6 */
+.athemes-blog.airi_athemes_blog_skin_6 .post-item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .thumbnail {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .thumbnail img {
+  border-radius: 5px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .thumbnail:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content {
+  padding: 0;
+  background: transparent;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content .posted-on {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content .posted-on a {
+  color: #0a8ae6;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content .entry-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content .entry-title a {
+  color: #191919;
+  border-bottom: 1px solid transparent;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .post-content .entry-title a:hover {
+  border-bottom-color: #191919;
+}
+.athemes-blog.airi_athemes_blog_skin_6 .post-item .first-cat {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #0a8ae6;
+  color: #fff;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 7px 13px;
 }
 
 /* Slider block */
