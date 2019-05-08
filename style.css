@@ -896,6 +896,117 @@ a:hover, a:active {
   z-index: 9999 !important;
 }
 
+.menuStyle6 .site-header {
+  background-color: #181b33;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.menuStyle6 .site-header .top-section {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 1px solid #303248;
+  padding-bottom: 13px;
+  padding-top: 12px;
+}
+.menuStyle6 .site-header .top-section i {
+  color: #948b3e;
+  font-size: 15px;
+  margin-right: 19px;
+}
+.menuStyle6 .site-header .top-section .location i {
+  margin-right: 13px;
+}
+.menuStyle6 .site-header .top-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.menuStyle6 .site-header .top-section ul li {
+  position: relative;
+}
+.menuStyle6 .site-header .top-section ul li + li {
+  margin-left: 28px;
+  padding-left: 31px;
+}
+.menuStyle6 .site-header .top-section ul li + li:before {
+  background-color: #303248;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+}
+.menuStyle6 .site-header .bottom-section {
+  padding-top: 27px;
+  padding-bottom: 24px;
+}
+.menuStyle6 .site-header .main-navigation ul li {
+  padding: 0;
+}
+.menuStyle6 .site-header .main-navigation ul li a {
+  color: #fff;
+  display: inline-block;
+  padding-bottom: 3px;
+  position: relative;
+}
+.menuStyle6 .site-header .main-navigation ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  background-color: #948b3e;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.menuStyle6 .site-header .main-navigation ul li a:hover:after {
+  left: 0;
+  width: 100%;
+}
+.menuStyle6 .site-header .main-navigation ul li + li {
+  margin-left: 33px;
+}
+.menuStyle6 .site-header .group-actions {
+  margin-left: 61px;
+}
+.menuStyle6 .site-header .group-actions .search-form {
+  position: relative;
+}
+.menuStyle6 .site-header .group-actions .search-form .header-search-form {
+  top: auto;
+}
+.menuStyle6 .site-header .header-search-cart {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menuStyle6 .site-header .header-search-cart li {
+  color: #fff;
+}
+.menuStyle6 .site-header .btn {
+  border: 2px solid #948b3e;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 12px 15px 15px;
+  margin-left: 42px;
+}
+
 .site-header {
   padding: 30px 0;
   /* Sticky header */

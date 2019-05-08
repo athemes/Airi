@@ -599,6 +599,129 @@
 	//}
 
 }
+.menuStyle6 {
+	.site-header {
+		background-color: #181b33;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.top-section {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			border-bottom: 1px solid #303248;
+			padding-bottom: 13px;
+			padding-top: 12px;
+
+			i {
+				color: #948b3e;
+				font-size: 15px;
+				margin-right: 19px;
+			}
+			.location {
+				i {
+					margin-right: 13px;
+				}
+			}
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: flex-end;
+
+				li {
+					position: relative;
+
+					&+ li {
+						margin-left: 28px;
+						padding-left: 31px;
+
+						&:before {
+							background-color: #303248;
+							content: '';
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							width: 1px;
+						}
+					}
+				}
+			}
+		}
+		.bottom-section {
+			padding-top: 27px;
+			padding-bottom: 24px;
+		}
+		.main-navigation {
+			ul {
+				li {
+					padding: 0;
+					a {
+						color: #fff;
+						display: inline-block;
+						padding-bottom: 3px;
+						position: relative;
+
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							width: 0;
+							background-color: #948b3e;
+							height: 2px;
+							transition: all .3s;
+						}
+
+						&:hover {
+							&:after {
+								left: 0;
+								width: 100%;
+							}
+						}
+					}
+
+					&+ li {
+						margin-left: 33px;
+					}
+				}
+			}
+		}
+		.group-actions {
+			margin-left: 61px;
+
+			.search-form {
+				position: relative;
+
+				.header-search-form {
+					top: auto;
+				}
+			}
+		}
+		.header-search-cart {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				color: #fff;
+			}
+		}
+		.btn {
+			border: 2px solid #948b3e;
+			color: #fff;
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 500;
+			letter-spacing: 1px;
+			padding: 12px 15px 15px;
+			margin-left: 42px;
+		}
+	}
+}
 .site-header {
 	padding: 30px 0;
 

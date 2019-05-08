@@ -26,7 +26,7 @@ Airi_Kirki::add_field( 'airi', array(
 		'menuStyle1' => esc_attr__( 'Basic 1 - inside header', 'airi' ),
 		'menuStyle2' => esc_attr__( 'Basic 2 - outside header', 'airi' ),
 		'menuStyle5' => esc_attr__( 'Basic 3 - inside header', 'airi' ),
-		'menuStyle5' => esc_attr__( 'Basic 5 - inside header', 'airi' ),
+		'menuStyle6' => esc_attr__( 'Basic 4 - inside header', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -43,6 +43,11 @@ Airi_Kirki::add_field( 'airi', array(
 		array(
 			'setting'  => 'menu_type',
 			'value'    => 'menuStyle5',
+			'operator' => '!=',
+		),
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
 			'operator' => '!=',
 		),
 	)
@@ -542,6 +547,63 @@ Airi_Kirki::add_field( 'airi', array(
 		),
 	)
 ) );
+// Menu style 6
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'textarea',
+	'settings'    		=> 'menu6_top_section_left',
+	'label'       		=> __( 'Block Top Left Content', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 6
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'textarea',
+	'settings'    		=> 'menu6_top_section_right',
+	'label'       		=> __( 'Block Top Right Content', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu6_button_text',
+	'label'       		=> __( 'Button Text', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu6_button_url',
+	'label'       		=> __( 'Button Url', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+
 /**
  * Checks if menu type is extended
  */
