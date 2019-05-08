@@ -27,6 +27,10 @@ $layout = airi_single_layout();
 			{
 				get_template_part( 'template-parts/content-single', '2' );
 			}
+			elseif ( 'layout-3' == $single_layout )
+			{
+				get_template_part( 'template-parts/content-single', '3' );
+			}
 			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.

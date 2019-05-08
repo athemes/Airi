@@ -111,19 +111,27 @@ function airi_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
+	$layout = get_theme_mod( 'blog_layout', 'layout-default' );
 
 	if ( is_singular() ) :
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail( 'airi-720' ); ?>
+		<?php
+		$image_size = 'airi-720';
+
+		if ( 'layout-two-columns' == $layout )
+		{
+			$image_size = 'airi-969-485';
+		}
+		?>
+		<?php the_post_thumbnail( $image_size ); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
-		$layout = get_theme_mod( 'blog_layout', 'layout-default' );
 		$image_size = 'airi-720';
 		if ( 'layout-list-2' == $layout )
 		{

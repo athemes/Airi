@@ -411,7 +411,6 @@
 					}
 				}
 				.entry-title {
-					font-size: 24px;
 					line-height: 30px;
 					margin-top: 19px;
 
@@ -475,6 +474,77 @@
 	}
 }
 
+.single-post {
+	&.layout-two-columns {
+		.site-content {
+			padding-bottom: 50px;
+
+			.content-area {
+				&.layout-full {
+					border: none;
+					box-shadow: none;
+					padding: 0 100px;
+
+					.site-main {
+						padding-right: 0;
+					}
+				}
+				article {
+					.entry-header {
+						margin-bottom: 44px;
+						text-align: center;
+
+						.entry-title {
+							line-height: 59px;
+							margin-top: 34px;
+							margin-bottom: 14px;
+						}
+
+						.cat-links {
+							background-color: #948b3e;
+							border-radius: 2px;
+							font-size: 12px;
+							text-transform: initial;
+							padding: 7px 9px 8px 11px;
+
+							a {
+								color: #fff;
+							}
+						}
+
+					}
+					.entry-meta {
+						margin-bottom: 42px;
+
+						.byline {
+							color: #948b3e;
+
+							a {
+								color: #948b3e;
+							}
+						}
+						.separator {
+							color: #948b3e;
+						}
+						.posted-on {
+							a {
+								color: #948b3e;
+							}
+						}
+					}
+				}
+				.post-navigation {
+					display: none;
+				}
+			}
+		}
+		.comment-respond {
+			border-top: none;
+			padding-top: 0;
+			margin-top: 47px;
+		}
+	}
+}
 /* Woocommerce pages */
 .woocommerce .content-area {
 	width: 100%;

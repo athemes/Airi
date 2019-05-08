@@ -123,6 +123,7 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+		'layout-3' 		=> esc_attr__( 'Layout 3', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -134,6 +135,7 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+		'layout-3' 		=> esc_attr__( 'Layout 3', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
