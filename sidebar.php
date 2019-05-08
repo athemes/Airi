@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <?php
 $sidebar_col = 'col-lg-4';
 $layout 		= airi_blog_layout();
-if ( $layout['type'] == 'layout-list-2' )
+if ( $layout['type'] == 'layout-list-2' || $layout['type'] == 'layout-two-columns' )
 {
 	$sidebar_col = 'col-lg-3';
 }

@@ -129,7 +129,7 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 			$cols 		= 'col-md-12';
 			$sidebar	= false;
 		}
-		elseif ( $layout == 'layout-list-2' )
+		elseif ( $layout == 'layout-list-2' || $layout == 'layout-two-columns' )
 		{
 			$cols 		= 'col-lg-9';
 			$sidebar 	= true;

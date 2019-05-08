@@ -27,6 +27,7 @@ Airi_Kirki::add_field( 'airi', array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-grid' 		=> esc_attr__( 'Grid', 'airi' ),
 		'layout-list-2' 		=> esc_attr__( 'Classic', 'airi' ),
+		'layout-two-columns' 		=> esc_attr__( 'Two Columns', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
