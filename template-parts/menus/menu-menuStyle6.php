@@ -8,7 +8,7 @@
 
 <header id="masthead" class="site-header">
 	
-	<div class="<?php echo esc_attr( airi_menu_container() ); ?>">
+	<div class="container">
 		<div class="top-section">
 			<div class="row">
 				<div class="left-content col-md-6">
