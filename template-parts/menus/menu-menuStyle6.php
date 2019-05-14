@@ -9,15 +9,15 @@
 <header id="masthead" class="site-header">
 	
 	<div class="container">
-		<div class="top-section">
+		<div class="top-section d-none d-md-block">
 			<div class="row">
-				<div class="left-content col-md-6">
+				<div class="left-content col-md-6 col-12 text-md-left text-center">
 				<?php
 				$left_content = get_theme_mod( 'menu6_top_section_left' );
 				echo wp_kses_post( $left_content );
 				?>
 				</div>
-				<div class="botton-section col-md-6 text-right">
+				<div class="botton-section col-md-6 col-12 text-md-right text-center">
 					<?php
 					$right_content = get_theme_mod( 'menu6_top_section_right' );
 					echo wp_kses_post( $right_content );
@@ -30,13 +30,13 @@
 				<?php airi_site_branding(); ?>
 			</div><!-- .site-branding -->
 
-			<div class="header-mobile-menu col-lg-10 col-md-8 col-sm-6 col-3">
+			<div class="header-mobile-menu col-lg-9 col-md-8 col-sm-6 col-3">
 				<button class="mobile-menu-toggle" aria-controls="primary-menu">
 					<span class="mobile-menu-toggle_lines"></span>
 					<span class="sr-only"><?php esc_html_e( 'Toggle mobile menu', 'airi' ); ?></span>
 				</button>
 			</div>			
-			<div class="right-content col-md-9">
+			<div class="right-content col-xl-9 col-md-12">
 				<div class="d-flex align-items-center justify-content-end">
 					<nav id="site-navigation" class="main-navigation">
 						<?php
@@ -46,7 +46,7 @@
 						) );
 						?>
 					</nav><!-- #site-navigation -->
-					<div class="group-actions d-flex align-items-center">
+					<div class="group-actions d-none d-xl-flex align-items-center">
 
 						<div class="search-form">
 							<?php airi_header_cart_search(); ?>
