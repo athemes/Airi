@@ -485,6 +485,10 @@
 					box-shadow: none;
 					padding: 0 100px;
 
+					@include mqmax991 {
+						padding: 30px;
+					}
+					
 					.site-main {
 						padding-right: 0;
 					}
