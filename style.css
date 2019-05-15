@@ -2294,6 +2294,8 @@ ul.social-media-list {
       color: #948b3e; }
     .single-post.layout-two-columns .site-content .content-area article .entry-meta .posted-on a {
       color: #948b3e; }
+  .single-post.layout-two-columns .site-content .content-area article .entry-footer {
+    margin-top: 30px; }
   .single-post.layout-two-columns .site-content .content-area .post-navigation {
     display: none; }
 .single-post.layout-two-columns .comment-respond {
