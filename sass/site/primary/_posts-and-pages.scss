@@ -556,18 +556,3 @@
 .woocommerce .content-area {
 	width: 100%;
 }
-
-@media ( max-width: 479px ) {
-	.layout-list-2 {
-		.content-area {
-			article {
-				.entry-header {
-					.entry-title {
-						font-size: 36px;
-						line-height: 40px;
-					}
-				}
-			}
-		}
-	}
-}
