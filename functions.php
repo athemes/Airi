@@ -44,7 +44,6 @@ if ( ! function_exists( 'airi_setup' ) ) :
 
 		add_image_size( 'airi-720', 720 );
 		add_image_size( 'airi-360-360', 360, 360, true );
-		add_image_size( 'airi-850-485', 850, 485, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -254,7 +253,6 @@ require get_template_directory() . '/inc/compatibility/elementor/skins/class-air
 require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php';
 require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php';
 require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php';
 
 /**
  * Widgets

@@ -239,30 +239,3 @@ ul.social-media-list {
 	content: '\f0e0';
 	background: $mailto;
 }
-
-.layout-list-2 {
-	.widget {
-		margin-bottom: 30px;
-
-		ul {
-			li {
-				padding-bottom: 18px;
-				a {
-					font-size: 16px;
-				}
-			}
-		}
-	}
-	.widget_search {
-		.search-field {
-			border-radius: 24.5px;
-		}
-	}
-	.widget_categories {
-		li {
-			&:before {
-				display: none;
-			}
-		}
-	}
-}

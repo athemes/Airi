@@ -29,14 +29,6 @@ function airi_set_import_files() {
             'preview_url'                => 'https://demo.athemes.com/airi-startup',
         ),
         array(
-            'import_file_name'           => 'Business',
-            'import_file_url'            => 'https://athemes.com/wp-content/uploads/demo-content/airi/airi-dc-business2.xml',
-            'import_widget_file_url'     => 'https://athemes.com/wp-content/uploads/demo-content/airi/airi-w-business2.wie',
-            'import_customizer_file_url' => 'https://athemes.com/wp-content/uploads/demo-content/airi/airi-c-business2.dat',
-            'import_preview_image_url'   => 'https://athemes.com/wp-content/uploads/business2-hero-thumb.png',
-            'preview_url'                => 'https://demo.athemes.com/airi-business2',
-        ),        
-        array(
             'import_file_name'           => 'Health coach',
             'import_file_url'            => 'https://athemes.com/wp-content/uploads/demo-content/airi/airi-dc-health.xml',
             'import_widget_file_url'     => 'https://athemes.com/wp-content/uploads/demo-content/airi/airi-w-health.wie',

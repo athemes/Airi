@@ -12,10 +12,7 @@ function airi_register_athemes_blog_skin_3() {
 		
 		public function __construct( Elementor\Widget_Base $parent ) {
 			parent::__construct( $parent );
-			add_action( 'elementor/element/athemes-blog/section_style_content/after_section_start', [ $this, 'register_controls' ] );
-			add_filter( 'elementor/widget/print_template', array( $this, 'skin_print_template' ), 10, 2 );
-
-		
+			add_action( 'elementor/element/athemes-blog/section_style_content/after_section_start', [ $this, 'register_controls' ] );		
 		}
      
 		public function get_id() {

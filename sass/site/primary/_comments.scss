@@ -123,37 +123,4 @@
 	.comment-reply-title {
 		font-size: 24px;
 	}
-
-	&.layout-2 {
-		margin-top: 35px;
-
-		.form-group {
-			margin-bottom: 19px;
-		}
-
-		input,
-		textarea {
-			border-color: #ebebeb;
-			border-radius: 5px;
-			outline: none;
-			box-shadow: none;
-		}
-		.form-submit {
-			margin-top: 40px;
-			text-align: left;
-
-			.btn-main {
-				display: inline-block;
-				width: auto;
-				border-width: 0;
-				border-radius: 2px;
-				padding: 13px 33px;
-
-				&:hover {
-					background-color: #0a8ae6;
-					color: #fff;
-				}
-			}
-		}
-	}
 }

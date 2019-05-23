@@ -17,16 +17,9 @@ $layout = airi_single_layout();
 
 		<?php
 		while ( have_posts() ) : the_post();
-			$single_layout = get_theme_mod( 'single_post_content_layout', 'layout-default' );
 
-			if ( 'layout-default' == $single_layout )
-			{
-				get_template_part( 'template-parts/content', 'single' );
-			}
-			elseif ( 'layout-2' == $single_layout )
-			{
-				get_template_part( 'template-parts/content-single', '2' );
-			}
+			get_template_part( 'template-parts/content', 'single' );
+
 			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
