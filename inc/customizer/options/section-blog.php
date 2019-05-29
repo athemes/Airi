@@ -26,6 +26,8 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-grid' 		=> esc_attr__( 'Grid', 'airi' ),
+		'layout-list-2' 		=> esc_attr__( 'Classic', 'airi' ),
+		'layout-two-columns' 		=> esc_attr__( 'Two Columns', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -110,6 +112,30 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-full' 		=> esc_attr__( 'No sidebar', 'airi' ),
+	),
+) );
+Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'radio',
+	'settings'    => 'single_post_content_layout',
+	'label'       => __( 'Content layout', 'airi' ),
+	'section'     => 'airi_section_blog_single',
+	'default'     => 'layout-default',
+	'choices'     => array(
+		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
+		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+		'layout-3' 		=> esc_attr__( 'Layout 3', 'airi' ),
+	),
+) );
+Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'radio',
+	'settings'    => 'single_comment_form_layout',
+	'label'       => __( 'Comment Form Layout', 'airi' ),
+	'section'     => 'airi_section_blog_single',
+	'default'     => 'layout-default',
+	'choices'     => array(
+		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
+		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
+		'layout-3' 		=> esc_attr__( 'Layout 3', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(

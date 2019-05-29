@@ -122,7 +122,13 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		if ( $layout == 'layout-grid' || $layout == 'layout-masonry' ) {
 			$cols 		= 'col-md-12';
 			$sidebar	= false;
-		} else {
+		}
+		elseif ( $layout == 'layout-list-2' || $layout == 'layout-two-columns' )
+		{
+			$cols 		= 'col-lg-9';
+			$sidebar 	= true;
+		}
+		else {
 			$cols 		= 'col-lg-8';
 			$sidebar 	= true;
 		}	

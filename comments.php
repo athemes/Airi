@@ -66,8 +66,59 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
+	$comment_layout = get_theme_mod('single_comment_form_layout', 'layout-default');
+	if ( 'layout-2' == $comment_layout )
+	{
+		$args = array(
+			'title_reply'   => esc_html__( 'Leave A Comment', 'airi' ),
+			'label_submit'  => esc_html__( 'Send message', 'airi' ),
+			'comment_notes_before'	=>	'',
+			'class_form'	=>	'comment-form layout-2',
+			'comment_notes_after'	=>	'',
+			'class_submit'	=>	'btn-main',
+			'fields'               => array(
+				'author' => '<div class="form-group">' . '<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" placeholder="' . esc_attr__( 'Name', 'airi' ) . '" aria-required="true" required/></div>',
+				'email'	=>	'<div class="form-group">' . '<input id="email" name="email" class="form-control" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" placeholder="' . esc_attr__( 'Email', 'airi' ) . '" aria-required="true" required /></div>',
+				'url'	=>	'<div class="form-group">' . '<input id="url" name="url" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" placeholder="' . esc_attr__( 'Website', 'airi' ) . '" aria-required="true" required /></div>',
+				'comment_field'	=>	'<div class="form-group"><textarea id="comment" rows="6" class="form-control" name="comment" placeholder="' . esc_attr__( 'Message', 'airi' ) . '" aria-required="true"></textarea></div>',
+			),
+			'comment_field'	=>	'<div class="form-group"><textarea id="comment" rows="6" class="form-control" name="comment" placeholder="' . esc_attr__( 'Message', 'airi' ) . '" aria-required="true"></textarea></div>',
+		);
+		if ( ! is_user_logged_in() )
+		{
+			$args['comment_field'] = '';
+		}
 
-	comment_form();
+		comment_form( $args );
+	}
+	elseif ( 'layout-3' == $comment_layout )
+	{
+		$args = array(
+			'title_reply'   => esc_html__( 'Leave A Comment', 'airi' ),
+			'label_submit'  => esc_html__( 'Send message', 'airi' ),
+			'comment_notes_before'	=>	'',
+			'class_form'	=>	'comment-form layout-3',
+			'comment_notes_after'	=>	'',
+			'class_submit'	=>	'btn-main',
+			'fields'               => array(
+				'author' => '<div class="row"><div class="col-md-6"><div class="form-group">' . '<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" placeholder="' . esc_attr__( 'Name', 'airi' ) . '" aria-required="true" required/></div></div>',
+				'email'	=>	'<div class="col-md-6"><div class="form-group">' . '<input id="email" name="email" class="form-control" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" placeholder="' . esc_attr__( 'Email', 'airi' ) . '" aria-required="true" required /></div></div></div>',
+				'url'	=>	'<div class="form-group">' . '<input id="url" name="url" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" placeholder="' . esc_attr__( 'Website', 'airi' ) . '" aria-required="true" required /></div>',
+				'comment_field'	=>	'<div class="form-group"><textarea id="comment" rows="6" class="form-control" name="comment" placeholder="' . esc_attr__( 'Message', 'airi' ) . '" aria-required="true"></textarea></div>',
+			),
+			'comment_field'	=>	'<div class="form-group"><textarea id="comment" rows="6" class="form-control" name="comment" placeholder="' . esc_attr__( 'Message', 'airi' ) . '" aria-required="true"></textarea></div>',
+		);
+		if ( ! is_user_logged_in() )
+		{
+			$args['comment_field'] = '';
+		}
+
+		comment_form( $args );
+	}
+	else
+	{
+		comment_form();
+	}
 	?>
 
 </div><!-- #comments -->

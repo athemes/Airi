@@ -246,6 +246,186 @@
 	}
 }
 
+.layout-list-2 {
+	.site-content {
+		padding-bottom: 0;
+	}
+	.content-area {
+		article {
+			border-bottom: none;
+			padding-right: 20px;
+			width: 100%;
+			margin-bottom: 0;
+			padding-bottom: 52px;
+
+			.post-inner {
+				padding-right: 20px;
+				padding-bottom: 51px;
+				border-bottom: 1px solid #ebebeb;
+			}
+
+			.entry-header {
+				margin-bottom: 24px;
+
+				.entry-title {
+					line-height: 46px;
+					margin-top: 15px;
+					margin-bottom: 32px;
+				}
+			}
+			.thumbnail {
+				position: relative;
+
+				.post-thumbnail {
+					margin-bottom: 0;
+					img {
+						border-radius: 5px;
+					}
+				}
+
+				.post-cat,
+				.cat-links a{
+					background: #0a8ae6;
+					color: #fff;
+					border-radius: 2px;
+					position: absolute;
+					left: 20px;
+					bottom: 20px;
+					padding: 7px 15px;
+				}
+			}
+			.entry-meta {
+				line-height: 18px;
+
+				.byline {
+					font-size: 16px;
+
+					a {
+						color: #191919;
+					}
+				}
+			}
+			.entry-content {
+				margin-top: 26px;
+			}
+			.entry-footer {
+				.read-more-link {
+					font-size: 18px;
+					font-weight: 500;
+					margin-top: 21px;
+					text-transform: capitalize;
+				}
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+
+				.post-inner {
+					border-bottom: none
+				}
+			}
+		}
+	}
+	.widget-area {
+		padding: 0;
+		border: none;
+	}
+	&.single-post {
+		.site-content {
+			padding-bottom: 39px;
+		}
+		.content-area {
+			article {
+				.thumbnail {
+					.cat-links {
+						font-size: 12px;
+						line-height: 12px;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}
+
+.layout-two-columns {
+	.site-content {
+		.content-area {
+			.site-main {
+				padding-right: 40px;
+			}
+			.blog-loop {
+				&> .row {
+					margin-left: -25px;
+					margin-right: -25px;
+
+					article {
+						padding-left: 25px;
+						padding-right: 25px;
+					}
+				}
+			}
+			article {
+				padding-bottom: 0;
+				margin-bottom: 18px;
+
+				.entry-header {
+					margin-bottom: 0;
+					position: relative;
+
+					.post-thumbnail {
+						margin-bottom: 24px;
+					}
+					.first-cat {
+						background-color: #948b3e;
+						border-radius: 2px;
+						color: #fff;
+						font-size: 12px;
+						text-transform: initial;
+						padding: 7px 9px 8px 11px;
+						position: absolute;
+						bottom: 20px;
+						left: 20px;
+					}
+				}
+				.entry-meta {
+					i {
+						color: #948b3e;
+						margin-right: -2px;
+					}
+					span {
+						margin-right: 0;
+
+						&.separator {
+							margin-left: 3px;
+							margin-right: 3px;
+						}
+					}
+					.posted-on {
+						display: inline-block;
+
+						a {
+							text-transform: initial;
+							letter-spacing: 0;
+						}
+					}
+				}
+				.entry-title {
+					line-height: 30px;
+					margin-top: 19px;
+
+					a {
+						&:hover {
+							color: #948b3e;
+						}
+					}
+				}
+
+				border-bottom: none;
+			}
+		}
+	}
+}
 /* 404 */
 .error404 {
 
@@ -294,6 +474,84 @@
 	}
 }
 
+.single-post {
+	&.layout-two-columns {
+		.site-content {
+			padding-bottom: 50px;
+
+			.content-area {
+				&.layout-full {
+					border: none;
+					box-shadow: none;
+					padding: 0 100px;
+
+					@include mqmax991 {
+						padding: 30px;
+					}
+
+					.site-main {
+						padding-right: 0;
+					}
+				}
+				article {
+					.entry-header {
+						margin-bottom: 44px;
+						text-align: center;
+
+						.entry-title {
+							line-height: 59px;
+							margin-top: 34px;
+							margin-bottom: 14px;
+						}
+
+						.cat-links {
+							background-color: #948b3e;
+							border-radius: 2px;
+							font-size: 12px;
+							text-transform: initial;
+							padding: 7px 9px 8px 11px;
+
+							a {
+								color: #fff;
+							}
+						}
+
+					}
+					.entry-meta {
+						margin-bottom: 42px;
+
+						.byline {
+							color: #948b3e;
+
+							a {
+								color: #948b3e;
+							}
+						}
+						.separator {
+							color: #948b3e;
+						}
+						.posted-on {
+							a {
+								color: #948b3e;
+							}
+						}
+					}
+					.entry-footer {
+						margin-top: 30px;
+					}
+				}
+				.post-navigation {
+					display: none;
+				}
+			}
+		}
+		.comment-respond {
+			border-top: none;
+			padding-top: 0;
+			margin-top: 47px;
+		}
+	}
+}
 /* Woocommerce pages */
 .woocommerce .content-area {
 	width: 100%;

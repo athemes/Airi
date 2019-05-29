@@ -25,6 +25,8 @@ Airi_Kirki::add_field( 'airi', array(
 	'choices'     => array(
 		'menuStyle1' => esc_attr__( 'Basic 1 - inside header', 'airi' ),
 		'menuStyle2' => esc_attr__( 'Basic 2 - outside header', 'airi' ),
+		'menuStyle5' => esc_attr__( 'Basic 3 - inside header', 'airi' ),
+		'menuStyle6' => esc_attr__( 'Basic 4 - inside header', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(
@@ -37,6 +39,18 @@ Airi_Kirki::add_field( 'airi', array(
 		'menuContained' 	=> esc_attr__( 'Contained', 'airi' ),
 		'menuNotContained' 	=> esc_attr__( 'Not contained', 'airi' ),
 	),
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '!=',
+		),
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '!=',
+		),
+	)
 ) );
 Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'radio',
@@ -444,6 +458,150 @@ Airi_Kirki::add_field( 'airi', array(
 	'section'     => 'airi_section_menu',
 	'default'     => '',	
 	'label'       => __( 'Disable header search icon?', 'airi' ),
+) );
+
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_custom_text',
+	'label'       		=> __( 'Custom Text', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'default'     		=> __( 'Call Us', 'airi' ),
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_facebook',
+	'label'       		=> __( 'Facebook', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_twitter',
+	'label'       		=> __( 'Twitter', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_google',
+	'label'       		=> __( 'Google +', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'default'     		=> '',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_linkedin',
+	'label'       		=> __( 'Likedin', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu5_skype',
+	'label'       		=> __( 'Skype', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle5',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 6
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'textarea',
+	'settings'    		=> 'menu6_top_section_left',
+	'label'       		=> __( 'Block Top Left Content', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+// Menu style 6
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'textarea',
+	'settings'    		=> 'menu6_top_section_right',
+	'label'       		=> __( 'Block Top Right Content', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu6_button_text',
+	'label'       		=> __( 'Button Text', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'text',
+	'settings'    		=> 'menu6_button_url',
+	'label'       		=> __( 'Button Url', 'airi' ),
+	'section'     		=> 'airi_section_menu',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
 ) );
 
 /**
