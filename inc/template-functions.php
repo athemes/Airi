@@ -190,7 +190,16 @@ function airi_blog_grid( $classes ) {
 	if ( !is_singular() && ( $layout['type'] == 'layout-grid' || $layout['type'] == 'layout-masonry' ) ) {
 		$classes[] = 'col-lg-4 col-md-6';
 	}
-
+	elseif ( !is_singular() && ( 'layout-two-columns' == $layout['type'] ) )
+	{
+		$classes[] = 'col-md-6';
+		$classes[] = $layout['type'];
+	}
+	elseif ( !is_singular() && ( 'layout-list-2' == $layout['type'] ) )
+	{
+		$classes[] = 'col-12';
+		$classes[] = $layout['type'];
+	}
 	return $classes;
 }
 add_filter( 'post_class', 'airi_blog_grid' );

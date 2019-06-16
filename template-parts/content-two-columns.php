@@ -13,11 +13,10 @@ $hide_date 		= get_theme_mod( 'index_hide_date' );
 $hide_cats 		= get_theme_mod( 'index_hide_cats' );
 $hide_author 	= get_theme_mod( 'index_hide_author' );
 $hide_comments 	= get_theme_mod( 'index_hide_comments' );
-$post_class[] = 'col-md-6';
-$post_class[] = $layout['type'];
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( implode( ' ', $post_class ) ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="inner">
 		<header class="entry-header">
 			<?php
