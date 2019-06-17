@@ -211,15 +211,6 @@ function airi_disable_elementor_globals () {
 add_action('after_switch_theme', 'airi_disable_elementor_globals');
 
 /**
- * Custom Elementor custom script
- */
-function airi_widget_scripts() {
-
-	wp_register_script( 'airi-isotope', get_template_directory_uri() . '/js/vendor/isotope.pkgd.js', array( 'jquery', 'jquery-masonry' ), '20190617', true );
-}
-add_action( 'elementor/frontend/after_register_scripts','airi_widget_scripts' );
-
-/**
  * Custom Elementor widgets
  */
 function airi_register_elementor_widgets() {

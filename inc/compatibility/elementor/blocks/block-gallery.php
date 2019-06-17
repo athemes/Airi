@@ -70,10 +70,6 @@ class Airi_Gallery extends Widget_Base {
 		return [ 'airi-elements' ];
 	}
 
-	public function get_script_depends() {
-		return [ 'airi-isotope' ];
-	}
-
 	/**
 	 * Register blog widget controls.
 	 *
@@ -141,7 +137,6 @@ class Airi_Gallery extends Widget_Base {
 			$args = [
 				'image_size'    =>  'custom',
 			];
-//			$items = ['<div class="grid-sizer"></div>'];
 			foreach ( $settings['images'] as $img )
 			{
 				if ( 0 == $count || 5 == $count || 11 == $count )
