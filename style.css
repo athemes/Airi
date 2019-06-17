@@ -4325,6 +4325,72 @@ ul.social-media-list li {
   bottom: 25px;
 }
 
+/* Gallery */
+.airi-image-gallery .gallery {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.airi-image-gallery .group {
+  display: inline-block;
+}
+.airi-image-gallery .gallery-item {
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: auto;
+}
+.airi-image-gallery .gallery-item a {
+  display: inline-block;
+  position: relative;
+}
+.airi-image-gallery .gallery-item a i {
+  font-size: 16px;
+  background-color: #fff;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #b9af86;
+  padding: 17px 18px 17px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.airi-image-gallery .gallery-item a:after {
+  background-color: rgba(103, 131, 131, 0.65);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+.airi-image-gallery .gallery-item a:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+.airi-image-gallery .gallery-item a:hover i {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  opacity: 1;
+  visibility: visible;
+}
+
 /*--------------------------------------------------------------
 ## Elementor
 --------------------------------------------------------------*/

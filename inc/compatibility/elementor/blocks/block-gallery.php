@@ -68,7 +68,11 @@ class Airi_Gallery extends Widget_Base {
 	 */
 	public function get_categories() {
 		return [ 'airi-elements' ];
-	}	
+	}
+
+	public function get_script_depends() {
+		return [ 'airi-isotope' ];
+	}
 
 	/**
 	 * Register blog widget controls.
@@ -80,253 +84,29 @@ class Airi_Gallery extends Widget_Base {
 	 */
 	protected function _register_controls() {
 		$this->start_controls_section(
-			'section_blog_settings',
+			'section_gallery_settings',
 			[
-				'label' => __( 'Blog', 'airi' ),
+				'label' => __( 'Gallery', 'airi' ),
 			]
 		);
 
-		$cats_array = $this->prepare_cats_for_select();
-
 		$this->add_control(
-			'categories',
+			'images',
 			[
-				'label' => __( 'Select your categories', 'airi' ),
-				'type' => Controls_Manager::SELECT2,
+				'label' => __( 'Add Images', 'airi' ),
+				'type' => Controls_Manager::GALLERY,
+				'show_label' => false,
 				'dynamic' => [
 					'active' => true,
 				],
-				'options' => $cats_array,
-				'multiple' => true
 			]
 		);
-
-		$this->add_control(
-			'number',
-				[
-				'label'   => __( 'Number of posts', 'airi' ),
-				'type'    => Controls_Manager::NUMBER,
-				'default' => 3,
-				'min'     => 1,
-				'max'     => 24,
-				'step'    => 1,
-				]
-		);			
 
 		$this->end_controls_section();
+	}
 
-		$this->start_controls_section(
-			'section_style_content',
-			[
-				'label' => __( 'Content', 'airi' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		//Title
-		$this->add_control(
-			'heading_title',
-			[
-				'label' => __( 'Post Title', 'airi' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-			]
-		);
-
-		$this->add_control(
-			'title_color',
-			[
-				'label' => __( 'Color', 'airi' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .entry-title a' => 'color: {{VALUE}};',
-				],
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'title_typography',
-				'selector' => '{{WRAPPER}} .athemes-blog .entry-title a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-			]
-		);
-		//End title
-
-		//Date
-		$this->add_control(
-			'heading_date',
-			[
-				'label' => __( 'Date', 'airi' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-			]
-		);
-
-		$this->add_control(
-			'date_color',
-			[
-				'label' => __( 'Color', 'airi' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .posted-on a, {{WRAPPER}} .athemes-blog .posted-on' => 'color: {{VALUE}};',
-				],
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-			]
-		);
-
-		$this->add_control(
-			'date_bg_color',
-			[
-				'label' => __( 'Background color', 'airi' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .posted-on' => 'background-color: {{VALUE}};',
-				],
-				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
-				],
-				'condition' => [
-					'_skin' => 'airi_athemes_blog_skin_4',
-				],					
-			]
-		);		
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'date_typography',
-				'selector' => '{{WRAPPER}} .athemes-blog .posted-on a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-			]
-		);
-		//End date
-
-
-		//Cat
-		$this->add_control(
-			'heading_cat',
-			[
-				'label' => __( 'Category', 'airi' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'_skin' => '',
-				],					
-			]
-		);
-
-		$this->add_control(
-			'cat_color',
-			[
-				'label' => __( 'Color', 'airi' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .first-cat' => 'color: {{VALUE}};',
-				],
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'condition' => [
-					'_skin' => '',
-				],				
-			]
-		);
-
-		$this->add_control(
-			'cat_bg_color',
-			[
-				'label' => __( 'Background color', 'airi' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .first-cat' => 'background-color: {{VALUE}};',
-				],
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-				'condition' => [
-					'_skin' => '',
-				],					
-			]
-		);		
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'cat_typography',
-				'selector' => '{{WRAPPER}} .athemes-blog .posted-on a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-				'condition' => [
-					'_skin' => '',
-				],					
-			]
-		);
-		//End cat		
-
-		//Author
-		$this->add_control(
-			'heading_author',
-			[
-				'label' => __( 'Author', 'airi' ),
-				'type' => Controls_Manager::HEADING,
-				'separator' => 'before',
-				'condition' => [
-					'_skin' => '',
-				],				
-			]
-		);
-
-		$this->add_control(
-			'author_color',
-			[
-				'label' => __( 'Color', 'airi' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .athemes-blog .byline a' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'_skin' => '',
-				],					
-				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'author_typography',
-				'selector' => '{{WRAPPER}} .athemes-blog .byline',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-				'condition' => [
-					'_skin' => '',
-				],					
-			]
-		);
-		//End Author		
-
-
-
-		$this->end_controls_section();
+	public function add_lightbox_data_to_image_link( $link_html ) {
+		return preg_replace( '/^<a/', '<a ' . $this->get_render_attribute_string( 'link' ), $link_html );
 	}
 
 	/**
@@ -338,59 +118,105 @@ class Airi_Gallery extends Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
-		$settings = $this->get_settings();
-
-		$cats = is_array( $settings['categories'] ) ? implode( ',', $settings['categories'] ) : $settings['categories'];
-
-		$query = new \WP_Query( array(
-			'posts_per_page'      => $settings['number'],
-			'no_found_rows'       => true,
-			'post_stairis'         => 'publish',
-			'ignore_sticky_posts' => true,
-			'cat' 			      => $cats
-		) ); ?>
-
-		<div class="athemes-blog">
-			<div class="row">	
-			<?php if ( $query->have_posts() ) : ?>
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<div class="col-md-4 col-sm-6">
-						<div class="post-item">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'airi-360-360' ); ?>
-							<?php endif; ?>					
-							<div class="post-content">	
-								<?php airi_posted_on(); ?>
-								<?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
-								<?php airi_first_category(); ?>
-								<?php airi_posted_by(); ?>
-							</div>	
-						</div>				
-					</div>
-				<?php
-				endwhile;
-				wp_reset_postdata();
-			endif; ?>
-			</div>
-		</div>	
-		<?php
-	}
-
-	/**
-	 * Prepare posts to be used in the SELECT2 field
-	 */
-	private function prepare_cats_for_select() {
-
-		$categories = get_categories();
-
-		$options = ['' => ''];
-
-		foreach ( $categories as $cat ) {
-			$options[$cat->term_id] = $cat->name;
+		$settings = $this->get_settings_for_display();
+		if ( ! $settings['images'] ) {
+			return;
 		}
 
-		return $options;
-	}	
+		$ids = wp_list_pluck( $settings['images'], 'id' );
+
+		$this->add_render_attribute( 'shortcode', 'ids', implode( ',', $ids ) );
+		$this->add_render_attribute( 'shortcode', 'size', 'full' );
+
+
+		$this->add_render_attribute( 'shortcode', 'link', 'file' );
+		?>
+		<div class="airi-image-gallery">
+			<?php
+			add_filter( 'wp_get_attachment_link', [ $this, 'add_lightbox_data_to_image_link' ] );
+
+			$id = uniqid();
+
+			$count = 0;
+			$args = [
+				'image_size'    =>  'custom',
+			];
+//			$items = ['<div class="grid-sizer"></div>'];
+			foreach ( $settings['images'] as $img )
+			{
+				if ( 0 == $count || 5 == $count || 11 == $count )
+				{
+					$class_item = 'item1';
+					$args['image_custom_dimension'] = [
+						'width' =>  716,
+						'height' =>  348,
+					];
+				}
+				elseif ( 8 == $count )
+				{
+					$class_item = 'item3';
+					$args['image_custom_dimension'] = [
+						'width' =>  716,
+						'height' =>  716,
+					];
+				}
+				elseif ( 12 == $count )
+				{
+					$class_item = 'item4';
+					$args['image_custom_dimension'] = [
+						'width' =>  348,
+						'height' =>  716,
+					];
+				}
+				else
+				{
+					$class_item = 'item2';
+					$args['image_custom_dimension'] = [
+						'width' =>  348,
+						'height' =>  348,
+					];
+				}
+				$image_id = $img['id'];
+				$image_src = Group_Control_Image_Size::get_attachment_image_src( $image_id, 'image', $args );
+				$image_src_full = wp_get_attachment_image_src( $image_id, 'full' );
+				$image_output = sprintf( '<img src="%s" />', esc_url( $image_src ));
+				if ( 9 == $count )
+				{
+					$items[] = "<div class='group'>";
+					$items[] = "<div class='inner-group d-flex'>";
+				}
+				$items[] = "<div class='gallery-item landscape " . esc_attr( $class_item ) . "'>
+					<a data-elementor-open-lightbox='yes' data-elementor-lightbox-slideshow='" . $this->get_id() . "' href='" . $image_src_full[0] . "'>
+						$image_output
+						<i class='fa fa-search' aria-hidden='true'></i>
+					</a>
+				</div>";
+				if ( 10 == $count )
+				{
+					$items[] = "</div>";
+				}
+				if ( 11 == $count )
+				{
+					$items[] = "</div>";
+				}
+				$count++;
+				if ( 12 < $count )
+				{
+					$count = 0;
+				}
+			}
+			$output = "<div id='" . esc_attr( $id ) . "' class='gallery galleryid-{$id} d-flex'>";
+			$output .= implode( ' ', $items );
+			$output .= "</div>";
+			echo $output;
+			?>
+
+			<?php
+			remove_filter( 'wp_get_attachment_link', [ $this, 'add_lightbox_data_to_image_link' ] );
+			?>
+		</div>
+		<?php
+	}
 
 }
 
