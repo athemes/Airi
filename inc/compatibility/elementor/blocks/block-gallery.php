@@ -99,6 +99,78 @@ class Airi_Gallery extends Widget_Base {
 		);
 
 		$this->end_controls_section();
+		$this->start_controls_section(
+			'gallery_style',
+			[
+				'label' =>  esc_html__( 'Gallery', 'airi' ),
+				'tab'   =>  Controls_Manager::TAB_STYLE,
+			]
+		);
+		$this->add_responsive_control(
+			'images_spacing',
+			[
+				'label' => esc_html__( 'Spacing', 'airi' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 20,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .airi-image-gallery .gallery-item' => 'padding-right: {{SIZE}}{{UNIT}};padding-bottom: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_control(
+			'overlay_color',
+			[
+				'label' => __( 'Overlay Background Color', 'airi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => 'rgba(103, 131, 131, 0.65)',
+				'selectors' => [
+					'{{WRAPPER}} .airi-image-gallery .gallery-item a:after' => 'background-color: {{VALUE}};',
+				],
+				'scheme' => [
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_1,
+				],
+			]
+		);
+		$this->add_control(
+			'search_icon_color',
+			[
+				'label' => __( 'Search Icon Color', 'airi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#b9af86',
+				'selectors' => [
+					'{{WRAPPER}} .airi-image-gallery .gallery-item a i' => 'color: {{VALUE}};',
+				],
+				'scheme' => [
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_1,
+				],
+			]
+		);
+		$this->add_control(
+			'search_icon_bg_color',
+			[
+				'label' => __( 'Search Icon Background Color', 'airi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#fff',
+				'selectors' => [
+					'{{WRAPPER}} .airi-image-gallery .gallery-item a i' => 'background-color: {{VALUE}};',
+				],
+				'scheme' => [
+					'type' => \Elementor\Scheme_Color::get_type(),
+					'value' => \Elementor\Scheme_Color::COLOR_1,
+				],
+			]
+		);
+		$this->end_controls_section();
 	}
 
 	public function add_lightbox_data_to_image_link( $link_html ) {
@@ -119,13 +191,8 @@ class Airi_Gallery extends Widget_Base {
 			return;
 		}
 
-		$ids = wp_list_pluck( $settings['images'], 'id' );
+		$total_image = count( $settings['images'] );
 
-		$this->add_render_attribute( 'shortcode', 'ids', implode( ',', $ids ) );
-		$this->add_render_attribute( 'shortcode', 'size', 'full' );
-
-
-		$this->add_render_attribute( 'shortcode', 'link', 'file' );
 		?>
 		<div class="airi-image-gallery">
 			<?php
@@ -190,6 +257,7 @@ class Airi_Gallery extends Widget_Base {
 				{
 					$items[] = "</div>";
 				}
+
 				if ( 11 == $count )
 				{
 					$items[] = "</div>";
@@ -199,6 +267,10 @@ class Airi_Gallery extends Widget_Base {
 				{
 					$count = 0;
 				}
+			}
+			if ( 10 == $count && ( $total_image % $count == 0 ) )
+			{
+				$items[] = "</div>";
 			}
 			$output = "<div id='" . esc_attr( $id ) . "' class='gallery galleryid-{$id} d-flex'>";
 			$output .= implode( ' ', $items );
