@@ -218,6 +218,7 @@ function airi_register_elementor_widgets() {
 	if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
 
 		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-blog.php';
+		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-gallery.php';
 	}
 }
 add_action( 'elementor/widgets/widgets_registered', 'airi_register_elementor_widgets' );
