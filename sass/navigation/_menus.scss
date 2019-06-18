@@ -731,6 +731,26 @@
 		}
 	}
 }
+.menuStyle7 {
+	.site-header {
+		padding-top: 38px;
+		padding-bottom: 13px;
+
+		.site-branding {
+			margin-bottom: 35px;
+		}
+		.main-navigation {
+			a {
+				font-size: 14px;
+				text-transform: uppercase;
+
+				&:hover {
+					color: #678383;
+				}
+			}
+		}
+	}
+}
 .site-header {
 	padding: 30px 0;
 

@@ -47,6 +47,7 @@ if ( ! function_exists( 'airi_setup' ) ) :
 		add_image_size( 'airi-850-485', 850, 485, true );
 		add_image_size( 'airi-390-280', 390, 280, true );
 		add_image_size( 'airi-969-485', 969, 485, true );
+		add_image_size( 'airi-870-384', 870, 384, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

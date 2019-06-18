@@ -30,6 +30,25 @@ $layout = airi_blog_layout();
 				</header>
 				<?php
 			endif;
+			if	( 'layout-list-box' == $layout['type'] )
+			{
+			?>
+				<div class="page-title">
+					<h1><?php single_post_title(); ?></h1>
+					<?php
+					$img = get_theme_mod( 'image_separate' );
+					if ( $img )
+					{
+						?>
+						<div class="separate">
+							<img src="<?php echo esc_url( $img ); ?>">
+						</div>
+						<?php
+					}
+					?>
+				</div>
+			<?php
+			}
 			?>
 			<div class="blog-loop" <?php echo airi_masonry_data(); ?>>
 				<div class="row">
@@ -52,6 +71,10 @@ $layout = airi_blog_layout();
 					else if	( 'layout-two-columns' == $layout['type'] )
 					{
 						get_template_part( 'template-parts/content-two', 'columns' );
+					}
+					else if	( 'layout-list-box' == $layout['type'] )
+					{
+						get_template_part( 'template-parts/content', 'box' );
 					}
 					else
 					{

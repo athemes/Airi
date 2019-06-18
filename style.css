@@ -1010,6 +1010,21 @@ a:hover, a:active {
   margin-left: 42px;
 }
 
+.menuStyle7 .site-header {
+  padding-top: 38px;
+  padding-bottom: 13px;
+}
+.menuStyle7 .site-header .site-branding {
+  margin-bottom: 35px;
+}
+.menuStyle7 .site-header .main-navigation a {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.menuStyle7 .site-header .main-navigation a:hover {
+  color: #678383;
+}
+
 .site-header {
   padding: 30px 0;
   /* Sticky header */
@@ -2719,6 +2734,72 @@ ul.social-media-list li {
 }
 .layout-two-columns .site-content .content-area article .entry-title a:hover {
   color: #948b3e;
+}
+
+.layout-list-box .page-title {
+  text-align: center;
+  margin-bottom: 62px;
+}
+.layout-list-box .page-title h1 {
+  color: #678383;
+  font-size: 54px;
+  margin-bottom: 0;
+}
+.layout-list-box .site-main {
+  padding-right: 0;
+}
+.layout-list-box .blog-loop {
+  -webkit-box-shadow: 0 22px 46px 9px rgba(103, 131, 131, 0.15);
+          box-shadow: 0 22px 46px 9px rgba(103, 131, 131, 0.15);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+.layout-list-box .single-post .hentry,
+.layout-list-box .blog-loop .hentry {
+  border-bottom: none;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 50px;
+}
+.layout-list-box .single-post .hentry .entry-header,
+.layout-list-box .blog-loop .hentry .entry-header {
+  margin-bottom: 3px;
+}
+.layout-list-box .single-post .hentry .entry-header .entry-title,
+.layout-list-box .blog-loop .hentry .entry-header .entry-title {
+  margin-bottom: 0;
+}
+.layout-list-box .single-post .hentry .post-thumbnail,
+.layout-list-box .blog-loop .hentry .post-thumbnail {
+  margin-bottom: 40px;
+}
+.layout-list-box .single-post .hentry .entry-meta,
+.layout-list-box .blog-loop .hentry .entry-meta {
+  margin-bottom: 17px;
+}
+.layout-list-box .single-post .hentry .entry-meta .comments-number,
+.layout-list-box .blog-loop .hentry .entry-meta .comments-number {
+  font-size: 14px;
+}
+.layout-list-box .single-post .hentry .entry-meta .posted-on,
+.layout-list-box .blog-loop .hentry .entry-meta .posted-on {
+  margin-right: 28px;
+}
+.layout-list-box .single-post .hentry .entry-content,
+.layout-list-box .blog-loop .hentry .entry-content {
+  line-height: 30px;
+  margin-bottom: 6px;
+}
+.layout-list-box .single-post .hentry .read-more-link,
+.layout-list-box .blog-loop .hentry .read-more-link {
+  color: #b9af86;
+  display: inline-block;
+  font-size: 14px;
+  border-bottom: 2px solid #b9af86;
+  letter-spacing: 4px;
+  font-weight: 500;
+  padding-bottom: 3px;
 }
 
 /* 404 */
