@@ -616,6 +616,107 @@
 			margin-top: 47px;
 		}
 	}
+	.content-area {
+		&.layout-4 {
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-top: 50px;
+			flex: 0 0 83.333333%;
+			max-width: 83.333333%;
+			margin-left: 8.333333%;
+			box-shadow: 0px 33px 49px 0px rgba(86, 115, 121, 0.15);
+			border-width: 0;
+
+			h1,h2,h3,h4,h5 {
+				color: #678383;
+			}
+			.site-main {
+				padding-right: 0;
+			}
+			blockquote {
+				color: #678383;
+				font-family: Parisienne, "Comic Sans MS", cursive, sans-serif;
+				font-size: 36px;
+				margin: 0;
+				padding: 0;
+				background-color: #fff;
+				line-height: 45px;
+				border-left: none;
+				margin-top: 47px;
+				margin-bottom: 33px;
+
+				cite {
+					font-family: Lato;
+					color: #8b9094;
+					font-size: 14px;
+					letter-spacing: 3px;
+					font-style: inherit;
+					text-transform: uppercase;
+					margin-top: 8px;
+					display: block;
+				}
+			}
+			.page-title {
+				text-align: center;
+				margin-bottom: 62px;
+
+				h1 {
+					color: #678383;
+					font-size: 54px;
+					margin-bottom: 0;
+				}
+			}
+
+			.hentry {
+				.entry-header {
+					margin-bottom: 2px;
+					text-align: center;
+
+					.entry-title {
+						margin-bottom: 0;
+					}
+					.thumbnail {
+						margin-bottom: 40px;
+					}
+				}
+				.entry-meta {
+					margin-bottom: 18px;
+
+					.comments-number {
+						font-size: 14px;
+					}
+					.posted-on {
+						margin-right: 28px;
+					}
+				}
+				.separate {
+					text-align: center;
+				}
+				.entry-content {
+					line-height: 30px;
+					margin-bottom: 6px;
+				}
+			}
+			.comments-area {
+				.comment-reply-title {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+	.page-title {
+		&.single-layout-4 {
+			text-align: center;
+			margin-bottom: 62px;
+			width: 100%;
+			
+			h1 {
+				color: #678383;
+				font-size: 54px;
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 /* Woocommerce pages */
 .woocommerce .content-area {

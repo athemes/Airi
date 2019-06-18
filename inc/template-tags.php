@@ -124,6 +124,10 @@ function airi_post_thumbnail() {
 		{
 			$image_size = 'airi-969-485';
 		}
+		elseif ( 'layout-list-box' == $layout )
+		{
+			$image_size = 'airi-870-384';
+		}
 		?>
 		<?php the_post_thumbnail( $image_size ); ?>
 	</div><!-- .post-thumbnail -->
