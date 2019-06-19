@@ -1017,12 +1017,27 @@ a:hover, a:active {
 .menuStyle7 .site-header .site-branding {
   margin-bottom: 35px;
 }
+.menuStyle7 .site-header .mobile-menu-toggle_lines {
+  background: #191919;
+}
+.menuStyle7 .site-header .mobile-menu-toggle_lines:before, .menuStyle7 .site-header .mobile-menu-toggle_lines:after {
+  background: #191919;
+}
 .menuStyle7 .site-header .main-navigation a {
   font-size: 14px;
   text-transform: uppercase;
 }
 .menuStyle7 .site-header .main-navigation a:hover {
   color: #678383;
+}
+@media (max-width: 1199px) {
+  .menuStyle7 .site-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .menuStyle7 .site-header .site-branding {
+    margin-bottom: 0;
+  }
 }
 
 .site-header {
@@ -2801,6 +2816,21 @@ ul.social-media-list li {
   font-weight: 500;
   padding-bottom: 3px;
 }
+@media (max-width: 577px) {
+  .layout-list-box .blog-loop .hentry .entry-meta,
+.layout-list-box .single-post .hentry .entry-meta {
+    text-align: center;
+  }
+  .layout-list-box .blog-loop .hentry .entry-meta .posted-on,
+.layout-list-box .single-post .hentry .entry-meta .posted-on {
+    margin-right: 0;
+    display: block;
+  }
+  .layout-list-box .blog-loop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 /* 404 */
 .error404 .site-content {
@@ -2981,6 +3011,30 @@ ul.social-media-list li {
 }
 .single-post .content-area.layout-4 .comments-area .comment-reply-title {
   font-size: 40px;
+}
+@media (max-width: 767px) {
+  .single-post .content-area.layout-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .single-post .content-area.layout-4 .hentry .entry-meta {
+    text-align: center;
+  }
+  .single-post .content-area.layout-4 .hentry .entry-meta .posted-on {
+    display: block;
+    margin-right: 0;
+  }
+}
+@media (max-width: 577px) {
+  .single-post .content-area.layout-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .single-post .page-title.single-layout-4 {
   text-align: center;

@@ -15,7 +15,7 @@ if	( 'layout-4' == $single_layout )
 {
 	?>
 	<div class="page-title single-layout-4">
-		<h1><?php single_post_title(); ?></h1>
+		<h1><?php echo esc_html( 'Blog', 'airi' ); ?></h1>
 		<?php
 		$img = get_theme_mod( 'image_separate' );
 		if ( $img )

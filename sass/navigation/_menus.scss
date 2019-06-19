@@ -739,6 +739,14 @@
 		.site-branding {
 			margin-bottom: 35px;
 		}
+		.mobile-menu-toggle_lines {
+			background: #191919;
+
+			&:before,
+			&:after {
+				background: #191919;
+			}
+		}
 		.main-navigation {
 			a {
 				font-size: 14px;
@@ -747,6 +755,14 @@
 				&:hover {
 					color: #678383;
 				}
+			}
+		}
+		@include mqmax1199 {
+			padding-top: 30px;
+			padding-bottom: 30px;
+
+			.site-branding {
+				margin-bottom: 0;
 			}
 		}
 	}

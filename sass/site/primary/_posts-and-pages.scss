@@ -490,7 +490,28 @@
 			}
 		}
 	}
+
+	@include mqmax577 {
+		.blog-loop,
+		.single-post {
+			.hentry {
+				.entry-meta {
+					text-align: center;
+
+					.posted-on {
+						margin-right: 0;
+						display: block;
+					}
+				}
+			}
+		}
+		.blog-loop {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 }
+
 /* 404 */
 .error404 {
 
@@ -702,6 +723,27 @@
 					font-size: 40px;
 				}
 			}
+
+			@include mqmax767{
+				flex: 0 0 100%;
+				max-width: 100%;
+				margin-left: 0;
+
+				.hentry {
+					.entry-meta {
+						text-align: center;
+
+						.posted-on {
+							display: block;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+			@include mqmax577{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 		}
 	}
 	.page-title {
@@ -709,7 +751,7 @@
 			text-align: center;
 			margin-bottom: 62px;
 			width: 100%;
-			
+
 			h1 {
 				color: #678383;
 				font-size: 54px;

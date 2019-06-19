@@ -45,6 +45,11 @@
 	  @content;
 	}
 }
+@mixin mqmax577 {
+	@media (max-width: 577px) {
+		@content;
+	}
+}
 @mixin mqmax1199 {
 	@media (max-width: 1199px) {
 	  @content;
