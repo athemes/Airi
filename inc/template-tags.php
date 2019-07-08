@@ -124,6 +124,10 @@ function airi_post_thumbnail() {
 		{
 			$image_size = 'airi-969-485';
 		}
+		elseif ( 'layout-list-box' == $layout )
+		{
+			$image_size = 'airi-870-384';
+		}
 		?>
 		<?php the_post_thumbnail( $image_size ); ?>
 	</div><!-- .post-thumbnail -->
@@ -141,12 +145,15 @@ function airi_post_thumbnail() {
 		{
 			$image_size = 'airi-390-280';
 		}
-
-			the_post_thumbnail( $image_size, array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
+		elseif ( 'layout-list-box' == $layout )
+		{
+			$image_size = 'airi-870-384';
+		}
+		the_post_thumbnail( $image_size, array(
+			'alt' => the_title_attribute( array(
+				'echo' => false,
+			) ),
+		) );
 		?>
 	</a>
 

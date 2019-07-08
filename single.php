@@ -10,14 +10,32 @@
 get_header();
 
 $layout = airi_single_layout();
+$single_layout = get_theme_mod( 'single_post_content_layout', 'layout-default' );
+if	( 'layout-4' == $single_layout )
+{
+	?>
+	<div class="page-title single-layout-4">
+		<h1><?php echo esc_html( 'Blog', 'airi' ); ?></h1>
+		<?php
+		$img = get_theme_mod( 'image_separate' );
+		if ( $img )
+		{
+			?>
+			<div class="separate">
+				<img src="<?php echo esc_url( $img ); ?>">
+			</div>
+			<?php
+		}
+		?>
+	</div>
+	<?php
+}
 ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $layout['type'] ); ?> <?php echo esc_attr( $layout['cols'] ); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr( $layout['type'] ); ?> <?php echo esc_attr( $layout['cols'] ); ?> <?php echo esc_attr( $single_layout ); ?>">
 		<main id="main" class="site-main">
-
 		<?php
 		while ( have_posts() ) : the_post();
-			$single_layout = get_theme_mod( 'single_post_content_layout', 'layout-default' );
 
 			if ( 'layout-default' == $single_layout )
 			{
@@ -30,6 +48,10 @@ $layout = airi_single_layout();
 			elseif ( 'layout-3' == $single_layout )
 			{
 				get_template_part( 'template-parts/content-single', '3' );
+			}
+			elseif ( 'layout-4' == $single_layout )
+			{
+				get_template_part( 'template-parts/content-single', '4' );
 			}
 			the_post_navigation();
 

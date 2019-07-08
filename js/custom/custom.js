@@ -124,5 +124,4 @@
 			$( '.header-search-form' ).slideToggle();
 		});
 	}
-
 })( jQuery );

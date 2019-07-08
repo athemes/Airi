@@ -27,6 +27,7 @@ Airi_Kirki::add_field( 'airi', array(
 		'menuStyle2' => esc_attr__( 'Basic 2 - outside header', 'airi' ),
 		'menuStyle5' => esc_attr__( 'Basic 3 - inside header', 'airi' ),
 		'menuStyle6' => esc_attr__( 'Basic 4 - inside header', 'airi' ),
+		'menuStyle7' => esc_attr__( 'Basic 5 - inside header', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(

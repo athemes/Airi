@@ -28,7 +28,22 @@ Airi_Kirki::add_field( 'airi', array(
 		'layout-grid' 		=> esc_attr__( 'Grid', 'airi' ),
 		'layout-list-2' 		=> esc_attr__( 'Classic', 'airi' ),
 		'layout-two-columns' 		=> esc_attr__( 'Two Columns', 'airi' ),
+		'layout-list-box' 		=> esc_attr__( 'Box', 'airi' ),
 	),
+) );
+// Menu style 5
+Airi_Kirki::add_field( 'airi', array(
+	'type'       		=> 'image',
+	'settings'    		=> 'image_separate',
+	'label'       		=> __( 'Image Separate', 'airi' ),
+	'section'     		=> 'airi_section_blog_index',
+	'required'  => array(
+		array(
+			'setting'  => 'blog_layout',
+			'value'    => 'layout-list-box',
+			'operator' => '==',
+		),
+	)
 ) );
 Airi_Kirki::add_field( 'airi', array(
 	'type'        => 'number',
@@ -124,6 +139,7 @@ Airi_Kirki::add_field( 'airi', array(
 		'layout-default' 	=> esc_attr__( 'Default', 'airi' ),
 		'layout-2' 		=> esc_attr__( 'Layout 2', 'airi' ),
 		'layout-3' 		=> esc_attr__( 'Layout 3', 'airi' ),
+		'layout-4' 		=> esc_attr__( 'Layout 4', 'airi' ),
 	),
 ) );
 Airi_Kirki::add_field( 'airi', array(

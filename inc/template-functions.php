@@ -128,6 +128,11 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 			$cols 		= 'col-lg-9';
 			$sidebar 	= true;
 		}
+		elseif ( $layout == 'layout-list-box' )
+		{
+			$cols 		= 'col-md-10 offset-md-1';
+			$sidebar 	= false;
+		}
 		else {
 			$cols 		= 'col-lg-8';
 			$sidebar 	= true;
@@ -136,7 +141,11 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		//Inner columns for list layout
 		if ( $layout == 'layout-list' ) {
 			$item_inner_cols = 'col-md-6 col-sm-12';
-		} else {
+		}
+		if ( $layout == 'layout-list-box' ) {
+			$item_inner_cols = '';
+		}
+		else {
 			$item_inner_cols = 'col-md-12';
 		}
 
@@ -190,7 +199,21 @@ function airi_blog_grid( $classes ) {
 	if ( !is_singular() && ( $layout['type'] == 'layout-grid' || $layout['type'] == 'layout-masonry' ) ) {
 		$classes[] = 'col-lg-4 col-md-6';
 	}
-
+	elseif ( !is_singular() && ( 'layout-two-columns' == $layout['type'] ) )
+	{
+		$classes[] = 'col-md-6';
+		$classes[] = $layout['type'];
+	}
+	elseif ( !is_singular() && ( 'layout-list-2' == $layout['type'] ) )
+	{
+		$classes[] = 'col-12';
+		$classes[] = $layout['type'];
+	}
+	elseif ( !is_singular() && ( 'layout-list-box' == $layout['type'] ) )
+	{
+		$classes[] = 'col-12';
+		$classes[] = $layout['type'];
+	}
 	return $classes;
 }
 add_filter( 'post_class', 'airi_blog_grid' );
