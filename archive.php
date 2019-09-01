@@ -36,7 +36,18 @@ $layout = airi_blog_layout();
 						* If you want to override this in a child theme, then include a file
 						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						*/
-						get_template_part( 'template-parts/content', get_post_format() );
+						if	( 'layout-list-2' == $layout['type'] )
+						{
+							get_template_part( 'template-parts/content-list', '2' );
+						}
+						else if	( 'layout-two-columns' == $layout['type'] )
+						{
+							get_template_part( 'template-parts/content-two', 'columns' );
+						}
+						else
+						{
+							get_template_part( 'template-parts/content', get_post_type() );
+						}
 
 					endwhile; ?>
 				</div>

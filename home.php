@@ -49,7 +49,7 @@ $layout = airi_blog_layout();
 					{
 						get_template_part( 'template-parts/content-list', '2' );
 					}
-					else if	( 'layout-two-columns' == $layout['type'] )
+					elseif	( 'layout-two-columns' == $layout['type'] )
 					{
 						get_template_part( 'template-parts/content-two', 'columns' );
 					}

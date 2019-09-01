@@ -11,9 +11,13 @@
 .startup-services .elementor-icon .fa::before {
 	position: static;
 }
+
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay img,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay img {
 	display: none;
 }
+
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay .elementor-custom-embed-play,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay .elementor-custom-embed-play {
 	position: static;
 	transform: none;
@@ -169,5 +173,53 @@
 			padding: 17px 20px;
 		}
 	}
+}
 
+.hover-white-style {
+	&:hover {
+		.elementor-icon-box-wrapper {
+			.elementor-icon-box-icon {
+				i {
+					color: #fff;
+				}
+			}
+			.elementor-icon-box-content {
+				.elementor-icon-box-title {
+					color: #fff !important;
+				}
+			}
+			.elementor-icon-box-description {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.counter-layout {
+	.elementor-icon-box-wrapper {
+		position: relative;
+
+		.elementor-icon-box-icon {
+			position: absolute;
+			margin: 0;
+			right: 0;
+		}
+		.elementor-icon-box-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.elementor-icon-box-title {
+			margin-right: 16px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.hover-slide-up {
+	transition: all .3s;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
 }

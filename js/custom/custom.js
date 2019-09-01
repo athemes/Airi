@@ -26,7 +26,16 @@
 			$('.menuStyle3.sticky-header:not(.admin-bar) .bottom-bar').sticky({
 				topSpacing: 0,
 				responsiveWidth: true
-			});	
+			});
+
+			$('.menuStyle5.sticky-header.admin-bar .site-header').sticky({
+				topSpacing: 32,
+				responsiveWidth: true
+			});
+			$('.menuStyle5.sticky-header:not(.admin-bar) .site-header').sticky({
+				topSpacing: 0,
+				responsiveWidth: true
+			});
 
 			var menuHeight = $( '.main-navigation' ).outerHeight();
 			$( '.menuStyle4 #site-navigation-sticky-wrapper, .menuStyle4 .main-navigation' ).css( 'margin-bottom', -(menuHeight/2 + 30) );
