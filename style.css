@@ -4313,6 +4313,10 @@ ul.social-media-list li {
   color: #595959;
 }
 
+.footer-widgets .widget.widget_nav_menu ul > li > a:before {
+  content: "\f101";
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -4413,3 +4417,5 @@ object {
 .gallery-caption {
   display: block;
 }
+
+/*# sourceMappingURL=style.css.map */
