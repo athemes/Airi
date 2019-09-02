@@ -523,7 +523,7 @@ Airi_Kirki::add_field( 'airi', array(
 Airi_Kirki::add_field( 'airi', array(
 	'type'       		=> 'text',
 	'settings'    		=> 'menu5_linkedin',
-	'label'       		=> __( 'Likedin', 'airi' ),
+	'label'       		=> __( 'Linkedin', 'airi' ),
 	'section'     		=> 'airi_section_menu',
 	'required'  => array(
 		array(
