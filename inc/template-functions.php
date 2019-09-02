@@ -26,6 +26,12 @@ function airi_body_classes( $classes ) {
 	$sticky 	= get_theme_mod('sticky_menu', 'sticky-header');
 	$classes[] 	= esc_attr( $sticky );	
 
+	// primary type
+	if ( is_home() || is_singular( 'post' ) )
+	{
+		$layout = airi_blog_layout();
+		$classes[] = $layout[ 'type' ];
+	}	
 
 	if ( class_exists( 'WooCommerce' ) ) {
 		$check = airi_wc_archive_check();
@@ -136,7 +142,12 @@ if ( !function_exists( 'airi_blog_layout' ) ) {
 		//Inner columns for list layout
 		if ( $layout == 'layout-list' ) {
 			$item_inner_cols = 'col-md-6 col-sm-12';
-		} else {
+		}
+		elseif ( $layout == 'layout-list-2' )
+		{
+			$item_inner_cols = '';
+		}
+		else {
 			$item_inner_cols = 'col-md-12';
 		}
 
