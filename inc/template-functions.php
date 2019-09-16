@@ -27,7 +27,7 @@ function airi_body_classes( $classes ) {
 	$classes[] 	= esc_attr( $sticky );	
 
 	// primary type
-	if ( is_home() || is_singular( 'post' ) )
+	if ( is_home() || !is_singular( 'post' ) )
 	{
 		$layout = airi_blog_layout();
 		$classes[] = $layout[ 'type' ];
