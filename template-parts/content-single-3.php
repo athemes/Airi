@@ -50,7 +50,7 @@ $hide_author 	= get_theme_mod( 'single_hide_author' );
 			if ( has_post_thumbnail() )
 			{
 				?>
-				<div class="thumbnail<?php echo esc_attr( $layout['item_inner_cols'] ); ?>">
+				<div class="thumbnail">
 					<?php airi_post_thumbnail(); ?>
 				</div>
 				<?php
