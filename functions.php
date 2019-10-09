@@ -367,4 +367,6 @@ require get_template_directory() . '/inc/customizer/upsell/class-customize.php';
 /**
  * Onboarding
  */
-require get_template_directory() . '/inc/onboarding/class-airi-onboarding.php';
+if ( current_user_can( 'manage_options' ) ) {
+	require get_template_directory() . '/inc/onboarding/class-airi-onboarding.php';
+}
