@@ -38,7 +38,7 @@ $layout = airi_blog_layout();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile; ?>
 
