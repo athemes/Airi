@@ -250,13 +250,16 @@ add_action( 'elementor/elements/categories_registered', 'airi_block_category' );
 /**
  * Elementor skins
  */
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-google-maps-skin.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php';
-require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php';
+add_action( 'elementor/init', 'airi_add_elementor_skins' );
+function airi_add_elementor_skins(){
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-google-maps-skin.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php';
+	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php';
+}
 
 /**
  * Widgets

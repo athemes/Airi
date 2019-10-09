@@ -4,18 +4,12 @@
  * Skin for the aThemes: Blog module
  */
 
-add_action( 'elementor/init', 'airi_register_athemes_blog_skin_6' );
 
-function airi_register_athemes_blog_skin_6() {
-	
 	class Airi_aThemes_Blog_Skin_6 extends Elementor\Skin_Base {
 		
 		public function __construct( Elementor\Widget_Base $parent ) {
 			parent::__construct( $parent );
 			add_action( 'elementor/element/athemes-blog/section_style_content/after_section_start', [ $this, 'register_controls' ] );
-			add_filter( 'elementor/widget/print_template', array( $this, 'skin_print_template' ), 10, 2 );
-
-		
 		}
      
 		public function get_id() {
@@ -117,7 +111,6 @@ function airi_register_athemes_blog_skin_6() {
 		}
 
 	}
-}
 
 add_action( 'elementor/widget/athemes-blog/skins_init', function( $widget ) {
    $widget->add_skin( new Airi_aThemes_Blog_Skin_6( $widget ) );

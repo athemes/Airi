@@ -4,10 +4,7 @@
  * Skin for the aThemes: Blog module
  */
 
-add_action( 'elementor/init', 'airi_register_athemes_blog_skin_2' );
 
-function airi_register_athemes_blog_skin_2() {
-	
 	class Airi_aThemes_Blog_Skin_2 extends Elementor\Skin_Base {
 		
 		public function __construct( Elementor\Widget_Base $parent ) {
@@ -135,7 +132,6 @@ function airi_register_athemes_blog_skin_2() {
 		}
 
 	}
-}
 
 add_action( 'elementor/widget/athemes-blog/skins_init', function( $widget ) {
    $widget->add_skin( new Airi_aThemes_Blog_Skin_2( $widget ) );

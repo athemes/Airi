@@ -5,9 +5,6 @@
 
 
 
-add_action( 'elementor/init', 'airi_register_google_maps_skin' );
-
-function airi_register_google_maps_skin() {
 	
 	class Airi_Google_Maps_Skin extends Elementor\Skin_Base {
 		
@@ -179,7 +176,6 @@ function airi_register_google_maps_skin() {
     }
 
   }
-}
 
 add_action( 'elementor/widget/google_maps/skins_init', function( $widget ) {
    $widget->add_skin( new Airi_Google_Maps_Skin( $widget ) );
