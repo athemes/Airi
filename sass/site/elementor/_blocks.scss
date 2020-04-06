@@ -795,7 +795,12 @@
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 30px;
+	grid-gap: 30px;
+	
+	@include mqmax767 {
+		height: auto;
+		display: block;
+	}
 
 	.cats-grid-item {
 
@@ -803,6 +808,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		min-width: 0;
 
 		&.item1 {
 			grid-column: 1 / span 2;
@@ -870,6 +876,12 @@
 			padding-left: 30px;
 			padding-right: 30px;
 		}
+
+		@include mqmax767 {
+			min-height: 130px;
+			margin-bottom: 15px;
+		}
+
 	}
 }
 
