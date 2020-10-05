@@ -8,12 +8,19 @@
 //Get the options
 $above_phone_number = get_theme_mod( 'above_phone_number', esc_html__( 'Call us', 'airi' ) );
 $phone_number 		= get_theme_mod( 'phone_number', '999.999.999' );
+$phone_number_url 	= get_theme_mod( 'phone_number_url', '#' );
 $above_address		= get_theme_mod( 'above_address', esc_html__( 'Address', 'airi' ) );
 $address			= get_theme_mod( 'address_details', esc_html__( 'Brooklyn Street', 'airi' ) );
+$address_url			= get_theme_mod( 'address_url', '#' );
 $above_opening		= get_theme_mod( 'above_opening', esc_html__( 'Opening hours', 'airi' ) );
 $opening_hours		= get_theme_mod( 'opening_hours', esc_html__( '9-18 Mon-Fri', 'airi' ) );
+$opening_hours_url 	= get_theme_mod( 'opening_hours_url', '#' );
 $cta_text			= get_theme_mod( 'cta_text_menustyle4', esc_html__( 'Get a quote', 'airi' ) );
 $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
+
+$has_phone_url		= !empty($phone_number_url) && $phone_number_url != '#';
+$has_address_url	= !empty($address_url) && $address_url != '#';
+$has_opening_hours_url	= !empty($opening_hours_url) && $opening_hours_url != '#';
 ?>
 
 <header id="masthead" class="site-header">
@@ -38,16 +45,25 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $above_phone_number ); ?></span>
-						<span><?php echo esc_html( $phone_number ); ?></span>
+						<?php if ($has_phone_url) { ?>
+							<a href="<?php echo $phone_number_url; ?>"><span><?php echo esc_html( $phone_number ); ?></span></a>
+						<?php } else { ?>
+							<span><?php echo esc_html( $phone_number ); ?></span>
+						<?php } ?>
 					</div>
 				</div>
+				
 				<div class="contact-block">
 					<div class="contact-icon">
 						<i class="fa fa-map-marker"></i>
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $above_address ); ?></span>
-						<span><?php echo esc_html( $address ); ?></span>
+						<?php if ($has_address_url) { ?>
+							<a href="<?php echo $address_url; ?>"><span><?php echo esc_html( $address ); ?></span></a>
+						<?php } else { ?>
+							<span><?php echo esc_html( $address ); ?></span>
+						<?php } ?>
 					</div>
 				</div>
 				<div class="contact-block">
@@ -56,7 +72,11 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $above_opening ); ?></span>
-						<span><?php echo esc_html( $opening_hours ); ?></span>
+						<?php if ($has_opening_hours_url) { ?>
+							<a href="<?php echo $opening_hours_url; ?>"><span><?php echo esc_html( $opening_hours ); ?></span></a>
+						<?php } else { ?>
+							<span><?php echo esc_html( $opening_hours ); ?></span>
+						<?php } ?>
 					</div>
 				</div>				
 			</div>
