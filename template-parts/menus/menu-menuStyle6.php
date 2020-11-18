@@ -13,14 +13,14 @@
 			<div class="row">
 				<div class="left-content col-md-6 col-12 text-md-left text-center">
 				<?php
-				$left_content = get_theme_mod( 'menu6_top_section_left' );
-				echo wp_kses_post( $left_content );
+				$airi_left_content = get_theme_mod( 'menu6_top_section_left' );
+				echo wp_kses_post( $airi_left_content );
 				?>
 				</div>
 				<div class="botton-section col-md-6 col-12 text-md-right text-center">
 					<?php
-					$right_content = get_theme_mod( 'menu6_top_section_right' );
-					echo wp_kses_post( $right_content );
+					$airi_right_content = get_theme_mod( 'menu6_top_section_right' );
+					echo wp_kses_post( $airi_right_content );
 					?>
 				</div>
 			</div>
@@ -55,13 +55,13 @@
 							</div>
 						</div>
 						<?php
-						$button_text = get_theme_mod( 'menu6_button_text' );
-						if ( $button_text )
+						$airi_button_text = get_theme_mod( 'menu6_button_text' );
+						if ( $airi_button_text )
 						{
-							$button_url = get_theme_mod( 'menu6_button_url' );
+							$airi_button_url = get_theme_mod( 'menu6_button_url' );
 						?>
-							<a href="<?php echo esc_url( $button_url ); ?>" class="btn">
-								<?php echo esc_html( $button_text ); ?>
+							<a href="<?php echo esc_url( $airi_button_url ); ?>" class="btn">
+								<?php echo esc_html( $airi_button_text ); ?>
 							</a>
 						<?php
 						}

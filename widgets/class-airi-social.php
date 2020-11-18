@@ -25,11 +25,12 @@ class Airi_Social extends WP_Widget {
         ?>
         <?php wp_nav_menu(
             array(
-                'fallback_cb' => false,
-                'menu' => $nav_menu,
-                'link_before' => '<span class="screen-reader-text">',
-                'link_after' => '</span>',
-                'menu_class' => 'menu social-media-list clearfix'
+                'fallback_cb'   => false,
+                'menu'          => $nav_menu,
+                'theme_location' => 'dummylocation',
+                'link_before'   => '<span class="screen-reader-text">',
+                'link_after'    => '</span>',
+                'menu_class'    => 'menu social-media-list clearfix'
             )
         ); ?>
         <?php

@@ -36,5 +36,5 @@ Airi is a powerful, flexible, and modern theme for your business website. Featur
 * Isotope http://isotope.metafizzy.co/, (C) Metafizzy, [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 * Bootstrap http://getbootstrap.com/, (C) 2011-2015 Twitter, Inc, [MIT](http://opensource.org/licenses/MIT)
 * Sticky Plugin http://stickyjs.com/. (C) Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
-* Screenshot image https://pixabay.com/en/laptop-table-technology-office-2434393/, (C) umeridrisi, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* Screenshot image https://unsplash.com/photos/zNRITe8NPqY/, (C) Kevin Bhagat, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+* Screenshot image https://stocksnap.io/photo/music-speaker-HR6N4GPCRQ, (C) Burst, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+* Screenshot image https://stocksnap.io/photo/laptop-mobile-CCUEGVL7HU, (C) Milos Milosevic, [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)

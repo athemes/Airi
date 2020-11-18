@@ -60,7 +60,7 @@ class Airi_Recent_Posts extends WP_Widget {
 		 * @param array $args     An array of arguments used to retrieve the recent posts.
 		 * @param array $instance Array of settings for the current widget.
 		 */
-		$r = new WP_Query( apply_filters( 'widget_posts_args', array(
+		$r = new WP_Query( apply_filters( 'airi_widget_posts_args', array(
 			'posts_per_page'      => $number,
 			'no_found_rows'       => true,
 			'post_stairis'         => 'publish',

@@ -32,25 +32,25 @@
 
 			<div class="col-sm-12 col-xl-2 col-lg-6 col-12 contact-us text-center text-lg-left text-xl-right">
 			<?php
-			$custom_text = get_theme_mod( 'menu5_custom_text' );
-			if ( $custom_text )
+			$airi_custom_text = get_theme_mod( 'menu5_custom_text' );
+			if ( $airi_custom_text )
 			{
-				echo wp_kses_post( $custom_text );
+				echo wp_kses_post( $airi_custom_text );
 			}
 			?>
 			</div>
 			<div class="col-sm-12 last-block col-xl-2 col-lg-6 col-12">
 				<div class="socials d-flex justify-content-end">
 					<?php
-					$socials = array( 'facebook', 'twitter', 'google', 'linkedin', 'skype' );
-					foreach ( $socials as $social )
+					$airi_socials = array( 'facebook', 'twitter', 'google', 'linkedin', 'skype' );
+					foreach ( $airi_socials as $airi_social )
 					{
-						$field_name = sprintf( 'menu5_%s', $social );
-						$value = get_theme_mod( $field_name );
-						if ( $value )
+						$airi_field_name = sprintf( 'menu5_%s', $airi_social );
+						$airi_value = get_theme_mod( $airi_field_name );
+						if ( $airi_value )
 						{
 						?>
-							<a href="<?php echo esc_url( $value ); ?>"><i class="fa fa-<?php echo $social == 'google'? 'google-plus': $social; ?>" aria-hidden="true"></i></a>
+							<a href="<?php echo esc_url( $airi_value ); ?>"><i class="fa fa-<?php echo $airi_social == 'google'? 'google-plus': $airi_social; ?>" aria-hidden="true"></i></a>
 						<?php
 						}
 					?>

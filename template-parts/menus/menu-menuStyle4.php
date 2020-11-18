@@ -6,14 +6,14 @@
  */
 
 //Get the options
-$above_phone_number = get_theme_mod( 'above_phone_number', esc_html__( 'Call us', 'airi' ) );
-$phone_number 		= get_theme_mod( 'phone_number', '999.999.999' );
-$above_address		= get_theme_mod( 'above_address', esc_html__( 'Address', 'airi' ) );
-$address			= get_theme_mod( 'address_details', esc_html__( 'Brooklyn Street', 'airi' ) );
-$above_opening		= get_theme_mod( 'above_opening', esc_html__( 'Opening hours', 'airi' ) );
-$opening_hours		= get_theme_mod( 'opening_hours', esc_html__( '9-18 Mon-Fri', 'airi' ) );
-$cta_text			= get_theme_mod( 'cta_text_menustyle4', esc_html__( 'Get a quote', 'airi' ) );
-$cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
+$airi_above_phone_number = get_theme_mod( 'above_phone_number', esc_html__( 'Call us', 'airi' ) );
+$airi_phone_number 		= get_theme_mod( 'phone_number', '999.999.999' );
+$airi_above_address		= get_theme_mod( 'above_address', esc_html__( 'Address', 'airi' ) );
+$airi_address			= get_theme_mod( 'address_details', esc_html__( 'Brooklyn Street', 'airi' ) );
+$airi_above_opening		= get_theme_mod( 'above_opening', esc_html__( 'Opening hours', 'airi' ) );
+$airi_opening_hours		= get_theme_mod( 'opening_hours', esc_html__( '9-18 Mon-Fri', 'airi' ) );
+$airi_cta_text			= get_theme_mod( 'cta_text_menustyle4', esc_html__( 'Get a quote', 'airi' ) );
+$airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 ?>
 
 <header id="masthead" class="site-header">
@@ -37,8 +37,8 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 						<i class="fa fa-phone"></i>
 					</div>
 					<div class="contact-text">
-						<span><?php echo esc_html( $above_phone_number ); ?></span>
-						<span><?php echo esc_html( $phone_number ); ?></span>
+						<span><?php echo esc_html( $airi_above_phone_number ); ?></span>
+						<span><?php echo esc_html( $airi_phone_number ); ?></span>
 					</div>
 				</div>
 				<div class="contact-block">
@@ -46,8 +46,8 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 						<i class="fa fa-map-marker"></i>
 					</div>
 					<div class="contact-text">
-						<span><?php echo esc_html( $above_address ); ?></span>
-						<span><?php echo esc_html( $address ); ?></span>
+						<span><?php echo esc_html( $airi_above_address ); ?></span>
+						<span><?php echo esc_html( $airi_address ); ?></span>
 					</div>
 				</div>
 				<div class="contact-block">
@@ -55,8 +55,8 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 						<i class="fa fa-clock-o"></i>
 					</div>
 					<div class="contact-text">
-						<span><?php echo esc_html( $above_opening ); ?></span>
-						<span><?php echo esc_html( $opening_hours ); ?></span>
+						<span><?php echo esc_html( $airi_above_opening ); ?></span>
+						<span><?php echo esc_html( $airi_opening_hours ); ?></span>
 					</div>
 				</div>				
 			</div>
@@ -72,9 +72,9 @@ $cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 
 			<?php airi_header_cart_search(); ?>
 
-			<?php if ( $cta_text ) : ?>
+			<?php if ( $airi_cta_text ) : ?>
 			<div class="header-cta">
-				<a href="<?php echo esc_url( $cta_url ); ?>"><?php echo esc_html( $cta_text ); ?></a>
+				<a href="<?php echo esc_url( $airi_cta_url ); ?>"><?php echo esc_html( $airi_cta_text ); ?></a>
 			</div>
 			<?php endif; ?>
 			<div class="header-search-form">

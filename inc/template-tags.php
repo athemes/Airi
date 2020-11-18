@@ -176,7 +176,7 @@ function airi_first_category() {
  */
 function airi_all_categories() {
 	/* translators: used between list items, there is a space after the comma */
-	$categories_list = get_the_category_list( esc_html__( ' ', 'airi' ) );
+	$categories_list = get_the_category_list( ' ' );
 	if ( $categories_list ) {
 		echo '<span class="cat-links">' . $categories_list . '</span>';
 	}
@@ -199,4 +199,15 @@ function airi_get_comments_number() {
 		);
 	}
 	echo '</span>';
+}
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Shim for wp_body_open() function
+	 */
+	// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedFunctionFound
+	function wp_body_open() {
+		// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
+		do_action( 'wp_body_open' );
+	}
 }

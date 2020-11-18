@@ -135,7 +135,7 @@ Airi_Kirki::add_field( 'airi', array(
 ) );
 
 
-$social_networks = array( 
+$airi_social_networks = array( 
 	'fa-facebook' => 'Facebook',
 	'fa-twitter'  => 'Twitter',
 	'fa-linkedin'  => 'Linkedin',
@@ -189,7 +189,7 @@ Airi_Kirki::add_field( 'airi', array(
 		'icon' => array(
 			'type'        => 'select',
 			'label'       => __( 'Social network', 'airi' ),
-			'choices'     => $social_networks,
+			'choices'     => $airi_social_networks,
 		),
 		'link_url' => array(
 			'type'        => 'text',

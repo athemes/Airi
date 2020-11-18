@@ -161,7 +161,7 @@
 			}
 
         </script>
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_attr( $settings['api_key'] ); ?>&callback=init"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo esc_attr( $settings['api_key'] ); ?>&callback=init"></script> <?php // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript ?>
 
         <style type="text/css">
             #airi-map {
