@@ -2,6 +2,29 @@
    CSS for Customizer Custom Controls
    ========================================================================== */
 
+
+/* ==========================================================================
+   Label
+   ========================================================================== */
+.label-custom-control {
+	margin-top: 20px;
+	margin-bottom: 20px;	   
+}
+
+.label-custom-control:not(:first-child) {
+	margin-top: 40px;
+}
+
+
+.label-custom-control .customize-control-title {
+	font-size: 24px;
+	text-align: center;
+	background-color: #DDD;
+}
+
+
+
+
 /* ==========================================================================
    Slider
    ========================================================================== */

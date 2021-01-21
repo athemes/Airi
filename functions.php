@@ -400,3 +400,21 @@ function airi_welcome_admin_notice() {
 }
 add_action( 'admin_init', array( 'PAnD', 'init' ) );
 add_action( 'admin_notices', 'airi_welcome_admin_notice' );
+
+
+/**
+ * Enqueue scripts for our Customizer preview
+ *
+ * @return void
+ */
+if ( ! function_exists( 'airi_customizer_preview_scripts' ) ) {
+	function airi_customizer_preview_scripts() {
+		wp_enqueue_script( 'airi-customizer-preview-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-custom-controls/assets/js/customizer-preview.js', array( 'customize-preview', 'jquery' ), time(), false );
+	}
+}
+add_action( 'customize_preview_init', 'airi_customizer_preview_scripts' );
+
+/**
+* Load all our Customizer options
+*/
+include_once trailingslashit( dirname(__FILE__) ) . 'inc/customizer-custom-controls/customizer.php';
