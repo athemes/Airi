@@ -3,10 +3,6 @@ jQuery( document ).ready(function($) {
 
 	/**
 	 * Slider Custom Control
-	 *
-	 * @author Anthony Hortin <http://maddisondesigns.com>
-	 * @license http://www.gnu.org/licenses/gpl-2.0.html
-	 * @link https://github.com/maddisondesigns
 	 */
 
 	// Set our slider defaults and initialise the slider
@@ -62,10 +58,6 @@ jQuery( document ).ready(function($) {
 
 	/**
 	 * Googe Font Select Custom Control
-	 *
-	 * @author Anthony Hortin <http://maddisondesigns.com>
-	 * @license http://www.gnu.org/licenses/gpl-2.0.html
-	 * @link https://github.com/maddisondesigns
 	 */
 
 	$('.google-fonts-list').each(function (i, obj) {
@@ -76,20 +68,11 @@ jQuery( document ).ready(function($) {
 
 	$('.google-fonts-list').on('change', function() {
 		var elementRegularWeight = $(this).parent().parent().find('.google-fonts-regularweight-style');
-		var elementItalicWeight = $(this).parent().parent().find('.google-fonts-italicweight-style');
-		var elementBoldWeight = $(this).parent().parent().find('.google-fonts-boldweight-style');
 		var selectedFont = $(this).val();
 		var customizerControlName = $(this).attr('control-name');
-		var elementItalicWeightCount = 0;
-		var elementBoldWeightCount = 0;
 
 		// Clear Weight/Style dropdowns
 		elementRegularWeight.empty();
-		elementItalicWeight.empty();
-		elementBoldWeight.empty();
-		// Make sure Italic & Bold dropdowns are enabled
-		elementItalicWeight.prop('disabled', false);
-		elementBoldWeight.prop('disabled', false);
 
 		// Get the Google Fonts control object
 		var bodyfontcontrol = _wpCustomizeSettings.controls[customizerControlName];
@@ -107,48 +90,22 @@ jQuery( document ).ready(function($) {
 			elementRegularWeight.append(
 				$('<option></option>').val(text).html(text)
 			);
-			if (text.indexOf("italic") >= 0) {
-				elementItalicWeight.append(
-					$('<option></option>').val(text).html(text)
-				);
-				elementItalicWeightCount++;
-			} else {
-				elementBoldWeight.append(
-					$('<option></option>').val(text).html(text)
-				);
-				elementBoldWeightCount++;
-			}
 		});
-
-		if(elementItalicWeightCount == 0) {
-			elementItalicWeight.append(
-				$('<option></option>').val('').html('Not Available for this font')
-			);
-			elementItalicWeight.prop('disabled', 'disabled');
-		}
-		if(elementBoldWeightCount == 0) {
-			elementBoldWeight.append(
-				$('<option></option>').val('').html('Not Available for this font')
-			);
-			elementBoldWeight.prop('disabled', 'disabled');
-		}
 
 		// Update the font category based on the selected font
 		$(this).parent().parent().find('.google-fonts-category').val(bodyfontcontrol.airifontslist[index].category);
 
-		skyrocketGetAllSelects($(this).parent().parent());
+		airiGetAllSelects($(this).parent().parent());
 	});
 
 	$('.google_fonts_select_control select').on('change', function() {
-		skyrocketGetAllSelects($(this).parent().parent());
+		airiGetAllSelects($(this).parent().parent());
 	});
 
-	function skyrocketGetAllSelects($element) {
+	function airiGetAllSelects($element) {
 		var selectedFont = {
 			font: $element.find('.google-fonts-list').val(),
 			regularweight: $element.find('.google-fonts-regularweight-style').val(),
-			italicweight: $element.find('.google-fonts-italicweight-style').val(),
-			boldweight: $element.find('.google-fonts-boldweight-style').val(),
 			category: $element.find('.google-fonts-category').val()
 		};
 
