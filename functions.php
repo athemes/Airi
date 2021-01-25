@@ -138,6 +138,7 @@ function airi_widgets_init() {
 }
 add_action( 'widgets_init', 'airi_widgets_init' );
 
+
 /**
  * Enqueue scripts and styles.
  */
@@ -323,6 +324,7 @@ require get_template_directory() . '/inc/theme-dashboard-settings.php';
  */
 require get_template_directory() . '/inc/notices/class-airi-review.php';
 
+
 /**
  * Enqueue Font scripts and styles.
  * 
@@ -390,7 +392,6 @@ if ( ! function_exists( 'airi_process_font' ) ) {
 		return array($font_family[1], $font_variant[1]);
 	}
 }
-
 
 /**
  * Enqueue scripts for our Customizer preview

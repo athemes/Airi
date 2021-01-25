@@ -499,13 +499,13 @@ $airi_settings = new Airi_initialise_customizer_settings(
 		'typography_body_font' => json_encode(
 			array(
 				'font' => 'Work Sans',
-				'regularweight' => 'regular',
+				'variant' => 'regular',
 			)
 		),
 		'typography_headings_font' => json_encode(
 			array(
 				'font' => 'Work Sans',
-				'regularweight' => 'regular',
+				'variant' => 'regular',
 			)
 		),
 	)
