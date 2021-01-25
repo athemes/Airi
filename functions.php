@@ -223,13 +223,6 @@ function airi_register_elementor_widgets() {
 add_action( 'elementor/widgets/widgets_registered', 'airi_register_elementor_widgets' );
 
 /**
- * Elementor ID
- */
-if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
-    define( 'ELEMENTOR_PARTNER_ID', 2128 );
-}
-
-/**
  * Custom Elementor category
  */
 function airi_block_category() {
@@ -311,92 +304,21 @@ if ( class_exists( 'SitePress' ) ) {
 }
 
 /**
- * TGMPA
- */
-require_once get_template_directory() . '/inc/tgmpa/class-tgm-plugin-activation.php';
-
-function airi_register_required_plugins() {
-
-	$plugins = array(
-
-		array(
-			'name'      => 'Elementor',
-			'slug'      => 'elementor',
-			'required'  => false,
-		),
-		array(
-			'name'      => 'Contact Form 7',
-			'slug'      => 'contact-form-7',
-			'required'  => false,
-		),
-		array(
-			'name'      => 'MailChimp for WordPress',
-			'slug'      => 'mailchimp-for-wp',
-			'required'  => false,
-		),
-		array(
-			'name'      => 'Theme options',
-			'slug'      => 'kirki',
-			'required'  => false,
-		),
-		array(
-			'name'      => 'Demo interface',
-			'slug'      => 'airi-demo-importer',
-			'required'  => false,
-		),		
-		array(
-			'name'      => 'Demo content import',
-			'slug'      => 'one-click-demo-import',
-			'required'  => false,
-		),		
-	);	
-
-	$config = array(
-		'id'           => 'airi',
-		'default_path' => '',
-		'menu'         => 'tgmpa-install-plugins',
-		'has_notices'  => true,
-		'dismissable'  => true,
-		'dismiss_msg'  => '',
-		'is_automatic' => false,
-		'message'      => '',
-	);
-
-	tgmpa( $plugins, $config );
-}
-add_action( 'tgmpa_register', 'airi_register_required_plugins' );
-
-/**
  * Upsell
  */
 require get_template_directory() . '/inc/customizer/upsell/class-customize.php';
 
 /**
- * Onboarding
+ * Theme dashboard.
  */
-if ( current_user_can( 'manage_options' ) ) {
-	require get_template_directory() . '/inc/onboarding/theme-info.php';
-}
-
+require get_template_directory() . '/theme-dashboard/class-theme-dashboard.php';
 
 /**
- * Admin notice
+ * Theme dashboard settings.
  */
-require get_template_directory() . '/inc/notices/persist-admin-notices-dismissal.php';
+require get_template_directory() . '/inc/theme-dashboard-settings.php';
 
-function airi_welcome_admin_notice() {
-	if ( ! PAnD::is_admin_notice_active( 'airi-welcome-forever' ) ) {
-		return;
-	}
-	
-	?>
-	<div data-dismissible="airi-welcome-forever" class="airi-admin-notice updated notice notice-success is-dismissible">
-
-		<p><?php echo sprintf( __( 'Welcome to Airi. To get started please make sure to visit our <a href="%s">welcome page</a>.', 'airi' ), admin_url( 'themes.php?page=airi-info.php' ) ); ?></p>
-		<a class="button" href="<?php echo admin_url( 'themes.php?page=airi-info.php' ); ?>"><?php esc_html_e( 'Get started with Airi', 'airi' ); ?></a>
-
-	</div>
-	<?php
-}
-add_action( 'admin_init', array( 'PAnD', 'init' ) );
-add_action( 'admin_notices', 'airi_welcome_admin_notice' );
+/**
+ * Review notice
+ */
+require get_template_directory() . '/inc/notices/class-airi-review.php';
