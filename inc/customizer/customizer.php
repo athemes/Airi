@@ -77,5 +77,4 @@ Airi_Kirki::add_config( 'airi', array(
 require get_template_directory() . '/inc/customizer/options/section-blog.php';
 require get_template_directory() . '/inc/customizer/options/section-header.php';
 require get_template_directory() . '/inc/customizer/options/section-footer.php';
-//require get_template_directory() . '/inc/customizer/options/section-typography.php';
 require get_template_directory() . '/inc/customizer/options/section-colors.php';
