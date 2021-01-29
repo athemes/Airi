@@ -98,6 +98,7 @@ class Airi_initialise_customizer_settings
             'body_font',
             array(
                 'default' => $this->defaults['body_font'],
+                'transport' => 'postMessage',
                 'sanitize_callback' => 'airi_google_font_sanitization'
             )
         );
@@ -118,6 +119,7 @@ class Airi_initialise_customizer_settings
             'headings_font',
             array(
                 'default' => $this->defaults['headings_font'],
+                'transport' => 'postMessage',
                 'sanitize_callback' => 'airi_google_font_sanitization'
             )
         );
@@ -144,7 +146,10 @@ class Airi_initialise_customizer_settings
 
         // General Label
         $wp_customize->add_setting(
-            'typography_general_section_label'
+            'typography_general_section_label',
+            array(
+                'sanitize_callback' => 'esc_html'
+            )
         );
         $wp_customize->add_control(new Airi_Label_Custom_Control(
             $wp_customize,
@@ -174,6 +179,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_body'],
                 ),
             )
         ));
@@ -181,7 +187,10 @@ class Airi_initialise_customizer_settings
         
         // Header Area Label
         $wp_customize->add_setting(
-            'typography_header_area_section_label'
+            'typography_header_area_section_label',
+            array(
+                'sanitize_callback' => 'esc_html'
+            )
         );
         $wp_customize->add_control(new Airi_Label_Custom_Control(
             $wp_customize,
@@ -212,6 +221,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_site_title'],
                 ),
             )
         ));
@@ -235,6 +245,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_site_desc'],
                 ),
             )
         ));
@@ -258,6 +269,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_menu_top_items'],
                 ),
             )
         ));
@@ -281,6 +293,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_menu_sub_items'],
                 ),
             )
         ));
@@ -288,7 +301,10 @@ class Airi_initialise_customizer_settings
 
         // Blog Label
         $wp_customize->add_setting(
-            'typography_blog_section_label'
+            'typography_blog_section_label',
+            array(
+                'sanitize_callback' => 'esc_html'
+            )
         );
         $wp_customize->add_control(new Airi_Label_Custom_Control(
             $wp_customize,
@@ -319,6 +335,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_index_title'],
                 ),
             )
         ));
@@ -342,6 +359,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_single_title'],
                 ),
             )
         ));
@@ -349,7 +367,10 @@ class Airi_initialise_customizer_settings
 
         // Sidebar Label
         $wp_customize->add_setting(
-            'typography_sidebar_section_label'
+            'typography_sidebar_section_label',
+            array(
+                'sanitize_callback' => 'esc_html'
+            )
         );
         $wp_customize->add_control(new Airi_Label_Custom_Control(
             $wp_customize,
@@ -380,6 +401,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_widget_title'],
                 ),
             )
         ));
@@ -403,6 +425,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_widgets'],
                 ),
             )
         ));
@@ -410,7 +433,10 @@ class Airi_initialise_customizer_settings
 
         // Footer Area Label
         $wp_customize->add_setting(
-            'typography_footer_area_section_label'
+            'typography_footer_area_section_label',
+            array(
+                'sanitize_callback' => 'esc_html'
+            )
         );
         $wp_customize->add_control(new Airi_Label_Custom_Control(
             $wp_customize,
@@ -441,6 +467,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_footer_widget_titles'],
                 ),
             )
         ));
@@ -464,6 +491,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_footer_widgets'],
                 ),
             )
         ));
@@ -487,6 +515,7 @@ class Airi_initialise_customizer_settings
                     'min' => 0,
                     'max' => 180,
                     'step' => 1,
+                    'default' => $this->defaults['font_size_footer_credits'],
                 ),
             )
         ));
@@ -568,8 +597,6 @@ if (! function_exists('airi_font_scripts')) {
 		$fonts = "";
 		$headings_font = get_theme_mod('headings_font');
         $body_font = get_theme_mod('body_font');
-        
-        var_dump($headings_font);
 
         if ($headings_font) {
             $font_pieces = airi_process_font($headings_font);
@@ -650,12 +677,12 @@ if (! function_exists('airi_font_family_styles')) {
 
         if ($headings_font) {
             $font_pieces = airi_process_font($headings_font);
-            $headings_font_val = htmlspecialchars_decode($font_pieces[0]);
+            $headings_font_val = $font_pieces[0];
         }
 
         if ($body_font) {
             $font_pieces = airi_process_font($body_font);
-            $body_font_val = htmlspecialchars_decode($font_pieces[0]);
+            $body_font_val = $font_pieces[0];
         }
 
         // If not gutenberg editor.
@@ -763,6 +790,6 @@ if (! function_exists('airi_process_font')) {
         $font_family = explode(":", $font_pieces[0]);
         $font_variant = explode(":", $font_pieces[1]);
 
-        return array($font_family[1], $font_variant[1]);
+        return array(preg_replace('/[^\w\d\s]*/', '', htmlspecialchars_decode($font_family[1])), $font_variant[1]);
     }
 }

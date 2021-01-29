@@ -92,6 +92,10 @@ jQuery( document ).ready(function($) {
 			);
 		});
 
+		if( $.inArray("regular", bodyfontcontrol.airifontslist[index].variants) !== -1 ) {
+			elementRegularWeight.val("regular");
+		}
+
 		// Update the font category based on the selected font
 		$(this).parent().parent().find('.google-fonts-category').val(bodyfontcontrol.airifontslist[index].category);
 

@@ -91,14 +91,16 @@ jQuery( document ).ready(function($) {
 	// Change the headings font-family
 	wp.customize('headings_font', function(control) {
 		control.bind(function( controlValue ) {
-			$('h1, h2, h3, h4, h5, h6, .site-title').css('font-family', controlValue );
+			const font_object = JSON.parse(controlValue);
+			$('h1, h2, h3, h4, h5, h6, .site-title').css('font-family', font_object.font );
 		});
 	});
 
 	// Change the body font-family
 	wp.customize('body_font', function(control) {
 		control.bind(function( controlValue ) {
-			$('body, button, input, select, textarea').css('font-family', controlValue );
+			const font_object = JSON.parse(controlValue);
+			$('body, button, input, select, textarea').css('font-family', font_object.font );
 		});
 	});
 
