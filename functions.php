@@ -327,4 +327,4 @@ require get_template_directory() . '/inc/notices/class-airi-review.php';
 /**
 * Load all our Customizer options
 */
-include_once trailingslashit( dirname(__FILE__) ) . 'inc/customizer-custom-controls/customizer.php';
+require get_template_directory() . '/inc/customizer-v2/customizer.php';

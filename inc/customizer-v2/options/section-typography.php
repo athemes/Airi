@@ -1,13 +1,13 @@
 <?php
 /**
- * Customizer Setup and Custom Controls
+ * Customizer Typography Controls
  *
  */
 
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class Airi_initialise_customizer_settings
+class Airi_Initialise_Customizer_Typography_Settings
 {
     // Get our default values
     private $defaults;
@@ -547,15 +547,15 @@ if (! function_exists('airi_google_font_sanitization')) {
 /**
  * Load all our Customizer Custom Controls
  */
-require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-airi-custom-control.php';
-require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-airi-google-font-select-custom-control.php';
-require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-airi-slider-custom-control.php';
-require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-airi-label-custom-control.php';
+require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-custom-control.php';
+require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-google-font-select-custom-control.php';
+require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-slider-custom-control.php';
+require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-label-custom-control.php';
 
 /**
  * Initialise our Customizer settings
  */
-$airi_settings = new Airi_initialise_customizer_settings(
+$airi_settings = new Airi_Initialise_Customizer_Typography_Settings(
     array(
         'font_size_body' => 16,
         'font_size_site_title' => 36,
@@ -594,28 +594,49 @@ $airi_settings = new Airi_initialise_customizer_settings(
 if (! function_exists('airi_font_scripts')) {
 	function airi_font_scripts()
 	{
-		$fonts = "";
+		$fonts = array();
 		$headings_font = get_theme_mod('headings_font');
         $body_font = get_theme_mod('body_font');
 
+        
         if ($headings_font) {
+            array_push($fonts, "'");
             $font_pieces = airi_process_font($headings_font);
-            $fonts .= $font_pieces[0] . ":" . $font_pieces[1];
+            array_push($fonts, $font_pieces[0] . ":" . $font_pieces[1]);
+            array_push($fonts, "'");
         }
-
-        $fonts .= $fonts ? "|" : "";
-
-        if ($body_font) {
-            $font_pieces = airi_process_font($body_font);
-            $fonts .= $font_pieces[0] . ":" . $font_pieces[1];
-        }
+        
 
         if ($fonts) {
-            wp_enqueue_style('airi-typography-fonts', '//fonts.googleapis.com/css?family='. htmlspecialchars_decode($fonts), array(), null);
-        } else {
-            wp_enqueue_style('airi-typography-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600'. htmlspecialchars_decode($fonts), array(), null);
-		}
-		
+            array_push($fonts, ",");
+        };
+
+
+        if ($body_font) {
+            array_push($fonts, "'");
+            $font_pieces = airi_process_font($body_font);
+            array_push($fonts, $font_pieces[0] . ":" . $font_pieces[1]);
+            array_push($fonts, "'");
+        }
+        
+        wp_enqueue_script('webfont-loader-script', trailingslashit(get_template_directory_uri()) . 'inc/customizer-v2/assets/js/webfont.js', array(), '1.6.26', false);
+
+        $inline_js = 'WebFont.load({
+            google: { 
+                   families: [\'Work Sans:400,500,600\']
+             } 
+         });';
+
+        if ($fonts) {
+            $font_families = preg_replace("/&#?[a-z0-9]+;/i", '', implode("", $fonts));
+            $inline_js = 'WebFont.load({
+				google: { 
+					   families: ['. $font_families .']
+				 } 
+	 		});';
+        }
+
+		wp_add_inline_script('webfont-loader-script', $inline_js);
     }
 }
 add_action('wp_enqueue_scripts', 'airi_font_scripts');
@@ -660,7 +681,8 @@ add_action('enqueue_block_editor_assets', 'airi_gutenberg_editor_font_styles');
 if (! function_exists('airi_customizer_preview_scripts')) {
     function airi_customizer_preview_scripts()
     {
-        wp_enqueue_script('airi-customizer-preview-js', trailingslashit(get_template_directory_uri()) . 'inc/customizer-custom-controls/assets/js/customizer-preview.js', array( 'customize-preview', 'jquery' ), time(), false);
+        airi_font_scripts();
+        wp_enqueue_script('airi-customizer-preview-js', trailingslashit(get_template_directory_uri()) . 'inc/customizer-v2/assets/js/customizer-preview.js', array( 'customize-preview', 'jquery' ), time(), false);
     }
 }
 add_action('customize_preview_init', 'airi_customizer_preview_scripts');

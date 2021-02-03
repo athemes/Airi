@@ -109,7 +109,7 @@ jQuery( document ).ready(function($) {
 	function airiGetAllSelects($element) {
 		var selectedFont = {
 			font: $element.find('.google-fonts-list').val(),
-			regularweight: $element.find('.google-fonts-regularweight-style').val(),
+			variant: $element.find('.google-fonts-regularweight-style').val(),
 			category: $element.find('.google-fonts-category').val()
 		};
 

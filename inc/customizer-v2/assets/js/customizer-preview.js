@@ -92,6 +92,11 @@ jQuery( document ).ready(function($) {
 	wp.customize('headings_font', function(control) {
 		control.bind(function( controlValue ) {
 			const font_object = JSON.parse(controlValue);
+			WebFont.load({
+				google: { 
+					   families: [font_object.font+":"+font_object.variant] 
+				 } 
+	 		});
 			$('h1, h2, h3, h4, h5, h6, .site-title').css('font-family', font_object.font );
 		});
 	});
@@ -100,7 +105,13 @@ jQuery( document ).ready(function($) {
 	wp.customize('body_font', function(control) {
 		control.bind(function( controlValue ) {
 			const font_object = JSON.parse(controlValue);
+			WebFont.load({
+				google: { 
+					   families: [font_object.font+":"+font_object.variant] 
+				 } 
+	 		});
 			$('body, button, input, select, textarea').css('font-family', font_object.font );
+			
 		});
 	});
 
