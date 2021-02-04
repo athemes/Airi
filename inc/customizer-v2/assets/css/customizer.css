@@ -2,123 +2,118 @@
    CSS for Customizer Custom Controls
    ========================================================================== */
 
-
 /* ==========================================================================
    Label
    ========================================================================== */
 .label-custom-control {
-	margin-top: 20px;
-	margin-bottom: 20px;	   
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .label-custom-control:not(:first-child) {
-	margin-top: 40px;
+  margin-top: 40px;
 }
-
 
 .label-custom-control .customize-control-title {
-	font-size: 24px;
-	text-align: center;
-	background-color: #DDD;
+  font-size: 24px;
+  text-align: center;
+  background-color: #ddd;
 }
-
-
-
 
 /* ==========================================================================
    Slider
    ========================================================================== */
 .slider-custom-control {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.slider-custom-control input[type=number]::-webkit-inner-spin-button,
-.slider-custom-control input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+.slider-custom-control input[type="number"]::-webkit-inner-spin-button,
+.slider-custom-control input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.slider-custom-control input[type=number] {
-	-moz-appearance: textfield;
+.slider-custom-control input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-.slider-custom-control  .customize-control-title {
-	display: inline-block;
+.slider-custom-control .customize-control-title {
+  display: inline-block;
 }
 
-.slider-custom-control input[type=number] {
-	text-align: right;
-	width: 50px;
-	float: right;
+.slider-custom-control input[type="number"] {
+  text-align: right;
+  width: 50px;
+  float: right;
 }
 
 .slider-custom-control .slider {
-	width: 85%;
-	float: left;
-	margin: 20px 0 10px;
+  width: 85%;
+  float: left;
+  margin: 20px 0 10px;
 }
 
 .slider-custom-control .slider-reset {
-	float: right;
-	cursor: pointer;
+  float: right;
+  cursor: pointer;
 }
 
 .slider-custom-control .slider-value {
-	border: none;
-	text-align: right;
-	width: 50px;
-	margin-right: 5px;
+  border: none;
+  text-align: right;
+  width: 50px;
+  margin-right: 5px;
 }
 
 .slider-custom-control .slider-value,
 .slider-custom-control .slider-unit {
-	float: right;
+  float: right;
 }
 
 .slider-custom-control .ui-widget.ui-widget-content {
-	border: 1px solid #f4f4f4;
+  border: 1px solid #f4f4f4;
 }
 
 .slider-custom-control .ui-corner-all,
 .slider-custom-control .ui-corner-bottom,
 .slider-custom-control .ui-corner-right,
 .slider-custom-control .ui-corner-br {
-	border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .slider-custom-control .ui-corner-all,
 .slider-custom-control .ui-corner-bottom,
 .slider-custom-control .ui-corner-left,
 .slider-custom-control .ui-corner-bl {
-	border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .slider-custom-control .ui-corner-all,
 .slider-custom-control .ui-corner-top,
 .slider-custom-control .ui-corner-right,
 .slider-custom-control .ui-corner-tr {
-	border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .slider-custom-control .ui-corner-all,
 .slider-custom-control .ui-corner-top,
 .slider-custom-control .ui-corner-left,
 .slider-custom-control .ui-corner-tl {
-	border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .slider-custom-control .ui-widget-content {
-	background: #f4f4f4 none repeat scroll 0 0;
-	color: #333;
+  background: #f4f4f4 none repeat scroll 0 0;
+  color: #333;
 }
 
 .slider-custom-control .ui-slider-horizontal {
-	height: 3px;
+  height: 3px;
 }
 
 .slider-custom-control .ui-slider {
-	position: relative;
-	text-align: left;
+  position: relative;
+  text-align: left;
 }
 
 .slider-custom-control .ui-state-default,
@@ -127,34 +122,34 @@
 .slider-custom-control .ui-button,
 .slider-custom-control .ui-button.ui-state-disabled:hover,
 .slider-custom-control .ui-button.ui-state-disabled:active {
-	background: #2885bb none repeat scroll 0 0;
-	border: 1px solid #2885bb;
-	color: #454545;
-	font-weight: normal;
+  background: #2885bb none repeat scroll 0 0;
+  border: 1px solid #2885bb;
+  color: #454545;
+  font-weight: normal;
 }
 
 .slider-custom-control .ui-slider-horizontal .ui-slider-handle {
-	margin-left: -7px;
-	top: -7px;
-	border-radius: 50%;
+  margin-left: -7px;
+  top: -7px;
+  border-radius: 50%;
 }
 
 .slider-custom-control .ui-slider .ui-slider-handle {
-	cursor: pointer;
-	height: 14px;
-	position: absolute;
-	width: 14px;
-	z-index: 2;
+  cursor: pointer;
+  height: 14px;
+  position: absolute;
+  width: 14px;
+  z-index: 2;
 }
 
 .slider-custom-control .dashicons-image-rotate {
-	margin-top: 10px;
-	color: #d4d4d4;
-	size: 16px;
+  margin-top: 10px;
+  color: #d4d4d4;
+  size: 16px;
 }
 
 .slider-custom-control .dashicons-image-rotate:hover {
-	color: #a7a7a7;
+  color: #a7a7a7;
 }
 
 /* ==========================================================================
@@ -162,5 +157,52 @@
    ========================================================================== */
 .google_fonts_select_control .google-fonts,
 .google_fonts_select_control .weight-style {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Text Radio Buttons
+   ========================================================================== */
+.text_radio_button_control:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.text_radio_button_control .radio-buttons {
+  display: inline-block;
+  border: 1px solid #f9f9fe;
+}
+
+.text_radio_button_control .radio-button-label {
+  cursor: pointer;
+  float: left;
+}
+
+.text_radio_button_control .radio-button-label > input {
+  display: none;
+}
+
+.text_radio_button_control .radio-button-label span {
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid #f9f9fe;
+  margin: 0;
+  background-color: #eee;
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.text_radio_button_control .radio-button-label span:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #2885bb;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span {
+  background-color: #2084bd;
+  color: #fff;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span:hover {
+  color: #fff;
 }

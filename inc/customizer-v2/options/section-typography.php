@@ -523,31 +523,8 @@ class Airi_Initialise_Customizer_Typography_Settings
 }
 
 /**
- * Google Font sanitization
- *
- * @param  string	JSON string to be sanitized
- * @return string	Sanitized input
- */
-if (! function_exists('airi_google_font_sanitization')) {
-    function airi_google_font_sanitization($input)
-    {
-        $val =  json_decode($input, true);
-        if (is_array($val)) {
-            foreach ($val as $key => $value) {
-                $val[$key] = sanitize_text_field($value);
-            }
-            $input = json_encode($val);
-        } else {
-            $input = json_encode(sanitize_text_field($val));
-        }
-        return $input;
-    }
-}
-
-/**
  * Load all our Customizer Custom Controls
  */
-require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-custom-control.php';
 require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-google-font-select-custom-control.php';
 require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-slider-custom-control.php';
 require_once trailingslashit(get_template_directory()) . 'inc/customizer-v2/custom-controls/class-airi-label-custom-control.php';
