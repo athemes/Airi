@@ -19,11 +19,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Render the control in the customizer
 		 */
 		public function render_content() {
-		?>
+			?>
 			<div class="label-custom-control">
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 			</div>
-		<?php
+			<?php
 		}
-    }
+	}
 }

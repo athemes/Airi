@@ -15,7 +15,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * The saved font values decoded from json
 		 */
-		private $fontValues = [];
+		private $fontValues = array();
 		/**
 		 * The index of the saved font within the list of Google fonts
 		 */
@@ -60,50 +60,50 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Render the control in the customizer
 		 */
 		public function render_content() {
-			$fontCounter = 0;
+			$fontCounter  = 0;
 			$isFontInList = false;
-			$fontListStr = '';
+			$fontListStr  = '';
 
-			if( !empty($this->fontList) ) {
+			if ( ! empty( $this->fontList ) ) {
 				?>
 				<div class="google_fonts_select_control">
-					<?php if( !empty( $this->label ) ) { ?>
+					<?php if ( ! empty( $this->label ) ) { ?>
 						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 					<?php } ?>
-					<?php if( !empty( $this->description ) ) { ?>
+					<?php if ( ! empty( $this->description ) ) { ?>
 						<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 					<?php } ?>
 					<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-google-font-selection" <?php $this->link(); ?> />
-					<div class="customize-control-description"><?php esc_html_e( 'Font Family', 'airi' ) ?></div>
+					<div class="customize-control-description"><?php esc_html_e( 'Font Family', 'airi' ); ?></div>
 					<div class="google-fonts">
 						<select class="google-fonts-list" control-name="<?php echo esc_attr( $this->id ); ?>">
 							<?php
-								foreach( $this->fontList as $key => $value ) {
-									$fontCounter++;
-									$fontListStr .= '<option value="' . $value->family . '" ' . selected( $this->fontValues->font, $value->family, false ) . '>' . $value->family . '</option>';
-									if ( $this->fontValues->font === $value->family ) {
-										$isFontInList = true;
-									}
-									if ( is_int( $this->fontCount ) && $fontCounter === $this->fontCount ) {
-										break;
-									}
+							foreach ( $this->fontList as $key => $value ) {
+								$fontCounter++;
+								$fontListStr .= '<option value="' . $value->family . '" ' . selected( $this->fontValues->font, $value->family, false ) . '>' . $value->family . '</option>';
+								if ( $this->fontValues->font === $value->family ) {
+									$isFontInList = true;
 								}
-								if ( !$isFontInList && $this->fontListIndex ) {
-									// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font
-									$fontListStr = '<option value="' . $this->fontList[$this->fontListIndex]->family . '" ' . selected( $this->fontValues->font, $this->fontList[$this->fontListIndex]->family, false ) . '>' . $this->fontList[$this->fontListIndex]->family . ' (default)</option>' . $fontListStr;
+								if ( is_int( $this->fontCount ) && $fontCounter === $this->fontCount ) {
+									break;
 								}
+							}
+							if ( ! $isFontInList && $this->fontListIndex ) {
+								// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font
+								$fontListStr = '<option value="' . $this->fontList[ $this->fontListIndex ]->family . '" ' . selected( $this->fontValues->font, $this->fontList[ $this->fontListIndex ]->family, false ) . '>' . $this->fontList[ $this->fontListIndex ]->family . ' (default)</option>' . $fontListStr;
+							}
 								// Display our list of font options
 								echo $fontListStr;
 							?>
 						</select>
 					</div>
-					<div class="customize-control-description"><?php esc_html_e( 'Variant', 'airi' ) ?></div>
+					<div class="customize-control-description"><?php esc_html_e( 'Variant', 'airi' ); ?></div>
 					<div class="weight-style">
 						<select class="google-fonts-regularweight-style">
 							<?php
-								foreach( $this->fontList[$this->fontListIndex]->variants as $key => $value ) {
-									echo '<option value="' . $value . '" ' . selected( $this->fontValues->variant, $value, false ) . '>' . $value . '</option>';
-								}
+							foreach ( $this->fontList[ $this->fontListIndex ]->variants as $key => $value ) {
+								echo '<option value="' . $value . '" ' . selected( $this->fontValues->variant, $value, false ) . '>' . $value . '</option>';
+							}
 							?>
 						</select>
 					</div>
@@ -117,8 +117,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Find the index of the saved font in our multidimensional array of Google Fonts
 		 */
 		public function airi_getFontIndex( $haystack, $needle ) {
-			foreach( $haystack as $key => $value ) {
-				if( $value->family == $needle ) {
+			foreach ( $haystack as $key => $value ) {
+				if ( $value->family == $needle ) {
 					return $key;
 				}
 			}
@@ -133,18 +133,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			$fontFile = $this->get_airi_resource_url() . 'assets/google-fonts-alphabetical.json';
 
 			$request = wp_remote_get( $fontFile );
-			if( is_wp_error( $request ) ) {
-				return "";
+			if ( is_wp_error( $request ) ) {
+				return '';
 			}
 
-			$body = wp_remote_retrieve_body( $request );
+			$body    = wp_remote_retrieve_body( $request );
 			$content = json_decode( $body );
 
-			if( $count == 'all' ) {
+			if ( $count == 'all' ) {
 				return $content->items;
 			} else {
 				return array_slice( $content->items, 0, $count );
 			}
 		}
-    }
+	}
 }
