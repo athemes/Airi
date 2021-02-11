@@ -10,7 +10,7 @@ require trailingslashit( get_template_directory() ) . 'inc/customizer-v2/options
 require trailingslashit( get_template_directory() ) . 'inc/customizer-v2/options/section-header.php';
 require trailingslashit( get_template_directory() ) . 'inc/customizer-v2/options/section-colors.php';
 require trailingslashit( get_template_directory() ) . 'inc/customizer-v2/options/section-footer.php';
-
+require trailingslashit( get_template_directory() ) . 'inc/customizer-v2/options/section-blog.php';
 
 if (! function_exists('airi_custom_styles')) {
     function airi_custom_styles()
