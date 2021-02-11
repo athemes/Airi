@@ -16,12 +16,19 @@ class Airi_Sortable_Repeater_Custom_Control extends Airi_Custom_Control {
 	 */
 	public $button_labels = array();
 	/**
+	 * Currently selected icon
+	 */
+	public $current_values = array();
+	/**
 	 * Constructor
 	 */
 	public function __construct( $manager, $id, $args = array(), $options = array() ) {
 		parent::__construct( $manager, $id, $args );
-		// Merge the passed button labels with our default labels.
-		$this->social_icons  = wp_parse_args(
+
+		$this->current_values = json_decode( $this->values );
+		var_dump( $this->current_values );
+
+		$this->social_icons = wp_parse_args(
 			$this->social_icons,
 			array(
 				'fa-facebook'      => 'Facebook',
@@ -46,7 +53,7 @@ class Airi_Sortable_Repeater_Custom_Control extends Airi_Custom_Control {
 				'fa-telegram'      => 'telegram',
 			)
 		);
-		
+
 		$this->button_labels = wp_parse_args(
 			$this->button_labels,
 			array(
@@ -78,14 +85,14 @@ class Airi_Sortable_Repeater_Custom_Control extends Airi_Custom_Control {
 					<div class="repeater">
 						<select name="repeater-icon-select" class="repeater-icon-select">
 							<option value=""><?php echo esc_html( __( 'Select icon', 'aria' ) ); ?></option>
-							<?php foreach ( $this->social_icons as $social_icon ) : ?>
-									<option value="<?php echo esc_attr( $social_icon['icon'] ); ?>"><?php echo esc_html( $social_icon['name'] ); ?></option>								
+							<?php foreach ( $this->social_icons as $icon => $name ) : ?>
+									<option value="<?php echo esc_attr( $icon ); ?>" <?php // selected( $icon, '', false ); ?>><?php echo esc_html( $name ); ?></option>						
 							<?php endforeach; ?>
 						</select>
 						<input type="text" value="" class="repeater-input" placeholder="https://" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a>
 					</div>
 				</div>
-				<button class="button customize-control-sortable-repeater-add" type="button"><?php echo $this->button_labels['add']; ?></button>
+				<button class="button customize-control-sortable-repeater-add" type="button"><?php echo esc_html( $this->button_labels['add'] ); ?></button>
 			</div>
 		<?php
 	}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Customizer Header Controls
+ * Customizer Footer Controls
  */
 
 /**

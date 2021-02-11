@@ -11,36 +11,36 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * The list of Google Fonts
 		 */
-		private $fontList = false;
+		private $font_list = false;
 		/**
 		 * The saved font values decoded from json
 		 */
-		private $fontValues = array();
+		private $font_values = array();
 		/**
 		 * The index of the saved font within the list of Google fonts
 		 */
-		private $fontListIndex = 0;
+		private $font_list_index = 0;
 		/**
 		 * The number of fonts to display from the json file. Either positive integer or 'all'. Default = 'all'
 		 */
-		private $fontCount = 'all';
+		private $font_count = 'all';
 		/**
 		 * Get our list of fonts from the json file
 		 */
 		public function __construct( $manager, $id, $args = array(), $options = array() ) {
 			parent::__construct( $manager, $id, $args );
 
-			// Get the list of Google fonts
+			// Get the list of Google fonts.
 			if ( isset( $this->input_attrs['font_count'] ) ) {
 				if ( 'all' != strtolower( $this->input_attrs['font_count'] ) ) {
-					$this->fontCount = ( abs( (int) $this->input_attrs['font_count'] ) > 0 ? abs( (int) $this->input_attrs['font_count'] ) : 'all' );
+					$this->font_count = ( abs( (int) $this->input_attrs['font_count'] ) > 0 ? abs( (int) $this->input_attrs['font_count'] ) : 'all' );
 				}
 			}
-			$this->fontList = $this->airi_getGoogleFonts( 'all' );
-			// Decode the default json font value
-			$this->fontValues = json_decode( $this->value() );
-			// Find the index of our default font within our list of Google fonts
-			$this->fontListIndex = $this->airi_getFontIndex( $this->fontList, $this->fontValues->font );
+			$this->font_list = $this->airi_getGoogleFonts( 'all' );
+			// Decode the default json font value.
+			$this->font_values = json_decode( $this->value() );
+			// Find the index of our default font within our list of Google fonts.
+			$this->font_list_index = $this->airi_getFontIndex( $this->font_list, $this->font_values->font );
 		}
 		/**
 		 * Enqueue our scripts and styles
@@ -54,17 +54,17 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 */
 		public function to_json() {
 			parent::to_json();
-			$this->json['airifontslist'] = $this->fontList;
+			$this->json['airifontslist'] = $this->font_list;
 		}
 		/**
-		 * Render the control in the customizer
+		 * Render the control in the customizer.
 		 */
 		public function render_content() {
-			$fontCounter  = 0;
-			$isFontInList = false;
-			$fontListStr  = '';
+			$font_counter    = 0;
+			$is_font_in_list = false;
+			$font_list_str   = '';
 
-			if ( ! empty( $this->fontList ) ) {
+			if ( ! empty( $this->font_list ) ) {
 				?>
 				<div class="google_fonts_select_control">
 					<?php if ( ! empty( $this->label ) ) { ?>
@@ -78,22 +78,22 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					<div class="google-fonts">
 						<select class="google-fonts-list" control-name="<?php echo esc_attr( $this->id ); ?>">
 							<?php
-							foreach ( $this->fontList as $key => $value ) {
-								$fontCounter++;
-								$fontListStr .= '<option value="' . $value->family . '" ' . selected( $this->fontValues->font, $value->family, false ) . '>' . $value->family . '</option>';
-								if ( $this->fontValues->font === $value->family ) {
-									$isFontInList = true;
+							foreach ( $this->font_list as $key => $value ) {
+								$font_counter++;
+								$font_list_str .= '<option value="' . esc_attr( $value->family ) . '" ' . selected( esc_attr( $this->font_values->font ), esc_attr( $value->family ), false ) . '>' . esc_html( $value->family ) . '</option>';
+								if ( $this->font_values->font === $value->family ) {
+									$is_font_in_list = true;
 								}
-								if ( is_int( $this->fontCount ) && $fontCounter === $this->fontCount ) {
+								if ( is_int( $this->font_count ) && $font_counter === $this->font_count ) {
 									break;
 								}
 							}
-							if ( ! $isFontInList && $this->fontListIndex ) {
-								// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font
-								$fontListStr = '<option value="' . $this->fontList[ $this->fontListIndex ]->family . '" ' . selected( $this->fontValues->font, $this->fontList[ $this->fontListIndex ]->family, false ) . '>' . $this->fontList[ $this->fontListIndex ]->family . ' (default)</option>' . $fontListStr;
+							if ( ! $is_font_in_list && $this->font_list_index ) {
+								// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font.
+								$font_list_str = '<option value="' . esc_attr( $this->font_list[ $this->font_list_index ]->family ) . '" ' . selected( esc_attr( $this->font_values->font ), esc_attr( $this->font_list[ $this->font_list_index ]->family ), false ) . '>' . esc_hml( $this->font_list[ $this->font_list_index ]->family ) . ' (default)</option>' . $font_list_str;
 							}
-								// Display our list of font options
-								echo $fontListStr;
+								// Display our list of font options.
+								echo $font_list_str;
 							?>
 						</select>
 					</div>
@@ -101,13 +101,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					<div class="weight-style">
 						<select class="google-fonts-regularweight-style">
 							<?php
-							foreach ( $this->fontList[ $this->fontListIndex ]->variants as $key => $value ) {
-								echo '<option value="' . $value . '" ' . selected( $this->fontValues->variant, $value, false ) . '>' . $value . '</option>';
+							foreach ( $this->font_list[ $this->font_list_index ]->variants as $key => $value ) {
+								echo '<option value="' . esc_attr( $value ) . '" ' . selected( esc_attr( $this->font_values->variant ), esc_attr( $value ), false ) . '>' . esc_html( $value ) . '</option>';
 							}
 							?>
 						</select>
 					</div>
-					<input type="hidden" class="google-fonts-category" value="<?php echo $this->fontValues->category; ?>">
+					<input type="hidden" class="google-fonts-category" value="<?php echo esc_attr( $this->font_values->category ); ?>">
 				</div>
 				<?php
 			}
@@ -129,10 +129,10 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Return the list of Google Fonts from our json file. Unless otherwise specfied, list will be limited to 30 fonts.
 		 */
 		public function airi_getGoogleFonts( $count = 30 ) {
-			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY
-			$fontFile = $this->get_airi_resource_url() . 'assets/google-fonts-alphabetical.json';
+			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY .
+			$font_file = $this->get_airi_resource_url() . 'assets/google-fonts-alphabetical.json';
 
-			$request = wp_remote_get( $fontFile );
+			$request = wp_remote_get( $font_file );
 			if ( is_wp_error( $request ) ) {
 				return '';
 			}

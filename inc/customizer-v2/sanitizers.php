@@ -84,3 +84,46 @@ if ( ! function_exists( 'airi_google_font_sanitization' ) ) {
 		return $input;
 	}
 }
+
+	/**
+	 * Alpha Color (Hex & RGBa) sanitization
+	 *
+	 * @param  string	Input to be sanitized
+	 * @return string	Sanitized input
+	 */
+	if ( ! function_exists( 'airi_hex_rgba_sanitization' ) ) {
+		function airi_hex_rgba_sanitization( $input, $setting ) {
+			if ( empty( $input ) || is_array( $input ) ) {
+				return $setting->default;
+			}
+
+			if ( false === strpos( $input, 'rgba' ) ) {
+				// If string doesn't start with 'rgba' then santize as hex color
+				$input = sanitize_hex_color( $input );
+			} else {
+				// Sanitize as RGBa color
+				$input = str_replace( ' ', '', $input );
+				sscanf( $input, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
+				$input = 'rgba(' . airi_in_range( $red, 0, 255 ) . ',' . airi_in_range( $green, 0, 255 ) . ',' . airi_in_range( $blue, 0, 255 ) . ',' . airi_in_range( $alpha, 0, 1 ) . ')';
+			}
+			return $input;
+		}
+	}
+
+		/**
+	 * Only allow values between a certain minimum & maxmium range
+	 *
+	 * @param  number	Input to be sanitized
+	 * @return number	Sanitized input
+	 */
+	if ( ! function_exists( 'airi_in_range' ) ) {
+		function airi_in_range( $input, $min, $max ){
+			if ( $input < $min ) {
+				$input = $min;
+			}
+			if ( $input > $max ) {
+				$input = $max;
+			}
+			return $input;
+		}
+	}

@@ -98,7 +98,7 @@ class Airi_Initialise_Customizer_Typography_Settings
             'body_font',
             array(
                 'default' => $this->defaults['body_font'],
-                'transport' => 'postMessage',
+                'transport' => 'refresh',
                 'sanitize_callback' => 'airi_google_font_sanitization'
             )
         );
@@ -617,21 +617,6 @@ if (! function_exists('airi_font_scripts')) {
     }
 }
 add_action('wp_enqueue_scripts', 'airi_font_scripts');
-
-
-
-if (! function_exists('airi_font_styles')) {
-    function airi_font_styles()
-    {
-        $custom_styles = '';
-        $custom_styles .= airi_font_family_styles();
-        $custom_styles .= airi_font_sizes_styles();
-
-        // Output all styles.
-        echo '<style id="airi-font-css">' . esc_html($custom_styles) . '</style>';
-    }
-}
-add_action('wp_head', 'airi_font_styles', 9999);
 
 
 /**

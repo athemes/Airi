@@ -294,16 +294,3 @@ $airi_settings = new Airi_Initialise_Customizer_Header_Settings(
 		'test_menu5_skype'           => '',
 	)
 );
-
-/**
- * Callback to display fields only if Menu 5 selected
- */
-if ( ! function_exists( 'airi_section_menu_menu5_conditional_display' ) ) {
-	function airi_section_menu_menu5_conditional_display() {
-		$test_menu_type = get_theme_mod( 'test_menu_type' );
-		if ( ( $test_menu_type === 'menuStyle5' ) ) {
-			return true;
-		}
-		return false;
-	}
-}
