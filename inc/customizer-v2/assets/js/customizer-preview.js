@@ -399,4 +399,72 @@ jQuery(document).ready(function ($) {
       ).css("background-color", controlValue);
     });
   });
+
+  wp.customize("test_color_index_post_title", function (control) {
+    control.bind(function (controlValue) {
+      $(".entry-title a").css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_single_post_title", function (control) {
+    control.bind(function (controlValue) {
+      $(".single-post .entry-title").css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_meta_cat_bg", function (control) {
+    control.bind(function (controlValue) {
+      $(".single-post .post-cat, .blog-loop .post-cat").css(
+        "background-color",
+        controlValue
+      );
+    });
+  });
+
+  wp.customize("test_color_meta_text", function (control) {
+    control.bind(function (controlValue) {
+      $(".single-post .entry-meta, .blog-loop .entry-meta").css(
+        "color",
+        controlValue
+      );
+    });
+  });
+
+  wp.customize("test_color_meta_links", function (control) {
+    control.bind(function (controlValue) {
+      $(
+        ".single-post .entry-meta .byline a, .blog-loop .entry-meta .byline a"
+      ).css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_post_text", function (control) {
+    control.bind(function (controlValue) {
+      $(".single-post .entry-content, .blog-loop .entry-content").css(
+        "color",
+        controlValue
+      );
+      $(
+        ".editor-block-list__layout, .editor-block-list__layout .editor-block-list__block"
+      ).css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_widgets_title", function (control) {
+    control.bind(function (controlValue) {
+      $(".widget .widget-title").css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_widgets_text", function (control) {
+    control.bind(function (controlValue) {
+      $(".widget").css("color", controlValue);
+    });
+  });
+
+  wp.customize("test_color_widgets_links", function (control) {
+    control.bind(function (controlValue) {
+      $(".widget a").css("color", controlValue);
+    });
+  });
 });

@@ -108,24 +108,24 @@ class Airi_Initialise_Customizer_Colors_Settings {
 		 * General
 		 */
 		// $wp_customize->add_setting(
-		// 	'test_color_primary',
-		// 	array(
-		// 		'default'           => $this->defaults['test_color_primary'],
-		// 		'transport'         => 'postmessage',
-		// 		'sanitize_callback' => 'airi_hex_rgba_sanitization',
-		// 	)
+		// 'test_color_primary',
+		// array(
+		// 'default'           => $this->defaults['test_color_primary'],
+		// 'transport'         => 'postmessage',
+		// 'sanitize_callback' => 'airi_hex_rgba_sanitization',
+		// )
 		// );
 		// $wp_customize->add_control(
-		// 	new Airi_Alpha_Color_Custom_Control(
-		// 		$wp_customize,
-		// 		'test_color_primary',
-		// 		array(
-		// 			'label'        => esc_attr__( 'Primary color', 'airi' ),
-		// 			'section'      => 'colors',
-		// 			'show_opacity' => true,
-		// 			'palette'      => $this->default_palette,
-		// 		)
-		// 	)
+		// new Airi_Alpha_Color_Custom_Control(
+		// $wp_customize,
+		// 'test_color_primary',
+		// array(
+		// 'label'        => esc_attr__( 'Primary color', 'airi' ),
+		// 'section'      => 'colors',
+		// 'show_opacity' => true,
+		// 'palette'      => $this->default_palette,
+		// )
+		// )
 		// );
 
 		/**
@@ -310,14 +310,819 @@ class Airi_Initialise_Customizer_Colors_Settings {
 		);
 
 		// Menu 2.
+		$wp_customize->add_setting(
+			'test_color_mt2_site_title',
+			array(
+				'default'           => $this->defaults['test_color_mt2_site_title'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_site_title',
+				array(
+					'label'           => esc_attr__(
+						'Site title',
+						'airi'
+					),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_site_title_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt2_site_title_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_site_title_sticky',
+				array(
+					'label'           => esc_attr__( 'Site title (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_site_desc',
+			array(
+				'default'           => $this->defaults['test_color_mt2_site_desc'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_site_desc',
+				array(
+					'label'           => esc_attr__( 'Site description', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_site_desc_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt2_site_desc_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_site_desc_sticky',
+				array(
+					'label'           => esc_attr__( 'Site description (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_top_menu_items',
+			array(
+				'default'           => $this->defaults['test_color_mt2_top_menu_items'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_top_menu_items',
+				array(
+					'label'           => esc_attr__( 'Top level menu items', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_top_menu_items_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt2_top_menu_items_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_top_menu_items_sticky',
+				array(
+					'label'           => esc_attr__( 'Top level menu items (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_bg_color',
+			array(
+				'default'           => $this->defaults['test_color_mt2_bg_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_bg_color',
+				array(
+					'label'           => esc_attr__( 'Background color', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt2_bg_color_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt2_bg_color_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt2_bg_color_sticky',
+				array(
+					'label'           => esc_attr__( 'Background color (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu2_conditional_display',
+				)
+			)
+		);
+
+		// Menu 3.
+		$wp_customize->add_setting(
+			'test_color_mt3_top_bar',
+			array(
+				'default'           => $this->defaults['test_color_mt3_top_bar'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_top_bar',
+				array(
+					'label'           => esc_attr__( 'Top bar background', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_top_bar_color',
+			array(
+				'default'           => $this->defaults['test_color_mt3_top_bar_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_top_bar_color',
+				array(
+					'label'           => esc_attr__( 'Top bar color', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_site_title',
+			array(
+				'default'           => $this->defaults['test_color_mt3_site_title'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_site_title',
+				array(
+					'label'           => esc_attr__( 'Site title', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_site_title_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt3_site_title_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_site_title_sticky',
+				array(
+					'label'           => esc_attr__( 'Site title (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_site_desc',
+			array(
+				'default'           => $this->defaults['test_color_mt3_site_desc'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_site_desc',
+				array(
+					'label'           => esc_attr__( 'Site description', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_site_desc_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt3_site_desc_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_site_desc_sticky',
+				array(
+					'label'           => esc_attr__( 'Site description (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_top_menu_items',
+			array(
+				'default'           => $this->defaults['test_color_mt3_top_menu_items'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_top_menu_items',
+				array(
+					'label'           => esc_attr__( 'Top level menu items', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_top_menu_items_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt3_top_menu_items_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_top_menu_items_sticky',
+				array(
+					'label'           => esc_attr__( 'Top level menu items (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_bg_color',
+			array(
+				'default'           => $this->defaults['test_color_mt3_bg_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_bg_color',
+				array(
+					'label'           => esc_attr__( 'Background color', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt3_bg_color_sticky',
+			array(
+				'default'           => $this->defaults['test_color_mt3_bg_color_sticky'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt3_bg_color_sticky',
+				array(
+					'label'           => esc_attr__( 'Background color (sticky)', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu3_conditional_display',
+				)
+			)
+		);
+
+		// Menu 4.
+		$wp_customize->add_setting(
+			'test_color_mt4_site_title',
+			array(
+				'default'           => $this->defaults['test_color_mt4_site_title'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_site_title',
+				array(
+					'label'           => esc_attr__( 'Site title', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_site_desc',
+			array(
+				'default'           => $this->defaults['test_color_mt4_site_desc'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_site_desc',
+				array(
+					'label'           => esc_attr__( 'Site description', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_menu_bg_color',
+			array(
+				'default'           => $this->defaults['test_color_mt4_menu_bg_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_menu_bg_color',
+				array(
+					'label'           => esc_attr__( 'Menu background color', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_top_menu_items',
+			array(
+				'default'           => $this->defaults['test_color_mt4_top_menu_items'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_top_menu_items',
+				array(
+					'label'           => esc_attr__( 'Top level menu items', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_bg_color',
+			array(
+				'default'           => $this->defaults['test_color_mt4_bg_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_bg_color',
+				array(
+					'label'           => esc_attr__( 'Background color', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_top_line',
+			array(
+				'default'           => $this->defaults['test_color_mt4_top_line'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_top_line',
+				array(
+					'label'           => esc_attr__( 'Contact blocks - top line', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_mt4_bottom_line',
+			array(
+				'default'           => $this->defaults['test_color_mt4_bottom_line'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_mt4_bottom_line',
+				array(
+					'label'           => esc_attr__( 'Contact blocks - bottom line', 'airi' ),
+					'section'         => 'test_airi_section_colors_header',
+					'show_opacity'    => true,
+					'palette'         => $this->default_palette,
+					'active_callback' => 'airi_section_menu_menu4_conditional_display',
+				)
+			)
+		);
+
+		// Submenu.
+		$wp_customize->add_setting(
+			'test_color_submenu_items',
+			array(
+				'default'           => $this->defaults['test_color_submenu_items'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_submenu_items',
+				array(
+					'label'        => esc_attr__( 'Submenu items', 'airi' ),
+					'section'      => 'test_airi_section_colors_header',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_submenu_bg',
+			array(
+				'default'           => $this->defaults['test_color_submenu_bg'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_submenu_bg',
+				array(
+					'label'        => esc_attr__( 'Submenu background', 'airi' ),
+					'section'      => 'test_airi_section_colors_header',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_mobile_toggle_color',
+			array(
+				'default'           => $this->defaults['test_mobile_toggle_color'],
+				'transport'         => 'postmessage',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_mobile_toggle_color',
+				array(
+					'label'        => esc_attr__( 'Mobile toggle color', 'airi' ),
+					'section'      => 'test_airi_section_colors_header',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
 
 		/**
 		 * Blog colors
 		 */
+		$wp_customize->add_setting(
+			'test_color_index_post_title',
+			array(
+				'default'           => $this->defaults['test_color_index_post_title'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_index_post_title',
+				array(
+					'label'        => esc_attr__( 'Post title (archives)', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_single_post_title',
+			array(
+				'default'           => $this->defaults['test_color_single_post_title'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_single_post_title',
+				array(
+					'label'        => esc_attr__( 'Post title (single)', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_meta_cat_bg',
+			array(
+				'default'           => $this->defaults['test_color_meta_cat_bg'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_meta_cat_bg',
+				array(
+					'label'        => esc_attr__( 'Categories (single and archives)', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_meta_text',
+			array(
+				'default'           => $this->defaults['test_color_meta_text'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_meta_text',
+				array(
+					'label'        => esc_attr__( 'Meta text', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_meta_links',
+			array(
+				'default'           => $this->defaults['test_color_meta_links'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_meta_links',
+				array(
+					'label'        => esc_attr__( 'Meta links', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_post_text',
+			array(
+				'default'           => $this->defaults['test_color_post_text'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_post_text',
+				array(
+					'label'        => esc_attr__( 'Body text', 'airi' ),
+					'section'      => 'test_airi_section_colors_blog',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
 
 		/**
 		 * Widget colors
 		 */
+		$wp_customize->add_setting(
+			'test_color_widgets_title',
+			array(
+				'default'           => $this->defaults['test_color_widgets_title'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_widgets_title',
+				array(
+					'label'        => esc_attr__( 'Widget titles', 'airi' ),
+					'section'      => 'test_airi_section_colors_widgets',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_widgets_text',
+			array(
+				'default'           => $this->defaults['test_color_widgets_text'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_widgets_text',
+				array(
+					'label'        => esc_attr__( 'Widget text', 'airi' ),
+					'section'      => 'test_airi_section_colors_widgets',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'test_color_widgets_links',
+			array(
+				'default'           => $this->defaults['test_color_widgets_links'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_hex_rgba_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			new Airi_Alpha_Color_Custom_Control(
+				$wp_customize,
+				'test_color_widgets_links',
+				array(
+					'label'        => esc_attr__( 'Widget links', 'airi' ),
+					'section'      => 'test_airi_section_colors_widgets',
+					'show_opacity' => true,
+					'palette'      => $this->default_palette,
+				)
+			)
+		);
 
 	}
 
@@ -383,7 +1188,15 @@ $airi_settings = new Airi_Initialise_Customizer_Colors_Settings(
 		'test_color_submenu_items'             => '#1c1c1c',
 		'test_color_submenu_bg'                => '#f7f7f7',
 		'test_mobile_toggle_color'             => '',
-
+		'test_color_index_post_title'          => '#191919',
+		'test_color_single_post_title'         => '#191919',
+		'test_color_meta_cat_bg'               => '#eff1f4',
+		'test_color_meta_text'                 => '#bfbfbf',
+		'test_color_meta_links'                => '#595959',
+		'test_color_post_text'                 => '#595959',
+		'test_color_widgets_title'             => '#191919',
+		'test_color_widgets_text'              => '#707070',
+		'test_color_widgets_links'             => '#595959',
 	),
 	$default_palette,
 );
@@ -429,6 +1242,15 @@ if ( ! function_exists( 'airi_custom_colors_styles' ) ) {
 		$test_color_submenu_items             = get_theme_mod( 'test_color_submenu_items' );
 		$test_color_submenu_bg                = get_theme_mod( 'test_color_submenu_bg' );
 		$test_mobile_toggle_color             = get_theme_mod( 'test_mobile_toggle_color' );
+		$test_color_index_post_title          = get_theme_mod( 'test_color_index_post_title' );
+		$test_color_single_post_title         = get_theme_mod( 'test_color_single_post_title' );
+		$test_color_meta_cat_bg               = get_theme_mod( 'test_color_meta_cat_bg' );
+		$test_color_meta_text                 = get_theme_mod( 'test_color_meta_text' );
+		$test_color_meta_links                = get_theme_mod( 'test_color_meta_links' );
+		$test_color_post_text                 = get_theme_mod( 'test_color_post_text' );
+		$test_color_widgets_title             = get_theme_mod( 'test_color_widgets_title' );
+		$test_color_widgets_text              = get_theme_mod( 'test_color_widgets_text' );
+		$test_color_widgets_links             = get_theme_mod( 'test_color_widgets_links' );
 
 		if ( $test_color_primary ) {
 			$custom_styles .= ".woocommerce div.product .woocommerce-tabs ul.tabs li.active a,.product div.entry-summary p.price, .product div.entry-summary span.price,.athemes-blog:not(.airi_athemes_blog_skin) .posted-on a,.athemes-blog:not(.airi_athemes_blog_skin) .byline a:hover,.testimonials-section.style1:before,.single-post .read-more-link .gt,.blog-loop .read-more-link .gt,.single-post .posted-on a,.blog-loop .posted-on a,.entry-title a:hover,.airi_recent_entries .post-date,.menuStyle3 .top-bar .contact-item .fa,.menuStyle4 .contact-area .contact-block .contact-icon,.widget_categories li:hover::before,.widget_categories li:hover a {color: $test_color_primary; }";
@@ -569,6 +1391,43 @@ if ( ! function_exists( 'airi_custom_colors_styles' ) ) {
 
 		if ( $test_mobile_toggle_color ) {
 			$custom_styles .= ".menuStyle1 .mobile-menu-toggle_lines, .menuStyle1 .mobile-menu-toggle_lines:before, .menuStyle1 .mobile-menu-toggle_lines:after,.menuStyle1 .mobile-menu-toggle_lines,.mobile-menu-toggle_lines:before, .mobile-menu-toggle_lines:after,.mobile-menu-toggle_lines,.menuStyle3 .mobile-menu-toggle_lines,.menuStyle3 .mobile-menu-toggle_lines:before, .menuStyle3 .mobile-menu-toggle_lines:after { background-color:$test_mobile_toggle_color; }";
+		}
+
+		if ( $test_color_index_post_title ) {
+			$custom_styles .= ".entry-title a { color: $test_color_index_post_title; }";
+		}
+
+		if ( $test_color_single_post_title ) {
+			$custom_styles .= ".single-post .entry-title { color: $test_color_single_post_title; }";
+		}
+
+		if ( $test_color_meta_cat_bg ) {
+			$custom_styles .= ".single-post .post-cat, .blog-loop .post-cat { background-color: $test_color_meta_cat_bg; }";
+		}
+
+		if ( $test_color_meta_text ) {
+			$custom_styles .= ".single-post .entry-meta, .blog-loop .entry-meta { color: $test_color_meta_text; }";
+		}
+
+		if ( $test_color_meta_links ) {
+			$custom_styles .= ".single-post .entry-meta .byline a, .blog-loop .entry-meta .byline a { color: $test_color_meta_links; }";
+		}
+
+		if ( $test_color_post_text ) {
+			$custom_styles .= ".single-post .entry-content, .blog-loop .entry-content { color: $test_color_post_text; }";
+			$custom_styles .= ".editor-block-list__layout, .editor-block-list__layout .editor-block-list__block { color: $test_color_post_text; }";
+		}
+
+		if ( $test_color_widgets_title ) {
+			$custom_styles .= ".widget .widget-title { color: $test_color_widgets_title; }";
+		}
+
+		if ( $test_color_widgets_text ) {
+			$custom_styles .= ".widget { color: $test_color_widgets_text; }";
+		}
+
+		if ( $test_color_widgets_links ) {
+			$custom_styles .= ".widget a { color: $test_color_widgets_links; }";
 		}
 
 		return $custom_styles;
