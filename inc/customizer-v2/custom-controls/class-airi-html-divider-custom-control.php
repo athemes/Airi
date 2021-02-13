@@ -3,7 +3,7 @@
  * Label Custom Control
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	class Airi_Custom_HTML_Custom_Control extends Airi_Custom_Control {
+	class Airi_HTML_Divider_Custom_Control extends Airi_Custom_Control {
 		/**
 		 * The type of control being rendered
 		 */
@@ -14,7 +14,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public function render_content() {
 			?>
 			<div class="custom-html-custom-control">
-				<?php echo esc_html( $this->label ); ?>
+				<hr />
 			</div>
 			<?php
 		}

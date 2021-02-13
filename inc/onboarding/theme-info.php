@@ -75,13 +75,7 @@ function airi_info_page() {
 								<h3>One Click Demo Import</h3>
 								<p><?php esc_html_e( 'This plugin is useful for importing our demos. You can uninstall it after you\'re done with it.', 'airi' ); ?></p>
 								<?php echo Airi_Recommended_Plugins::instance()->get_button_html( $plugin ); ?>
-							</div>
-							<div class="plugin-block">
-								<?php $plugin = 'kirki'; ?>
-								<h3>Kirki</h3>
-								<p><?php esc_html_e( 'Kirki is a framework for theme options. You need this plugin to access Airi\'s options.', 'airi' ); ?></p>
-								<?php echo Airi_Recommended_Plugins::instance()->get_button_html( $plugin ); ?>
-							</div>															
+							</div>											
 						</div>
 					</div>
 					<hr style="margin-top:25px;margin-bottom:25px;">
@@ -95,11 +89,9 @@ function airi_info_page() {
 							$plugin = 'elementor';
 							$is_elementor_active = Airi_Recommended_Plugins::instance()->check_plugin_state( $plugin );
 							$plugin = 'one-click-demo-import';
-							$is_ocdi_active = Airi_Recommended_Plugins::instance()->check_plugin_state( $plugin );	
-							$plugin = 'kirki';
-							$is_kirki_active = Airi_Recommended_Plugins::instance()->check_plugin_state( $plugin );																					
+							$is_ocdi_active = Airi_Recommended_Plugins::instance()->check_plugin_state( $plugin );																					
 						?>
-							<?php if ( $is_airi_toolbox_active == 'deactivate' && $is_elementor_active == 'deactivate' && $is_ocdi_active == 'deactivate' && $is_kirki_active ==  'deactivate' ) : ?>
+							<?php if ( $is_airi_toolbox_active == 'deactivate' && $is_elementor_active == 'deactivate' && $is_ocdi_active == 'deactivate' ==  'deactivate' ) : ?>
 								<a class="button button-primary button-large" href="<?php echo admin_url( 'themes.php?page=pt-one-click-demo-import.php' ); ?>"><?php esc_html_e( 'Go to the automatic importer', 'airi' ); ?></a>
 							<?php else : ?>
 								<p class="airi-notice"><?php esc_html_e( 'All recommended plugins need to be installed and activated for this step.', 'airi' ); ?></p>

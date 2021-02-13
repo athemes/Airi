@@ -36,9 +36,9 @@ class Airi_Initialise_Customizer_Footer_Settings {
 		 * Add Footer Section
 		 */
 		$wp_customize->add_section(
-			'test_airi_section_footer',
+			'airi_section_footer',
 			array(
-				'title'    => __( 'Footer V2', 'airi' ),
+				'title'    => __( 'Footer', 'airi' ),
 				'priority' => 16,
 			)
 		);
@@ -52,18 +52,18 @@ class Airi_Initialise_Customizer_Footer_Settings {
 
 		// Menu Type.
 		$wp_customize->add_setting(
-			'test_footer_widget_areas',
+			'footer_widget_areas',
 			array(
-				'default'           => $this->defaults['test_footer_widget_areas'],
+				'default'           => $this->defaults['footer_widget_areas'],
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'airi_radio_sanitization',
 			)
 		);
 		$wp_customize->add_control(
-			'test_footer_widget_areas',
+			'footer_widget_areas',
 			array(
 				'label'    => __( 'Footer widget areas', 'airi' ),
-				'section'  => 'test_airi_section_footer',
+				'section'  => 'airi_section_footer',
 				'type'     => 'radio',
 				'priority' => 10,
 				'choices'  => array(
@@ -84,7 +84,7 @@ class Airi_Initialise_Customizer_Footer_Settings {
  */
 $airi_settings = new Airi_Initialise_Customizer_Footer_Settings(
 	array(
-		'test_footer_widget_areas' => '4',
+		'footer_widget_areas' => '4',
 
 	)
 );

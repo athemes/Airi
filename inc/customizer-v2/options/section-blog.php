@@ -146,7 +146,6 @@ class Airi_Initialise_Customizer_Blog_Settings {
 				'label'       => esc_attr__( 'Read more text', 'airi' ),
 				'description' => esc_attr__( 'Leave empty to hide', 'airi' ),
 				'section'     => 'airi_section_blog_index',
-				'default'     => esc_attr__( 'Read more', 'airi' ),
 				'priority'    => 10,
 			)
 		);
@@ -232,7 +231,6 @@ class Airi_Initialise_Customizer_Blog_Settings {
 				'type'     => 'checkbox',
 				'label'    => esc_attr__( 'Hide comments number?', 'airi' ),
 				'section'  => 'airi_section_blog_index',
-				'default'  => '0',
 				'priority' => 10,
 			)
 		);
@@ -374,12 +372,6 @@ class Airi_Initialise_Customizer_Blog_Settings {
 	}
 
 }
-
-
-/**
- * Load all our Customizer Custom Controls
- */
-require_once trailingslashit( get_template_directory() ) . 'inc/customizer-v2/custom-controls/class-airi-slider-custom-control.php';
 
 
 /**

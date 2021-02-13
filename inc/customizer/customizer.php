@@ -14,9 +14,9 @@ function airi_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_section( 'colors' )->title 				= esc_attr__( 'General', 'airi' );
-	$wp_customize->get_section( 'colors' )->panel 				= 'airi_panel_colors';
-	$wp_customize->get_section( 'colors' )->priority 			= '10';
+	// $wp_customize->get_section( 'colors' )->title 				= esc_attr__( 'General', 'airi' );
+	// $wp_customize->get_section( 'colors' )->panel 				= 'airi_panel_colors';
+	// $wp_customize->get_section( 'colors' )->priority 			= '10';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -74,7 +74,4 @@ Airi_Kirki::add_config( 'airi', array(
 /**
  * Load option files
  */
-// require get_template_directory() . '/inc/customizer/options/section-blog.php';
 require get_template_directory() . '/inc/customizer/options/section-header.php';
-require get_template_directory() . '/inc/customizer/options/section-footer.php';
-require get_template_directory() . '/inc/customizer/options/section-colors.php';

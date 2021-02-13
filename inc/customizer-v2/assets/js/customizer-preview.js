@@ -89,12 +89,12 @@ jQuery(document).ready(function ($) {
       const font_object = JSON.parse(controlValue);
       WebFont.load({
         google: {
-          families: [font_object.font + ":" + font_object.variant],
+          families: [font_object["font-family"] + ":" + font_object["variant"]],
         },
       });
       $("h1, h2, h3, h4, h5, h6, .site-title").css(
         "font-family",
-        font_object.font
+        font_object["font-family"]
       );
     });
   });
@@ -105,12 +105,12 @@ jQuery(document).ready(function ($) {
       const font_object = JSON.parse(controlValue);
       WebFont.load({
         google: {
-          families: [font_object.font + ":" + font_object.variant],
+          families: [font_object["font-family"] + ":" + font_object["variant"]],
         },
       });
       $("body, button, input, select, textarea").css(
         "font-family",
-        font_object.font
+        font_object["font-family"]
       );
     });
   });

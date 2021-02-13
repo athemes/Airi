@@ -39,8 +39,9 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			$this->font_list = $this->airi_getGoogleFonts( 'all' );
 			// Decode the default json font value.
 			$this->font_values = json_decode( $this->value() );
+
 			// Find the index of our default font within our list of Google fonts.
-			$this->font_list_index = $this->airi_getFontIndex( $this->font_list, $this->font_values->font );
+			$this->font_list_index = $this->airi_getFontIndex( $this->font_list, $this->font_values->{'font-family'} );
 		}
 		/**
 		 * Enqueue our scripts and styles
@@ -80,8 +81,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							<?php
 							foreach ( $this->font_list as $key => $value ) {
 								$font_counter++;
-								$font_list_str .= '<option value="' . esc_attr( $value->family ) . '" ' . selected( esc_attr( $this->font_values->font ), esc_attr( $value->family ), false ) . '>' . esc_html( $value->family ) . '</option>';
-								if ( $this->font_values->font === $value->family ) {
+								$font_list_str .= '<option value="' . esc_attr( $value->family ) . '" ' . selected( esc_attr( $this->font_values->{'font-family'} ), esc_attr( $value->family ), false ) . '>' . esc_html( $value->family ) . '</option>';
+								if ( $this->font_values->{'font-family'} === $value->family ) {
 									$is_font_in_list = true;
 								}
 								if ( is_int( $this->font_count ) && $font_counter === $this->font_count ) {
@@ -90,7 +91,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							}
 							if ( ! $is_font_in_list && $this->font_list_index ) {
 								// If the default or saved font value isn't in the list of displayed fonts, add it to the top of the list as the default font.
-								$font_list_str = '<option value="' . esc_attr( $this->font_list[ $this->font_list_index ]->family ) . '" ' . selected( esc_attr( $this->font_values->font ), esc_attr( $this->font_list[ $this->font_list_index ]->family ), false ) . '>' . esc_hml( $this->font_list[ $this->font_list_index ]->family ) . ' (default)</option>' . $font_list_str;
+								$font_list_str = '<option value="' . esc_attr( $this->font_list[ $this->font_list_index ]->family ) . '" ' . selected( esc_attr( $this->font_values->{'font-family'} ), esc_attr( $this->font_list[ $this->font_list_index ]->family ), false ) . '>' . esc_hml( $this->font_list[ $this->font_list_index ]->family ) . ' (default)</option>' . $font_list_str;
 							}
 								// Display our list of font options.
 								echo $font_list_str;

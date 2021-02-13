@@ -152,10 +152,6 @@ function airi_scripts() {
 	//Deregister FontAwesome from Elementor
 	wp_deregister_style( 'font-awesome' );
 
-	if ( !class_exists( 'Kirki_Fonts' ) ) {
-		wp_enqueue_style( 'airi-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600', array(), null );
-	}
-
 	//Load masonry
 	$blog_layout = airi_blog_layout();
 	if ( $blog_layout == 'layout-masonry' ) {
@@ -196,9 +192,6 @@ function airi_editor_styles() {
 	
 	wp_enqueue_style( 'airi-block-editor-styles', get_theme_file_uri( '/editor-styles.css' ), '', '1.0', 'all' );
 	
-	if ( !class_exists( 'Kirki_Fonts' ) ) {
-		wp_enqueue_style( 'airi-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600', array(), null );
-	}
 }
 add_action( 'enqueue_block_editor_assets', 'airi_editor_styles' );
 
