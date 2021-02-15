@@ -1,5 +1,30 @@
 <?php
 /**
+ * Load all our Customizer Custom Controls
+ */
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-slider-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-alpha-color-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-google-font-select-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-label-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-html-divider-custom-control.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/custom-controls/class-airi-sortable-repeater-custom-control.php';
+
+
+/**
+ * Customizer Setup Controls
+ * Load options and sanitizers files
+ */
+require trailingslashit( get_template_directory() ) . 'inc/customizer/sanitizers.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/active-callbacks.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/options/section-typography.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/options/section-header.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/options/section-colors.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/options/section-footer.php';
+require trailingslashit( get_template_directory() ) . 'inc/customizer/options/section-blog.php';
+
+
+/**
  * Airi Theme Customizer
  *
  * @package Airi
@@ -14,9 +39,6 @@ function airi_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	// $wp_customize->get_section( 'colors' )->title 				= esc_attr__( 'General', 'airi' );
-	// $wp_customize->get_section( 'colors' )->panel 				= 'airi_panel_colors';
-	// $wp_customize->get_section( 'colors' )->priority 			= '10';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -49,29 +71,29 @@ function airi_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function airi_customize_preview_js() {
-	wp_enqueue_script( 'airi-customizer', get_template_directory_uri() . '/js/admin/customizer.js', array( 'customize-preview' ), '20151215', true );
+
+if ( ! function_exists( 'airi_custom_styles' ) ) {
+	function airi_custom_styles() {
+		$custom_styles  = '';
+		$custom_styles .= airi_font_family_styles();
+		$custom_styles .= airi_font_sizes_styles();
+		$custom_styles .= airi_custom_colors_styles();
+
+		// Output all styles.
+		echo '<style id="airi-custom-css">' . esc_html( $custom_styles ) . '</style>';
+	}
 }
-add_action( 'customize_preview_init', 'airi_customize_preview_js' );
+add_action( 'wp_head', 'airi_custom_styles', 9999 );
 
 /**
- * Kirki
+ * Enqueue scripts for our Customizer preview
+ *
+ * @return void
  */
-require get_template_directory() . '/inc/customizer/kirki/include-kirki.php';
-require get_template_directory() . '/inc/customizer/kirki/class-athemes-kirki.php';
-
-/**
- * Add Kirki config
- */
-Airi_Kirki::add_config( 'airi', array(
-	'capability'    => 'edit_theme_options',
-	'option_type'   => 'theme_mod',
-) );
-
-/**
- * Load option files
- */
-require get_template_directory() . '/inc/customizer/options/section-header.php';
+if ( ! function_exists( 'airi_customizer_preview_scripts' ) ) {
+	function airi_customizer_preview_scripts() {
+		airi_font_scripts();
+		wp_enqueue_script( 'airi-customizer-preview-js', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/assets/js/customizer-preview.js', array( 'customize-preview', 'jquery' ), time(), false );
+	}
+}
+add_action( 'customize_preview_init', 'airi_customizer_preview_scripts' );

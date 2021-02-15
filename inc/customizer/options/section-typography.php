@@ -584,7 +584,7 @@ if ( ! function_exists( 'airi_font_scripts' ) ) {
 			array_push( $fonts, "'" );
 		}
 
-		wp_enqueue_script( 'webfont-loader-script', trailingslashit( get_template_directory_uri() ) . 'inc/customizer-v2/assets/js/webfont.js', array(), '1.6.26', false );
+		wp_enqueue_script( 'webfont-loader-script', trailingslashit( get_template_directory_uri() ) . 'inc/customizer/assets/js/webfont.js', array(), '1.6.26', false );
 
 		$inline_js = 'WebFont.load({
             google: { 

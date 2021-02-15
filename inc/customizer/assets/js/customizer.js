@@ -134,22 +134,39 @@ jQuery(document).ready(function ($) {
    * Sortable Repeater Custom Control
    */
 
+  var socialIconsObj;
+  var socialIconsSelectOptions = "";
   // Update the values for all our input fields and initialise the sortable repeater
   $(".sortable_repeater_control").each(function () {
     // If there is an existing customizer value, populate our rows
-    var defaultValuesArray = $(this)
+    var defaultValuesArray = JSON.parse(
+      $(this).find(".customize-control-sortable-repeater").val()
+    );
+
+    socialIconsObj = $(this)
       .find(".customize-control-sortable-repeater")
-      .val()
-      .split(",");
+      .data("social-icons");
+
     var numRepeaterItems = defaultValuesArray.length;
 
     if (numRepeaterItems > 0) {
       // Add the first item to our existing input field
-      $(this).find(".repeater-input").val(defaultValuesArray[0]);
+      $(this)
+        .find(".repeater-input-url")
+        .val(defaultValuesArray[0]["link_url"]);
+      $(this)
+        .find(
+          ".repeater-icon-select option[value=" +
+            defaultValuesArray[0]["icon"] +
+            "]"
+        )
+        .prop("selected", true);
+
       // Create a new row for each new value
       if (numRepeaterItems > 1) {
         var i;
         for (i = 1; i < numRepeaterItems; ++i) {
+          airiCreateSelect(defaultValuesArray[i]["icon"]);
           airiAppendRow($(this), defaultValuesArray[i]);
         }
       }
@@ -182,7 +199,8 @@ jQuery(document).ready(function ($) {
             airiGetAllInputs(parentContainer);
           });
       } else {
-        $(this).parent().find(".repeater-input").val("");
+        $(this).parent().find(".repeater-input-url").val("");
+        $(this).parent().find(".repeater-icon-select").val("");
         airiGetAllInputs($(this).parent().parent().parent());
       }
     }
@@ -201,21 +219,41 @@ jQuery(document).ready(function ($) {
   });
 
   // Add https:// to the start of the URL if it doesn't have it
-  $(".sortable_repeater.sortable").on("blur", ".repeater-input", function () {
-    var url = $(this);
-    var val = url.val();
-    if (val && !val.match(/^.+:\/\/.*/)) {
-      // Important! Make sure to trigger change event so Customizer knows it has to save the field
-      url.val("https://" + val).trigger("change");
+  $(".sortable_repeater.sortable").on(
+    "blur",
+    ".repeater-input-url",
+    function () {
+      var url = $(this);
+      var val = url.val();
+      if (val && !val.match(/^.+:\/\/.*/)) {
+        // Important! Make sure to trigger change event so Customizer knows it has to save the field
+        url.val("https://" + val).trigger("change");
+      }
     }
-  });
+  );
+
+  function airiCreateSelect(selectedOption) {
+    $.each(socialIconsObj, function (key, value) {
+      var selected = selectedOption === key ? " selected" : "";
+      socialIconsSelectOptions +=
+        '<option value="' + key + '"' + selected + ">" + value + "</option>";
+    });
+  }
 
   // Append a new row to our list of elements
   function airiAppendRow($element, defaultValue = "") {
+    var socialIconsSelect =
+      '<select name="repeater-icon-select" class="repeater-icon-select">';
+    socialIconsSelect += '<option value="">Select icon</option>';
+    socialIconsSelect += socialIconsSelectOptions;
+    socialIconsSelect += "</select>";
+
     var newRow =
-      '<div class="repeater" style="display:none"><input type="text" value="' +
-      defaultValue +
-      '" class="repeater-input" placeholder="https://" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a></div>';
+      '<div class="repeater" style="display:none">' +
+      socialIconsSelect +
+      '<br/><input type="text" value="' +
+      defaultValue["link_url"] +
+      '" class="repeater-input-url" placeholder="https://" /><span class="dashicons dashicons-sort"></span><a class="customize-control-sortable-repeater-delete" href="#"><span class="dashicons dashicons-no-alt"></span></a></div>';
 
     $element.find(".sortable").append(newRow);
     $element
@@ -224,6 +262,36 @@ jQuery(document).ready(function ($) {
       .slideDown("slow", function () {
         $(this).find("input").focus();
       });
+  }
+
+  // Get the values from the repeater input fields and add to our hidden field
+  function airiGetAllInputs($element) {
+    var inputValues = [];
+    $(".repeater-icon-select").each(function (index, val) {
+      var icon = $(this).val();
+      if (inputValues[index] === undefined) {
+        inputValues[index] = { icon: icon };
+      } else {
+        inputValues[index].icon = icon;
+      }
+    });
+
+    $(".repeater-input-url").each(function (index, val) {
+      var link_url = $(this).val();
+      if (inputValues[index] === undefined) {
+        inputValues[index] = { link_url: link_url };
+      } else {
+        inputValues[index].link_url = link_url;
+      }
+    });
+
+    // Add all the values from our repeater fields to the hidden field (which is the one that actually gets saved)
+
+    $element
+      .find(".customize-control-sortable-repeater")
+      .val(JSON.stringify(inputValues));
+    // Important! Make sure to trigger change event so Customizer knows it has to save the field
+    $element.find(".customize-control-sortable-repeater").trigger("change");
   }
 
   // Get the values from the repeater input fields and add to our hidden field
