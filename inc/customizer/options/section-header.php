@@ -241,7 +241,7 @@ class Airi_Initialise_Customizer_Header_Settings {
 				'x1_header_social',
 				array(
 					'label'           => __( 'Social links', 'airi' ),
-					'description'     => __( 'Available for menu types Extended 1', 'airi' ),
+					'description'     => __( 'Select social icons and insert links', 'airi' ),
 					'section'         => 'airi_section_menu',
 					'active_callback' => 'airi_section_menu_menu3_conditional_display',
 					'button_labels'   => array(
@@ -759,17 +759,15 @@ $airi_settings = new Airi_Initialise_Customizer_Header_Settings(
 		'sticky_menu'             => 'sticky-header',
 		'cta_text_menustyle4'     => esc_attr__( 'Get a quote', 'airi' ),
 		'cta_url_menustyle4'      => esc_attr__( 'http://example.org/contact/', 'airi' ),
-		'x1_header_social'                 => json_encode(
+		'x1_header_social'        => array(
 			array(
-				array(
-					'icon'     => 'fa-facebook',
-					'link_url' => 'https://facebook.com/yourprofile',
-				),
-				array(
-					'icon'     => 'fa-twitter',
-					'link_url' => 'https://twitter.com/yourprofile',
-				),
-			)
+				'icon'     => 'fa-facebook',
+				'link_url' => 'https://facebook.com/yourprofile',
+			),
+			array(
+				'icon'     => 'fa-twitter',
+				'link_url' => 'https://twitter.com/yourprofile',
+			),
 		),
 		'x1_cta_text'             => esc_attr__( 'Get a quote', 'airi' ),
 		'x1_cta_url'              => esc_attr__( 'http://example.org/contact/', 'airi' ),

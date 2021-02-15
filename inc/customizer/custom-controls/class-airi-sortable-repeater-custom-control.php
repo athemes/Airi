@@ -75,17 +75,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			return $dropdown;
 		}
 
-
-		public function social_icons_json() {
-			return json_encode( $this->social_icons );
-		}
-
 		/**
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
 			wp_enqueue_script( 'airi-custom-controls-js', $this->get_airi_resource_url() . 'assets/js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.0', true );
 			wp_enqueue_style( 'airi-custom-controls-css', $this->get_airi_resource_url() . 'assets/css/customizer.css', array(), '1.0', 'all' );
+			wp_add_inline_script( 'airi-custom-controls-js', 'var defaultValuesArray = ' . json_encode( $this->value() ) );
+			wp_add_inline_script( 'airi-custom-controls-js', 'var socialIconsObj = ' . json_encode( $this->social_icons ) );
 		}
 		/**
 		 * Render the control in the customizer
@@ -99,7 +96,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			<?php if ( ! empty( $this->description ) ) { ?>
 					<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 				<?php } ?>
-				<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-sortable-repeater" <?php $this->link(); ?> data-social-icons="<?php echo esc_attr( $this->social_icons_json() ); ?>" />
+				<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-sortable-repeater" <?php $this->link(); ?> />
 
 				<div class="sortable_repeater sortable">
 					<div class="repeater">

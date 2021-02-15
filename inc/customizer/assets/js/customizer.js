@@ -63,12 +63,6 @@ jQuery(document).ready(function ($) {
    * Googe Font Select Custom Control
    */
 
-  $(".google-fonts-list").each(function (i, obj) {
-    if (!$(obj).hasClass("select2-hidden-accessible")) {
-      $(obj).select2();
-    }
-  });
-
   $(".google-fonts-list").on("change", function () {
     var elementRegularWeight = $(this)
       .parent()
@@ -134,18 +128,10 @@ jQuery(document).ready(function ($) {
    * Sortable Repeater Custom Control
    */
 
-  var socialIconsObj;
   var socialIconsSelectOptions = "";
   // Update the values for all our input fields and initialise the sortable repeater
   $(".sortable_repeater_control").each(function () {
     // If there is an existing customizer value, populate our rows
-    var defaultValuesArray = JSON.parse(
-      $(this).find(".customize-control-sortable-repeater").val()
-    );
-
-    socialIconsObj = $(this)
-      .find(".customize-control-sortable-repeater")
-      .data("social-icons");
 
     var numRepeaterItems = defaultValuesArray.length;
 
@@ -154,6 +140,13 @@ jQuery(document).ready(function ($) {
       $(this)
         .find(".repeater-input-url")
         .val(defaultValuesArray[0]["link_url"]);
+
+      console.log(
+        $(this)
+          .find(".repeater-input-url")
+          .val(defaultValuesArray[0]["link_url"])
+      );
+
       $(this)
         .find(
           ".repeater-icon-select option[value=" +

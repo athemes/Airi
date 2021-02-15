@@ -8,9 +8,6 @@
 
 $airi_options   = airi_get_extended1_options();
 $airi_container = airi_menu_container();
-
-$airi_social_icon_links = json_decode( $airi_options['header_social'] );
-
 ?>
 
 <header id="masthead" class="site-header">
@@ -26,7 +23,7 @@ $airi_social_icon_links = json_decode( $airi_options['header_social'] );
 						<i class="fa fa-phone"></i><a href="tel:<?php echo esc_attr( $airi_options['phone_number'] ); ?>"><?php echo esc_html( $airi_options['phone_number'] ); ?></a>
 					</div>
 					<div class="header-social contact-item">
-						<?php foreach ( $airi_social_icon_links as $airi_social ) : ?>
+						<?php foreach ( $airi_options['header_social'] as $airi_social ) : ?>
 							<a target="_blank" href="<?php echo esc_url( $airi_social['link_url'] ); ?>"><i class="fa <?php echo esc_attr( $airi_social['icon'] ); ?>"></i></a>
 						<?php endforeach; ?>
 					</div>
