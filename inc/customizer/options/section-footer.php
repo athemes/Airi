@@ -1,32 +1,91 @@
 <?php
 /**
- * Footer Customizer panel
- *
- * @package Airi
+ * Customizer Footer Controls
  */
 
+/**
+ * Adds the individual sections, settings, and controls to the theme customizer
+ */
+class Airi_Initialise_Customizer_Footer_Settings {
 
-Airi_Kirki::add_section( 'airi_section_footer', array(
-    'title'       	 => __( 'Footer', 'airi' ),
-    'priority'       => 16,
-) );
+	/**
+	 * @var array $defaults Get our default values.
+	 */
+	private $defaults;
 
-Airi_Kirki::add_field( 'airi', array(
-	'type'        => 'radio',
-	'settings'    => 'footer_widget_areas',
-	'label'       => __( 'Footer widget areas', 'airi' ),
-	'section'     => 'airi_section_footer',
-	'default'     => '4',
-	'priority'    => 10,
-	'choices'     => array(
-		'1'   	=> esc_attr__( '1', 'airi' ),
-		'2'   	=> esc_attr__( '2', 'airi' ),
-		'3'	 	=> esc_attr__( '3', 'airi' ),
-		'4'  	=> esc_attr__( '4', 'airi' ),
-	),
-) );
+	/**
+	 * Construct
+	 */
+	public function __construct( $defaults ) {
+		// Get our Customizer defaults.
+		$this->defaults = $defaults;
 
-//Santize function
-function airi_sanitize_text( $input ) {
-    return wp_kses_post( force_balance_tags( $input ) );
+		// Register our sections.
+		add_action( 'customize_register', array( $this, 'airi_add_customizer_sections' ) );
+
+		// Register our controls.
+		add_action( 'customize_register', array( $this, 'airi_register_controls' ) );
+
+	}
+
+	/**
+	 * Register the Customizer sections
+	 */
+	public function airi_add_customizer_sections( $wp_customize ) {
+		/**
+		 * Add Footer Section
+		 */
+		$wp_customize->add_section(
+			'airi_section_footer',
+			array(
+				'title'    => __( 'Footer', 'airi' ),
+				'priority' => 16,
+			)
+		);
+
+	}
+
+	/**
+	 * Register our Footer Controls
+	 */
+	public function airi_register_controls( $wp_customize ) {
+
+		// Menu Type.
+		$wp_customize->add_setting(
+			'footer_widget_areas',
+			array(
+				'default'           => $this->defaults['footer_widget_areas'],
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'airi_radio_sanitization',
+			)
+		);
+		$wp_customize->add_control(
+			'footer_widget_areas',
+			array(
+				'label'    => __( 'Footer widget areas', 'airi' ),
+				'section'  => 'airi_section_footer',
+				'type'     => 'radio',
+				'priority' => 10,
+				'choices'  => array(
+					'1' => esc_attr__( '1', 'airi' ),
+					'2' => esc_attr__( '2', 'airi' ),
+					'3' => esc_attr__( '3', 'airi' ),
+					'4' => esc_attr__( '4', 'airi' ),
+				),
+			)
+		);
+
+	}
+
 }
+
+/**
+ * Initialise our Customizer settings
+ */
+$airi_settings = new Airi_Initialise_Customizer_Footer_Settings(
+	array(
+		'footer_widget_areas' => '4',
+
+	)
+);
+

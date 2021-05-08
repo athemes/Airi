@@ -6,7 +6,7 @@
  */
 
 
-$airi_options	= airi_get_extended1_options();
+$airi_options   = airi_get_extended1_options();
 $airi_container = airi_menu_container();
 ?>
 
@@ -53,11 +53,13 @@ $airi_container = airi_menu_container();
 				<div class="col-md-9">
 					<nav id="site-navigation" class="main-navigation">
 						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-							) );
-						?>
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								)
+							);
+							?>
 					</nav><!-- #site-navigation -->
 				</div>
 
