@@ -4,12 +4,14 @@
  *
  * @package Airi
  */
+
+$show_header_top_on_mobile = get_theme_mod( 'show_header_top_on_mobile' ) ? '' : ' d-none d-md-block';
 ?>
 
 <header id="masthead" class="site-header">
 	
 	<div class="container">
-		<div class="top-section d-none d-md-block">
+		<div class="top-section<?php esc_attr_e( $show_header_top_on_mobile ); ?>">
 			<div class="row">
 				<div class="left-content col-md-6 col-12 text-md-left text-center">
 				<?php
@@ -46,16 +48,15 @@
 						) );
 						?>
 					</nav><!-- #site-navigation -->
-					<div class="group-actions d-none d-xl-flex align-items-center">
 
-						<div class="search-form">
-							<?php airi_header_cart_search(); ?>
-							<div class="header-search-form">
-								<?php get_search_form(); ?>
-							</div>
-						</div>
+					<?php airi_header_cart_search(); ?>	
+
+					<?php 
+					$airi_button_text = get_theme_mod( 'menu6_button_text' ); 
+					$ga_display_class = empty($airi_button_text) ? 'd-none' : 'd-none d-xl-flex'; ?>
+
+					<div class="group-actions align-items-center <?php esc_attr_e( $ga_display_class ); ?>">
 						<?php
-						$airi_button_text = get_theme_mod( 'menu6_button_text' );
 						if ( $airi_button_text )
 						{
 							$airi_button_url = get_theme_mod( 'menu6_button_url' );

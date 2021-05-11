@@ -143,8 +143,8 @@ class Airi_Blog extends Widget_Base {
 					'{{WRAPPER}} .athemes-blog .entry-title a' => 'color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 			]
 		);
@@ -154,7 +154,7 @@ class Airi_Blog extends Widget_Base {
 			[
 				'name' => 'title_typography',
 				'selector' => '{{WRAPPER}} .athemes-blog .entry-title a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 			]
 		);
 		//End title
@@ -179,8 +179,8 @@ class Airi_Blog extends Widget_Base {
 					'{{WRAPPER}} .athemes-blog .posted-on a, {{WRAPPER}} .athemes-blog .posted-on' => 'color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 			]
 		);
@@ -195,8 +195,8 @@ class Airi_Blog extends Widget_Base {
 					'{{WRAPPER}} .athemes-blog .posted-on' => 'background-color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 				'condition' => [
 					'_skin' => 'airi_athemes_blog_skin_4',
@@ -209,7 +209,7 @@ class Airi_Blog extends Widget_Base {
 			[
 				'name' => 'date_typography',
 				'selector' => '{{WRAPPER}} .athemes-blog .posted-on a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 			]
 		);
 		//End date
@@ -238,8 +238,8 @@ class Airi_Blog extends Widget_Base {
 					'{{WRAPPER}} .athemes-blog .first-cat' => 'color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 				'condition' => [
 					'_skin' => '',
@@ -257,8 +257,8 @@ class Airi_Blog extends Widget_Base {
 					'{{WRAPPER}} .athemes-blog .first-cat' => 'background-color: {{VALUE}};',
 				],
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 				'condition' => [
 					'_skin' => '',
@@ -271,7 +271,7 @@ class Airi_Blog extends Widget_Base {
 			[
 				'name' => 'cat_typography',
 				'selector' => '{{WRAPPER}} .athemes-blog .posted-on a',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'condition' => [
 					'_skin' => '',
 				],					
@@ -305,8 +305,8 @@ class Airi_Blog extends Widget_Base {
 					'_skin' => '',
 				],					
 				'scheme' => [
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+					'type' => Core\Schemes\Color::get_type(),
+					'value' => Core\Schemes\Color::COLOR_1,
 				],
 			]
 		);
@@ -316,7 +316,7 @@ class Airi_Blog extends Widget_Base {
 			[
 				'name' => 'author_typography',
 				'selector' => '{{WRAPPER}} .athemes-blog .byline',
-				'scheme' => Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => Core\Schemes\Typography::TYPOGRAPHY_1,
 				'condition' => [
 					'_skin' => '',
 				],					

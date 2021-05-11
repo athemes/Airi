@@ -2,7 +2,7 @@
 (function($) {
 
 	function stickyHeader() {
-		if ( matchMedia( 'only screen and (min-width: 1024px)' ).matches ) {
+		if ( matchMedia( 'only screen and (min-width: 1200px)' ).matches ) {
 
 			$('.menuStyle1.sticky-header:not(.admin-bar) .site-header, .menuStyle2.sticky-header:not(.admin-bar) .site-header').sticky({
 				topSpacing: 0,
@@ -33,6 +33,15 @@
 				responsiveWidth: true
 			});
 			$('.menuStyle5.sticky-header:not(.admin-bar) .site-header').sticky({
+				topSpacing: 0,
+				responsiveWidth: true
+			});
+
+			$('.menuStyle6.sticky-header.admin-bar .site-header').sticky({
+				topSpacing: 32,
+				responsiveWidth: true
+			});
+			$('.menuStyle6.sticky-header:not(.admin-bar) .site-header').sticky({
 				topSpacing: 0,
 				responsiveWidth: true
 			});

@@ -6,34 +6,45 @@
  */
 
 
-$airi_options	= airi_get_extended1_options();
-$airi_container = airi_menu_container();
+$airi_options	 = airi_get_extended1_options();
+$is_topbar_empty = airi_get_extended1_options( true );
+$airi_container  = airi_menu_container();
 ?>
 
 <header id="masthead" class="site-header">
 	
+	<?php if( $is_topbar_empty == false ) : ?>
 	<div class="top-bar">
 		<div class="<?php echo esc_attr( $airi_container ); ?>">
 			<div class="col-md-12">
 				<div class="row">
-					<div class="contact-item">
-						<i class="fa fa-envelope"></i><a href="mailto:<?php echo antispambot( $airi_options['email_address'] ); ?>"><?php echo antispambot( $airi_options['email_address'] ); ?></a>
-					</div>
-					<div class="contact-item">
-						<i class="fa fa-phone"></i><a href="tel:<?php echo esc_attr( $airi_options['phone_number'] ); ?>"><?php echo esc_html( $airi_options['phone_number'] ); ?></a>
-					</div>
-					<div class="header-social contact-item">
-						<?php foreach ( $airi_options['header_social'] as $airi_social ) : ?>
-							<a target="_blank" href="<?php echo esc_url( $airi_social['link_url'] ); ?>"><i class="fa <?php echo esc_attr( $airi_social['icon'] ); ?>"></i></a>
-						<?php endforeach; ?>
-					</div>
-					<div class="contact-item header-cta">
-						<a class="button" href="<?php echo esc_url( $airi_options['cta_url'] ); ?>"><?php echo esc_html( $airi_options['cta_text'] ); ?></a>
-					</div>	
+					<?php if( !empty($airi_options['email_address']) ) : ?>
+						<div class="contact-item">
+							<i class="fa fa-envelope"></i><a href="mailto:<?php echo antispambot( $airi_options['email_address'] ); ?>"><?php echo antispambot( $airi_options['email_address'] ); ?></a>
+						</div>
+					<?php endif; ?>
+					<?php if( !empty($airi_options['phone_number']) ) : ?>
+						<div class="contact-item">
+							<i class="fa fa-phone"></i><a href="tel:<?php echo esc_attr( $airi_options['phone_number'] ); ?>"><?php echo esc_html( $airi_options['phone_number'] ); ?></a>
+						</div>
+					<?php endif; ?>
+					<?php if( !empty($airi_options['header_social'][0]) ) : ?>
+						<div class="header-social contact-item">
+							<?php foreach ( $airi_options['header_social'] as $airi_social ) : ?>
+								<a target="_blank" href="<?php echo esc_url( $airi_social['link_url'] ); ?>"><i class="fa <?php echo esc_attr( $airi_social['icon'] ); ?>"></i></a>
+							<?php endforeach; ?>
+						</div>
+					<?php endif; ?>
+					<?php if( !empty($airi_options['cta_text']) ) : ?>
+						<div class="contact-item header-cta">
+							<a class="button" href="<?php echo esc_url( $airi_options['cta_url'] ); ?>"><?php echo esc_html( $airi_options['cta_text'] ); ?></a>
+						</div>	
+					<?php endif; ?>
 				</div>				
 			</div>
 		</div>				
 	</div>
+	<?php endif; ?>
 
 	<div class="bottom-bar">
 		<div class="<?php echo esc_attr( $airi_container ); ?>">
@@ -50,7 +61,7 @@ $airi_container = airi_menu_container();
 					</button>
 				</div>
 
-				<div class="col-md-9">
+				<div class="col-xl-9 d-flex align-items-center">
 					<nav id="site-navigation" class="main-navigation">
 						<?php
 							wp_nav_menu( array(
@@ -59,6 +70,8 @@ $airi_container = airi_menu_container();
 							) );
 						?>
 					</nav><!-- #site-navigation -->
+					<?php airi_header_cart_search(); ?>	
+
 				</div>
 
 			</div>

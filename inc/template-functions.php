@@ -91,7 +91,7 @@ function airi_menu_container() {
 /**
  * Menu style 3 (Extended 1) options
  */
-function airi_get_extended1_options() {
+function airi_get_extended1_options( $check_empty = false ) {
 
 	$default_social 	= array(
 		array(
@@ -111,6 +111,20 @@ function airi_get_extended1_options() {
 		'email_address'	=> get_theme_mod( 'x1_email_address', 'office@example.org' ),
 		'phone_number'	=> get_theme_mod( 'x1_phone_number', '+333.222.111' ),
 	);
+
+	if( $check_empty ) {
+		$is_empty = true;
+
+		unset($options['cta_url']);
+		foreach( $options as $opt ) {
+			if( !empty($opt) ) {
+				$is_empty = false;
+				break;
+			}
+		}
+
+		return $is_empty;
+	}
 
 	return $options;
 }
@@ -348,18 +362,22 @@ if ( ! function_exists( 'airi_header_cart_search' ) ) {
 		
 		$disable_search = get_theme_mod( 'disable_header_search' );
 		?>
-		<ul class="header-search-cart">
-			<?php if ( !$disable_search ) : ?>
-			<li class="header-search">
-				<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
-			</li>
-			<?php endif; ?>
-			<li class="header-cart-link">
-				<?php if ( function_exists( 'airi_woocommerce_cart_link' ) ) {
-					airi_woocommerce_cart_link();
-				} ?>
-			</li>
-		</ul>
-		<?php
+		<?php if ( !$disable_search ) : ?>
+			<div class="header-search-wrapper d-none d-xl-flex">
+				<div class="header-search-form">
+					<?php get_search_form(); ?>
+				</div>
+				<div class="header-search">
+					<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
+				</div>
+			</div>
+		<?php endif; ?>
+		<?php if ( function_exists( 'airi_woocommerce_cart_link' ) ) : ?>
+			<ul class="header-search-cart d-none d-xl-flex">
+				<li class="header-cart-link">
+					<?php airi_woocommerce_cart_link(); ?>
+				</li>
+			</ul>
+		<?php endif;
 	}
 }

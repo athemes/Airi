@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 /**
  * Airi functions and definitions
  *
@@ -149,7 +154,7 @@ function airi_scripts() {
 	wp_enqueue_style( 'airi-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
 
 	//Deregister FontAwesome from Elementor
-	wp_deregister_style( 'font-awesome' );
+	wp_deregister_style( 'elementor-icons-shared-0' );
 
 	if ( !class_exists( 'Kirki_Fonts' ) ) {
 		wp_enqueue_style( 'airi-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600', array(), null );
@@ -163,7 +168,7 @@ function airi_scripts() {
 
 	wp_enqueue_script( 'airi-scripts', get_template_directory_uri() . '/js/vendor/scripts.js', array( 'jquery' ), '20180223', true );
 
-	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/custom.min.js', array( 'jquery' ), '20181017', true );	
+	wp_enqueue_script( 'airi-main', get_template_directory_uri() . '/js/custom/custom.js', array( 'jquery' ), '20181017', true );	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

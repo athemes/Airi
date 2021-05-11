@@ -48,8 +48,8 @@
 					'_skin' => $this->get_id(),
 				],					
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 			]
 		);
@@ -59,7 +59,7 @@
 			[
 				'name' => 'rm_typography',
 				'selector' => '{{WRAPPER}} .athemes-blog .read-more',
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'condition' => [
 					'_skin' => $this->get_id(),
 				],					

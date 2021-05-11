@@ -21,16 +21,19 @@
 				</button>
 			</div>			
 
-			<nav id="site-navigation" class="main-navigation col-md-6">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-				?>
-			</nav><!-- #site-navigation -->
+			<div class="d-flex col-md-12 col-xl-6">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+				<?php airi_header_cart_search(); ?>	
+			</div>
 
-			<div class="col-sm-12 col-xl-2 col-lg-6 col-12 contact-us text-center text-lg-left text-xl-right">
+			<div class="col-12 col-sm-12 col-lg-6 col-xl-2 contact-us text-center text-lg-left text-xl-right">
 			<?php
 			$airi_custom_text = get_theme_mod( 'menu5_custom_text' );
 			if ( $airi_custom_text )
@@ -39,8 +42,8 @@
 			}
 			?>
 			</div>
-			<div class="col-sm-12 last-block col-xl-2 col-lg-6 col-12">
-				<div class="socials d-flex justify-content-end">
+			<div class="d-flex col-12 col-sm-12 last-block col-lg-6 col-xl-2">
+				<div class="socials d-flex justify-content-end w-100">
 					<?php
 					$airi_socials = array( 'facebook', 'twitter', 'google', 'linkedin', 'skype' );
 					foreach ( $airi_socials as $airi_social )
@@ -58,11 +61,9 @@
 					}
 					?>
 				</div>
+
 			</div>
 		</div>
-	</div>
-	<div class="header-search-form">
-		<?php get_search_form(); ?>
 	</div>
 
 

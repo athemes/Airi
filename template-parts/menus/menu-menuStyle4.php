@@ -70,15 +70,14 @@ $airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 				) );
 			?>
 
-			<?php airi_header_cart_search(); ?>
+			<div class="actions-wrapper d-flex">
+				<?php airi_header_cart_search(); ?>
 
-			<?php if ( $airi_cta_text ) : ?>
-			<div class="header-cta">
-				<a href="<?php echo esc_url( $airi_cta_url ); ?>"><?php echo esc_html( $airi_cta_text ); ?></a>
-			</div>
-			<?php endif; ?>
-			<div class="header-search-form">
-				<?php get_search_form(); ?>
+				<?php if ( $airi_cta_text ) : ?>
+				<div class="header-cta">
+					<a href="<?php echo esc_url( $airi_cta_url ); ?>"><?php echo esc_html( $airi_cta_text ); ?></a>
+				</div>
+				<?php endif; ?>
 			</div>
 		</nav><!-- #site-navigation -->
 	</div>

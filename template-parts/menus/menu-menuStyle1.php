@@ -21,20 +21,21 @@
 				</button>
 			</div>			
 
-			<nav id="site-navigation" class="main-navigation col-md-8">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-				?>
+			<div class="d-flex justify-content-end col-md-8">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+
 				<?php airi_header_cart_search(); ?>
-			</nav><!-- #site-navigation -->
+			</div>
 		</div>
 	</div>
-	<div class="header-search-form">
-		<?php get_search_form(); ?>
-	</div>
+	
 
 
 </header><!-- #masthead -->

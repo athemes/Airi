@@ -42,11 +42,6 @@ Airi_Kirki::add_field( 'airi', array(
 	'required'  => array(
 		array(
 			'setting'  => 'menu_type',
-			'value'    => 'menuStyle5',
-			'operator' => '!=',
-		),
-		array(
-			'setting'  => 'menu_type',
 			'value'    => 'menuStyle6',
 			'operator' => '!=',
 		),
@@ -549,6 +544,20 @@ Airi_Kirki::add_field( 'airi', array(
 ) );
 // Menu style 6
 Airi_Kirki::add_field( 'airi', array(
+	'type'        => 'checkbox',
+	'settings'    => 'show_header_top_on_mobile',
+	'label'       => __( 'Show header top on mobile?', 'airi' ),
+	'section'     => 'airi_section_menu',
+	'default'     => '',
+	'required'  => array(
+		array(
+			'setting'  => 'menu_type',
+			'value'    => 'menuStyle6',
+			'operator' => '==',
+		),
+	)
+) );
+Airi_Kirki::add_field( 'airi', array(
 	'type'       		=> 'textarea',
 	'settings'    		=> 'menu6_top_section_left',
 	'label'       		=> __( 'Block Top Left Content', 'airi' ),
@@ -561,7 +570,6 @@ Airi_Kirki::add_field( 'airi', array(
 		),
 	)
 ) );
-// Menu style 6
 Airi_Kirki::add_field( 'airi', array(
 	'type'       		=> 'textarea',
 	'settings'    		=> 'menu6_top_section_right',
