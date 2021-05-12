@@ -65,7 +65,7 @@ $airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 		<nav id="site-navigation" class="main-navigation col-md-12">			
 			<?php
 				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
+					'theme_location' => 'primary',
 					'menu_id'        => 'primary-menu',
 				) );
 			?>

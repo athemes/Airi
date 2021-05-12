@@ -95,7 +95,7 @@
 	}
 
 add_action( 'elementor/widget/athemes-image-icon-box/skins_init', function( $widget ) {
-   $widget->add_skin( new Airi_Image_Icon_Box_Skin( $widget ) );
+    $widget->add_skin( new Airi_Image_Icon_Box_Skin( $widget ) );
 } );
 
 

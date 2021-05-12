@@ -165,8 +165,8 @@
 
         <style type="text/css">
             #airi-map {
-								width: 100%;
-								height: 560px;
+				width: 100%;
+				height: 560px;
             }
         </style>
 
@@ -178,7 +178,7 @@
   }
 
 add_action( 'elementor/widget/google_maps/skins_init', function( $widget ) {
-   $widget->add_skin( new Airi_Google_Maps_Skin( $widget ) );
+    $widget->add_skin( new Airi_Google_Maps_Skin( $widget ) );
 } );
 
 

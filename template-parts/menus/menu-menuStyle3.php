@@ -65,7 +65,7 @@ $airi_container  = airi_menu_container();
 					<nav id="site-navigation" class="main-navigation">
 						<?php
 							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
+								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
 							) );
 						?>

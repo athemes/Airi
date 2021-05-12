@@ -129,7 +129,7 @@
 	}
 
 add_action( 'elementor/widget/athemes-blog/skins_init', function( $widget ) {
-   $widget->add_skin( new Airi_aThemes_Blog_Skin_3( $widget ) );
+    $widget->add_skin( new Airi_aThemes_Blog_Skin_3( $widget ) );
 } );
 
 

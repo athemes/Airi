@@ -1,9 +1,4 @@
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 /**
  * Airi functions and definitions
  *
@@ -55,7 +50,7 @@ if ( ! function_exists( 'airi_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'airi' ),
+			'primary' => esc_html__( 'Primary', 'airi' ),
 		) );
 
 		/*
@@ -222,7 +217,7 @@ function airi_register_elementor_widgets() {
 
 	if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
 
-		require get_template_directory() . '/inc/compatibility/elementor/blocks/block-blog.php';
+		require get_theme_file_path( '/inc/compatibility/elementor/blocks/block-blog.php' );
 	}
 }
 add_action( 'elementor/widgets/widgets_registered', 'airi_register_elementor_widgets' );
@@ -250,20 +245,20 @@ add_action( 'elementor/elements/categories_registered', 'airi_block_category' );
  */
 add_action( 'elementor/init', 'airi_add_elementor_skins' );
 function airi_add_elementor_skins(){
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-google-maps-skin.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php';
-	require get_template_directory() . '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php';
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-google-maps-skin.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php' );
+	require get_theme_file_path( '/inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php' );
 }
 
 /**
  * Widgets
  */
-require get_template_directory() . '/widgets/class-airi-social.php';
-require get_template_directory() . '/widgets/class-airi-recent-posts.php';
+require get_theme_file_path( '/widgets/class-airi-social.php' );
+require get_theme_file_path( '/widgets/class-airi-recent-posts.php' );
 
 /**
  * Custom template tags for this theme.
