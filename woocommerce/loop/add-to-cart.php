@@ -28,6 +28,6 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link', // phpcs:ignore WPTheme
 		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
 		esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
 		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
-		'<i class="fa fa-shopping-cart"></i>'
+		'<i class="fas fa-shopping-cart"></i>'
 	),
 $product, $args );

@@ -20,18 +20,18 @@ $airi_container  = airi_menu_container();
 				<div class="row">
 					<?php if( !empty($airi_options['email_address']) ) : ?>
 						<div class="contact-item">
-							<i class="fa fa-envelope"></i><a href="mailto:<?php echo antispambot( $airi_options['email_address'] ); ?>"><?php echo antispambot( $airi_options['email_address'] ); ?></a>
+							<i class="fas fa-envelope"></i><a href="mailto:<?php echo antispambot( $airi_options['email_address'] ); ?>"><?php echo antispambot( $airi_options['email_address'] ); ?></a>
 						</div>
 					<?php endif; ?>
 					<?php if( !empty($airi_options['phone_number']) ) : ?>
 						<div class="contact-item">
-							<i class="fa fa-phone"></i><a href="tel:<?php echo esc_attr( $airi_options['phone_number'] ); ?>"><?php echo esc_html( $airi_options['phone_number'] ); ?></a>
+							<i class="fas fa-phone"></i><a href="tel:<?php echo esc_attr( $airi_options['phone_number'] ); ?>"><?php echo esc_html( $airi_options['phone_number'] ); ?></a>
 						</div>
 					<?php endif; ?>
 					<?php if( !empty($airi_options['header_social'][0]) ) : ?>
 						<div class="header-social contact-item">
 							<?php foreach ( $airi_options['header_social'] as $airi_social ) : ?>
-								<a target="_blank" href="<?php echo esc_url( $airi_social['link_url'] ); ?>"><i class="fa <?php echo esc_attr( $airi_social['icon'] ); ?>"></i></a>
+								<a target="_blank" href="<?php echo esc_url( $airi_social['link_url'] ); ?>"><i class="fab <?php echo esc_attr( $airi_social['icon'] ); ?>"></i></a>
 							<?php endforeach; ?>
 						</div>
 					<?php endif; ?>

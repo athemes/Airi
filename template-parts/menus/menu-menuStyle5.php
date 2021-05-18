@@ -53,7 +53,7 @@
 						if ( $airi_value )
 						{
 						?>
-							<a href="<?php echo esc_url( $airi_value ); ?>"><i class="fa fa-<?php echo $airi_social == 'google'? 'google-plus': $airi_social; ?>" aria-hidden="true"></i></a>
+							<a href="<?php echo esc_url( $airi_value ); ?>"><i class="fab fa-<?php echo $airi_social == 'google'? 'google-plus': $airi_social; ?>" aria-hidden="true"></i></a>
 						<?php
 						}
 					?>

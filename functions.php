@@ -146,7 +146,7 @@ function airi_scripts() {
 
 	wp_enqueue_script( 'airi-skip-link-focus-fix', get_template_directory_uri() . '/js/vendor/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_style( 'airi-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'airi-font-awesome', get_template_directory_uri() . '/css/font-awesome/css/all.min.css' );
 
 	//Deregister FontAwesome from Elementor
 	wp_deregister_style( 'elementor-icons-shared-0' );
@@ -232,7 +232,7 @@ function airi_block_category() {
 		'airi-elements',
 		[
 			'title' => __( 'Airi Elements', 'airi' ),
-			'icon' => 'fa fa-plug',
+			'icon' => 'fas fa-plug',
 		],
 		1
 		);		

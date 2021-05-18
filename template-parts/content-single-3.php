@@ -30,14 +30,14 @@ $hide_author 	= get_theme_mod( 'single_hide_author' );
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		?>
 		<div class="entry-meta">
-			<i class="fa fa-user" aria-hidden="true"></i>
+			<i class="fas fa-user" aria-hidden="true"></i>
 			<?php
 			if ( $layout['type'] != 'layout-grid' && $layout['type'] != 'layout-masonry' && $hide_author == '' ) {
 				airi_posted_by();
 			}
 			?>
 			<span class="separator">-</span>
-			<i class="fa fa-clock-o" aria-hidden="true"></i>
+			<i class="fas fa-clock-o" aria-hidden="true"></i>
 			<?php
 			if ( $hide_date == '' ) {
 				airi_posted_on();

@@ -73,7 +73,7 @@ $instance = $this->instance; // phpcs:ignore WPThemeReview.CoreFunctionality.Pre
                             <!-- number students -->
                             <?php if ( ! empty( $instance['show_enrolled_students'] ) ) { ?>
                                 <div class="course-student-number course-meta-field">
-                                    <i class="fa fa-users"></i><?php echo $airi_course->get_users_enrolled(); ?>
+                                    <i class="fas fa-users"></i><?php echo $airi_course->get_users_enrolled(); ?>
                                 </div>
                             <?php } ?>
 

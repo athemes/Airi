@@ -368,7 +368,7 @@ if ( ! function_exists( 'airi_header_cart_search' ) ) {
 					<?php get_search_form(); ?>
 				</div>
 				<div class="header-search">
-					<div class="header-search-toggle"><a><i class="fa fa-search"></i></a></div>
+					<div class="header-search-toggle"><a><i class="fas fa-search"></i></a></div>
 				</div>
 			</div>
 		<?php endif; ?>

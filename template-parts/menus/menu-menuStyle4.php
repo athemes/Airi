@@ -34,7 +34,7 @@ $airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 			<div class="contact-area col-md-8">
 				<div class="contact-block">
 					<div class="contact-icon">
-						<i class="fa fa-phone"></i>
+						<i class="fas fa-phone"></i>
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $airi_above_phone_number ); ?></span>
@@ -43,7 +43,7 @@ $airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 				</div>
 				<div class="contact-block">
 					<div class="contact-icon">
-						<i class="fa fa-map-marker"></i>
+						<i class="fas fa-map-marker"></i>
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $airi_above_address ); ?></span>
@@ -52,7 +52,7 @@ $airi_cta_url			= get_theme_mod( 'cta_url_menustyle4', '#' );
 				</div>
 				<div class="contact-block">
 					<div class="contact-icon">
-						<i class="fa fa-clock-o"></i>
+						<i class="fas fa-clock-o"></i>
 					</div>
 					<div class="contact-text">
 						<span><?php echo esc_html( $airi_above_opening ); ?></span>

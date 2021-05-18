@@ -213,7 +213,7 @@ if ( ! function_exists( 'airi_woocommerce_cart_link' ) ) {
 	function airi_woocommerce_cart_link() {
 		?>
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'airi' ); ?>">
-			<i class="fa fa-shopping-bag"></i><span class="count"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></span>
+			<i class="fas fa-shopping-bag"></i><span class="count"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></span>
 		</a>
 		<?php
 	}
