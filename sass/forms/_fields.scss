@@ -19,6 +19,7 @@ select {
 	border: 1px solid #ebebeb;
 	border-radius: 0;
 	padding: 15px 20px;
+	max-width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -27,4 +28,8 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+label {
+	max-width: 100%;
 }

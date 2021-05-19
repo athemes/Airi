@@ -271,6 +271,7 @@ select {
   border: 1px solid #ebebeb;
   border-radius: 0;
   padding: 15px 20px;
+  max-width: 100%;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -296,9 +297,17 @@ textarea {
   width: 100%;
 }
 
+label {
+  max-width: 100%;
+}
+
 .wpcf7-not-valid-tip {
+  margin: 10px 0px 10px 3px;
+}
+
+label > .wpcf7-form-control-wrap {
+  display: block;
   margin-top: 10px;
-  margin-left: 3px;
 }
 
 /*--------------------------------------------------------------
@@ -2404,6 +2413,10 @@ ul.social-media-list li {
   display: block;
   margin-bottom: 35px;
 }
+.single-post .entry-content p,
+.blog-loop .entry-content p {
+  line-height: 32px;
+}
 .single-post .entry-content p:last-of-type,
 .blog-loop .entry-content p:last-of-type {
   margin: 0;
@@ -3015,10 +3028,12 @@ ul.social-media-list li {
   text-align: center;
 }
 
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay i::before,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay i::before {
   font-size: 24px;
   line-height: 70px;
-  font-family: "Fontawesome";
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900;
   content: "";
   display: block;
   position: absolute;

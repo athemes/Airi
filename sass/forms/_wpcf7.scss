@@ -1,4 +1,8 @@
 .wpcf7-not-valid-tip {
+    margin: 10px 0px 10px 3px;
+}
+
+label > .wpcf7-form-control-wrap {
+    display: block;
     margin-top: 10px;
-    margin-left: 3px;
 }

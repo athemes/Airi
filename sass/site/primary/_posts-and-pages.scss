@@ -64,7 +64,6 @@
 	.entry-title {
 		margin: 20px 0 25px;
 		font-size: 36px;
-		
 	}
 
 	.post-thumbnail {
@@ -75,6 +74,7 @@
 	.entry-content {
 		
 		p {
+			line-height: 32px;
 			&:last-of-type {
 				margin: 0;
 			}

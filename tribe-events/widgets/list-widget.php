@@ -36,15 +36,13 @@ if ( $airi_posts ) : ?>
 	<ol class="tribe-list-widget">
 		<?php
 		// Setup the post data for each event.
-		foreach ( $airi_posts as $airi_post ) :
-			setup_postdata( $airi_post );
-			?>
-			<li class="tribe-events-list-widget-events clearfix <?php tribe_events_event_classes() ?>">
+		foreach ( $airi_posts as $airi_post ) : ?>
+			<li class="tribe-events-list-widget-events clearfix <?php tribe_events_event_classes( $airi_post -> ID ) ?>">
 
 				<div class="events-inner clearfix">
 					<?php
 					if (
-						tribe( 'tec.featured_events' )->is_featured( get_the_ID() )
+						tribe( 'tec.featured_events' )->is_featured( $airi_post -> ID )
 						&& get_post_thumbnail_id( $airi_post )
 					) {
 						/**
@@ -71,7 +69,7 @@ if ( $airi_posts ) : ?>
 						$airi_post_thumbnail      = get_the_post_thumbnail( null, $airi_thumbnail_size );
 
 						if ( $airi_featured_image_link ) {
-							$airi_post_thumbnail = '<a href="' . esc_url( tribe_get_event_link() ) . '">' . $airi_post_thumbnail . '</a>';
+							$airi_post_thumbnail = '<a href="' . esc_url( tribe_get_event_link( $airi_post -> ID ) ) . '">' . $airi_post_thumbnail . '</a>';
 						}
 						?>
 						<div class="tribe-event-image">
@@ -92,7 +90,7 @@ if ( $airi_posts ) : ?>
 					<?php do_action( 'tribe_events_list_widget_before_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 					<!-- Event Title -->
 					<h4 class="tribe-event-title">
-						<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark"><?php the_title(); ?></a>
+						<a href="<?php echo esc_url( tribe_get_event_link( $airi_post -> ID ) ); ?>" rel="bookmark"><?php esc_html_e( get_the_title( $airi_post -> ID ) ); ?></a>
 					</h4>
 
 					<?php do_action( 'tribe_events_list_widget_after_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
@@ -105,7 +103,7 @@ if ( $airi_posts ) : ?>
 					</div>
 
 					<div class="tribe-event-duration">
-						<?php echo tribe_events_event_schedule_details(); ?>
+						<?php echo tribe_events_event_schedule_details( $airi_post -> ID ); ?>
 					</div>
 
 					<?php do_action( 'tribe_events_list_widget_after_the_meta' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>

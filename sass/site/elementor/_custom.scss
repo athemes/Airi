@@ -31,10 +31,12 @@
 	height: 70px;
 	text-align: center;
 }
+.business-video .elementor-widget-video .elementor-custom-embed-image-overlay i::before,
 .startup-video .elementor-widget-video .elementor-custom-embed-image-overlay i::before {
 	font-size: 24px;
 	line-height: 70px;
-	font-family: 'Fontawesome';
+	font-family: 'Font Awesome 5 Free' !important;
+	font-weight: 900;
 	content: '\f04b';
 	display: block;
 	position: absolute;
