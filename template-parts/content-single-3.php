@@ -37,7 +37,7 @@ $hide_author 	= get_theme_mod( 'single_hide_author' );
 			}
 			?>
 			<span class="separator">-</span>
-			<i class="fas fa-clock-o" aria-hidden="true"></i>
+			<i class="fas fa-clock" aria-hidden="true"></i>
 			<?php
 			if ( $hide_date == '' ) {
 				airi_posted_on();

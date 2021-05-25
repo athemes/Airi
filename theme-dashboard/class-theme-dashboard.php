@@ -657,7 +657,7 @@ class Airi_Theme_Dashboard {
 							</div>
 							<div class="thd-panel-content">
 								<div class="thd-title">
-									<?php echo wp_kses_post( __( 'Join our Facebook community', 'airi' ) ); ?>
+									<?php echo wp_kses_post( __( 'Join Our Community', 'airi' ) ); ?>
 								</div>
 
 								<div class="thd-description"><?php esc_html_e( 'Discuss products and ask for community support or help the community.', 'airi' ); ?></div>
@@ -709,9 +709,9 @@ class Airi_Theme_Dashboard {
 
 								<div class="thd-line"></div>
 
-								<div class="thd-heading"><?php esc_html_e( 'Have an idea how to improve?', 'airi' ); ?></div>
+								<div class="thd-heading"><?php esc_html_e( 'Have an idea or feedback?', 'airi' ); ?></div>
 
-								<div class="thd-description"><?php esc_html_e( 'Let us know. We process all suggestions to make the theme perfect.', 'airi' ); ?></div>
+								<div class="thd-description"><?php esc_html_e( 'Let us know. We\'d love to hear from you.', 'airi' ); ?></div>
 
 								<a href="<?php echo esc_url( $this->settings['suggest_idea_link'] ); ?>" class="thd-suggest-idea-link" target="_blank">
 									<?php echo esc_html_e( 'Suggest an Idea', 'airi' ); ?>

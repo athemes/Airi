@@ -151,55 +151,59 @@
 	};    
 
     var aThemesPortfoliorun = function ($scope, $) {
-	   if ( $('.athemes-project-wrap').length ) {
+	   	if ( $('.athemes-project-wrap').length ) {
 
-	      $('.athemes-project-wrap').each(function() {
+	      	$('.athemes-project-wrap').each(function() {
 
-	        var self       = $(this);
-	        var filterNav  = self.find('.project-filter').find('a');
+				var self       = $(this);
+				var filterNav  = self.find('.project-filter').find('a');
 
-	        var projectIsotope = function($selector) {
-		        $selector.isotope({
-		            filter: '*',
-		            itemSelector: '.project-item',
-		            percentPosition: true,
-		            animationOptions: {
-		                duration: 750,
-		                easing: 'liniar',
-		                queue: false,
-		            }
-		        });
-	        }
+				var projectIsotope = function($selector) {
+					$selector.isotope({
+						filter: '*',
+						itemSelector: '.project-item',
+						percentPosition: true,
+						animationOptions: {
+							duration: 750,
+							easing: 'liniar',
+							queue: false,
+						}
+					});
+				}
 
-	        self.children().find('.isotope-container').imagesLoaded( function() {
-				projectIsotope( self.children().find('.isotope-container').parent().removeClass('loading') );	        	
-				projectIsotope( self.children().find('.isotope-container') );
-	        });
+				self.children().find('.isotope-container').imagesLoaded( function() {
+					projectIsotope( self.children().find('.isotope-container').parent().removeClass('loading') );	        	
+					projectIsotope( self.children().find('.isotope-container') );
+				});
 
-	        $( document ).ready(function() {
-				projectIsotope( self.children().find('.isotope-container').parent().removeClass('loading') );	        	
-				projectIsotope( self.children().find('.isotope-container') );
-	        });
+				$( document ).ready(function() {
+					projectIsotope( self.children().find('.isotope-container').parent().removeClass('loading') );	        	
+					projectIsotope( self.children().find('.isotope-container') );
 
-	        filterNav.click(function(){
-	            var selector = $(this).attr('data-filter');
-	            filterNav.removeClass('active');
-	            $(this).addClass('active');
+					self.find('.isotope-container').isotope( 'on', 'arrangeComplete', function() {
+						self.find('.isotope-container').closest('.roll-project').height( self.find('.isotope-container').height() );
+					});
+				});
 
-	            self.find('.isotope-container').isotope({
-	                filter: selector,
-	                animationOptions: {
-	                    duration: 750,
-	                    easing: 'liniar',
-	                    queue: false,
-	                }
-	            });
+				filterNav.click(function(){
+					var selector = $(this).attr('data-filter');
+					filterNav.removeClass('active');
+					$(this).addClass('active');
 
-	            return false;
+					self.find('.isotope-container').isotope({
+						filter: selector,
+						animationOptions: {
+							duration: 750,
+							easing: 'liniar',
+							queue: false,
+						}
+					});
 
-	        });
+					return false;
 
-	      });
+				});
+
+	      	});
 
 	    }
     };

@@ -1,6 +1,11 @@
 
+/* Business demo */
+.atu-employee-row > .elementor-container {
+	justify-content: space-between;
+}
+
 /* Startup demo */
-.startup-services .elementor-icon .fa {
+.startup-services .elementor-icon .fas {
 	color: #9884e7 !important;
 	background: linear-gradient( to right, #62e8be 0%, #c952eb 100%);
 	-webkit-background-clip: text;
@@ -8,7 +13,7 @@
 	background-clip: text;
 	text-fill-color: transparent;
 }
-.startup-services .elementor-icon .fa::before {
+.startup-services .elementor-icon .fas::before {
 	position: static;
 }
 

@@ -285,10 +285,9 @@
 		}
 
 		.header-social.contact-item {
-
 			border: 0;
 
-			.fa {
+			.fab {
 				margin: 10px;
 			}
 		}
@@ -297,13 +296,13 @@
 			font-weight: 500;
 			border-right: 1px solid #ebebeb;
 
-			.fa {
+			.fas {
 				color: $color_primary;
 				margin-right: 15px;
 			}
 
 			&.header-social {
-				.fa,
+				.fab,
 				a {
 					color: #28293a;
 				}

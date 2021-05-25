@@ -103,9 +103,13 @@ if ( $events ) : ?>
 
 					<?php do_action( 'airi_tribe_events_list_widget_before_the_meta' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 
+					<?php 
+					$venue = tribe_get_venue( $event -> ID );
+					if( !empty($venue) ) : ?>
 					<div class="atu-event-venue">
-						<?php echo tribe_get_venue( $event -> ID ); ?>
+						<?php esc_html_e( $venue ); ?>
 					</div>
+					<?php endif; ?>
 
 					<div class="tribe-event-duration">
 						<?php echo tribe_events_event_schedule_details( $event -> ID ); ?>

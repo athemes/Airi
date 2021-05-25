@@ -49,7 +49,7 @@ $post_class[] = $layout['type'];
 			}
 			?>
 			<span class="separator">-</span>
-			<i class="fas fa-clock-o" aria-hidden="true"></i>
+			<i class="fas fa-clock" aria-hidden="true"></i>
 			<?php
 			if ( $hide_date == '' ) {
 				airi_posted_on();

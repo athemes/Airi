@@ -249,7 +249,7 @@ function airi_dashboard_settings( $settings ) {
 	$settings['support_pro_link'] = 'https://athemes.com/theme/airi/?utm_source=theme_info&utm_medium=link&utm_campaign=Airi';
 
 	// Community.
-	$settings['community_link'] = 'https://www.facebook.com/groups/athemes';
+	$settings['community_link'] = 'https://community.athemes.com/home';
 
 	$theme = wp_get_theme();
 	// Changelog.
