@@ -11,7 +11,7 @@ $show_header_top_on_mobile = get_theme_mod( 'show_header_top_on_mobile' ) ? '' :
 <header id="masthead" class="site-header">
 	
 	<div class="container">
-		<div class="top-section<?php esc_attr_e( $show_header_top_on_mobile ); ?>">
+		<div class="top-section<?php echo esc_attr( $show_header_top_on_mobile ); ?>">
 			<div class="row">
 				<div class="left-content col-md-6 col-12 text-md-left text-center">
 				<?php
@@ -55,7 +55,7 @@ $show_header_top_on_mobile = get_theme_mod( 'show_header_top_on_mobile' ) ? '' :
 					$airi_button_text = get_theme_mod( 'menu6_button_text' ); 
 					$ga_display_class = empty($airi_button_text) ? 'd-none' : 'd-none d-xl-flex'; ?>
 
-					<div class="group-actions align-items-center <?php esc_attr_e( $ga_display_class ); ?>">
+					<div class="group-actions align-items-center <?php echo esc_attr( $ga_display_class ); ?>">
 						<?php
 						if ( $airi_button_text )
 						{

@@ -1,21 +1,22 @@
-# Copyright (C) 2018 airi
-# This file is distributed under the same license as the airi package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: airi\n"
-"Report-Msgid-Bugs-To: https://athemes.com/\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: yyyy-mm-dd hh:mm+0000\n"
+"PO-Revision-Date: 2021-05-26 10:00-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Vlad\n"
-"Language-Team: aThemes\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Eazy Po 0.9.5.3\n"
 
 #: 404.php:17
 msgid "404"
@@ -25,11 +26,12 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try searching?"
 msgstr ""
 
-#: comments.php:34, inc/template-tags.php:167
+#: comments.php:34 inc/template-tags.php:193
 msgid "1 comment"
 msgstr ""
 
 #: comments.php:40
+#, php-format
 msgctxt "comments title"
 msgid "%1$s comments"
 msgid_plural "%1$s comments"
@@ -40,35 +42,328 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:50
+#: comments.php:73 comments.php:97
+msgid "Leave A Comment"
+msgstr ""
+
+#: comments.php:74 comments.php:98
+msgid "Send message"
+msgstr ""
+
+#: comments.php:80 comments.php:104
+msgid "Name"
+msgstr ""
+
+#: comments.php:81 comments.php:105
+msgid "Email"
+msgstr ""
+
+#: comments.php:82 comments.php:106
+msgid "Website"
+msgstr ""
+
+#: comments.php:83 comments.php:85 comments.php:107 comments.php:109
+msgid "Message"
+msgstr ""
+
+#: functions.php:53
 msgid "Primary"
 msgstr ""
 
-#: functions.php:108, inc/customizer/options/section-typography.php:253
+#: functions.php:112 inc/customizer/options/section-typography.php:265
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:114
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:121
+#: functions.php:125
 msgid "Footer "
 msgstr ""
 
-#: functions.php:228
+#: functions.php:234
 msgid "Airi Elements"
 msgstr ""
 
-#: header.php:25
+#: header.php:27
 msgid "Skip to content"
+msgstr ""
+
+#: search.php:24
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/template-functions.php:108 inc/customizer/options/section-header.php:94
+#: inc/customizer/options/section-header.php:287
+#: template-parts/menus/menu-menuStyle4.php:15
+msgid "Get a quote"
+msgstr ""
+
+#: inc/template-functions.php:109
+#: inc/customizer/options/section-header.php:108
+#: inc/customizer/options/section-header.php:301
+msgid "http://example.org/contact/"
+msgstr ""
+
+#: inc/template-functions.php:251
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-functions.php:260
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-functions.php:267
+msgid "Edit"
+msgstr ""
+
+#: inc/template-functions.php:301
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: inc/template-functions.php:303
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: inc/template-functions.php:308
+#, php-format
+msgid "Theme: %2$s by %1$s."
+msgstr ""
+
+#: inc/template-tags.php:41
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:58
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:61
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:71
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:88 template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:197
+#, php-format
+msgctxt "comments title"
+msgid "%1$s comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/theme-dashboard-settings.php:33
+msgid "Differences between Airi and Airi Pro"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:34
+msgid "Here is the list of differences between Airi and Airi Pro:"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:39 inc/onboarding/theme-info.php:143
+msgid "Feature"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:40
+#: inc/onboarding/class-airi-onboarding.php:218
+#: inc/onboarding/theme-info.php:144
+msgid "Airi"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:41 inc/onboarding/theme-info.php:145
+msgid "Airi Pro"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:46 inc/onboarding/theme-info.php:150
+msgid "Elementor support"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:51 inc/onboarding/theme-info.php:155
+msgid "Access to all Google Fonts"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:56 inc/onboarding/theme-info.php:160
+msgid "Responsive"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:61 inc/onboarding/theme-info.php:165
+msgid "Parallax backgrounds"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:66 inc/onboarding/theme-info.php:170
+msgid "Social Icons"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:71 inc/onboarding/theme-info.php:175
+msgid "Custom Elementor blocks"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:76 inc/onboarding/theme-info.php:180
+msgid "Translation ready"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:81 inc/onboarding/theme-info.php:115
+#: inc/onboarding/theme-info.php:185
+msgid "Color options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:86 inc/onboarding/theme-info.php:117
+#: inc/onboarding/theme-info.php:190
+msgid "Blog options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:91 inc/onboarding/theme-info.php:195
+msgid "Widgetized footer"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:96 inc/onboarding/theme-info.php:200
+msgid "Background image support"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:101 inc/onboarding/theme-info.php:204
+msgid "WooCommerce compatible"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:106 inc/onboarding/theme-info.php:209
+msgid "Growing collection of premium demos"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:111 inc/onboarding/theme-info.php:214
+msgid "Footer Credits option"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:116 inc/onboarding/theme-info.php:219
+msgid "Footer background image"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:121 inc/onboarding/theme-info.php:224
+msgid "Extra Elementor blocks (portfolio, shop categories, slider)"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:126 inc/onboarding/theme-info.php:229
+msgid "Two extra menu types"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:131 inc/onboarding/theme-info.php:234
+msgid "Extra blog layouts (list, masonry)"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:136 inc/onboarding/theme-info.php:239
+msgid "Extended WooCommerce options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:141 inc/onboarding/theme-info.php:244
+msgid "Priority support"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:152
+msgid "Get Airi Pro Today"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:173 inc/onboarding/theme-info.php:31
+msgid "Welcome to Airi"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:174
+msgid ""
+"Airi is now installed and ready to use. Click on Starter Sites to get off to "
+"a flying start with one of our pre-made templates, or go to Theme Dashboard "
+"to get an overview of everything."
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:175
+msgid ""
+"Airi is now installed and ready to go. To help you with the next step, we've "
+"gathered together on this page all the resources you might need. We hope you "
+"enjoy using Airi."
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:185
+msgid "Theme Features"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:190
+msgid "Change Site Title or Logo"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:195
+msgid "Header Options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:200
+msgid "Color Options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:205
+msgid "Font Options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:210
+msgid "Blog Options"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:215
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:222
+msgid "Free vs PRO"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:228
+msgid "Performance"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:238
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:239 inc/onboarding/theme-info.php:270
+msgid "Take Airi to a whole other level by upgrading to the Pro version."
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:240 inc/onboarding/theme-info.php:271
+msgid "Discover Airi Pro"
+msgstr ""
+
+#: inc/theme-dashboard-settings.php:284
+#: inc/customizer/upsell/class-customize.php:77
+msgid "Get Airi Pro"
+msgstr ""
+
+#: inc/woocommerce.php:215
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/compatibility/learnpress.php:14
+msgid "Free"
 msgstr ""
 
 #: inc/compatibility/elementor/blocks/block-blog.php:40
 msgid "aThemes: Blog"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:85, inc/customizer/options/section-blog.php:12, inc/customizer/options/section-colors.php:831, inc/customizer/options/section-typography.php:201
+#: inc/compatibility/elementor/blocks/block-blog.php:85
+#: inc/customizer/options/section-blog.php:12
+#: inc/customizer/options/section-colors.php:1920
+#: inc/customizer/options/section-typography.php:213
 msgid "Blog"
 msgstr ""
 
@@ -88,7 +383,17 @@ msgstr ""
 msgid "Post Title"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:139, inc/compatibility/elementor/blocks/block-blog.php:175, inc/compatibility/elementor/blocks/block-blog.php:234, inc/compatibility/elementor/blocks/block-blog.php:298, inc/compatibility/elementor/blocks/block-portfolio.php:200, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:47, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:80, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:46, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:79, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:44, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:45
+#: inc/compatibility/elementor/blocks/block-blog.php:139
+#: inc/compatibility/elementor/blocks/block-blog.php:175
+#: inc/compatibility/elementor/blocks/block-blog.php:234
+#: inc/compatibility/elementor/blocks/block-blog.php:298
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:41
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:74
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:39
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:72
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:40
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php:40
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:41
 msgid "Color"
 msgstr ""
 
@@ -96,11 +401,22 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:191, inc/compatibility/elementor/blocks/block-blog.php:253, inc/customizer/options/section-colors.php:185, inc/customizer/options/section-colors.php:363, inc/customizer/options/section-colors.php:583, inc/customizer/options/section-colors.php:723
+#: inc/compatibility/elementor/blocks/block-blog.php:191
+#: inc/compatibility/elementor/blocks/block-blog.php:253
+#: inc/customizer/options/section-colors.php:209
+#: inc/customizer/options/section-colors.php:441
+#: inc/customizer/options/section-colors.php:828
+#: inc/customizer/options/section-colors.php:1016
+#: inc/customizer/options/section-colors.php:1350
+#: inc/customizer/options/section-colors.php:1753
 msgid "Background color"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-blog.php:222, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:36, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:35, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:33
+#: inc/compatibility/elementor/blocks/block-blog.php:222
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:30
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:28
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:29
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php:29
 msgid "Category"
 msgstr ""
 
@@ -108,276 +424,106 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: inc/compatibility/elementor/blocks/block-portfolio.php:42
-msgid "aThemes: Portfolio"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:87
-msgid "Testimonials"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:94
-msgid "Features list"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:98
-msgid "John Doe"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:99, inc/compatibility/elementor/blocks/block-portfolio.php:104
-msgid "Manager"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:100, inc/compatibility/elementor/blocks/block-portfolio.php:105
-msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id purus neque. Curabitur pulvinar elementum neque in dictum. Sed non lectus nec tortor iaculis tincidunt."
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:103
-msgid "James Stevens"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:111
-msgid "Image"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:117, inc/compatibility/elementor/blocks/block-portfolio.php:120
-msgid "Title"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:121, inc/compatibility/elementor/blocks/block-portfolio.php:193
-msgid "Project title"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:125
-msgid "Filter term"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:128
-msgid "Term for the filter"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:129
-msgid "Art"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:133
-msgid "Link"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:136
-msgid "Link for this project"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:147, inc/compatibility/elementor/blocks/block-portfolio.php:150
-msgid "Text for show all button"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:149
-msgid "Show all"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:158
-msgid "View"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:170, inc/customizer/customizer.php:17, inc/customizer/options/section-typography.php:74
-msgid "General"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:177, inc/compatibility/elementor/blocks/block-shop-categories.php:420
-msgid "Main color"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:225
-msgid "Filter"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-portfolio.php:282
-msgid "Loading..."
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:42
-msgid "aThemes: Shop category grid"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:90
-msgid "Box 1"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:97, inc/compatibility/elementor/blocks/block-shop-categories.php:153, inc/compatibility/elementor/blocks/block-shop-categories.php:209, inc/compatibility/elementor/blocks/block-shop-categories.php:331
-msgid "Choose Image"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:111, inc/compatibility/elementor/blocks/block-shop-categories.php:167, inc/compatibility/elementor/blocks/block-shop-categories.php:223, inc/compatibility/elementor/blocks/block-shop-categories.php:278, inc/compatibility/elementor/blocks/block-shop-categories.php:345
-msgid "Label title"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:116
-msgid "Shoes"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:117, inc/compatibility/elementor/blocks/block-shop-categories.php:173, inc/compatibility/elementor/blocks/block-shop-categories.php:229, inc/compatibility/elementor/blocks/block-shop-categories.php:270, inc/compatibility/elementor/blocks/block-shop-categories.php:284, inc/compatibility/elementor/blocks/block-shop-categories.php:351
-msgid "Enter your label"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:125, inc/compatibility/elementor/blocks/block-shop-categories.php:181, inc/compatibility/elementor/blocks/block-shop-categories.php:237, inc/compatibility/elementor/blocks/block-shop-categories.php:304, inc/compatibility/elementor/blocks/block-shop-categories.php:359
-msgid "Link to"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:133, inc/compatibility/elementor/blocks/block-shop-categories.php:189, inc/compatibility/elementor/blocks/block-shop-categories.php:245, inc/compatibility/elementor/blocks/block-shop-categories.php:312, inc/compatibility/elementor/blocks/block-shop-categories.php:367
-msgid "https://your-link.com"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:146
-msgid "Box 2"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:172
-msgid "Bags"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:202
-msgid "Box 3"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:228
-msgid "Pants"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:257
-msgid "Box 4 (CTA)"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:264
-msgid "Text"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:269
-msgid "Spring collection"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:283
-msgid "New arrivals"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:291, inc/compatibility/elementor/blocks/block-shop-categories.php:297
-msgid "Button text"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:296
-msgid "Shop now"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:324
-msgid "Box 5"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:350
-msgid "Dresses"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:379
-msgid "Style"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:387, inc/compatibility/elementor/blocks/block-shop-categories.php:403
-msgid "Box title background color"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:438
-msgid "Box titles"
-msgstr ""
-
-#: inc/compatibility/elementor/blocks/block-shop-categories.php:448
-msgid "CTA box titles"
-msgstr ""
-
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:26
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:20
 msgid "Style 3"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:69, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:68
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-2.php:63
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:61
 msgid "Comments"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:26
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-3.php:19
 msgid "Style 4"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:24
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-4.php:20
 msgid "Style 5"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:24
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin-6.php:20
+msgid "Style 6"
+msgstr ""
+
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:20
 msgid "Style 2"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:33
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:29
 msgid "Read more link"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:110, inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:127
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:106
+#: inc/compatibility/elementor/skins/class-airi-athemes-blog-skin.php:123
 msgid "Read more >>"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:25
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:22
 msgid "Airi map"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:31
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:28
 msgid "London Eye, London, United Kingdom"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:36, inc/customizer/options/section-header.php:364, template-parts/menus/menu-menuStyle4.php:11
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:33
+#: inc/customizer/options/section-header.php:371
+#: template-parts/menus/menu-menuStyle4.php:11
 msgid "Address"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:53
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:50
 msgid "Note"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:58
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:55
+#, php-format
 msgid "Please go here %s to find the latitude and longitute for your address."
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:58, inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:71
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:55
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:68
 msgid "here"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:66
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:63
 msgid "API key"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:71
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:68
+#, php-format
 msgid "Please go here %s to get your Google Maps API Key."
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:81
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:78
 msgid "Latitude"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:94
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:91
 msgid "Longitude"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:108
+#: inc/compatibility/elementor/skins/class-airi-google-maps-skin.php:105
 msgid "Marker"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:26
+#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:19
 msgid "List style"
 msgstr ""
 
-#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:33
+#: inc/compatibility/elementor/skins/class-airi-image-icon-box-skin.php:26
 msgid "General color"
 msgstr ""
 
-#: inc/compatibility/learnpress.php:14
-msgid "Free"
+#: inc/customizer/customizer.php:17
+#: inc/customizer/options/section-typography.php:82
+msgid "General"
 msgstr ""
 
 #: inc/customizer/kirki/include-kirki.php:54
-msgid "A plugin is required to take advantage of this theme's features in the customizer."
+msgid ""
+"A plugin is required to take advantage of this theme's features in the "
+"customizer."
 msgstr ""
 
 #: inc/customizer/kirki/include-kirki.php:55
@@ -389,7 +535,9 @@ msgid "Install Now"
 msgstr ""
 
 #: inc/customizer/kirki/include-kirki.php:59
-msgid "You have installed Kirki. Activate it to take advantage of this theme's features in the customizer."
+msgid ""
+"You have installed Kirki. Activate it to take advantage of this theme's "
+"features in the customizer."
 msgstr ""
 
 #: inc/customizer/kirki/include-kirki.php:60
@@ -408,7 +556,10 @@ msgstr ""
 msgid "Blog layout"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:27, inc/customizer/options/section-blog.php:113
+#: inc/customizer/options/section-blog.php:27
+#: inc/customizer/options/section-blog.php:113
+#: inc/customizer/options/section-blog.php:124
+#: inc/customizer/options/section-blog.php:136
 msgid "Default"
 msgstr ""
 
@@ -417,11 +568,11 @@ msgid "Grid"
 msgstr ""
 
 #: inc/customizer/options/section-blog.php:29
-msgid "Masonry"
+msgid "Classic"
 msgstr ""
 
 #: inc/customizer/options/section-blog.php:30
-msgid "List"
+msgid "Two Columns"
 msgstr ""
 
 #: inc/customizer/options/section-blog.php:36
@@ -436,23 +587,31 @@ msgstr ""
 msgid "Leave empty to hide"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:52, template-parts/content.php:11
+#: inc/customizer/options/section-blog.php:52
+#: template-parts/content-list-2.php:11 template-parts/content-search.php:11
+#: template-parts/content.php:11 theme-dashboard/class-theme-dashboard.php:393
+#: theme-dashboard/class-theme-dashboard.php:413
+#: theme-dashboard/class-theme-dashboard.php:433
 msgid "Read more"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:59, inc/customizer/options/section-blog.php:120
+#: inc/customizer/options/section-blog.php:59
+#: inc/customizer/options/section-blog.php:144
 msgid "Hide post thumbnail?"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:67, inc/customizer/options/section-blog.php:128
+#: inc/customizer/options/section-blog.php:67
+#: inc/customizer/options/section-blog.php:152
 msgid "Hide post date?"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:75, inc/customizer/options/section-blog.php:136
+#: inc/customizer/options/section-blog.php:75
+#: inc/customizer/options/section-blog.php:160
 msgid "Hide post categories?"
 msgstr ""
 
-#: inc/customizer/options/section-blog.php:83, inc/customizer/options/section-blog.php:144
+#: inc/customizer/options/section-blog.php:83
+#: inc/customizer/options/section-blog.php:168
 msgid "Hide post author?"
 msgstr ""
 
@@ -472,6 +631,24 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
+#: inc/customizer/options/section-blog.php:120
+msgid "Content layout"
+msgstr ""
+
+#: inc/customizer/options/section-blog.php:125
+#: inc/customizer/options/section-blog.php:137
+msgid "Layout 2"
+msgstr ""
+
+#: inc/customizer/options/section-blog.php:126
+#: inc/customizer/options/section-blog.php:138
+msgid "Layout 3"
+msgstr ""
+
+#: inc/customizer/options/section-blog.php:132
+msgid "Comment Form Layout"
+msgstr ""
+
 #: inc/customizer/options/section-colors.php:13
 msgid "Colors"
 msgstr ""
@@ -480,107 +657,233 @@ msgstr ""
 msgid "Primary color"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:46, inc/customizer/options/section-header.php:10
+#: inc/customizer/options/section-colors.php:46
+#: inc/customizer/options/section-header.php:10
 msgid "Header"
 msgstr ""
 
 #: inc/customizer/options/section-colors.php:48
-msgid "Different color options show up here, based on the type of menu you select from the Header > Menu section"
+msgid ""
+"Different color options show up here, based on the type of menu you select "
+"from the Header > Menu section"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:58, inc/customizer/options/section-colors.php:237, inc/customizer/options/section-colors.php:457, inc/customizer/options/section-colors.php:636, inc/customizer/options/section-typography.php:110
+#: inc/customizer/options/section-colors.php:58
+#: inc/customizer/options/section-colors.php:285
+#: inc/customizer/options/section-colors.php:672
+#: inc/customizer/options/section-colors.php:904
+#: inc/customizer/options/section-colors.php:1190
+#: inc/customizer/options/section-colors.php:1594
+#: inc/customizer/options/section-typography.php:122
 msgid "Site title"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:79, inc/customizer/options/section-colors.php:258, inc/customizer/options/section-colors.php:478
+#: inc/customizer/options/section-colors.php:79
+#: inc/customizer/options/section-colors.php:306
+#: inc/customizer/options/section-colors.php:693
+#: inc/customizer/options/section-colors.php:1211
+#: inc/customizer/options/section-colors.php:1615
 msgid "Site title (sticky)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:100, inc/customizer/options/section-colors.php:279, inc/customizer/options/section-colors.php:499, inc/customizer/options/section-colors.php:657, inc/customizer/options/section-typography.php:132
+#: inc/customizer/options/section-colors.php:100
+#: inc/customizer/options/section-colors.php:327
+#: inc/customizer/options/section-colors.php:714
+#: inc/customizer/options/section-colors.php:925
+#: inc/customizer/options/section-colors.php:1232
+#: inc/customizer/options/section-colors.php:1636
+#: inc/customizer/options/section-typography.php:144
 msgid "Site description"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:121, inc/customizer/options/section-colors.php:300, inc/customizer/options/section-colors.php:520
+#: inc/customizer/options/section-colors.php:121
+#: inc/customizer/options/section-colors.php:348
+#: inc/customizer/options/section-colors.php:735
+#: inc/customizer/options/section-colors.php:1253
+#: inc/customizer/options/section-colors.php:1657
 msgid "Site description (sticky)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:142, inc/customizer/options/section-colors.php:321, inc/customizer/options/section-colors.php:541, inc/customizer/options/section-colors.php:702, inc/customizer/options/section-typography.php:154
+#: inc/customizer/options/section-colors.php:142
+#: inc/customizer/options/section-colors.php:369
+#: inc/customizer/options/section-colors.php:756
+#: inc/customizer/options/section-colors.php:970
+#: inc/customizer/options/section-colors.php:1274
+#: inc/customizer/options/section-colors.php:1678
+#: inc/customizer/options/section-typography.php:166
 msgid "Top level menu items"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:163, inc/customizer/options/section-colors.php:342, inc/customizer/options/section-colors.php:562
+#: inc/customizer/options/section-colors.php:163
+#: inc/customizer/options/section-colors.php:390
+#: inc/customizer/options/section-colors.php:777
+#: inc/customizer/options/section-colors.php:1299
+#: inc/customizer/options/section-colors.php:1703
 msgid "Top level menu items (sticky)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:209, inc/customizer/options/section-colors.php:387, inc/customizer/options/section-colors.php:608
+#: inc/customizer/options/section-colors.php:184
+#: inc/customizer/options/section-colors.php:411
+#: inc/customizer/options/section-colors.php:798
+#: inc/customizer/options/section-colors.php:991
+#: inc/customizer/options/section-colors.php:1324
+#: inc/customizer/options/section-colors.php:1728
+msgid "Top level menu items (Mobile)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:233
+#: inc/customizer/options/section-colors.php:465
+#: inc/customizer/options/section-colors.php:852
+#: inc/customizer/options/section-colors.php:1374
+#: inc/customizer/options/section-colors.php:1777
 msgid "Background color (sticky)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:415
+#: inc/customizer/options/section-colors.php:257
+#: inc/customizer/options/section-colors.php:489
+#: inc/customizer/options/section-colors.php:876
+#: inc/customizer/options/section-colors.php:1164
+#: inc/customizer/options/section-colors.php:1519
+#: inc/customizer/options/section-colors.php:1849
+msgid "Hamburguer Button (mobile)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:517
 msgid "Top bar background"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:436
+#: inc/customizer/options/section-colors.php:538
 msgid "Top bar color"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:678
+#: inc/customizer/options/section-colors.php:559
+msgid "Top bar contact icons color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:580
+msgid "Top bar button background color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:605
+msgid "Top bar button background color (hover)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:630
+msgid "Top bar button text color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:651
+msgid "Top bar button text color (hover)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:946
 msgid "Menu background color"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:749
+#: inc/customizer/options/section-colors.php:1040
+msgid "Contact blocks - icon"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1068
 msgid "Contact blocks - top line"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:774
+#: inc/customizer/options/section-colors.php:1092
 msgid "Contact blocks - bottom line"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:800, inc/customizer/options/section-typography.php:176
+#: inc/customizer/options/section-colors.php:1116
+msgid "Call to action - background"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1140
+msgid "Call to action - text"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1398
+#: inc/customizer/options/section-colors.php:1801
+msgid "Menu items border bottom color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1423
+msgid "Social icons color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1447
+msgid "Social icons color (sticky)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1471
+msgid "Custom text color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1495
+msgid "Custom text color (sticky)"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1546
+msgid "Header top text color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1570
+msgid "Top line divider color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1825
+msgid "Header button border color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1875
+#: inc/customizer/options/section-typography.php:188
 msgid "Submenu items"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:814
+#: inc/customizer/options/section-colors.php:1889
 msgid "Submenu background"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:839
+#: inc/customizer/options/section-colors.php:1904
+msgid "Mobile toggle color"
+msgstr ""
+
+#: inc/customizer/options/section-colors.php:1928
 msgid "Post title (archives)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:853
+#: inc/customizer/options/section-colors.php:1942
 msgid "Post title (single)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:867
+#: inc/customizer/options/section-colors.php:1956
 msgid "Categories (single and archives)"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:881
+#: inc/customizer/options/section-colors.php:1970
 msgid "Meta text"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:895
+#: inc/customizer/options/section-colors.php:1984
 msgid "Meta links"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:909
+#: inc/customizer/options/section-colors.php:1998
 msgid "Body text"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:928
+#: inc/customizer/options/section-colors.php:2021
 msgid "Sidebar&amp;footer widgets"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:936, inc/customizer/options/section-typography.php:259
+#: inc/customizer/options/section-colors.php:2029
+#: inc/customizer/options/section-typography.php:271
 msgid "Widget titles"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:951
+#: inc/customizer/options/section-colors.php:2044
 msgid "Widget text"
 msgstr ""
 
-#: inc/customizer/options/section-colors.php:966
+#: inc/customizer/options/section-colors.php:2059
 msgid "Widget links"
 msgstr ""
 
@@ -588,32 +891,24 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/options/section-footer.php:16
-msgid "Background image"
-msgstr ""
-
-#: inc/customizer/options/section-footer.php:31
+#: inc/customizer/options/section-footer.php:17
 msgid "Footer widget areas"
 msgstr ""
 
-#: inc/customizer/options/section-footer.php:36
+#: inc/customizer/options/section-footer.php:22
 msgid "1"
 msgstr ""
 
-#: inc/customizer/options/section-footer.php:37
+#: inc/customizer/options/section-footer.php:23
 msgid "2"
 msgstr ""
 
-#: inc/customizer/options/section-footer.php:38
+#: inc/customizer/options/section-footer.php:24
 msgid "3"
 msgstr ""
 
-#: inc/customizer/options/section-footer.php:39
+#: inc/customizer/options/section-footer.php:25
 msgid "4"
-msgstr ""
-
-#: inc/customizer/options/section-footer.php:46, inc/customizer/options/section-typography.php:355
-msgid "Footer credits"
 msgstr ""
 
 #: inc/customizer/options/section-header.php:15
@@ -633,11 +928,11 @@ msgid "Basic 2 - outside header"
 msgstr ""
 
 #: inc/customizer/options/section-header.php:28
-msgid "Extended 1 - finance style"
+msgid "Basic 3 - inside header"
 msgstr ""
 
 #: inc/customizer/options/section-header.php:29
-msgid "Extended 2 - local business style"
+msgid "Basic 4 - inside header"
 msgstr ""
 
 #: inc/customizer/options/section-header.php:35
@@ -652,92 +947,146 @@ msgstr ""
 msgid "Not contained"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:46, inc/customizer/options/section-header.php:50
+#: inc/customizer/options/section-header.php:53
+#: inc/customizer/options/section-header.php:57
 msgid "Sticky menu"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:51
+#: inc/customizer/options/section-header.php:58
 msgid "Static menu"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:60
+#: inc/customizer/options/section-header.php:67
 msgid "*Extended 1* menu options"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:85, inc/customizer/options/section-header.php:278
+#: inc/customizer/options/section-header.php:92
+#: inc/customizer/options/section-header.php:285
 msgid "Call to action text"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:87, inc/customizer/options/section-header.php:280, inc/template-functions.php:102, template-parts/menus/menu-menuStyle4.php:15
-msgid "Get a quote"
-msgstr ""
-
-#: inc/customizer/options/section-header.php:99, inc/customizer/options/section-header.php:292
+#: inc/customizer/options/section-header.php:106
+#: inc/customizer/options/section-header.php:299
 msgid "Call to action URL"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:101, inc/customizer/options/section-header.php:294, inc/template-functions.php:103
-msgid "http://example.org/contact/"
-msgstr ""
-
-#: inc/customizer/options/section-header.php:151
+#: inc/customizer/options/section-header.php:158
 msgid "Social links"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:152
+#: inc/customizer/options/section-header.php:159
 msgid "Available for menu types Extended 1"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:156, inc/customizer/options/section-header.php:179
+#: inc/customizer/options/section-header.php:163
+#: inc/customizer/options/section-header.php:186
 msgid "Social network"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:184
+#: inc/customizer/options/section-header.php:191
 msgid "Social profile URL"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:207
+#: inc/customizer/options/section-header.php:214
 msgid "Email address"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:236, inc/customizer/options/section-header.php:334
+#: inc/customizer/options/section-header.php:243
+#: inc/customizer/options/section-header.php:341
 msgid "Phone number"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:253
+#: inc/customizer/options/section-header.php:260
 msgid "*Extended 2* menu options"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:320
+#: inc/customizer/options/section-header.php:327
 msgid "Above phone number text"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:322, template-parts/menus/menu-menuStyle4.php:9
+#: inc/customizer/options/section-header.php:329
+#: template-parts/menus/menu-menuStyle4.php:9
 msgid "Call us"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:362
+#: inc/customizer/options/section-header.php:369
 msgid "Above address text"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:376
+#: inc/customizer/options/section-header.php:383
 msgid "Your address"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:378, template-parts/menus/menu-menuStyle4.php:12
+#: inc/customizer/options/section-header.php:385
+#: template-parts/menus/menu-menuStyle4.php:12
 msgid "Brooklyn Street"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:404
+#: inc/customizer/options/section-header.php:411
 msgid "Above opening hours"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:406, inc/customizer/options/section-header.php:418, template-parts/menus/menu-menuStyle4.php:13
+#: inc/customizer/options/section-header.php:413
+#: inc/customizer/options/section-header.php:425
+#: template-parts/menus/menu-menuStyle4.php:13
 msgid "Opening hours"
 msgstr ""
 
-#: inc/customizer/options/section-header.php:420, template-parts/menus/menu-menuStyle4.php:14
+#: inc/customizer/options/section-header.php:427
+#: template-parts/menus/menu-menuStyle4.php:14
 msgid "9-18 Mon-Fri"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:455
+msgid "Disable header search icon?"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:462
+msgid "Custom Text"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:464
+msgid "Call Us"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:478
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:492
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:506
+msgid "Google +"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:521
+msgid "Linkedin"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:535
+msgid "Skype"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:549
+msgid "Show header top on mobile?"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:563
+msgid "Block Top Left Content"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:576
+msgid "Block Top Right Content"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:590
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer/options/section-header.php:604
+msgid "Button Url"
 msgstr ""
 
 #: inc/customizer/options/section-typography.php:10
@@ -752,99 +1101,287 @@ msgstr ""
 msgid "Headings"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:45, inc/customizer/options/section-typography.php:80
+#: inc/customizer/options/section-typography.php:49
+#: inc/customizer/options/section-typography.php:88
 msgid "Body"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:63
+#: inc/customizer/options/section-typography.php:71
 msgid "Font sizes"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:104
+#: inc/customizer/options/section-typography.php:116
 msgid "Header area"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:207
+#: inc/customizer/options/section-typography.php:219
 msgid "Post titles (archives)"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:228
+#: inc/customizer/options/section-typography.php:240
 msgid "Post titles (singles)"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:280
+#: inc/customizer/options/section-typography.php:292
 msgid "Widgets text"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:305
+#: inc/customizer/options/section-typography.php:317
 msgid "Footer area"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:311
+#: inc/customizer/options/section-typography.php:323
 msgid "Footer widget titles"
 msgstr ""
 
-#: inc/customizer/options/section-typography.php:333
+#: inc/customizer/options/section-typography.php:345
 msgid "Footer widgets text"
 msgstr ""
 
-#: inc/template-functions.php:220
-msgctxt "1: date, 2: time"
-msgid "%1$s at %2$s"
+#: inc/customizer/options/section-typography.php:367
+msgid "Footer credits"
 msgstr ""
 
-#: inc/template-functions.php:229
-msgid "Your comment is awaiting moderation."
+#: inc/customizer/upsell/class-customize.php:76
+msgid "Ready for more?"
 msgstr ""
 
-#: inc/template-functions.php:236
-msgid "Edit"
+#: inc/notices/class-airi-review.php:55
+#, php-format
+msgid ""
+"Hey, %1$s! You've been using Airi for more than two weeks now and we hope "
+"you're happy with it. If you have a few minutes, we would love to get a 5 "
+"star review from you."
 msgstr ""
 
-#: inc/template-functions.php:270
-msgid "https://wordpress.org/"
+#: inc/notices/class-airi-review.php:63
+msgid "Sure"
 msgstr ""
 
-#: inc/template-functions.php:272
-msgid "Proudly powered by %s"
+#: inc/notices/class-airi-review.php:65
+msgid "Maybe later"
 msgstr ""
 
-#: inc/template-functions.php:277
-msgid "Theme: %2$s by %1$s."
+#: inc/notices/class-airi-review.php:67
+msgid "I already did"
 msgstr ""
 
-#: inc/template-tags.php:41
-msgctxt "post author"
-msgid "by %s"
+#: inc/onboarding/class-airi-onboarding.php:37
+msgid "Processing..."
 msgstr ""
 
-#: inc/template-tags.php:58
-msgctxt "list item separator"
-msgid ", "
+#: inc/onboarding/class-airi-onboarding.php:138
+msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: inc/template-tags.php:61
-msgid "Tagged %1$s"
+#: inc/onboarding/class-airi-onboarding.php:142
+msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/template-tags.php:71
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+#: inc/onboarding/class-airi-onboarding.php:173
+#: inc/onboarding/class-airi-onboarding.php:176
+msgid "Get started with Airi"
 msgstr ""
 
-#: inc/template-tags.php:88, template-parts/content-page.php:37
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+#: inc/onboarding/class-airi-onboarding.php:189
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:155
+msgid "Activating "
 msgstr ""
 
-#: inc/template-tags.php:153
-msgid " "
+#: inc/onboarding/class-airi-onboarding.php:214
+msgid "Dismiss"
 msgstr ""
 
-#: inc/template-tags.php:171
-msgctxt "comments title"
-msgid "%1$s comment"
-msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] ""
+#: inc/onboarding/class-airi-onboarding.php:220
+#, php-format
+msgid "Hello, %s, and welcome to Airi"
+msgstr ""
+
+#: inc/onboarding/class-airi-onboarding.php:221
+msgid ""
+"Thank you for choosing our theme! Check out the links below to get started."
+msgstr ""
+
+#: inc/onboarding/class-airi-onboarding.php:224
+msgid "Import a demo site"
+msgstr ""
+
+#: inc/onboarding/class-airi-onboarding.php:225
+msgid "or visit the welcome page"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:21
+msgid "Airi Info"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:30
+#, php-format
+msgid "Hello, %s,"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:32
+msgid ""
+"Airi is now installed and ready to go. To help you with the next step, we’ve "
+"gathered together on this page all the resources you might need. We hope you "
+"enjoy using Airi. You can always come back to this page by going to "
+"<strong>Appearance > Airi Info</strong>."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:38
+msgid "Getting started"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:39
+#: theme-dashboard/class-theme-dashboard.php:613
+msgid "Support"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:40
+msgid "Free vs Pro"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:48
+msgid "Install recommended plugins"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:49
+msgid "Install one plugin at a time. Wait for each plugin to activate."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:55
+msgid ""
+"Airi Demo Importer is a free addon for the Airi WordPress theme. It acts as "
+"an interface between the One Click Demo Import plugin and our theme."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:62
+msgid ""
+"Elementor will enable you to create pages by adding widgets to them using "
+"drag and drop."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:67
+msgid "First time Elementor user?"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:76
+msgid ""
+"This plugin is useful for importing our demos. You can uninstall it after "
+"you're done with it."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:82
+msgid ""
+"Kirki is a framework for theme options. You need this plugin to access "
+"Airi's options."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:90
+msgid "Import demo content (optional)"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:91
+msgid "Importing the demo will make your website look like our website."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:103
+msgid "Go to the automatic importer"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:105
+msgid ""
+"All recommended plugins need to be installed and activated for this step."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:111
+msgid "Styling with the Customizer"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:112
+msgid ""
+"Theme elements can be styled from the Customizer. Use the links below to go "
+"straight to the section you want."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:113
+msgid "Change your site title or add a logo"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:114
+msgid "Header options"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:116
+msgid "Font options"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:127
+msgid "Visit our forums"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:128
+msgid ""
+"Need help? Go ahead and visit our support forums and we'll be happy to "
+"assist you with any theme related questions you might have"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:129
+msgid "Visit the forums"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:133
+#: theme-dashboard/class-theme-dashboard.php:548
+msgid "Documentation"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:134
+msgid ""
+"Our documentation can help you learn how to use the theme and also provides "
+"you with premade code snippets and answers to FAQs."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:135
+msgid "See the Documentation"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:250
+msgid "View Airi Pro"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:258
+#: theme-dashboard/class-theme-dashboard.php:702
+msgid "It makes us happy to hear from our users. We would appreciate a review."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:259
+msgid "Submit a review here"
+msgstr ""
+
+#: inc/onboarding/theme-info.php:264
+msgid "Keep informed about each theme update."
+msgstr ""
+
+#: inc/onboarding/theme-info.php:265
+msgid "See the changelog"
+msgstr ""
+
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:88
+msgid "Install and activate"
+msgstr ""
+
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:92
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:112
+#: inc/tgmpa/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:107
+msgid "Deactivate"
+msgstr ""
+
+#: inc/onboarding/plugins/class-airi-recommended-plugins.php:112
+msgid "Jetpack Portfolio"
+msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:327
 msgid "Install Required Plugins"
@@ -855,10 +1392,12 @@ msgid "Install Plugins"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:330
+#, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:332
+#, php-format
 msgid "Updating Plugin: %s"
 msgstr ""
 
@@ -866,55 +1405,65 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:334
-msgid "/*translators:1:pluginnames.*/This theme requires the following plugin: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:340
-msgid "/*translators:1:pluginnames.*/This theme recommends the following plugin: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:346
-msgid "/*translators:1:pluginnames.*/The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
-msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:352
-msgid "/*translators:1:pluginnames.*/There is an update available for: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:358
-msgid "/*translators:1:pluginnames.*/The following required plugin is currently inactive: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:364
-msgid "/*translators:1:pluginnames.*/The following recommended plugin is currently inactive: %1$s."
+#: inc/tgmpa/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:370
+#: inc/tgmpa/class-tgm-plugin-activation.php:371
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:375
+#: inc/tgmpa/class-tgm-plugin-activation.php:376
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:380
+#: inc/tgmpa/class-tgm-plugin-activation.php:381
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
@@ -924,29 +1473,39 @@ msgstr[1] ""
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:386, inc/tgmpa/class-tgm-plugin-activation.php:827, inc/tgmpa/class-tgm-plugin-activation.php:2533, inc/tgmpa/class-tgm-plugin-activation.php:3580
+#: inc/tgmpa/class-tgm-plugin-activation.php:386
+#: inc/tgmpa/class-tgm-plugin-activation.php:827
+#: inc/tgmpa/class-tgm-plugin-activation.php:2533
+#: inc/tgmpa/class-tgm-plugin-activation.php:3580
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:387, inc/tgmpa/class-tgm-plugin-activation.php:3159
+#: inc/tgmpa/class-tgm-plugin-activation.php:387
+#: inc/tgmpa/class-tgm-plugin-activation.php:3159
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:388, inc/tgmpa/class-tgm-plugin-activation.php:2952
+#: inc/tgmpa/class-tgm-plugin-activation.php:388
+#: inc/tgmpa/class-tgm-plugin-activation.php:2952
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:390
+#, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:392
-msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:394
+#, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
@@ -955,7 +1514,9 @@ msgid "Dismiss this notice"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:396
-msgid "There are one or more required or recommended plugins to install, update or activate."
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:397
@@ -971,23 +1532,32 @@ msgid "Update Required"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:934
-msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:934, inc/tgmpa/class-tgm-plugin-activation.php:937
-msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+#: inc/tgmpa/class-tgm-plugin-activation.php:934
+#: inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:937
-msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:1121, inc/tgmpa/class-tgm-plugin-activation.php:2948
+#: inc/tgmpa/class-tgm-plugin-activation.php:1121
+#: inc/tgmpa/class-tgm-plugin-activation.php:2948
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:1982
+#, php-format
 msgid "TGMPA v%s"
 msgstr ""
 
@@ -1036,11 +1606,13 @@ msgid "Update recommended"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2342
+#, php-format
 msgctxt "Install/Update Stairis"
 msgid "%1$s, %2$s"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2388
+#, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
@@ -1048,18 +1620,21 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2392
+#, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2396
+#, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2400
+#, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -1107,14 +1682,17 @@ msgid "Stairis"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2603
+#, php-format
 msgid "Install %2$s"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2608
+#, php-format
 msgid "Update %2$s"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2614
+#, php-format
 msgid "Activate %2$s"
 msgstr ""
 
@@ -1128,10 +1706,6 @@ msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2723
 msgid "Update"
-msgstr ""
-
-#: inc/tgmpa/class-tgm-plugin-activation.php:2726
-msgid "Activate"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:2757
@@ -1163,30 +1737,38 @@ msgid "Plugin activation failed."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3498
+#, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3501
+#, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3503
+#, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3507
-msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:3509, inc/tgmpa/class-tgm-plugin-activation.php:3517
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
 msgid "Show Details"
 msgstr ""
 
-#: inc/tgmpa/class-tgm-plugin-activation.php:3509, inc/tgmpa/class-tgm-plugin-activation.php:3517
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
 msgid "Hide Details"
 msgstr ""
 
@@ -1195,14 +1777,18 @@ msgid "All installations and activations have been completed."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3512
+#, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3515
-msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3517
+#, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
@@ -1211,11 +1797,80 @@ msgid "All installations have been completed."
 msgstr ""
 
 #: inc/tgmpa/class-tgm-plugin-activation.php:3520
+#, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/woocommerce.php:215
-msgid "View your shopping cart"
+#: inc/wpml/class-airi-wpml-hero-slider.php:30
+msgid "[aThemes Slider] Slide title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-hero-slider.php:33
+msgid "[aThemes Slider] Slide text"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-hero-slider.php:36
+msgid "[aThemes Slider] Link text"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-hero-slider.php:39
+msgid "[aThemes Slider] Link URL"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-portfolio.php:31
+msgid "[aThemes Portfolio] Title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-portfolio.php:34
+msgid "[aThemes Portfolio] Term"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml-portfolio.php:37
+msgid "[aThemes Portfolio] Link"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:24
+msgid "[aThemes Portfolio] Show all text"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:42
+msgid "[aThemes: Shop category grid] Box 1 title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:47
+msgid "[aThemes: Shop category grid] Box 1 link"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:52
+msgid "[aThemes: Shop category grid] Box 2 title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:57
+msgid "[aThemes: Shop category grid] Box 2 link"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:62
+msgid "[aThemes: Shop category grid] Box 3 title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:67
+msgid "[aThemes: Shop category grid] Box 3 link"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:72
+msgid "[aThemes: Shop category grid] Box 4 title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:77
+msgid "[aThemes: Shop category grid] Box 4 link"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:82
+msgid "[aThemes: Shop category grid] Box 5 title"
+msgstr ""
+
+#: inc/wpml/class-airi-wpml.php:87
+msgid "[aThemes: Shop category grid] Box 5 link"
 msgstr ""
 
 #: learnpress/widgets/recent-courses/default.php:24
@@ -1223,15 +1878,13 @@ msgid "No courses"
 msgstr ""
 
 #: learnpress/widgets/recent-courses/default.php:85
+#, php-format
 msgid "%d lessons"
 msgstr ""
 
 #: learnpress/widgets/recent-courses/default.php:85
+#, php-format
 msgid "%d lesson"
-msgstr ""
-
-#: search.php:24
-msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -1239,34 +1892,210 @@ msgid "Nothing Found"
 msgstr ""
 
 #: template-parts/content-none.php:25
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:38
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:24, template-parts/content-single.php:65
+#: template-parts/content-page.php:24 template-parts/content-single-2.php:77
+#: template-parts/content-single-3.php:77 template-parts/content-single.php:65
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/content-single.php:54
+#: template-parts/content-single-2.php:66
+#: template-parts/content-single-3.php:66 template-parts/content-single.php:54
+#, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/menus/menu-menuStyle1.php:20, template-parts/menus/menu-menuStyle2.php:20, template-parts/menus/menu-menuStyle3.php:49, template-parts/menus/menu-menuStyle4.php:30
+#: template-parts/menus/menu-menuStyle1.php:20
+#: template-parts/menus/menu-menuStyle2.php:20
+#: template-parts/menus/menu-menuStyle3.php:60
+#: template-parts/menus/menu-menuStyle4.php:30
+#: template-parts/menus/menu-menuStyle5.php:20
+#: template-parts/menus/menu-menuStyle6.php:38
 msgid "Toggle mobile menu"
 msgstr ""
 
-#: tribe-events/widgets/list-widget.php:115
+#: theme-dashboard/class-theme-dashboard.php:109
+#: theme-dashboard/class-theme-dashboard.php:506
+#: theme-dashboard/class-theme-dashboard.php:557
+msgid "Theme Dashboard"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:123
+msgid "Something went wrong, contact support."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:278
+msgid "Insufficient permissions to install the plugin."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:297
+msgid "Failed to initialize or activate importer plugin."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:360
+msgid "Customize"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:385
+msgid "Best WordPress Speed Optimization Plugins"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:389
+msgid ""
+"We run through the top 10 WordPress performance plugins to keep your site "
+"running fast. Goes beyond just caching plugins (though those are on there "
+"too!). A must-read for all WordPress site owners."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:405
+msgid "WP Rocket Review"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:409
+msgid ""
+"Every site that is serious about speed (and should be pretty much all sites "
+"these days) needs a caching plugin and WP Rocket is our pick of the bunch. "
+"Get the lowdown on why we recommend it n our data-backed review: "
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:425
+msgid "Fastest WordPress Hosts"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:429
+msgid ""
+"A slow host can really put a drag on your site’s performance, even an "
+"optimized one. Make sure you get a host that won’t hold you back by reading "
+"our review, complete with real speed tests, of the fastest WordPress hosts. "
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:455
+msgid "Hello, "
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:463
+msgid "👋🏻"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:501
+msgid "Starter Sites"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:513
+msgid ""
+"Clicking “Starter Sites” button will install and activate the demo importer "
+"plugin."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:540
+msgid "aThemes"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:616
+msgid "Priority Status"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:622
+msgid "Need help? We're here for you!"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:625
+msgid ""
+"Have a question? Hit a bug? Get the help you need, when you need it from our "
+"friendly support staff."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:629
+msgid "Get Support"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:637
+msgid "Priority Support"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:639
+msgid "pro"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:642
+msgid "Want your questions answered faster? Go Pro to be first in the queue!"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:646
+msgid "Go PRO"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:656
+msgid "Community"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:660
+msgid "Join Our Community"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:663
+msgid "Discuss products and ask for community support or help the community."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:667
+msgid "Join Now"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:697
+msgid "Review"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:706
+msgid "Submit a Review"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:712
+msgid "Have an idea or feedback?"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:714
+msgid "Let us know. We'd love to hear from you."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:717
+msgid "Suggest an Idea"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:724
+msgid "Changelog"
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:731
+msgid "Keep informed with the latest changes about each theme."
+msgstr ""
+
+#: theme-dashboard/class-theme-dashboard.php:734
+msgid "See the Changelog"
+msgstr ""
+
+#: tribe/events/v2/widgets/widget-events-list.php:123
+#: tribe-events/widgets/list-widget.php:114
 msgid "See this event"
 msgstr ""
 
-#: tribe-events/widgets/list-widget.php:126
+#: tribe/events/v2/widgets/widget-events-list.php:134
+#: tribe-events/widgets/list-widget.php:125
+#, php-format
 msgid "There are no upcoming %s at this time."
 msgstr ""
 
@@ -1278,7 +2107,7 @@ msgstr ""
 msgid "Airi: Recent Posts"
 msgstr ""
 
-#: widgets/class-airi-recent-posts.php:135, widgets/class-airi-social.php:55
+#: widgets/class-airi-recent-posts.php:135 widgets/class-airi-social.php:56
 msgid "Title:"
 msgstr ""
 
@@ -1298,18 +2127,24 @@ msgstr ""
 msgid "Airi: Social Profile"
 msgstr ""
 
-#: widgets/class-airi-social.php:50
+#: widgets/class-airi-social.php:51
+#, php-format
 msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
 msgstr ""
 
-#: widgets/class-airi-social.php:58
-msgid "In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance."
+#: widgets/class-airi-social.php:59
+msgid ""
+"In order to display your social icons in a widget, all you need to do is go "
+"to <strong>Appearance > Menus</strong> and create a menu containing links to "
+"your social profiles, then assign that menu here. Supported networks: "
+"Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, "
+"Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance."
 msgstr ""
 
-#: widgets/class-airi-social.php:60
+#: widgets/class-airi-social.php:61
 msgid "Select your social menu:"
 msgstr ""
 
-#: widgets/class-airi-social.php:62
+#: widgets/class-airi-social.php:63
 msgid "&mdash; Select &mdash;"
 msgstr ""

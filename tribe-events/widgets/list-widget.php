@@ -90,7 +90,7 @@ if ( $airi_posts ) : ?>
 					<?php do_action( 'tribe_events_list_widget_before_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 					<!-- Event Title -->
 					<h4 class="tribe-event-title">
-						<a href="<?php echo esc_url( tribe_get_event_link( $airi_post -> ID ) ); ?>" rel="bookmark"><?php esc_html_e( get_the_title( $airi_post -> ID ) ); ?></a>
+						<a href="<?php echo esc_url( tribe_get_event_link( $airi_post -> ID ) ); ?>" rel="bookmark"><?php echo esc_html( get_the_title( $airi_post -> ID ) ); ?></a>
 					</h4>
 
 					<?php do_action( 'tribe_events_list_widget_after_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>

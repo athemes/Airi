@@ -4188,9 +4188,6 @@ readers do not read off random characters that represent icons */
 .fa-unlock-alt:before {
   content: "\f13e"; }
 
-.fa-unsplash:before {
-  content: "\e07c"; }
-
 .fa-untappd:before {
   content: "\f405"; }
 

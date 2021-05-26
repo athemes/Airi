@@ -215,7 +215,7 @@ class Airi_Onboarding {
 			</a>
 			<div class="airi-onboarding-styles-wrapper">
 				<div class="airi-logo">
-					<img style="max-width:100px;" src="<?php echo get_template_directory_uri(); ?>/images/airi-logo.png" alt="<?php esc_html_e( 'Airi', 'airi' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img style="max-width:100px;" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/airi-logo.png" alt="<?php esc_attr_e( 'Airi', 'airi' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 				<h3><?php echo sprintf( __( 'Hello, %s, and welcome to Airi', 'airi' ), '<span>' . esc_html( ucfirst( $user->display_name ) ) . '</span>' ); ?></h3>
 				<p class="welcome-text"><?php echo esc_html__( 'Thank you for choosing our theme! Check out the links below to get started.', 'airi' ); ?></p>

@@ -95,7 +95,7 @@ if ( $events ) : ?>
 					<?php do_action( 'airi_tribe_events_list_widget_before_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
 					<!-- Event Title -->
 					<h4 class="tribe-event-title">
-						<a href="<?php echo esc_url( tribe_get_event_link( $event -> ID ) ); ?>" rel="bookmark"><?php esc_html_e( get_the_title( $event -> ID ) ); ?></a>
+						<a href="<?php echo esc_url( tribe_get_event_link( $event -> ID ) ); ?>" rel="bookmark"><?php echo esc_html( get_the_title( $event -> ID ) ); ?></a>
 					</h4>
 
 					<?php do_action( 'airi_tribe_events_list_widget_after_the_event_title' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound ?>
@@ -107,7 +107,7 @@ if ( $events ) : ?>
 					$venue = tribe_get_venue( $event -> ID );
 					if( !empty($venue) ) : ?>
 					<div class="atu-event-venue">
-						<?php esc_html_e( $venue ); ?>
+						<?php echo esc_html( $venue ); ?>
 					</div>
 					<?php endif; ?>
 

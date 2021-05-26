@@ -31,7 +31,7 @@ global $post;
 $instance = $this->instance; // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 ?>
 
-<div class="archive-course-widget-outer airi-course <?php esc_attr( $instance["css_class"] ); ?>">
+<div class="archive-course-widget-outer airi-course <?php echo esc_attr( $instance["css_class"] ); ?>">
 
     <div class="widget-body clearfix">
     <div class="row">
