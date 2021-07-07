@@ -71,8 +71,6 @@
 
 })( jQuery );
 
-
-
 /* Mobile menu */
 (function($) {
 
@@ -83,7 +81,6 @@
 		e.preventDefault();
 		$( 'body' ).toggleClass( 'mobile-menu-active' );
 	} );
-
 
 	$( '.main-navigation' ).on( 'click', 'li a', function( e ) {
 		if ( $( 'body' ).hasClass( 'mobile-menu-active' ) ) {
@@ -130,17 +127,52 @@
 
 })( jQuery );
 
-
 /* Header search toggle */
 (function($) {
 
 	var toggleButton = $( '.header-search-toggle' );
-
 	if ( toggleButton.length ) {
-
 		toggleButton.on("click", function(){
 			$( '.header-search-form' ).slideToggle();
 		});
 	}
 
 })( jQuery );
+
+/* 
+* Desktop menu
+* Check if sub-menu items are visible. If not, reverse the item position 
+*/
+(function($) {
+    var checkMenuReverse = function() {
+        if( window.matchMedia("only screen and (min-width: 1199px)").matches ) {
+            
+            // .off('mouseover') to avoid multiple events on resize event
+            $('.main-navigation .menu > li').off('mouseover').on('mouseover', function(e){
+                $( e.currentTarget ).find('.sub-menu').each(function(){
+                    if( isInViewport( $(this)[0] ) == false ) {
+                        $(this).addClass('sub-menu-reverse');	
+                    }
+                });
+            });
+
+        } else {
+            $('.main-navigation .sub-menu').each(function(){
+                $(this).removeClass('sub-menu-reverse');
+            });
+        }
+    }
+
+    $(document).ready( checkMenuReverse );
+    $(window).on('resize', checkMenuReverse);
+})( jQuery );
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}

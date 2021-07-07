@@ -1,4 +1,4 @@
-/* Menu styles */
+/* Menus */
 .main-navigation {
 	& + .header-search-wrapper {
 		margin-left: 23px;
@@ -8,6 +8,7 @@
 	}
 }
 
+/* Header Search */
 .header-search-wrapper {
 	& + .header-search-cart {
 		margin-left: 20px;
@@ -17,6 +18,29 @@
 	}
 }
 
+/* Sub Menu Reverse */
+.main-navigation {
+	.sub-menu {
+		&:not(.sub-menu-reverse) {
+			.sub-menu {
+				.sub-menu-reverse {
+					right: 100%;
+				}
+			}
+		}
+		&.sub-menu-reverse {
+			right: 0;
+			left: auto !important;
+			ul {
+				&.sub-menu-reverse {
+					right: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* Menus Styles */
 .menuStyle1,
 .menuStyle2 {
 	.site-header > div > .row {
@@ -541,6 +565,9 @@
 			> li {
 				padding-top: 30px;
 				padding-bottom: 30px;
+				> .sub-menu {
+					padding-top: 0;
+				}
 			}
 		}
 		li {
@@ -693,16 +720,6 @@
 			z-index: 9999 !important;
 		}
 	}
-	//&.home {
-	//	.sticky-wrapper{
-	//		&:not( .is-sticky ) {
-	//			.site-header {
-	//				background-color: rgba(0,0,0,.3);
-	//			}
-	//		}
-	//	}
-	//}
-
 }
 .menuStyle6 {
 	&.sticky-header {
@@ -810,16 +827,15 @@
 							}
 						}
 					}
+					& + li {
+						margin-left: 33px;
+					}
 				}
 				li {
 					a {
 						display: inline-block;
 						padding-bottom: 3px;
 						position: relative;						
-					}
-
-					&+ li {
-						margin-left: 33px;
 					}
 				}
 			}
@@ -938,6 +954,7 @@
 .admin-bar:not(.menuStyle4) .is-sticky .site-header {
 	top: 32px !important;
 }
+
 /* Menus */
 .main-navigation {
 	text-align: right;
@@ -951,6 +968,7 @@
 		padding-left: 0;
 
 		ul {
+			display: none;
 			float: left;
 			position: absolute;
 			padding-top: 15px;
@@ -993,6 +1011,7 @@
 
 		li:hover > ul,
 		li.focus > ul {
+			display: block;
 			left: auto;
 		}
 	}
