@@ -146,7 +146,6 @@
 (function($) {
     var checkMenuReverse = function() {
         if( window.matchMedia("only screen and (min-width: 1199px)").matches ) {
-            
             // .off('mouseover') to avoid multiple events on resize event
             $('.main-navigation .menu > li').off('mouseover').on('mouseover', function(e){
                 $( e.currentTarget ).find('.sub-menu').each(function(){
@@ -155,8 +154,8 @@
                     }
                 });
             });
-
         } else {
+            $('.main-navigation .menu > li').off('mouseover');
             $('.main-navigation .sub-menu').each(function(){
                 $(this).removeClass('sub-menu-reverse');
             });

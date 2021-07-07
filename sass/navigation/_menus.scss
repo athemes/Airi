@@ -1011,7 +1011,6 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			display: block;
 			left: auto;
 		}
 	}
@@ -1044,6 +1043,24 @@
 	}
 }
 
+@media only screen and (max-width: 1199px) {
+	.main-navigation {
+		ul {
+			ul {
+				li,
+				li:first-of-type {
+					padding: 0;
+				}
+				li {
+					a {
+						padding: 15px 0 !important;
+					}
+				}
+			}
+		}
+	}
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1056,6 +1073,10 @@
 	}
 	.main-navigation ul {
 		display: block;
+		li:hover > ul,
+		li.focus > ul {
+			display: block;
+		}
 	}
 }
 
@@ -1134,13 +1155,12 @@
 		width: 100%;
 		max-width: 100%;
 
-		li {
-
-			padding-top: 15px;
-			padding-bottom: 15px;
-
-			a {
-				padding: 0;
+		.menu {
+			> li {
+				padding: 0 25px;
+			}
+			.subnav-toggle {
+				height: 55px;
 			}
 		}
 

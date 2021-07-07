@@ -1110,7 +1110,6 @@ a:hover, a:active {
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  display: block;
   left: auto;
 }
 .main-navigation li {
@@ -1127,6 +1126,15 @@ a:hover, a:active {
   display: block;
   text-decoration: none;
 }
+@media only screen and (max-width: 1199px) {
+  .main-navigation ul ul li,
+.main-navigation ul ul li:first-of-type {
+    padding: 0;
+  }
+  .main-navigation ul ul li a {
+    padding: 15px 0 !important;
+  }
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1139,6 +1147,10 @@ a:hover, a:active {
   }
 
   .main-navigation ul {
+    display: block;
+  }
+  .main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
     display: block;
   }
 }
@@ -1212,12 +1224,11 @@ a:hover, a:active {
     width: 100%;
     max-width: 100%;
   }
-  .menuStyle4 .main-navigation li {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .menuStyle4 .main-navigation .menu > li {
+    padding: 0 25px;
   }
-  .menuStyle4 .main-navigation li a {
-    padding: 0;
+  .menuStyle4 .main-navigation .menu .subnav-toggle {
+    height: 55px;
   }
   .menuStyle4 .main-navigation .header-cta {
     display: block;
