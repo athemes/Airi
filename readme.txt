@@ -4,7 +4,7 @@ Contributors: athemes
 Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 4.0
-Tested up to: 4.9
+Tested up to: 5.7.2
 Stable tag: 1.0.0
 License: GNU General Public License v3
 License URI: LICENSE
