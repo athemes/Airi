@@ -242,7 +242,7 @@ function airi_dashboard_settings( $settings ) {
 
 	// Review.
 	$settings['review_link']       = 'https://wordpress.org/support/theme/airi/reviews/';
-	$settings['suggest_idea_link'] = 'https://athemes.com/contact/';
+	$settings['suggest_idea_link'] = 'https://forums.athemes.com/c/feature-requests/15';
 
 	// Support.
 	$settings['support_link']     = 'https://forums.athemes.com/c/airi';
