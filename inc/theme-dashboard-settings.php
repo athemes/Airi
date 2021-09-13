@@ -242,14 +242,14 @@ function airi_dashboard_settings( $settings ) {
 
 	// Review.
 	$settings['review_link']       = 'https://wordpress.org/support/theme/airi/reviews/';
-	$settings['suggest_idea_link'] = 'https://athemes.com/contact/';
+	$settings['suggest_idea_link'] = 'https://athemes.com/feature-request/';
 
 	// Support.
-	$settings['support_link']     = 'https://forums.athemes.com/c/airi';
+	$settings['support_link']     = 'https://wordpress.org/support/theme/airi/';
 	$settings['support_pro_link'] = 'https://athemes.com/theme/airi/?utm_source=theme_info&utm_medium=link&utm_campaign=Airi';
 
 	// Community.
-	$settings['community_link'] = 'https://community.athemes.com/home';
+	$settings['community_link'] = 'https://www.facebook.com/groups/athemes/';
 
 	$theme = wp_get_theme();
 	// Changelog.
