@@ -2210,6 +2210,12 @@ ul.header-search-cart .header-cart-link .count {
   font-size: 16px;
 }
 
+@media(max-width: 575px) {
+  .airi_recent_entries h5 {
+    margin-top: 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 Social
 --------------------------------------------------------------*/
